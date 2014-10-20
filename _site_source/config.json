@@ -1,0 +1,13 @@
+{
+    "contentdir": "content",
+    "layoutdir": "layouts",
+    "publishdir": "../",
+    "builddrafts": false,
+    "indexes": {
+       "category": "categories",
+       "tag": "tags"
+    },
+    "baseurl": "http://giubilo.org",
+    "title": "giubilo project site",
+    "canonifyurls": true
+}
