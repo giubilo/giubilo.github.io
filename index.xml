@@ -7,7 +7,25 @@
     
     
     
-    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>about</title>
+      <link>http://giubilo.org/about/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://giubilo.org/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cmis dlna connector</title>
+      <link>http://giubilo.org/concept/cmisdlnaconnector/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://giubilo.org/concept/cmisdlnaconnector/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

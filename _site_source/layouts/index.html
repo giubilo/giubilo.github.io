@@ -1,0 +1,322 @@
+{{ partial "pre_header.html" . }}
+<head>
+
+	{{ partial "std_header.html" . }}
+
+    <!-- CSS Implementing Plugins -->
+    {{ partial "std_impl_plugins.html" . }}
+    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">    
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/plugins/layer-slider/layerslider/css/layerslider.css">
+    <link rel="stylesheet" href="assets/plugins/image-hover/css/img-hover.css">
+
+    <!-- CSS Page Style -->    
+    <link rel="stylesheet" href="assets/css/pages/page_job.css">
+
+	{{ partial "std_css_theme.html" . }}
+
+</head>
+<body class="header-fixed">
+
+<div class="wrapper">
+
+    <div class="header">
+		{{ partial "topbar.html" . }}
+		{{ partial "navbar.html" . }}
+    </div>
+
+    <!--=== Slider ===-->
+    <div id="layerslider" style="width: 100%; height: 450px; margin: 0px auto;">
+        <!-- First slide -->
+        <div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
+            <img src="assets/img/san_pietro.png" class="ls-bg" alt="Slide background">
+
+            <p class="ls-s-1" style=" color: #fff; line-height:45px; font-weight: 200; font-size: 35px; background:rgba(114, 192, 44, 0.8); top:100px; left: 50px; ">
+                Store, Search &amp; Share
+            </p>
+            <p class="ls-s-1" style=" color: #fff; line-height:45px; font-weight: 200; font-size: 35px; background:rgba(114, 192, 44, 0.8); top:150px; left: 50px; ">
+                Your Digital Life
+            </p>
+
+            <a class="btn-u btn-u-blue ls-s-1" href="#" style=" padding: 9px 20px; font-size:25px; top:220px; left: 50px; slidedirection : bottom; slideoutdirection : bottom; durationin : 2000; durationout : 2000; ">
+                Find Out More
+            </a>
+        </div>
+
+        <!--Second Slide-->
+        <div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
+            <img src="assets/img/gaudi.png" class="ls-bg" alt="Slide background">
+
+            <span class="ls-s-1" style=" color: #fff; line-height:45px; font-weight: 200; font-size: 35px; top:100px; left: 50px; slidedirection : top; slideoutdirection : bottom; durationin : 1000; durationout : 1000; ">
+                Step by Step Solution <br> In Action
+            </span>
+
+            <a class="btn-u btn-u-orange ls-s-1" href="#" style=" padding: 9px 20px; font-size:25px; top:220px; left: 50px; slidedirection : bottom; slideoutdirection : bottom; durationin : 2000; durationout : 2000; ">
+                Find Out More
+            </a>
+        </div>
+
+        <!--Third Slide-->
+        <div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
+            <img src="assets/img/eiffel.jpg" class="ls-bg" alt="Slide background">
+
+            <span class="ls-s-1" style=" color: #fff; line-height:45px; font-weight: 200; font-size: 35px; top:100px; left: 50px; slidedirection : top; slideoutdirection : bottom; durationin : 1000; durationout : 1000; ">
+                Open Source Tools, Techniques <br> & Technologies
+            </span>
+
+            <a class="btn-u btn-u-green ls-s-1" href="#" style=" padding: 9px 20px; font-size:25px; top:220px; left: 50px; slidedirection : bottom; slideoutdirection : bottom; durationin : 2000; durationout : 2000; ">
+                Find Out More
+            </a>
+        </div>
+    </div>
+    <!--=== End Slider ===-->
+
+
+    <!--=== Tag Block ===-->
+    <div class="purchase">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 animated fadeInLeft">
+                    <span>Giubilo is a simple way to organise and access the family's entire digital life.</span>
+                    <p>
+                    We're working out how to make practical for a household, the processes and tools that large organisations use to store and organise <br>
+                    things. Read along and follow us to see how open source project techniques, tools and technologies are being used to do this.
+					</p>
+                </div>            
+                <div class="col-md-3 btn-buy animated fadeInRight">
+                    <a href="#" class="btn-u btn-u-lg"><i class="fa  fa-circle-o-notch"></i> Start Here</a>
+                </div>
+            </div>
+        </div>
+    </div><!--/row-->
+    <!-- End Tag Block -->
+
+    <!--=== Content Part ===-->
+    <div class="container content">	
+
+    	<!-- Service Blocks -->
+    	<div class="row margin-bottom-30">
+        	<div class="col-md-4">
+        		<div class="service">
+                    <i class="fa fa-search-plus service-icon"></i>
+        			<div class="desc">
+        				<h4>Store, Search & Share</h4>
+                        <p>We're developing tools that you can download and use for, storing all your digital things forever, no matter what they are, find them no 
+                        matter where you are and share them safely and easily...</p>
+        			</div>
+        		</div>	
+        	</div>
+        	<div class="col-md-4">
+        		<div class="service">
+                    <i class="fa fa-cubes service-icon"></i>
+        			<div class="desc">
+        				<h4>Step-by-Step In Action</h4>
+                        <p>Giubilo is made up of <i>Concepts</i>, and we are documenting how-to's for each one, describing them step-by-step, with summaries and spotlights on particularly
+                        tricky bits, so they're easy to understand and recreate...</p>
+        			</div>
+        		</div>	
+        	</div>			    
+        	<div class="col-md-4">
+        		<div class="service">
+                    <i class="fa fa-cogs service-icon"></i>
+        			<div class="desc">
+        				<h4>Open Source</h4>
+                        <p>The software and information developed is open source and is using open source tools, techniques and technologies, like Q&A Communities, ALM 
+                        and DevOps, Crowd Sourcing, Java, Go, UPnP, CMIS, Eclispe, Github, Docker...</p>
+        			</div>
+        		</div>	
+        	</div>
+    	</div>
+    	<!-- End Service Blokcs -->
+
+    	<!-- Info Blocks -->
+    	<div class="row margin-bottom-30">
+        	<!-- Welcome Block -->
+    		<div class="col-md-8 md-margin-bottom-40">
+    			<div class="headline"><h2><i class="fa fa-lightbulb-o"></i> The Idea</h2></div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img class="img-responsive margin-bottom-20" src="assets/img/giubilo-matrix-default.png" alt="">
+                    </div>
+                    <div class="col-sm-9">
+                        <p>
+                        Do you collect a ton of photos, notes, receipts, to-do's, music, movies, documents, recipes, how-to's, bookmarks?  Are you trying to 
+                        manage a life that's sprawling everywhere at home and online?  
+                        Giubilo is a virtual personal assistant to help tie up the loose ends of organising your life and leisure time. 
+                        </p>
+                        <p>
+                        The processes and tools to do this aren't new: 
+                        </p>
+                        <ul class="list-unstyled margin-bottom-20">
+                            <li><i class="fa fa-check color-green"></i> Corporations digitise file-rooms of paper into Advanced Case Management Systems</li>
+                            <li><i class="fa fa-check color-green"></i> Software developers manage code and builds in Distributed Version Controls Systems</li>
+                            <li><i class="fa fa-check color-green"></i> Researchers preserve their work with integrity in Immutable Repositories</li>
+                            <li><i class="fa fa-check color-green"></i> Webmasters organise and publish digital assets in Web Content Management Tools</li>
+                        </ul>                    
+                        <p>
+                        Between these they have had: sophisticated linking, analytics, collaboration and search, version control, file signing, integrity checks, encryptions
+                        licensing and citability, granular access models, flexible rules-based workflows and tools for backup, sync and cloud access. 
+                        </p>
+                        <p>
+                        It makes sense to consumerise these cool capabilities to help at home.
+                        </p>
+                    </div>
+                </div>
+            </div><!--/col-md-8-->        
+
+            <!-- Latest Posts -->
+            <div class="col-md-4">
+    			<div class="headline"><h2><i class="fa fa-university"></i> Latest Posts</h2></div>
+	                <ul class="list-unstyled latest-list">
+	                    <li>
+	                        <a href="#">Incredible content</a>
+	                        <small>May 8, 2014</small>
+	                    </li>
+	                    <li>
+	                        <a href="#">Best shoots</a>
+	                        <small>June 23, 2014</small>
+	                    </li>
+	                    <li>
+	                        <a href="#">New Terms and Conditions</a>
+	                        <small>September 15, 2014</small>
+	                    </li>
+	                </ul>
+            </div><!--/col-md-4-->
+    	</div>	
+    	<!-- End Info Blocks -->
+
+    	<!-- Info Blocks -->
+    	<div class="row margin-bottom-30">
+        	<!-- Welcome Block -->
+    		<div class="col-md-8 md-margin-bottom-40">
+    			<div class="headline"><h2><i class="fa fa-tags"></i> Credit for Inspiration</h2></div>
+	            <p>Some of the ideas and inspiration for Giubilo came from the following:</p>
+                <div class="row">
+                    <div class="col-lg-8">
+				        <ul class="list-inline our-clients" id="effect-2">
+				            <li>
+				                <figure>
+				                    <img src="assets/img/camlistore_logo.jpg" alt="">
+				                    <div class="img-hover">
+				                        <h4>Camlistore</h4>  
+				                    </div>
+				                </figure>
+				            </li>    
+				            <li>
+				                <figure>
+				                    <img src="assets/img/alfresco-logo.png" alt="">
+				                    <div class="img-hover">
+				                        <h4>Alfresco</h4>
+				                    </div>
+				                </figure>
+				            </li>    
+				            <li>
+				                <figure>
+				                    <img src="assets/img/ember-splash-screen.jpg" alt="">
+				                    <div class="img-hover">
+				                        <h4>Ember Media Manager</h4>  
+				                    </div>
+				                </figure>
+				            </li>    
+				            <li>
+				                <figure>
+				                    <img src="assets/img/chemistry_logo.png" alt="">
+				                    <div class="img-hover">
+				                        <h4>Apache Chemistry</h4>  
+				                    </div>
+				                </figure>
+				            </li>    
+				            <li>
+				                <figure>
+				                    <img src="assets/img/netty-logo.png" alt="">
+				                    <div class="img-hover">
+				                        <h4>Netty Project</h4>  
+				                    </div>
+				                </figure>
+				            </li>    
+				            <li>
+				                <figure>
+				                    <img src="assets/img/cybergarage-logo.png" alt="">
+				                    <div class="img-hover">
+				                        <h4>Cybergarage UPnP</h4>  
+				                    </div>
+				                </figure>
+				            </li>    
+				            <li>
+				                <figure>
+				                    <img src="assets/img/tasktop-logo.png" alt="">
+				                    <div class="img-hover">
+				                        <h4>Tasktop</h4>  
+				                    </div>
+				                </figure>
+				            </li>    
+				            <li>
+				                <figure>
+				                    <img src="assets/img/tom-demarco.png" alt="">
+				                    <div class="img-hover">
+				                        <h4>Tom Demarco</h4>  
+				                    </div>
+				                </figure>
+				            </li>    				 
+				        </ul>
+			        </div>
+                </div>
+            </div><!--/col-md-8-->        
+
+            <!-- Latest Posts -->
+            <div class="col-md-4">
+    			<div class="headline"><h2><i class="fa fa-calendar"></i> Latest News</h2></div>
+	                <ul class="list-unstyled latest-list">
+	                    <li>
+	                        <a href="#">Incredible content</a>
+	                        <small>May 8, 2014</small>
+	                    </li>
+	                    <li>
+	                        <a href="#">Best shoots</a>
+	                        <small>June 23, 2014</small>
+	                    </li>
+	                    <li>
+	                        <a href="#">New Terms and Conditions</a>
+	                        <small>September 15, 2014</small>
+	                    </li>
+	                </ul>
+            </div><!--/col-md-4-->
+    	</div>	
+    	<!-- End Info Blocks -->
+    	
+    </div>
+
+	{{ partial "copyright.html" . }}
+
+</div><!--/wrapper-->
+
+{{ partial "js_global_compulsory.html" . }}
+
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="assets/plugins/image-hover/js/modernizr.js"></script>
+<script type="text/javascript" src="assets/plugins/image-hover/js/touch.js"></script>
+<!-- Layer Slider -->
+<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/greensock.js"></script>
+<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js"></script>
+<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+<!-- End Layer Slider -->           
+<!-- JS Page Level -->           
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/pages/index.js"></script>
+<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+      	App.init();
+        App.initSliders();
+        Index.initLayerSlider();
+        OwlCarousel.initOwlCarousel();
+    });
+</script>
+
+{{ partial "ie9_plugin.html" . }}
+
+</body>
+</html>	
