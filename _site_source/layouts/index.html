@@ -134,8 +134,10 @@
     			<div class="headline"><h2><i class="fa fa-cloud-download service-icon" style="color: #72c02c;"></i> Latest Releases</h2></div>
 	                <ul class="list-unstyled latest-list">
 	                    <li>
-	                        <a href="#">Incredible content</a>
+						    {{ range first 1 .Data.Pages }}
+	                        <a href="{{ .Permalink }}">{{ .Title }}</a>
 	                        <small>May 8, 2014</small>
+						    {{ end }}
 	                    </li>
 	                    <li>
 	                        <a href="#">Best shoots</a>

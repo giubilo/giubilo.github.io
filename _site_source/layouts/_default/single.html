@@ -1,10 +1,55 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>{{ .Title }}</title> 
-</head> 
-<body> 
-  <h1>{{ .Title }}</h1> 
-  {{ .Content }} 
-</body> 
-</html> 
+{{ partial "pre_header.html" . }}
+<head>
+
+	{{ partial "std_header.html" . }}
+
+    <!-- CSS Implementing Plugins -->
+    {{ partial "std_impl_plugins.html" . }}
+
+    <!-- CSS Page Style -->    
+    <link rel="stylesheet" href="assets/css/pages/page_job.css">
+
+
+	{{ partial "std_css_theme.html" . }}
+
+</head>
+<body class="header-fixed">
+
+<div class="wrapper">
+
+    <div class="header">
+		{{ partial "topbar.html" . }}
+		{{ partial "navbar.html" . }}
+    </div>
+
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Services</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Pages</a></li>
+                <li class="active">Services</li>
+            </ul>
+        </div>
+    </div><!--/breadcrumbs-->
+
+    {{ .Content }} 
+    	
+	{{ partial "copyright.html" . }}
+
+</div><!--/wrapper-->
+
+{{ partial "js_global_compulsory.html" . }}
+
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+
+<!-- JS Page Level -->           
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/pages/index.js"></script>
+
+{{ partial "ie9_plugin.html" . }}
+
+</body>
+</html>
