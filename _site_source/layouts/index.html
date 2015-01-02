@@ -135,7 +135,7 @@
 	                <ul class="list-unstyled latest-list">
 	                    <li>
 						    {{ range first 5 (where .Data.Pages "Section" "release") }}
-	                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+	                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 	                        <small>{{.PublishDate.Format "Mon, 2 Jan, 2006"}}</small>
 						    {{ end }}
 	                    </li>
@@ -147,7 +147,7 @@
 	                <ul class="list-unstyled latest-list">
 	                    <li>
 						    {{ range first 5 (where .Data.Pages "Section" "concept") }}
-	                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+	                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 	                        <small>{{.PublishDate.Format "Mon Jan 1, 1000"}}</small>
 						    {{ end }}
 	                    </li>
@@ -159,7 +159,7 @@
 	                <ul class="list-unstyled latest-list">
 	                    <li>
 						    {{ range first 5 (where .Data.Pages "Section" "news") }}
-	                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+	                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 	                        <small>{{.PublishDate.Format "Mon Jan 1, 1000"}}</small>
 						    {{ end }}
 	                    </li>
