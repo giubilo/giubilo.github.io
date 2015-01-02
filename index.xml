@@ -3,39 +3,39 @@
   <channel>
       <title>Recent Content on giubilo project site </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://giubilo.org/index.xml/</link>
+    <link>http://localhost:1313/index.xml/</link>
     
     
     
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>about</title>
-      <link>http://giubilo.org/about/</link>
+      <title>content model</title>
+      <link>http://localhost:1313/concept/contentmodel/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://giubilo.org/about/</guid>
+      <guid>http://localhost:1313/concept/contentmodel/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>content model</title>
-      <link>http://giubilo.org/concept/contentmodel/</link>
+      <title>about</title>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://giubilo.org/concept/contentmodel/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cmis dlna connector</title>
-      <link>http://giubilo.org/concept/cmisdlnaconnector/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      <link>http://localhost:1313/concept/cmisdlnaconnector/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
       
-      <guid>http://giubilo.org/concept/cmisdlnaconnector/</guid>
+      <guid>http://localhost:1313/concept/cmisdlnaconnector/</guid>
       <description>
 
-&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;/about&#34;&gt;faq&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Allow MediaControllers and MediaRenderers to consume content stored in the Alfresco Repository (a cmis-upnp/dlna connector if you will).  Internet of Things (IoT) converging with Advanced Case Management (ACM).&lt;/p&gt;
 
@@ -45,7 +45,7 @@
 &lt;li&gt;Java&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Cyberlink4Java&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;MediaGate4Java&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Apache Chemistry  also looked at (Michael Daum - &lt;a href=&#34;https://github.com/MichaelDaum/cmis-perl&#34;&gt;WebService::Cmis&lt;/a&gt;)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Apache Chemistry  also looked at Michael Daum - &lt;a href=&#34;https://github.com/MichaelDaum/cmis-perl&#34;&gt;WebService::Cmis&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Apache Felix - Cyberlink4Java has an OSGi version and Alfresco has begun with Alfresco Dynamic Extensions.&lt;/li&gt;
 &lt;li&gt;VideoLan Project - RTSP&lt;/li&gt;
 &lt;/ul&gt;

@@ -10,5 +10,5 @@
     },
     "baseurl": "http://giubilo.org",
     "title": "giubilo project site",
-    "canonifyurls": true
+    "canonifyurls": false
 }

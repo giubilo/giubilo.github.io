@@ -3,7 +3,7 @@
   <channel>
       <title>Model on giubilo project site </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/tags/model/index.xml/</link>
+    <link>http://giubilo.org/tags/model.xml</link>
     
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>content model</title>
-      <link>http://localhost:1313/concept/contentmodel/</link>
+      <link>http://giubilo.org/concept/contentmodel.html</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/concept/contentmodel/</guid>
+      <guid>http://giubilo.org/concept/contentmodel.html</guid>
       <description></description>
     </item>
     

@@ -5,13 +5,13 @@
 
     <!-- CSS Implementing Plugins -->
     {{ partial "std_impl_plugins.html" . }}
-    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">    
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="assets/plugins/layer-slider/layerslider/css/layerslider.css">
-    <link rel="stylesheet" href="assets/plugins/image-hover/css/img-hover.css">
+    <link rel="stylesheet" href="/assets/plugins/flexslider/flexslider.css">    
+    <link rel="stylesheet" href="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/plugins/layer-slider/layerslider/css/layerslider.css">
+    <link rel="stylesheet" href="/assets/plugins/image-hover/css/img-hover.css">
 
     <!-- CSS Page Style -->    
-    <link rel="stylesheet" href="assets/css/pages/page_job.css">
+    <link rel="stylesheet" href="/assets/css/pages/page_job.css">
 
 	{{ partial "std_css_theme.html" . }}
 
@@ -29,7 +29,7 @@
     <div id="layerslider" style="width: 100%; height: 450px; margin: 0px auto;">
         <!-- First slide -->
         <div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
-            <img src="assets/img/san_pietro.png" class="ls-bg" alt="Slide background">
+            <img src="/assets/img/san_pietro.png" class="ls-bg" alt="Slide background">
 
             <p class="ls-s-1" style=" color: #fff; line-height:50px; font-weight: 200; font-size: 45px; background:rgba(35, 109, 29, 0.8); top:140px; left: 10px; ">
                 BETTER ORGANISE </p>
@@ -57,7 +57,7 @@
 
         <!--Second Slide-->
         <div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
-            <img src="assets/img/gaudi.png" class="ls-bg" alt="Slide background">
+            <img src="/assets/img/gaudi.png" class="ls-bg" alt="Slide background">
 
             <p class="ls-s-1" style=" color: #fff; line-height:50px; font-weight: 200; font-size: 45px; background:rgba(35, 109, 29, 0.8); top:140px; left: 10px; ">
                 UNDERSTANDING </p>
@@ -74,7 +74,7 @@
             <p class="ls-s-1" style=" color: #fff; line-height:30px; font-weight: 150; font-size: 20px; background:rgba(0, 0, 0, 0.8); top:312px; left: 10px; ">
                 Contribute to the process </p>
              
-            <img class="ls-l" src="assets/img/7-cogs.png" style="top:50px; left: 450px; " 
+            <img class="ls-l" src="/assets/img/7-cogs.png" style="top:50px; left: 450px; " 
             data-ls="offsetxin:right; durationin:1500; delayin:900; fadein:false; offsetxout:left; durationout:1000; fadeout:false;" />            
 
         </div>
@@ -98,7 +98,7 @@
             <p class="ls-s-1" style=" color: #fff; line-height:30px; font-weight: 150; font-size: 20px; background:rgba(0, 0, 0, 0.8); top:312px; left: 10px; ">
                  Readily accessible technologies </p>
              
-            <img class="ls-l" src="assets/img/open-source-icons-tile.png" style="top:50px; left: 550px; " 
+            <img class="ls-l" src="/assets/img/open-source-icons-tile.png" style="top:50px; left: 550px; " 
             data-ls="offsetxin:right; durationin:1500; delayin:900; fadein:false; offsetxout:left; durationout:1000; fadeout:false;" />            
             
         </div>
@@ -134,18 +134,10 @@
     			<div class="headline"><h2><i class="fa fa-cloud-download service-icon" style="color: #72c02c;"></i> Latest Releases</h2></div>
 	                <ul class="list-unstyled latest-list">
 	                    <li>
-						    {{ range first 1 .Data.Pages }}
+						    {{ range first 5 (where .Data.Pages "Section" "release") }}
 	                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-	                        <small>May 8, 2014</small>
+	                        <small>{{.PublishDate.Format "Mon, 2 Jan, 2006"}}</small>
 						    {{ end }}
-	                    </li>
-	                    <li>
-	                        <a href="#">Best shoots</a>
-	                        <small>June 23, 2014</small>
-	                    </li>
-	                    <li>
-	                        <a href="#">New Terms and Conditions</a>
-	                        <small>September 15, 2014</small>
 	                    </li>
 	                </ul>
             </div><!--/col-md-4-->
@@ -154,16 +146,10 @@
     			<div class="headline"><h2><i class="fa fa-cogs service-icon" style="color: #72c02c;"></i> Latest Posts</h2></div>
 	                <ul class="list-unstyled latest-list">
 	                    <li>
-	                        <a href="#">Incredible content</a>
-	                        <small>May 8, 2014</small>
-	                    </li>
-	                    <li>
-	                        <a href="#">Best shoots</a>
-	                        <small>June 23, 2014</small>
-	                    </li>
-	                    <li>
-	                        <a href="#">New Terms and Conditions</a>
-	                        <small>September 15, 2014</small>
+						    {{ range first 5 (where .Data.Pages "Section" "concept") }}
+	                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+	                        <small>{{.PublishDate.Format "Mon Jan 1, 1000"}}</small>
+						    {{ end }}
 	                    </li>
 	                </ul>
             </div><!--/col-md-4-->
@@ -172,16 +158,10 @@
     			<div class="headline"><h2><i class="fa fa-rss service-icon" style="color: #72c02c;"></i> Latest News</h2></div>
 	                <ul class="list-unstyled latest-list">
 	                    <li>
-	                        <a href="#">Incredible content</a>
-	                        <small>May 8, 2014</small>
-	                    </li>
-	                    <li>
-	                        <a href="#">Best shoots</a>
-	                        <small>June 23, 2014</small>
-	                    </li>
-	                    <li>
-	                        <a href="#">New Terms and Conditions</a>
-	                        <small>September 15, 2014</small>
+						    {{ range first 5 (where .Data.Pages "Section" "news") }}
+	                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+	                        <small>{{.PublishDate.Format "Mon Jan 1, 1000"}}</small>
+						    {{ end }}
 	                    </li>
 	                </ul>
             </div><!--/col-md-4-->
@@ -196,7 +176,7 @@
     			<div class="headline"><h2><i class="fa fa-lightbulb-o service-icon" style="color: #72c02c;"></i> The Idea</h2></div>
                 <div class="row">
                     <div class="col-sm-2">
-                        <img class="img-responsive margin-bottom-20" src="assets/img/comedy_tragedy_colour.png" alt="">
+                        <img class="img-responsive margin-bottom-20" src="/assets/img/comedy_tragedy_colour.png" alt="">
                     </div>
                     <div class="col-sm-10">
                         <p>
@@ -232,7 +212,7 @@
 				        <ul class="list-inline our-clients" id="effect-2">
 				            <li>
 				                <figure>
-				                    <img src="assets/img/camlistore_logo.jpg" alt="">
+				                    <img src="/assets/img/camlistore_logo.jpg" alt="">
 				                    <div class="img-hover">
 				                        <h4>Camlistore</h4>  
 				                    </div>
@@ -240,7 +220,7 @@
 				            </li>    
 				            <li>
 				                <figure>
-				                    <img src="assets/img/alfresco-logo.png" alt="">
+				                    <img src="/assets/img/alfresco-logo.png" alt="">
 				                    <div class="img-hover">
 				                        <h4>Alfresco</h4>
 				                    </div>
@@ -248,7 +228,7 @@
 				            </li>    
 				            <li>
 				                <figure>
-				                    <img src="assets/img/ember-splash-screen.jpg" alt="">
+				                    <img src="/assets/img/ember-splash-screen.jpg" alt="">
 				                    <div class="img-hover">
 				                        <h4>Ember Media Manager</h4>  
 				                    </div>
@@ -256,7 +236,7 @@
 				            </li>    
 				            <li>
 				                <figure>
-				                    <img src="assets/img/chemistry_logo.png" alt="">
+				                    <img src="/assets/img/chemistry_logo.png" alt="">
 				                    <div class="img-hover">
 				                        <h4>Apache Chemistry</h4>  
 				                    </div>
@@ -264,7 +244,7 @@
 				            </li>    
 				            <li>
 				                <figure>
-				                    <img src="assets/img/netty-logo.png" alt="">
+				                    <img src="/assets/img/netty-logo.png" alt="">
 				                    <div class="img-hover">
 				                        <h4>Netty Project</h4>  
 				                    </div>
@@ -280,7 +260,7 @@
 				            </li>    
 				            <li>
 				                <figure>
-				                    <img src="assets/img/tasktop-logo.png" alt="">
+				                    <img src="/assets/img/tasktop-logo.png" alt="">
 				                    <div class="img-hover">
 				                        <h4>Tasktop</h4>  
 				                    </div>
@@ -288,7 +268,7 @@
 				            </li>    
 				            <li>
 				                <figure>
-				                    <img src="assets/img/tom-demarco.png" alt="">
+				                    <img src="/assets/img/tom-demarco.png" alt="">
 				                    <div class="img-hover">
 				                        <h4>Tom Demarco</h4>  
 				                    </div>
@@ -344,20 +324,20 @@
 {{ partial "js_global_compulsory.html" . }}
 
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-<script type="text/javascript" src="assets/plugins/image-hover/js/modernizr.js"></script>
-<script type="text/javascript" src="assets/plugins/image-hover/js/touch.js"></script>
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="/assets/plugins/image-hover/js/modernizr.js"></script>
+<script type="text/javascript" src="/assets/plugins/image-hover/js/touch.js"></script>
 <!-- Layer Slider -->
-<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/greensock.js"></script>
-<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js"></script>
-<script type="text/javascript" src="assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+<script type="text/javascript" src="/assets/plugins/layer-slider/layerslider/js/greensock.js"></script>
+<script type="text/javascript" src="/assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js"></script>
+<script type="text/javascript" src="/assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
 <!-- End Layer Slider -->           
 <!-- JS Page Level -->           
-<script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/pages/index.js"></script>
-<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/pages/index.js"></script>
+<script type="text/javascript" src="/assets/js/plugins/owl-carousel.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
       	App.init();

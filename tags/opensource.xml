@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Model on giubilo project site </title>
+      <title>Opensource on giubilo project site </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/tags/model/index.xml/</link>
+    <link>http://giubilo.org/tags/opensource.xml</link>
     
     
     
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>content model</title>
-      <link>http://localhost:1313/concept/contentmodel/</link>
+      <title>about</title>
+      <link>http://giubilo.org/about.html</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/concept/contentmodel/</guid>
+      <guid>http://giubilo.org/about.html</guid>
       <description></description>
     </item>
     

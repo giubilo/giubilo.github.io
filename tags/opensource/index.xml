@@ -3,7 +3,7 @@
   <channel>
       <title>Opensource on giubilo project site </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://giubilo.org/tags/opensource/index.xml/</link>
+    <link>http://localhost:1313/tags/opensource/index.xml/</link>
     
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>about</title>
-      <link>http://giubilo.org/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://giubilo.org/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description></description>
     </item>
     

@@ -7,7 +7,7 @@
     {{ partial "std_impl_plugins.html" . }}
 
     <!-- CSS Page Style -->    
-    <link rel="stylesheet" href="assets/css/pages/page_job.css">
+    <link rel="stylesheet" href="/assets/css/pages/page_job.css">
 
 
 	{{ partial "std_css_theme.html" . }}
@@ -25,17 +25,22 @@
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">Services</h1>
+            <h1 class="pull-left">{{title .Title}} ({{.PublishDate.Format "2 Jan, 2006"}})</h1>
             <ul class="pull-right breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Pages</a></li>
-                <li class="active">Services</li>
+                <li><a href="/index.html">Home</a></li>
+                <li class="active">{{title .Type}}</li>
             </ul>
         </div>
     </div><!--/breadcrumbs-->
 
-    {{ .Content }} 
-    	
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>{{ .Content }}</p>
+                </div>            
+            </div>
+        </div>
+
 	{{ partial "copyright.html" . }}
 
 </div><!--/wrapper-->
@@ -43,11 +48,11 @@
 {{ partial "js_global_compulsory.html" . }}
 
 <!-- JS Implementing Plugins -->
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
 
 <!-- JS Page Level -->           
-<script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/pages/index.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/pages/index.js"></script>
 
 {{ partial "ie9_plugin.html" . }}
 
