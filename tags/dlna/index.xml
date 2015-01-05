@@ -10,14 +10,12 @@
     <updated>Tue, 01 Jan 2008 00:00:00 UTC</updated>
     
     <item>
-      <title>cmis dlna connector</title>
-      <link>http://localhost:1313/concept/cmisdlnaconnector/</link>
+      <title>concept summary</title>
+      <link>http://localhost:1313/concept/concepts/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/concept/cmisdlnaconnector/</guid>
+      <guid>http://localhost:1313/concept/concepts/</guid>
       <description>
-
-&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;/about&#34;&gt;faq&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Allow MediaControllers and MediaRenderers to consume content stored in the Alfresco Repository (a cmis-upnp/dlna connector if you will).  Internet of Things (IoT) converging with Advanced Case Management (ACM).&lt;/p&gt;
 
@@ -53,12 +51,14 @@
     </item>
     
     <item>
-      <title>concept summary</title>
-      <link>http://localhost:1313/concept/concepts/</link>
+      <title>cmis dlna connector</title>
+      <link>http://localhost:1313/concept/cmisdlnaconnector/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/concept/concepts/</guid>
+      <guid>http://localhost:1313/concept/cmisdlnaconnector/</guid>
       <description>
+
+&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;/about&#34;&gt;faq&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Allow MediaControllers and MediaRenderers to consume content stored in the Alfresco Repository (a cmis-upnp/dlna connector if you will).  Internet of Things (IoT) converging with Advanced Case Management (ACM).&lt;/p&gt;
 
