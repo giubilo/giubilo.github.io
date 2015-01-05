@@ -4,11 +4,11 @@
     "layoutdir": "layouts",
     "publishdir": "../",
     "builddrafts": false,
-    "indexes": {
+    "taxonomies": {
        "category": "categories",
        "tag": "tags"
     },
-    "baseurl": "http://giubilo.org",
+  "baseurl": "http://giubilo.org",
     "title": "giubilo project site",
     "canonifyurls": false
 }

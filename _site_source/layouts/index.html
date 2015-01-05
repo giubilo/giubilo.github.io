@@ -132,37 +132,49 @@
     	<div class="row margin-bottom-30">
             <div class="col-md-4">
     			<div class="headline"><h2><i class="fa fa-cloud-download service-icon" style="color: #72c02c;"></i> Latest Releases</h2></div>
-	                <ul class="list-unstyled latest-list">
-	                    <li>
-						    {{ range first 5 (where .Data.Pages "Section" "release") }}
-	                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-	                        <small>{{.PublishDate.Format "Mon, 2 Jan, 2006"}}</small>
-						    {{ end }}
-	                    </li>
+	                <ul class="list-unstyled latest-list" >
+				        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+				            {{ range first 3 $taxonomy.Pages.ByDate.Reverse }}
+				            	{{ if eq $key "releases" }}
+				            		<li>
+				            			<a href="{{ .RelPermalink}}" > {{ .LinkTitle }} </a> <br>
+				            			{{ .PublishDate.Format "Mon, Jan 2, 2006" }}
+				            		</li>
+				            	{{ end }}			            
+				            {{ end }}
+				        {{ end }}
 	                </ul>
             </div><!--/col-md-4-->
 
             <div class="col-md-4">
     			<div class="headline"><h2><i class="fa fa-cogs service-icon" style="color: #72c02c;"></i> Latest Posts</h2></div>
-	                <ul class="list-unstyled latest-list">
-	                    <li>
-						    {{ range first 5 (where .Data.Pages "Section" "concept") }}
-	                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-	                        <small>{{.PublishDate.Format "Mon Jan 1, 1000"}}</small>
-						    {{ end }}
-	                    </li>
+	                <ul class="list-unstyled latest-list" >
+				        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+				            {{ range first 3 $taxonomy.Pages.ByDate.Reverse }}
+				            	{{ if eq $key "posts" }}
+				            		<li>
+				            			<a href="{{ .RelPermalink}}" style="color: black; font-weight: 150; "> {{title .LinkTitle }} </a> <br>
+				            			{{ .PublishDate.Format "Mon, Jan 2, 2006" }}				            		
+				            		</li>
+				            	{{ end }}			            
+				            {{ end }}
+				        {{ end }}
 	                </ul>
             </div><!--/col-md-4-->
 
             <div class="col-md-4">
     			<div class="headline"><h2><i class="fa fa-rss service-icon" style="color: #72c02c;"></i> Latest News</h2></div>
 	                <ul class="list-unstyled latest-list">
-	                    <li>
-						    {{ range first 5 (where .Data.Pages "Section" "news") }}
-	                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-	                        <small>{{.PublishDate.Format "Mon Jan 1, 1000"}}</small>
-						    {{ end }}
-	                    </li>
+				        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+				            {{ range first 3 $taxonomy.Pages.ByDate.Reverse }}
+				            	{{ if eq $key "news" }}
+				            		<li>
+				            			<a href="{{ .RelPermalink}}"> {{ .LinkTitle }} </a> <br>
+				            			{{ .PublishDate.Format "Mon, Jan 2, 2006" }}				            		
+				            		</li>
+				            	{{ end }}			            
+				            {{ end }}
+				        {{ end }}
 	                </ul>
             </div><!--/col-md-4-->
 
@@ -297,8 +309,8 @@
                     <i class="fa fa-cubes service-icon"></i>
         			<div class="desc">
         				<h4>Step-by-Step</h4>
-                        <p>Giubilo is made up of <i>Concepts</i>, and we are documenting how-to's for each one, describing them step-by-step, with summaries and spotlights on particularly
-                        tricky bits, so they're easy to understand and recreate...</p>
+                        <p>Giubilo is made up of <i>Concepts</i> - things being built, <i>Retrospectives</i> - step-by-step how-did's to make things easy to understand and recreate and 
+                        <i>Points of view</i> - thoughts for where things could go...</p>
         			</div>
         		</div>	
         	</div>			    

@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Dlna on giubilo project site </title>
+      <title>Summary on giubilo project site </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://giubilo.org/tags/dlna.xml</link>
+    <link>http://localhost:1313/categories/summary/index.xml/</link>
     
     
     
-    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
+    <updated>Tue, 01 Jan 2008 00:00:00 UTC</updated>
     
     <item>
-      <title>cmis dlna connector</title>
-      <link>http://giubilo.org/concept/cmisdlnaconnector.html</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      <title>concept summary</title>
+      <link>http://localhost:1313/concept/concepts/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
       
-      <guid>http://giubilo.org/concept/cmisdlnaconnector.html</guid>
+      <guid>http://localhost:1313/concept/concepts/</guid>
       <description>
-
-&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Allow MediaControllers and MediaRenderers to consume content stored in the Alfresco Repository (a cmis-upnp/dlna connector if you will).  Internet of Things (IoT) converging with Advanced Case Management (ACM).&lt;/p&gt;
 
@@ -27,7 +25,7 @@
 &lt;li&gt;Java&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Cyberlink4Java&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;MediaGate4Java&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Apache Chemistry  also looked at (Michael Daum - &lt;a href=&#34;https://github.com/MichaelDaum/cmis-perl&#34;&gt;WebService::Cmis&lt;/a&gt;)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Apache Chemistry  also looked at Michael Daum - &lt;a href=&#34;https://github.com/MichaelDaum/cmis-perl&#34;&gt;WebService::Cmis&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Apache Felix - Cyberlink4Java has an OSGi version and Alfresco has begun with Alfresco Dynamic Extensions.&lt;/li&gt;
 &lt;li&gt;VideoLan Project - RTSP&lt;/li&gt;
 &lt;/ul&gt;
