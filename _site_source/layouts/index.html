@@ -136,10 +136,7 @@
 				        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
 				            {{ range first 3 $taxonomy.Pages.ByDate.Reverse }}
 				            	{{ if eq $key "releases" }}
-				            		<li>
-				            			<a href="{{ .RelPermalink}}" > {{ .LinkTitle }} </a> <br>
-				            			{{ .PublishDate.Format "Mon, Jan 2, 2006" }}
-				            		</li>
+								{{ .Render "li"}}
 				            	{{ end }}			            
 				            {{ end }}
 				        {{ end }}
@@ -152,10 +149,7 @@
 				        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
 				            {{ range first 3 $taxonomy.Pages.ByDate.Reverse }}
 				            	{{ if eq $key "posts" }}
-				            		<li>
-				            			<a href="{{ .RelPermalink}}" style="color: black; font-weight: 150; "> {{title .LinkTitle }} </a> <br>
-				            			{{ .PublishDate.Format "Mon, Jan 2, 2006" }}				            		
-				            		</li>
+								{{ .Render "li"}}
 				            	{{ end }}			            
 				            {{ end }}
 				        {{ end }}
@@ -168,10 +162,7 @@
 				        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
 				            {{ range first 3 $taxonomy.Pages.ByDate.Reverse }}
 				            	{{ if eq $key "news" }}
-				            		<li>
-				            			<a href="{{ .RelPermalink}}"> {{ .LinkTitle }} </a> <br>
-				            			{{ .PublishDate.Format "Mon, Jan 2, 2006" }}				            		
-				            		</li>
+								{{ .Render "li"}}
 				            	{{ end }}			            
 				            {{ end }}
 				        {{ end }}

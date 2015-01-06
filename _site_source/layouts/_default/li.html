@@ -1,4 +1,5 @@
 <li>
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-<div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
+	<a href="{{ .RelPermalink}}" > {{ .LinkTitle }} </a> <br>
+    {{ .PublishDate.Format "Mon, Jan 2, 2006" }}
 </li>
+
