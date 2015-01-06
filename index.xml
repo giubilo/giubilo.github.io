@@ -10,20 +10,20 @@
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>content model</title>
-      <link>http://localhost:1313/concept/contentmodel/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/concept/contentmodel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>about</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
       <guid>http://localhost:1313/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>content model</title>
+      <link>http://localhost:1313/concept/contentmodel/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concept/contentmodel/</guid>
       <description></description>
     </item>
     
