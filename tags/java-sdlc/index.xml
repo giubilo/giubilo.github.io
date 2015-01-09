@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Java-Sdlc on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/java-sdlc/index.xml/</link>
+    
+    
+    
+    <updated>Tue, 01 Jan 2008 00:00:00 UTC</updated>
+    
+    <item>
+      <title>java</title>
+      <link>http://localhost:1313/retrospectives/java/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/java/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/totalbeginner.html&#34;&gt;http://eclipsetutorial.sourceforge.net/totalbeginner.html&lt;/a&gt;
+&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&#34;&gt;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&lt;/a&gt;
+&lt;a href=&#34;http://sourceforge.net/projects/eclipsetutorial/files/&#34;&gt;http://sourceforge.net/projects/eclipsetutorial/files/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The companion has resources listed in the back including (gold standard):
+&lt;a href=&#34;http://docs.oracle.com/javase/tutorial/java/index.html&#34;&gt;http://docs.oracle.com/javase/tutorial/java/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&#34;&gt;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=al7bRZzz4oU&#34;&gt;http://www.youtube.com/watch?v=al7bRZzz4oU&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&#34;&gt;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;maven in Eclipse:  &lt;a href=&#34;http://www.youtube.com/watch?v=xE2F4Z_wKCU&#34;&gt;http://www.youtube.com/watch?v=xE2F4Z_wKCU&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

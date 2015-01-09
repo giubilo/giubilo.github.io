@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Github-Sdlc-Dvcs on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/github-sdlc-dvcs/index.xml/</link>
+    
+    
+    
+    <updated>Tue, 01 Jan 2008 00:00:00 UTC</updated>
+    
+    <item>
+      <title>github</title>
+      <link>http://localhost:1313/retrospectives/gitHub/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/gitHub/</guid>
+      <description>
+
+&lt;p&gt;First things first! There&amp;rsquo;s a lot of stuff to manage; source code objects, project information, documentation, issues and will need to see how this stuff changes over time.  Had mainly used commercial implementations of source repositories and team collaboration / wiki tools.  Looked at a few open source ones (GitHub, BitBucket, SourceForge) and chose GitHub because; it had plenty of &lt;a href=&#34;http://git-scm.com/about&#34;&gt;documentation&lt;/a&gt; and &lt;a href=&#34;http://teach.github.com&#34;&gt;training&lt;/a&gt;, active community, mac client, eclipse plug-in and there are other modules such as cmis-perl, pDLNA and ember media manager - that the project will be leveraging - are also on GitHub.&lt;/p&gt;
+
+&lt;p&gt;So we are going to use Git for:&lt;/p&gt;
+
+&lt;p&gt;|GitHub Capability  |Use  |
+|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;|&lt;br /&gt;
+|GitHubPages |project information  |&lt;br /&gt;
+|source code management tools (&amp;lt;&amp;gt; icon) | code storage, organisation, versioning, collaboration, backup, code review  |&lt;br /&gt;
+|wiki (the book icon) | how to documentation  |&lt;br /&gt;
+|issues (the (!) icon) | requirements and issue tracking   |
+|GitHub stats  | use the graphs and &lt;a href=&#34;https://help.github.com/articles/be-social&#34;&gt;social stuff&lt;/a&gt; to see how we are going |&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s a bit of a hill to climb to get the most out of Git but it was great to put a &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resource&lt;/a&gt; in like this as a first thing for the project as everything had a place to go and when talking to people could point them to it no matter where they were in the world.  We&amp;rsquo;re just using some of the basic bits.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Setup GitHub account&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup repository&lt;/li&gt;
+&lt;li&gt;Clone to desktop&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Edit README&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup GitHubPages&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup wiki&lt;/li&gt;
+&lt;li&gt;Setup issues&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;1. Setup GitHub account&lt;/h3&gt;
+
+&lt;p&gt;Simple registration, can do a free account or various paid ones if want more functionality, just go to &lt;a href=&#34;github.com&#34;&gt;github.com&lt;/a&gt;.  Can have individual accounts or organisation accounts.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;2. Setup repository(s)&lt;/h3&gt;
+
+&lt;p&gt;Just used the online prompts but there is an excellent &lt;a href=&#34;https://help.github.com&#34;&gt;bootcamp tutorial&lt;/a&gt;. Currently the project has repos for;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;allegria - the main repository that this wiki is in&lt;/li&gt;
+&lt;li&gt;pDLNA - a &amp;lsquo;forked&amp;rsquo; repository of some modules that allegria will customise&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have initially set the allegria repo up as a catchall for all the concepts being developed.  Later on may make submodules of each of the big areas to make cloning easier but just keeping it simple for now.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;3. Clone to desktop&lt;/h3&gt;
+
+&lt;p&gt;So you need a client application on your desktop to clone your repository to so that you can work on it.  Can do this with the &lt;a href=&#34;http://git-scm.com/downloads&#34;&gt;commandline client&lt;/a&gt;, which is ok and has lots of &lt;a href=&#34;http://git-scm.com/about&#34;&gt;documentation&lt;/a&gt;.  Or can use a &lt;a href=&#34;http://git-scm.com/downloads/guis&#34;&gt;graphical client&lt;/a&gt; (had a brief look at the mac client and it was pretty cool).  But for this project&amp;rsquo;s purposes we are using a graphical client that is embedded into the Eclipse Integrated Development Environment &lt;a href=&#34;./Paint-by-numbers:-Eclipse-with-Epic-and-Egit&#34;&gt;see the paint-by numbers here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;4. Edit README&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://help.github.com/articles/create-a-repo&#34;&gt;create a repo&lt;/a&gt; tutorial suggests that it is a good idea for your GitHub repository to have a &lt;a href=&#34;.&#34;&gt;README&lt;/a&gt; (or README.md) file which is like a summary landing page for the online webclient. If you create a repo through the command line there&amp;rsquo;s a few hoops to jump through but if you use the online webclient there is a checkbox to initialise the repo with a readme (that&amp;rsquo;s the easiest way to go).  The readme&amp;rsquo;s a good place to put some summary detail about the project and kick off some links to things like a project page, the wiki or to related sites.&lt;/p&gt;
+
+&lt;p&gt;The readme can use a &amp;lsquo;markdown&amp;rsquo; type language and there is tons of help for it like; &lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown&#34;&gt;articles in GitHub&lt;/a&gt; or &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax#link&#34;&gt;blogs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;5. Setup GitHub Pages&lt;/h3&gt;
+
+&lt;p&gt;The readme file is a good start to give people a snapshot of the project, but we wanted to have something a bit more, so are using &lt;a href=&#34;http://pages.github.com&#34;&gt;GitHubPages&lt;/a&gt;.  It is initially a bit tricky to set up. We used the wizard that is on the GitHubPages site but it seemed to not do anything (it says to wait 10 mins).  After a while if you go to the url (username.github.io/repository) that the wizard gives you (in our case it was &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;http://peterwatts.github.io/allegria/&lt;/a&gt;) then you should see the default page.&lt;/p&gt;
+
+&lt;p&gt;Underneath, the GitHubPages is a gh-pages branch under your repo and you can go into there and customise it to your heart&amp;rsquo;s content (we initially just tweaked the index page (by editing it online) with project information).  You could probably use some cool tools to manage it much as you would any normal html website but we are doing it all manually at the moment.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;6. Setup wiki&lt;/h3&gt;
+
+&lt;p&gt;Using the wiki for the majority of documentation for the project other than read-me&amp;rsquo;s and release notes etc which are included in each of the development directories.&lt;/p&gt;
+
+&lt;p&gt;Generally the wiki makes it easy to put up some information relatively quickly.  Needed to play around with getting the markup correct (e.g. putting spaces after text on end of line to get to display on next line, using relative links and embedding images in the pages).&lt;/p&gt;
+
+&lt;p&gt;Using predominantly the &amp;ldquo;Markdown&amp;rdquo; editing mode as it&amp;rsquo;s the default (&lt;a href=&#34;http://www.mediawiki.org/wiki/MediaWiki&#34;&gt;MediaWiki&lt;/a&gt; would also be useful) and just using basic functionality to begin with including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;simple naming standard of Home, Concept, HowTo, Paint-by-numbers, Point-of-view so the &amp;lsquo;Pages&amp;rsquo; page looks organised and relative links are easy to guess.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;formatting like; headings, bold, code blocks, unordered lists, ordered lists and quotes.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;relative links for content inside the Github repository (including for images).&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is plenty of raw documentation out there about the wiki syntax including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/categories/88/articles&#34;&gt;GitHub Help&lt;/a&gt; including; Writing on GitHub, Markdown Basics and GitHub Flavoured Markdown&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://guides.github.com/overviews/mastering-markdown/&#34;&gt;http://guides.github.com/overviews/mastering-markdown/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gollum/gollum/wiki&#34;&gt;https://github.com/gollum/gollum/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mojombo/gollum-demo/wiki&#34;&gt;https://github.com/mojombo/gollum-demo/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown&#34;&gt;https://help.github.com/articles/github-flavored-markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/blog/1395-relative-links-in-markup-files&#34;&gt;https://github.com/blog/1395-relative-links-in-markup-files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/relative-links-in-readmes&#34;&gt;https://help.github.com/articles/relative-links-in-readmes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;http://daringfireball.net/projects/markdown/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://designshack.net/articles/html/mastering-markdown-30-resources-apps-and-tutorials-to-get-you-started/&#34;&gt;http://designshack.net/articles/html/mastering-markdown-30-resources-apps-and-tutorials-to-get-you-started/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also a few forum examples for some of the trickier formatting stuff such as:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webapps.stackexchange.com/questions/29602/markdown-to-insert-and-display-an-image-on-github-repo&#34;&gt;embedding images into a wiki page&lt;/a&gt; - some of the standard information available looked confusing or inaccurate - but this explanation seems to work.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/snowplow/snowplow/wiki&#34;&gt;example Github wiki&lt;/a&gt; that has some nice table footer and sidebar functionality.&lt;/li&gt;
+&lt;li&gt;plenty of forum examples out there on using the Eclipse IDE to author the wiki rather than typing into the online webclient but need to test out how to do this before write about it.&lt;/li&gt;
+&lt;li&gt;can get some of the work in formatting tables done with a &lt;a href=&#34;http://www.tablesgenerator.com/markdown_tables&#34;&gt;table generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;ldquo;Github Flavoured Markdown (GFM) Markdown table syntax is quite simple. It does not allow row or cell spanning as well as putting multi-line text in a cell&amp;rdquo;.  To get a bit fancier can use some inline HTML.  The &lt;a href=&#34;http://www.w3schools.com/html/html_tables.asp&#34;&gt;W3Schools site&lt;/a&gt; has some good documentation for this (and syntax in general).&lt;/p&gt;
+
+&lt;p&gt;Simple example using the info from W3Schools:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;table border=&amp;quot;0&amp;quot;&amp;gt;
+  &amp;lt;!--tr gives you a new table row and td gives you a new cell in the row--&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;For more information on using groovy with cmis:
+     &amp;lt;ul&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://groovy.codehaus.org&amp;quot;&amp;gt;Groovy home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://groovy.codehaus.org/Documentation&amp;quot;&amp;gt;Groovy documentation&amp;lt;/a&amp;gt; including getting started and tutorials&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.ibm.com/developerworks/java/tutorials/j-groovy&amp;quot;&amp;gt;IBM groovy tutorial&amp;lt;/a&amp;gt; includes using with Eclipse IDE&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.gradle.org&amp;quot;&amp;gt;Gradle&amp;lt;/a&amp;gt; build system for groovy&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;books with groovy code examples&amp;lt;/li&amp;gt;
+     &amp;lt;/ul&amp;gt;
+    &amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;
+      &amp;lt;!--The target=&amp;quot;_blank&amp;quot; tag opens in a new browser tab when click on image--&amp;gt;
+      &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://www.manning.com/mueller&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;
+        &amp;lt;img src=&amp;quot;./images/manning-cmis.png?raw=true&amp;quot; alt=&amp;quot;book&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;/table&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which produces:&lt;/p&gt;
+
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;For more information on using groovy with cmis:
+   &lt;ul&gt;
+   &lt;li&gt;&lt;a href=&#34;http://groovy.codehaus.org&#34;&gt;Groovy home&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://groovy.codehaus.org/Documentation&#34;&gt;Groovy documentation&lt;/a&gt; including getting started and tutorials&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/java/tutorials/j-groovy&#34;&gt;IBM groovy tutorial&lt;/a&gt; includes using with Eclipse IDE&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://www.gradle.org&#34;&gt;Gradle&lt;/a&gt; build system for groovy&lt;/li&gt;
+   &lt;li&gt;books with groovy code examples&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/mueller&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/manning-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Examples of coding with images:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a name=&amp;quot;PaintByNumbers&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 
+##![Paint](/assets/img/paint-by-numbers-50.png?raw=true) Paint by Numbers  
+
+&amp;lt;a name=&amp;quot;HowTo&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 
+&amp;lt;html&amp;gt;
+  &amp;lt;h2&amp;gt;
+      &amp;lt;img src=&amp;quot;../blob/master/images/paint-by-numbers-50.png?raw=true&amp;quot; alt=&amp;quot;icon&amp;quot; style=&amp;quot;float:left&amp;quot;&amp;gt; How To&#39;s
+  &amp;lt;/h2&amp;gt;
+&amp;lt;/html&amp;gt; 
+
+[![Gem Version](https://badge.fury.io/rb/gollum.png)](http://rubygems.org/gems/gollum)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;7. Setup issues log&lt;/h3&gt;
+
+&lt;p&gt;Not getting too funky here but will use the issues list capability to store:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;requirements definitions (green label)&lt;/li&gt;
+&lt;li&gt;project issues / key decisions&lt;/li&gt;
+&lt;li&gt;bugs, enhancements etc&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

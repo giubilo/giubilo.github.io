@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Project-Management on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/project-management/index.xml/</link>
+    
+    
+    
+    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Project Success</title>
+      <link>http://localhost:1313/retrospectives/project-success/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/project-success/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Introduction
+It might be stating the obvious but we begin a project with the view that we are going to successfully deliver the project’s outcomes. Right! In general I guess that is true, except for those stakeholders hoping we don’t finish, don’t deliver, don’t succeed.
+Is finishing or delivering, the end-game then? Is that what success is.  How do we know we are at the end? How do we measure the level to which we have achieved the outcomes?
+Who Says What Success Is?
+What success means, is dependant generally on perspective; that is, who we are measuring success for.  There are generally many stakeholders on a project, all with their own views, sometimes conflicting, on what success is.  Success then is defined by the stakeholder’s personal views, professional views, role they play on the project or in society.  Their views are more than likely affected by the impact the project has on the environment, dictated by things like scale (100,000 people, 10 years) and nature (e.g. construction, software, social change) of the project.
+The old saying “the project was brought in on time, on budget and with acceptable quality” is still, in some peoples mind, the measure of project success.  There is much evidence to suggest however, that these are not the only measures of success.&lt;/p&gt;
+
+&lt;p&gt;Turner&lt;br /&gt;
+Hartman&lt;/p&gt;
+
+&lt;p&gt;Success as a Function of Time
+Projects are unique, transient, almost organic entities.  They have a start, middle and end.&lt;br /&gt;
+At the beginning of a project it is important to understand what are the criteria for success and who is measuring success.  This allows the direction of the project to be set and provides a yardstick with which to later evaluate the project.
+During the project we monitor success at useful points to ensure there is a reason to continue, to learn from what we have done right so that we can continue to use successful techniques and use points of success to motivate the team.
+It is important to end the project with success as generally all stakeholders have begun and continued the project with the thought of success.
+The point in time we are measuring success has an enormous influence on what success is and who measures success.  The team may be interested in time and quality during the project, the sponsor in cost at delivery time and the community might be interested in the impact the project had years after it was delivered.&lt;/p&gt;
+
+&lt;p&gt;PIC&lt;/p&gt;
+
+&lt;p&gt;Maximising Success
+Some easy steps to maximise the chances of success;
+* Understand the general drivers, pressures, resistance and dynamics of projects
+* Learn from past mistakes
+* Apply sound management techniques&lt;/p&gt;
+
+&lt;p&gt;Understanding Projects
+The chances of success can be maximised if you manage the forces on the project effectively.&lt;/p&gt;
+
+&lt;p&gt;Turner describes a number of interactions of a project.  Each may have an affect on the other.  Even though most projects by their nature are unique, some of the effects of the interactions may be understood through examining similarities to other projects.  Many of these project integration affects are well documented.&lt;/p&gt;
+
+&lt;p&gt;Of all the project dynamics, Attitude is the most important.
+The chances of success are substantially diminished unless;
+* There is major commitment to making the project a success
+* The motivation of everyone working on the project is high
+* Attitudes are supportive and positive.&lt;/p&gt;
+
+&lt;p&gt;Learning From The Past
+There is an enormous amount of generic information about what teams have done in the past to succeed and what pitfalls caused a less than desirable outcome.  The sheer volume of literature and anecdotal evidence to suggest that projects fail is a strong indicator for being concerned about why projects fail.
+By looking to the past we can see what worked and what didn’t so that we can learn from past successes and avoid past mistakes.&lt;/p&gt;
+
+&lt;p&gt;project failure examples&lt;/p&gt;
+
+&lt;p&gt;Cunning Plan: We&amp;rsquo;ll just do it!!&lt;/p&gt;
+
+&lt;p&gt;If you fail to plan, then plan to fail.&lt;/p&gt;
+
+&lt;p&gt;We never seem to have time to plan our projects, but we always have time to do them twice.&lt;/p&gt;
+
+&lt;p&gt;Project Pitfalls
+3 Grude describes a number of categories of pitfalls that have been observed on projects.  This is not intended as an exhaustive list but useful as a quick health check for a project;&lt;/p&gt;
+
+&lt;p&gt;Establishing the Project&lt;br /&gt;
+Pitfalls in the way the project is set up within the parent organisation;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project plans not aligned with business plans,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;procedures for managing projects are not well defined,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;priorities are not communicated to parties involved,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;no shared vision.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Planning the Project
+Pitfalls in the way the work is defined, the time &amp;amp; cost schedules calculated and communicated to the project team;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project plans developed on a single level,&lt;/li&gt;
+&lt;li&gt;using cumbersome tools,&lt;/li&gt;
+&lt;li&gt;creativity discouraged,&lt;/li&gt;
+&lt;li&gt;unrealistic estimates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Organising &amp;amp; Implementing the Project
+Pitfalls in building the project organisation and assigning work to people;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lack of cooperation,&lt;/li&gt;
+&lt;li&gt;resource providers not committed,&lt;/li&gt;
+&lt;li&gt;resources not available when required,&lt;/li&gt;
+&lt;li&gt;management responsibility not defined,&lt;/li&gt;
+&lt;li&gt;poor communication,&lt;/li&gt;
+&lt;li&gt;technical vs project management.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Controlling the Project
+Pitfalls in monitoring and control;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;purpose of control not understood,&lt;/li&gt;
+&lt;li&gt;progress is not monitored against the plan,&lt;/li&gt;
+&lt;li&gt;ineffective review meetings,&lt;/li&gt;
+&lt;li&gt;responsibility without authority.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Principles of Good Project Management
+Project Management, just as any other management stream, has it’s own principles upon which a manager can look to for guidance.  There is a huge body of stored knowledge on the principles and professional certification available for those willing.  These will all arm the manager with an enormous amount of skill and techniques on which to build experience.
+In addition to reading through all of the available knowledge and undertaking the available studies a number of simple, practical principles may be relied upon;
+ Most large or complex problems become easier if broken down into manageable parts that     allow them all to be absorbed.  Make use of breakdown structures for any part of the project    that requires visibility and understanding, such as tasks, people, product, organisation.  By   breaking then down we can more easily see new information about each piece as it becomes    evident over time.  This makes it possible to monitor and manage the project elaboration.
+ People are the biggest factor in nearly all projects, they need to be adequately motivated,    organised, committed, directed, skilled and communicated with.  You need to confirm and     align stakeholder’s success criteria.  Disregard the people factors at your peril.
+ Get as many successes as you can.  Organise the team, the schedule &amp;amp; the work so that  successes happy often.  If each small step is a success it will be easier and more likely that  the journey will be a success.  Learn from past successes and avoid the causes for past     failures.
+ Continuously carry out health checks and audits.  The old adage, ‘if it isn’t broken, don’t fix it’    doesn’t apply if we don’t know it isn’t broken.  Only by understanding the dynamics and     symptoms of a project can we steer the ship and take corrective actions.&lt;/p&gt;
+
+&lt;p&gt;Above all else KEEP IT SIMPLE.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Project Management</title>
+      <link>http://localhost:1313/retrospectives/project-management/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/project-management/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;allegria&amp;rsquo;s objectives seem straightforward enough:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;work out how to make the processes and tools large organisations use to organise stuff, practical for a household.&lt;/li&gt;
+&lt;li&gt;learn how to use some open source application lifecycle techniques, tools and technologies.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;have some fun and pass back what&amp;rsquo;s been learned to the community.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But what will it take to achieve them - &lt;a href=&#34;www.imdb.com/title/tt0066011/&#34;&gt;where do we begin&lt;/a&gt;?&lt;/p&gt;
+
+&lt;p&gt;Start at the beginning probably, although it may make more sense to start at the end, get a clear idea of [what success looks|Helicopter View: Success] like and write it down so there is a beacon to aim for and to keep the boat off the rocks.&lt;/p&gt;
+
+&lt;p&gt;With a clear view on success I hear you say &amp;lsquo;roll your sleeves up and get on with it&amp;rsquo; - the cunning plan - &lt;em&gt;just do it&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;And sometimes that is the best way to get things done, particulalry when the thing being done (product) is well known, how to do it is well known (process) and the whoever is doing it have worked together to do it before (people) i.e. the [dynamics|Helicopter View: Dynamics] are well understood.  Just getting on with it might also be the best approach when doing something like writing and writer&amp;rsquo;s block has set in making it difficult to start.  The &lt;a href=&#34;www.imdb.com/title/tt0181536/&#34;&gt;Forrestor Principle&lt;/a&gt; says to just sit down and write (but be prepared to re-write as well).&lt;/p&gt;
+
+&lt;p&gt;allegria as a product has parts well established (like the Alfresco platform), although in a corporate setting rather than for consumers and some of its technical parts are pretty new, and as is likely the case with most open source projects the people working on it also we have at the start none or limited experience with consumer content managemet and open source tools and techniques.&lt;/p&gt;
+
+&lt;p&gt;at the At the other end of the spectrum to the cunning plan, is to follow a prescription project management philosophy.&lt;/p&gt;
+
+&lt;p&gt;cunning plan is doable when just 1 person will build and use the product but as soon as add another for either activity then need some way to engage other (that means will need to use one or more PM techniques - and really even if you are by yourself will get some value from PM techniques).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project success&lt;/li&gt;
+&lt;li&gt;HRM&lt;/li&gt;
+&lt;li&gt;practitioner approaches&lt;/li&gt;
+&lt;li&gt;project dynamics&lt;/li&gt;
+&lt;li&gt;project lifecycle&lt;/li&gt;
+&lt;li&gt;quality&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Need a whole thing on the systems bit (not a PMBOK area but should add) as setting up an environment for manaing the project stuff and the development stuff and the overlap / integrations between them (think tasks / collaboration / consistency etc - all this is so integral to getting a project that has a systems flovour)&lt;/p&gt;
+
+&lt;p&gt;is this ia project or a product is it a number of projects to make a product -&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&#34;http://www.imdb.com/title/tt0097647/&#34;&gt;Karate Kid III (1989)&lt;/a&gt; Mr. Miyagi sagely tells his pupil (but about karate);&lt;br /&gt;
+&lt;em&gt;Mr. Kesuke Miyagi: Ah. Only root [development] come from Miyagi. Just like bonsai choose own way grow because root strong you choose own way do karate same reason.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;Daniel Larusso: I do it your way.&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;Mr. Kesuke Miyagi: Hai. One day you do own way.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Setting up some basic project resources for allegria was a bit like Miyagi San&amp;rsquo;s bonsai analogy for karate&amp;hellip;we wanted to have some basis in the steps of the [root] development process like:
+* propagate the idea - build the business case and project plan
+* work out the boundaries and requirements
+* define detailed design
+* specify technical elements and tools
+* determine the build, test and implement approach&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;but there really isn&amp;rsquo;t a traditional business case for this, we just want to do something &lt;a href=&#34;http://dictionary.reverso.net/italian-english/allegria&#34;&gt;fun&lt;/a&gt; and interesting - build &lt;a href=&#34;http://www.imdb.com/title/tt0097351/&#34;&gt;a field of dreams&lt;/a&gt;. It&amp;rsquo;s not going to be sold and nobody&amp;rsquo;s getting paid for this, which means even though there&amp;rsquo;s no fixed schedule, need to get quick, easy successes that build momentum and enthusiasm.  So our &amp;lsquo;own karate way&amp;rsquo; is somewhere in the middle of a spectrum of a sensible structured approach and the just-do-it cunning plan.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;project page&lt;/a&gt; describes the idea, objectives of the project and broadly a plan to get there.  The &lt;a href=&#34;../blob/master/README.md&#34;&gt;readme&lt;/a&gt;, &lt;a href=&#34;./&#34;&gt;wiki&lt;/a&gt; and &lt;a href=&#34;../issues&#34;&gt;issues&lt;/a&gt; describe a mixture of requirements and design (the summary &lt;a href=&#34;./Concept-Work&#34;&gt;concept&lt;/a&gt; and &lt;a href=&#34;./How-To&#39;s&#34;&gt;how to&lt;/a&gt; pages hold the 1000ft descriptions and will look to flesh this out in each of the underlying detail pages). We might be schmicky later with some traceability from objectives through requirements to code, test and implementation but for now going to take a pragmatic middle ground).&lt;/p&gt;
+
+&lt;p&gt;That leaves the technical elements.  Yes, it would be nice to have a bit more detail up front about what this thing is going to look like to determine an appropriate architecture, tools and approach but without trying to incite some zealous rage from technical purists the reality for this project is that there are some other drivers to these choices including:
+* the &lt;a href=&#34;http://www.imdb.com/title/tt0880557/&#34;&gt;64 million dollar&lt;/a&gt; question you&amp;rsquo;re probably thinking though is &amp;lsquo;why build a home media centre on top of a document management system - who does that? movies aren&amp;rsquo;t documents or web pages, just build a streaming app with genre folders&amp;rsquo;&amp;hellip;and I say, &amp;lsquo;it&amp;rsquo;s all content man!&amp;rsquo;, its just a content centric app&amp;hellip;not convinced? have a read of the &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;project page&lt;/a&gt; and choose then.
+* once had settled on doing this in a Content Management System had to pick a horse from the pack &amp;ndash;have looked at dozens of open source content / process tools but for whatever reason keep gravitating back to Alfresco - it might be the some of the words like &amp;lsquo;simple&amp;rsquo; and &amp;lsquo;solid&amp;rsquo; in the &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/concepts/alfresco-principles.html&#34;&gt;guiding design principles&lt;/a&gt; or that it was quick to get a feel for it and put content in, or the size of the surrounding community, or the shiny new Activiti tool, whatever it was we&amp;rsquo;re here. And now that have picked, a key objective of the project is to get better at using the Alfresco platform and use / enhance all of its capabilities and show others how we did it (interestingly Git is also a contender particularly for its feature of all collaborators having equal status of document versions - no single authoritative copy of something - and using sophisticated merge capabilities to sort out the logistics of merging updates).
+* for us, key to Alfresco &amp;lsquo;making sense&amp;rsquo; as a media centre is how it fits into the consumer ecosystems surrounding streaming stuff (movies, songs, pictures etc).  The horse race for technology contenders for this is close, none (and this will likely rattle more than a few cages) have really stuck out for us as THE ONE to choose.  This is crystal ball gazing rather than any scientific thinking about &lt;a href=&#34;./1.2.1-Where&#39;s-streaming-heading%3F&#34;&gt;where things are heading&lt;/a&gt;&amp;hellip;really just picked some &amp;lsquo;standards&amp;rsquo; that had some definition and community and will give them a crack (DLNA - Digital Living Network Alliance, UPnP - Universal Plug an Play and plug these into a content management standard CMIS -Content Management Interoperability Services).
+* another key objective is to get a better understanding of &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/newto/&#34;&gt;open source projects&lt;/a&gt;, so; using open source tools in a distributed collaborative approach (Alfresco and its addons and interfaces are developed in SpringSurf, Java, Python, Perl, C, Ruby etc and many are hosted on GitHub - so made sense to select from them).&lt;/p&gt;
+
+&lt;p&gt;• Integration Management&lt;br /&gt;
+• Scope Management&lt;br /&gt;
+• Time Management&lt;br /&gt;
+• Cost Management&lt;br /&gt;
+• Quality Management&lt;br /&gt;
+• Human Resources Management&lt;br /&gt;
+• Communications Management&lt;br /&gt;
+• Risk Management&lt;br /&gt;
+• Procurement Management&lt;br /&gt;
+• Stakeholder Management&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;orGAnIZAtIonAL InFLuEncES And ProJEct LIFE cYcLE &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;. 19
+2.1 organizational Influences on Project Management &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; 20 2.1.1 organizational cultures and Styles &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;. 20 2.1.2 organizational communications &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 21 2.1.3 organizational Structures &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;. 21 2.1.4 organizational Process Assets &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 27 2.1.5 Enterprise Environmental Factors &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; 29&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2.2 Project Stakeholders and Governance &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 30 2.2.1 Project Stakeholders&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; 30 2.2.2 Project Governance &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 34 2.2.3 Project Success&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 35
+2.3 Project team &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;. 35 2.3.1 composition of Project teams &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; 37 2.4 Project Life cycle &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; 38 2.4.1 characteristics of the Project Life cycle &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 38 2.4.2 Project Phases&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;. 41&lt;/p&gt;
+
+&lt;p&gt;Organizational culture is shaped by the common experiences of members of the organization and most organizations have developed unique cultures over time by practice and common usage. Common experiences include, but are not limited to:
+• Shared visions, mission, values, beliefs, and expectations;&lt;br /&gt;
+• Regulations, policies, methods, and procedures;&lt;br /&gt;
+• Motivation and reward systems;&lt;br /&gt;
+• Risk tolerance;&lt;br /&gt;
+• View of leadership, hierarchy, and authority relationships;&lt;br /&gt;
+• Code of conduct, work ethic, and work hours; and&lt;br /&gt;
+• Operating environments.&lt;/p&gt;
+
+&lt;p&gt;Many organizational structures include strategic, middle management, and operational levels. The project manager may interact with all three levels depending on factors such as:
+• Strategic importance of the project,&lt;br /&gt;
+• Capacity of stakeholders to exert influence on the project,&lt;br /&gt;
+• Degree of project management maturity,&lt;br /&gt;
+• Project management systems, and&lt;br /&gt;
+• Organizational communications.&lt;br /&gt;
+This interaction determines project characteristics such as:&lt;br /&gt;
+• Project manager’s level of authority,&lt;br /&gt;
+• Resource availability and management,&lt;br /&gt;
+• Entity controlling the project budget,&lt;br /&gt;
+• Project manager’s role, and&lt;br /&gt;
+• Project team composition.&lt;/p&gt;
+
+&lt;p&gt;The project life cycle is independent from the life cycle of the product produced by or modified by the project. However, the project should take the current life-cycle phase of the product into consideration.  A project may be divided into any number of phases. A project phase is a collection of logically related project activities that culminates in the completion of one or more deliverables. Project phases are used when the nature of the work to be performed is unique to a portion of the project, and are typically linked to the development of a specific major deliverable. A phase may emphasize processes from a particular Project Management Process Group, but it is likely that most or all processes will be executed in some form in each phase. Project phases typically are completed sequentially, but can overlap in some project situations. Different phases typically have a different duration or effort. The high-level nature of project phases makes them an element of the project life cycle.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Phase-to-Phase relationships: sequential and overlapping&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Predictive Life cycles&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Iterative and Incremental Life cycles&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Adaptive life cycles (also known as change-driven or agile methods) are intended to respond to high levels of change and ongoing stakeholder involvement. Adaptive methods are also iterative and incremental, but differ in that iterations are very rapid (usually with a duration of 2 to 4 weeks) and are fixed in time and cost. Adaptive projects generally perform several processes in each iteration, although early iterations may concentrate more on planning activities.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Adaptive methods are generally preferred when dealing with a rapidly changing environment, when requirements and scope are difficult to define in advance, and when it is possible to define small incremental improvements that will deliver value to stakeholders.&lt;/p&gt;
+
+&lt;p&gt;The project processes are performed by the project team with stakeholder interaction and generally fall into one of two major categories:
+• Project management processes. These processes ensure the effective flow of the project throughout its life cycle. These processes encompass the tools and techniques involved in applying the skills and capabilities described in the Knowledge Areas (Sections 4 through 13).&lt;br /&gt;
+• Product-oriented processes. These processes specify and create the project’s product. Product- oriented processes are typically defined by the project life cycle (as discussed in Section 2.4) and vary by application area as well as the phase of the product life cycle. The scope of the project cannot be defined without some basic understanding of how to create the specified product. For example, various construction techniques and tools need to be considered when determining the overall complexity of the house to be built.&lt;/p&gt;
+
+&lt;p&gt;Stakeholder Management:&lt;/p&gt;
+
+&lt;p&gt;Project Stakeholder Management includes the processes required to identify the people, groups, or organizations that could impact or be impacted by the project, to analyze stakeholder expectations and their impact on the project, and to develop appropriate management strategies for effectively engaging stakeholders in project decisions and execution. Stakeholder management also focuses on continuous communication with stakeholders to understand their needs and expectations, addressing issues as they occur, managing conflicting interests and fostering appropriate stakeholder engagement in project decisions and activities. Stakeholder satisfaction should be managed as a key project objective.&lt;/p&gt;
+
+&lt;p&gt;Integration:&lt;/p&gt;
+
+&lt;p&gt;Project Charter:
+• Project purpose or justification,&lt;br /&gt;
+• Measurable project objectives and related success criteria,&lt;br /&gt;
+• High-level requirements,&lt;br /&gt;
+• Assumptions and constraints,&lt;br /&gt;
+• High-level project description and boundaries,&lt;br /&gt;
+• High-level risks,&lt;br /&gt;
+• Summary milestone schedule,&lt;br /&gt;
+• Summary budget,&lt;br /&gt;
+• Stakeholder list,&lt;br /&gt;
+• Project approval requirements (i.e., what constitutes project success, who decides the project is successful, and who signs off on the project),&lt;br /&gt;
+• Assigned project manager, responsibility, and authority level, and&lt;br /&gt;
+• Name and authority of the sponsor or other person(s) authorizing the project charter.&lt;/p&gt;
+
+&lt;p&gt;Scope:&lt;/p&gt;
+
+&lt;p&gt;Requirements documentation describes how individual requirements meet the business need for the project. Requirements may start out at a high level and become progressively more detailed as more about the requirements is known. Before being baselined, requirements need to be unambiguous (measurable and testable), traceable, complete, consistent, and acceptable to key stakeholders. The format of a requirements document may range from a simple document listing all the requirements categorized by stakeholder and priority, to more elaborate forms containing an executive summary, detailed descriptions, and attachments.
+Components of requirements documentation can include, but, are not limited to:&lt;br /&gt;
+• Business requirements, including:&lt;br /&gt;
+○ Business and project objectives for traceability;&lt;br /&gt;
+○ Business rules for the performing organization; and&lt;br /&gt;
+○ Guiding principles of the organisation.&lt;br /&gt;
+• Stakeholder requirements, including:&lt;br /&gt;
+○ Impacts to other organizational areas;&lt;br /&gt;
+○ Impacts to other entities inside or outside the performing organization; and ○ Stakeholder communication and reporting requirements.&lt;br /&gt;
+• Solution requirements, including:&lt;br /&gt;
+○ Functional and nonfunctional requirements;&lt;br /&gt;
+○ Technology and standard compliance requirements;&lt;br /&gt;
+○ Support and training requirements;&lt;br /&gt;
+○ Quality requirements; and&lt;br /&gt;
+○ Reporting requirements, etc. (solution requirements can be documented textually, in models, or both).&lt;br /&gt;
+• Project requirements, such as:&lt;br /&gt;
+○ Levels of service, performance, safety, compliance, etc.; and ○ Acceptance criteria.&lt;br /&gt;
+• Transition requirements.&lt;br /&gt;
+• Requirements assumptions, dependencies, and constraints.&lt;/p&gt;
+
+&lt;p&gt;The requirements traceability matrix is a grid that links product requirements from their origin to the deliverables that satisfy them. The implementation of a requirements traceability matrix helps ensure that each requirement adds business value by linking it to the business and project objectives. It provides a means to track requirements throughout the project life cycle, helping to ensure that requirements approved in the requirements documentation are delivered at the end of the project. Finally, it provides a structure for managing changes to the product scope.
+Tracing includes, but is not limited to, tracing requirements for the following:
+• Business needs, opportunities, goals, and objectives;&lt;br /&gt;
+• Project objectives;&lt;br /&gt;
+• Project scope/WBS deliverables;&lt;br /&gt;
+• Product design;&lt;br /&gt;
+• Product development;&lt;br /&gt;
+• Test strategy and test scenarios; and&lt;br /&gt;
+• High-level requirements to more detailed requirements.&lt;br /&gt;
+Attributes associated with each requirement can be recorded in the requirements traceability matrix. These attributes help to define key information about the requirement. Typical attributes used in the requirements traceability matrix may include: a unique identifier, a textual description of the requirement, the rationale for inclusion, owner, source, priority, version, current status (such as active, cancelled, deferred, added, approved, assigned, completed), and status date. Additional attributes to ensure that the requirement has met stakeholders’ satisfaction may include stability, complexity, and acceptance criteria.&lt;/p&gt;
+
+&lt;p&gt;(docs, decisions)&lt;/p&gt;
+
+&lt;p&gt;Quality:&lt;/p&gt;
+
+&lt;p&gt;In the context of achieving ISO compatibility, modern quality management approaches seek to minimize variation and to deliver results that meet defined requirements. These approaches recognize the importance of:
+• customer satisfaction. Understanding, evaluating, defining, and managing requirements so that customer expectations are met. This requires a combination of conformance to requirements (to ensure the project produces what it was created to produce) and fitness for use (the product or service needs to satisfy the real needs).&lt;br /&gt;
+• Prevention over inspection. Quality should be planned, designed, and built into—not inspected into the project’s management or the project’s deliverables. The cost of preventing mistakes is generally much less than the cost of correcting mistakes when they are found by inspection or during usage.&lt;br /&gt;
+• continuous improvement. The PDCA (plan-do-check-act) cycle is the basis for quality improvement as defined by Shewhart and modified by Deming. In addition, quality improvement initiatives such as Total Quality Management (TQM), Six Sigma, and Lean Six Sigma could improve the quality of the project’s management as well as the quality of the project’s product. Commonly used process improvement models include Malcolm Baldrige, Organizational Project Management Maturity Model (OPM3®), and Capability Maturity Model Integrated (CMMI®).&lt;br /&gt;
+• Management responsibility. Success requires the participation of all members of the project team.  Nevertheless, management retains, within its responsibility for quality, a related responsibility to provide suitable resources at adequate capacities.&lt;br /&gt;
+• cost of quality (coQ).&lt;/p&gt;
+
+&lt;p&gt;(Requirements detail / req wiki, ADG, development workflows / branching strategies)&lt;/p&gt;
+
+&lt;p&gt;HR:
+A responsibility assignment matrix (RAM) is a grid that shows the project resources assigned to each work package. It is used to illustrate the connections between work packages or activities and project team members.&lt;/p&gt;
+
+&lt;p&gt;One example of a RAM is a RACI (responsible, accountable, consult, and inform) chart.&lt;/p&gt;
+
+&lt;p&gt;(GitHub team stuff)&lt;/p&gt;
+
+&lt;p&gt;The use of virtual teams creates new possibilities when acquiring project team members. Virtual teams can be defined as groups of people with a shared goal who fulfill their roles with little or no time spent meeting face to
+face. The meetings
+• • • • • •
+availability of communication technology such as e-mail, audio conferencing, social media, web-based and video conferencing has made virtual teams feasible. The virtual team model makes it possible to:
+Form teams of people from the same organization who live in widespread geographic areas;
+Add special expertise to a project team even though the expert is not in the same geographic area; Incorporate employees who work from home offices;
+Form teams of people who work different shifts, hours, or days;
+Include people with mobility limitations or disabilities; and
+Move forward with projects that would have been ignored due to travel expenses.&lt;/p&gt;
+
+&lt;p&gt;(GitHub social, code of conduct - no flame wars or trolls)&lt;/p&gt;
+
+&lt;p&gt;Communication:&lt;/p&gt;
+
+&lt;p&gt;• Listening actively and effectively;&lt;br /&gt;
+• Questioning and probing ideas and situations to ensure better understanding;&lt;br /&gt;
+• Educating to increase team’s knowledge so that they can be more effective;&lt;br /&gt;
+• Fact-finding to identify or confirm information;&lt;br /&gt;
+• Setting and managing expectations;&lt;br /&gt;
+• Persuading a person, a team, or an organization to perform an action;&lt;br /&gt;
+• Motivating to provide encouragement or reassurance;&lt;br /&gt;
+• Coaching to improve performance and achieve desired results;&lt;br /&gt;
+• Negotiating to achieve mutually acceptable agreements between parties;&lt;br /&gt;
+• Resolving conflict to prevent disruptive impacts; and&lt;br /&gt;
+• Summarizing, recapping, and identifying the next steps.&lt;/p&gt;
+
+&lt;p&gt;• Who needs what information, and who is authorized to access that information;&lt;br /&gt;
+• When they will need the information;&lt;br /&gt;
+• Where the information should be stored;&lt;br /&gt;
+• What format the information should be stored in;&lt;br /&gt;
+• How the information can be retrieved; and&lt;br /&gt;
+• Whether time zone, language barriers, and cross-cultural considerations need to be taken into account.&lt;/p&gt;
+
+&lt;p&gt;The communications management plan is a component of the project management plan that describes how project communications will be planned, structured, monitored, and controlled. The plan contains the following information:
+• Stakeholder communication requirements;&lt;br /&gt;
+• Information to be communicated, including language, format, content, and level of detail;&lt;br /&gt;
+• Reason for the distribution of that information;&lt;br /&gt;
+• Time frame and frequency for the distribution of required information and receipt of acknowledgment or response, if applicable;&lt;br /&gt;
+• Person responsible for communicating the information;&lt;br /&gt;
+• Person responsible for authorizing release of confidential information;&lt;br /&gt;
+• Person or groups who will receive the information;&lt;br /&gt;
+• Methods or technologies used to convey the information, such as memos, e-mail, and/or press releases;&lt;br /&gt;
+• Resources allocated for communication activities, including time and budget;&lt;br /&gt;
+• Escalation process identifying time frames and the management chain (names) for escalation of issues that cannot be resolved at a lower staff level;&lt;br /&gt;
+• Method for updating and refining the communications management plan as the project progresses and develops;&lt;br /&gt;
+• Glossary of common terminology;&lt;br /&gt;
+• Flow charts of the information flow in the project, workflows with possible sequence of authorization, list
+of reports, and meeting plans, etc.; and&lt;br /&gt;
+• Communication constraints usually derived from a specific legislation or regulation, technology, and organizational policies, etc.&lt;/p&gt;
+
+&lt;p&gt;Risk:&lt;/p&gt;
+
+&lt;p&gt;Risk Management Plan&lt;/p&gt;
+
+&lt;p&gt;Methodology.&lt;br /&gt;
+roles and responsibilities.&lt;br /&gt;
+Budgeting.&lt;br /&gt;
+timing.&lt;br /&gt;
+risk categories.&lt;br /&gt;
+definitions of risk probability and impact.&lt;br /&gt;
+Probability and impact matrix.&lt;br /&gt;
+revised stakeholders’ tolerances.&lt;br /&gt;
+reporting formats.&lt;br /&gt;
+tracking.&lt;/p&gt;
+
+&lt;p&gt;risk management plan (compare these against the standard)&lt;br /&gt;
+- Strategies for negative risks or threats; avoid, transfer, mitigate, accept&lt;br /&gt;
+- Positive risks or opportunities; exploit, enhance, share, accept&lt;br /&gt;
+risk register&lt;br /&gt;
+risk reporting&lt;/p&gt;
+
+&lt;p&gt;Procurement:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;hosting&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;industrialising kickstarter / outsourcing / imaging&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;donations&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reporting project effort</title>
+      <link>http://localhost:1313/retrospectives/reporting-project-effort/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/reporting-project-effort/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A model for reporting the status of project effort:&lt;/p&gt;
+
+&lt;p&gt;Multi-level messages&lt;/p&gt;
+
+&lt;p&gt;Budget baseline
+Actual baseline
+Forecast baseline&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

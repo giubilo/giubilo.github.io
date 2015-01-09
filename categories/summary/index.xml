@@ -7,46 +7,196 @@
     
     
     
-    <updated>Tue, 01 Jan 2008 00:00:00 UTC</updated>
+    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>concept summary</title>
-      <link>http://localhost:1313/concept/concepts/</link>
-      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      <title>Overview</title>
+      <link>http://localhost:1313/retrospectives/overview/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/concept/concepts/</guid>
+      <guid>http://localhost:1313/retrospectives/overview/</guid>
       <description>
 
-&lt;p&gt;Allow MediaControllers and MediaRenderers to consume content stored in the Alfresco Repository (a cmis-upnp/dlna connector if you will).  Internet of Things (IoT) converging with Advanced Case Management (ACM).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;allegria&lt;/strong&gt;  /alleˈgria/&lt;br /&gt;
+gioia, contentezza (glee, cheerfulness)&lt;br /&gt;
+vivacità di suoni e colori (brightness, liveliness)&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Choices&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Java&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Cyberlink4Java&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;MediaGate4Java&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Apache Chemistry  also looked at Michael Daum - &lt;a href=&#34;https://github.com/MichaelDaum/cmis-perl&#34;&gt;WebService::Cmis&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Apache Felix - Cyberlink4Java has an OSGi version and Alfresco has begun with Alfresco Dynamic Extensions.&lt;/li&gt;
-&lt;li&gt;VideoLan Project - RTSP&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;toc_1&#34;&gt;Skills&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Objectives:&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;building a folder and document based protocol&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;CMIS&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;UPnP / DLNA&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Programming in Java&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Integrated Development Environment&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Source Code Control&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Alfresco Content Model&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;work out how to make the processes and tools large organisations use to organise stuff, practical for a household.&lt;/li&gt;
+&lt;li&gt;learn how to use some open source application lifecycle techniques, tools and technologies.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;have some fun and pass back what&amp;rsquo;s been learned to the community.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;Dependencies&lt;/h2&gt;
+&lt;p&gt;An explanatory note for the word &amp;lsquo;content&amp;rsquo; (which is used everywhere in this wiki):
+&amp;gt;in the context of allegria it is a catch-all phrase that means all the stuff families are trying to organise - documents, photos, music, movies, tasks, likes, comments etc. etc.  Could just as easily have used the word &amp;lsquo;elephants&amp;rsquo; but &amp;lsquo;content&amp;rsquo; seems to be a generally accepted word&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Modifying a content model&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;Wiki:&lt;/h2&gt;
+
+&lt;p&gt;This wiki is trying to describe how these objectives are being achieved.  The pages will build up as things are &amp;lsquo;put in the bag&amp;rsquo; (i.e. lessons are learned, code is written).&lt;/p&gt;
+
+&lt;p&gt;The key areas in the wiki are:&lt;br /&gt;
+* [[concepts|Topic Summary#Concepts]] - list of concepts / modules that are building to make up the Consumer Content Management platform.&lt;br /&gt;
+* [[how-to&amp;rsquo;s|Topic Summary#HowTo]] - these are a record of how we did things (hope they are helpful).
+* [[paint by numbers|Topic Summary#PaintByNumbers]] - provide step by step instructions for a particular concept (usually in support of a how-to).&lt;br /&gt;
+* [[Helicopter view|Topic Summary#HelicopterView]] - a 10,000ft view of an area (usually pictures).
+* &lt;a href=&#34;a.k.a it&#39;s all greek to me&#34;&gt;[Spaghetti western|Topic Summary#SpaghettiWestern]&lt;/a&gt; - a more detailed explanation about a particularly confusing concept.
+* [[Point of view|Topic Summary#PointOfView]] - some crystal ball gazing opinion on a topic.&lt;/p&gt;
+
+&lt;p&gt;The wiki isn&amp;rsquo;t designed to be a collection of highly polished specs (hands up if you like writing or reading design or technical documents - nobody - that&amp;rsquo;s what I thought).  It&amp;rsquo;s really just a collection of tips from the internet that have worked in the context of allegria or where the original blog has been expanded upon to make it dead simple to understand and replicate.  The wiki is trying to be a creative outlet, so the techie stuff will be wrapped up in some stories.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;And, given allegria has its roots in media there&amp;rsquo;ll be a liberal sprinkling of movie and music references - some of them might need a bit of thinking to see the relevance - to make it [hopefully] interesting and engaging too&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;oh btw, If you see at the start of a page&lt;/strong&gt; &lt;em&gt;&amp;ldquo;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&amp;rdquo;&lt;/em&gt; &lt;strong&gt;well the why is as follows:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As more lessons are learned, links will start popping up to underlying pages and the underlying pages will begin to get filled. So &lt;strong&gt;in many cases you will see the work as it is being developed - warts and all&lt;/strong&gt; (could be a few random thoughts, or some structure, or some copy and paste of some information that looked interesting and thought provoking - you will be watching the creative writing process and hopefully collaborating with it as it happens). The [[Topic Summary|Topic Summary]] has a description and to what extent the pages are finished.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s still early days so there&amp;rsquo;s not much in the bag yet but we&amp;rsquo;ll get there. &lt;strong&gt;Keep watching&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So then, [[where do we begin|HowTo: Project Management]]?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>cmis dlna connector</title>
+      <link>http://localhost:1313/concepts/overview/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/overview/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;multiple ways to get to content so can use the tools familiar with to manipulate content e.g. iPhoto or flickr for photos - content at the edge is always tricky - ingesting / manipulating
+protocol-based access so don’t get locked in&lt;/p&gt;
+
+&lt;p&gt;service bus
+design based on a concise set of simple concepts that all can understand and build upon
+exposes a key interface where people can do content-driven-development&lt;/p&gt;
+
+&lt;p&gt;content context is built in - because meta-data is a blob as well then can rebuild from scratch an  understanding of content objects just by parsing the blobs - e.g. db backup corrupt, backup manifest corrupt, changing to a new db goes wrong -  never left with just thousands of cut up file names with no way to put back together
+ability to back up in a powerful way is built in - has deduplication, sync and share built-in, can use varied cost backup repositories depending on rules e.g. sentimental photos can be backed up on multiple local, peer and cloud sites, large media files that may not be so important can be on local and peer disks - doesn’t have to be one size / cost fits all - its built-in so no separate tools / consoles to manage and because its mutable storage don’t have to worry about piecing incremental backups together - just like git but for content
+specific implementation through Docker containers on NAS type devices.  Cloud storage through something like S3 buckets to Glacier lifecycle.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/allegria-logical-model.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>cmis dlna connector</title>
+      <link>http://localhost:1313/concepts/roadmap/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/roadmap/</guid>
+      <description>&lt;p&gt;&lt;a name=&#34;Concepts&#34;&gt;&lt;/a&gt;&lt;br /&gt;
+##&lt;img src=&#34;/assets/img/paint-by-numbers-50.png?raw=true&#34; alt=&#34;Concepts&#34; /&gt;
+ Concepts&lt;/p&gt;
+
+&lt;p&gt;Building a full platform for Consumer Content Management is a big job and doing it in an open source project (read: in spare time) could take forever.&lt;/p&gt;
+
+&lt;p&gt;To get things moving - and get some early successes to keep the momentum rolling - the elephant has been broken down into some interesting bite sized pieces that build on each other.  As get success with each one and &lt;a href=&#34;#HowTo&#34;&gt;learn&lt;/a&gt; more about what Allegria looks like this list will change.  Eventually should have enough things in the bag to move far enough along the &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;roadmap&lt;/a&gt; to get some funding to industrialise the project.&lt;/p&gt;
+
+&lt;p&gt;as follows:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Reference&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[[aaContentModel&lt;/td&gt;
+&lt;td&gt;Concept: aaContentModel]]&lt;/td&gt;
+&lt;td&gt;Modify Alfresco repository content / meta types to support consumer content types like movies, music, photos etc.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[CmisDlnaConnector&lt;/td&gt;
+&lt;td&gt;Concept: CmisDlnaConnector]]&lt;/td&gt;
+&lt;td&gt;Allow MediaControllers and MediaRenderers to consume content stored in the Alfresco Repository.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;CapTag&lt;/td&gt;
+&lt;td&gt;Capture and tagging of content (consider implementing the best bits of Ember Media Manager and Media Monkey applications using Alfresco Share / Workdesk or Spring for the user interface and Alfresco Activiti and Tikka for workflows / meta data extraction).&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;PlayList&lt;/td&gt;
+&lt;td&gt;Modify Alfresco content / meta model to support playlist type functionality (consider how to support using playlists to use internet streams).&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;FacetedSearch&lt;/td&gt;
+&lt;td&gt;Extend Alfresco search interface to provide basic faceted search functionality i.e. to categorise search results into primary types like movie, song, photo etc or even collections like album and include relevance and social context.&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Linkages&lt;/td&gt;
+&lt;td&gt;Work out how to build linkages between content e.g. recipe, recipe email tips and recipe demonstration video. Provide example for how to do some common linkages.&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Deployment&lt;/td&gt;
+&lt;td&gt;Evaluate different models of physically implementing the Alfresco Repository (such as on a NAS appliance or in the cloud and produce guidance for backup).&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;TagSync&lt;/td&gt;
+&lt;td&gt;Build basic photo browser functionality to allow building up of tags on photos (consider leveraging existing tools that can write tags and then a sync done to Alfresco repository).&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;NavPlus&lt;/td&gt;
+&lt;td&gt;Further extend the search interface to bring up the &amp;lsquo;related&amp;rsquo; / &amp;lsquo;more from&amp;rsquo; and allow navigation.&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;SocialConnector&lt;/td&gt;
+&lt;td&gt;Provide a connector to allow choice and publishing of content to social sites e.g. a photo to a photo sharing site. This provides, controlled and monitored sharing.&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;NavPlus2&lt;/td&gt;
+&lt;td&gt;Further extend the search interface to build contextual photo browser that allows overlays to be applied to photo navigation e.g. a family tree based on people tagged to photos, or world map based on location tags, or a date line.&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;BamCam&lt;/td&gt;
+&lt;td&gt;Further extend the workflow / activity monitoring to provide analytics such as &amp;lsquo;amount watched&amp;rsquo;, &amp;lsquo;peak days&amp;rsquo;, &amp;lsquo;edit effort&amp;rsquo;, &amp;lsquo;common searches&amp;rsquo;.&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;BamCamPlus&lt;/td&gt;
+&lt;td&gt;Further extend the workflow / activity monitoring to provide integrations with household calendars.&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;BamCamPlus2&lt;/td&gt;
+&lt;td&gt;Further extend the workflow / activity monitoring with Activiti to build &amp;lsquo;Internet of Things&amp;rsquo; automation examples like temperature monitoring and garden watering.&lt;/td&gt;
+&lt;td&gt;TO-START&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     

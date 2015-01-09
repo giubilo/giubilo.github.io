@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Alfresco-Cmis on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/alfresco-cmis/index.xml/</link>
+    
+    
+    
+    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>CMIS url</title>
+      <link>http://localhost:1313/retrospectives/cmis-url/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/cmis-url/</guid>
+      <description>
+
+&lt;p&gt;&lt;html&gt;
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+    &lt;p&gt;
+      &lt;img src=&#34;./images/spaghetti-western.png?raw=true&#34; alt=&#34;book&#34;&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;This spaghetti western applicable for:&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;CMIS 1.1&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;The url is where the rubber hits the road for cmis on Alfresco - a client will access a CMIS service endpoint described by a URL by either directly interacting with one of the CMIS bindings or against a CMIS client API.  It can be a little tricky to understand just which url is needed as there are many to choose from depending on:&lt;br /&gt;
+* what version of Alfresco is running&lt;br /&gt;
+* how the repository is deployed (i.e. on-premise, cloud, public)&lt;br /&gt;
+* which binding is being used (atompub, webservice, browser) and what version (1.0 or 1.1)&lt;br /&gt;
+* whether connecting using the OpenCMIS API or to services or service information.&lt;/p&gt;
+
+&lt;p&gt;Signs along the way to understanding what cmis url to use are in the following sections:
+* on-premise model url
+* cloud model url
+* theory and practice
+* other url styles
+* other interesting url&amp;rsquo;s&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;on-premise model url&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-request-url-format-onpremise.html&#34;&gt;official documentation&lt;/a&gt; for version 4.2 defines the request url for an on-premise repository using the bindings available in CMIS version 1.1 as:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;on-premise model url&lt;/strong&gt;: &lt;code&gt;{protocol}://{host}[:{port}]/{fixed ref}/{repository}/{api}/{versions/n}/{binding}/{cmis method}&lt;/code&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;url part&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Example value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;protocol&lt;/td&gt;
+&lt;td&gt;likely to be (or should be) https but is dependant on what is set up in the &lt;code&gt;alfresco-global.properties&lt;/code&gt; &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/tasks/global-props-config.html&#34;&gt;file&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;https&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;host&lt;/td&gt;
+&lt;td&gt;ip address or hostname of the host&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;localhost&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[port]&lt;/td&gt;
+&lt;td&gt;optional - usually 8080 but could be configured (usually in &lt;code&gt;alfresco-global.properties&lt;/code&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;8080&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;fixed ref&lt;/td&gt;
+&lt;td&gt;this is set to &lt;code&gt;alfresco/api&lt;/code&gt; for the alfresco one on-premise api&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;alfresco/api&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;repository&lt;/td&gt;
+&lt;td&gt;this is sort of a pseudo fixed name for the repository (see further explanation in &amp;lsquo;other url styles&amp;rsquo;  below)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;-default&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;api&lt;/td&gt;
+&lt;td&gt;using the public cmis api (could use public/cmis or cmis here) but there are others including alfresco rest and workflow&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;cmis&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;versions/n&lt;/td&gt;
+&lt;td&gt;version using of &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt; currently either 1.0 or 1.1 (should use 1.1 if can, as get access to newer capabilities such as the browser binding and secondary object types)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;1.1&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;binding&lt;/td&gt;
+&lt;td&gt;atompub (atom), webservices (cmisws) or browser (browser) - use browser if can as it is the fullest and most lightweight&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;browser&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cmis method&lt;/td&gt;
+&lt;td&gt;from the specification, but won&amp;rsquo;t need to use if interacting through a cmis client API such as Apache&amp;rsquo;s OpenCMIS&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;resultant on-premise example url&lt;/em&gt;: &lt;code&gt;https://localhost:8080/alfresco/api/-default-/cmis/versions/1.1/browser/&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;cloud model url&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Fconcepts%2Fcmis-get-service-document.html&#34;&gt;official documentation&lt;/a&gt; for version 4.2 defines the request url for a cloud repository using the bindings available in CMIS version 1.1 as:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;cloud model url&lt;/strong&gt;: &lt;code&gt;{protocol}://{host}/{network id}/{api}/{versions/n}/{binding}/{cmis method}&lt;/code&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;url part&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Example value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;protocol&lt;/td&gt;
+&lt;td&gt;will always be https&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;https&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;host&lt;/td&gt;
+&lt;td&gt;will always be api.alfresco.com&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;api.alfresco.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;network id&lt;/td&gt;
+&lt;td&gt;name of the company registered with alfresco&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;yourcompany.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;api&lt;/td&gt;
+&lt;td&gt;using the public cmis api (could use public/cmis or cmis here) but there are others including alfresco rest and workflow&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;cmis&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;versions/n&lt;/td&gt;
+&lt;td&gt;version using of &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt; currently either 1.0 or 1.1 (should use 1.1 as newer)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;1.1&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;binding&lt;/td&gt;
+&lt;td&gt;atompub (atom), webservices (cmisws) or browser (browser)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;atom&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cmis method&lt;/td&gt;
+&lt;td&gt;from the specification, but won&amp;rsquo;t need to use if interacting through a cmis client API such as Apache&amp;rsquo;s OpenCMIS&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;resultant cloud example url&lt;/em&gt;: &lt;code&gt;https://api.alfresco.com/yourcompany.com/cmis/versions/1.1/atom/&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;theory and practice&lt;/h2&gt;
+
+&lt;p&gt;That&amp;rsquo;s the theory&amp;hellip;in practice using the model url in the CMIS Workbench, while it&amp;rsquo;s &lt;a href=&#34;www.imdb.com/title/tt0172505/‎&#34;&gt;just right&lt;/a&gt; for some, it doesn&amp;rsquo;t necessarily work for all combinations:
+* the on-premise atom binding with cmis version 1.1 will get a parsing error
+* for on-premise, webservices won&amp;rsquo;t work with this model so will need to use the CMIS Workbench template (see below)
+* the browser binding is not available for the cloud version (even though running cmis version 1.1 and the documentation says it is)&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_3&#34;&gt;other url styles&lt;/h2&gt;
+
+&lt;p&gt;There are also some other styles of url&amp;rsquo;s out there in &lt;a href=&#34;www.imdb.com/title/tt0069762/‎&#34;&gt;documentation land&lt;/a&gt;, (adding to the confusion). Some still work with the 4.2 implementation of the api including:&lt;br /&gt;
+* The Alfresco &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Index_Page&#34;&gt;CMIS Wiki&lt;/a&gt; hasn&amp;rsquo;t caught up yet (it&amp;rsquo;s describing 4.1 and cmis 1.0 but the url&amp;rsquo;s for the defined AtomPub &lt;code&gt;http://[host]:[port]/alfresco/cmisatom&lt;/code&gt; and webservices &lt;code&gt;http://[host]:[port]/alfresco/cmisw&lt;/code&gt; still work.
+* The &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&#34;&gt;Alfresco developer forum&lt;/a&gt; describes some great cmis information and an update to the atom url which works:&lt;br /&gt;
+    &amp;gt;
+  please note that when you are using the CMIS ATOM Pub binding against Alfresco 4, you should use the new OpenCMIS-based URL (&lt;code&gt;http://localhost:8080/alfresco/cmisatom&lt;/code&gt;) instead of the old web script-based URL (&lt;a href=&#34;http://localhost:8080/alfresco/s/api/cmis&#34;&gt;http://localhost:8080/alfresco/s/api/cmis&lt;/a&gt;). The old URL should be considered deprecated. This is not just a URL change - these are two different implementations, so you will see differences in how they behave
+    &amp;gt;&lt;br /&gt;
+* The Apache Chemistry download for CMIS Workbench tool itself has connection templates that describe a range of url&amp;rsquo;s that work:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  # Alfresco 4 AtomPub
+  http://&amp;lt;host&amp;gt;/alfresco/cmisatom
+
+  # Alfresco 4 Web Services
+  http://&amp;lt;host&amp;gt;/alfresco/cmisws/RepositoryService?wsdl
+  http://&amp;lt;host&amp;gt;/alfresco/cmisws/NavigationService?wsdl
+  http://&amp;lt;host&amp;gt;/alfresco/cmisws/ObjectService?wsdl
+  http://&amp;lt;host&amp;gt;/alfresco/cmisws/VersioningService?wsdl
+  http://&amp;lt;host&amp;gt;/alfresco/cmisws/DiscoveryService?wsdl
+  http://&amp;lt;host&amp;gt;/alfresco/cmisws/MultiFilingService?wsdl
+  http://&amp;lt;host&amp;gt;/alfresco/cmisws/RelationshipService?wsdl
+  http://&amp;lt;host&amp;gt;/alfresco/cmisws/ACLService?wsdl
+  http://&amp;lt;host&amp;gt;/alfresco/cmisws/PolicyService?wsdl
+
+  # Alfresco Cloud (CMIS 1.0 AtomPub)
+  https://api.alfresco.com/cmis/versions/1.0/atom
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The CMIS specification allows a CMIS service endpoint to advertise one or more repositories.  This may be the thinking behind the &lt;code&gt;-default-&lt;/code&gt;, part of the on-premise url - &lt;code&gt;https://localhost:8080/alfresco/api/-default-/cmis/versions/1.1/browser/&lt;/code&gt;.  In CMIS Workbench when use the model url -default- appears in the repository list:&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/cmis-wb-repo-default.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;When use the CMIS Workbench template url &lt;code&gt;http://&amp;lt;host&amp;gt;/alfresco/cmisatom&lt;/code&gt; then see the actual repository name in the list:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;.images/cmis-wb-repo-name.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Even though you can connect with these other url styles it is probably best to try and move to the model urls as this is driving towards a more consistent approach.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_4&#34;&gt;other interesting url&amp;rsquo;s&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Alfresco &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Index_Page&#34;&gt;CMIS Wiki&lt;/a&gt; describes the &lt;em&gt;CMIS Index Page&lt;/em&gt;:
+&amp;gt;
+For any releases the [CMIS Index] page &lt;code&gt;http://[host]:[port]/alfresco/service/cmis/index.html&lt;/code&gt; provides an overview of the Alfresco CMIS implementation, and links to all the resources you&amp;rsquo;ll need to use the CMIS bindings.
+&amp;gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-index.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This page has some useful information about cmis compliance of the running version and some tools including the OpenCMIS Browser and the Web Scripts CMIS Browser.  This would be an awesome page it it also listed the binding url&amp;rsquo;s for connection - just saying - must put it on Allegria&amp;rsquo;s things to do list.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Alfresco &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-get-service-document.html&#34;&gt;Official Documentation for 4.2&lt;/a&gt; describes getting the cmis service document at:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  https://localhost:8080/alfresco/api/cmis/versions/1.1/atom/              #on-premise repository
+  https://api.alfresco.com/cmis/versions/1.1/atom/                         #cloud repository (current authenticated network)
+  https://api.alfresco.com/yourcompany.com/public/cmis/versions/1.1/atom   #specific cloud network
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Retrieving the service document using the HTTP GET method to one of those URL&amp;rsquo;s will return a response body that is an AtomPub XML document which describes the CMIS capabilities in a standard way (see the CMIS specification for more details).  The service document contains information on the repository, the CMIS methods that can be called on it, and the parameters for those methods.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-service-document.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The cxf service list url &lt;code&gt;http://[host]/alfresco/cmis&lt;/code&gt; lists cmis services available with web services:&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-cxf-service-url.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Oauth on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/oauth/index.xml/</link>
+    
+    
+    
+    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Alfresco oAuth sample application</title>
+      <link>http://localhost:1313/retrospectives/alfresco-oauth-sample-application/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/alfresco-oauth-sample-application/</guid>
+      <description>
+
+&lt;p&gt;&lt;html&gt;
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+    &lt;p&gt;
+      &lt;img src=&#34;/assets/mages/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;oAuth Sample webapp&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;In October 2012, Alfresco &lt;a href=&#34;http://www.alfresco.com/news/press-releases/alfrescos-cloud-api-mobile-apps-now-available&#34;&gt;announced&lt;/a&gt; an open application-programming interface &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;(API) for Alfresco in the cloud&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are some great resources available to show how to use the cloud api, including:&lt;br /&gt;
+* &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; from Jeff Potts
+* &lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation&lt;/a&gt; from the &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;Alfresco Developer Portal&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To access Alfresco in the cloud:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;an Alfresco application uses the OAuth 2.0 authorization code flow to authenticate itself with Alfresco Cloud and to allow users to authorize the application to access data on their behalf.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://oauth.net&#34;&gt;oAuth&lt;/a&gt; is an open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications.  The &lt;a href=&#34;http://tools.ietf.org/html/rfc6749#section-1.2&#34;&gt;oAuth protocol flow&lt;/a&gt; starts with making an authorisation request through to receiving initial and refresh access tokens for using in sessions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/ietf-oauth-flow.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;In addition to the &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529 and [Jeff Potts&#39; video tutorials](https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; showing how to do this, &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;Jeff also highlights&lt;/a&gt; on the developer forum Gethin Jame&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;oAuth sample application&lt;/a&gt; that demonstrates using the oAuth authentication protocol.&lt;/p&gt;
+
+&lt;p&gt;To get an access token to use with CMIS Workbench, Allegria has used Gethin&amp;rsquo;s oAuth sample application:&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Get the Alfresco oAuth application&lt;/li&gt;
+&lt;li&gt;Register for the Cloud api&lt;/li&gt;
+&lt;li&gt;Create an API key&lt;/li&gt;
+&lt;li&gt;Configure oAuth web app&lt;/li&gt;
+&lt;li&gt;Authorisation request&lt;/li&gt;
+&lt;li&gt;Access token request&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;1. Get the Alfresco oAuth application&lt;/h3&gt;
+
+&lt;p&gt;Gethin&amp;rsquo;s Alfresco oAuth Sample Application (uses gradle and runs in jetty servlet engine and http server) is easily used with CMIS workbench, so [[fork|Paint-by-numbers:-GitHub]] his &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;alfresco-oauth-sample repository&lt;/a&gt; and [[import|Paint-by-numbers:-Eclipse]] it to Eclipse eGit.&lt;/p&gt;
+
+&lt;p&gt;The readme has simple instructions to get things running.  For now just need to :
+* Ensure you have an &lt;a href=&#34;https://www.java.com/en/download/installed.jsp&#34; target=&#34;_blank&#34;&gt;up to date Java VM&lt;/a&gt; installed and port 8181 is not in use&lt;br /&gt;
+* take note of the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; which will be used when registering the application with Alfresco in later steps&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;2. Register for the Cloud api&lt;/h3&gt;
+
+&lt;p&gt;Need to follow a &lt;a href=&#34;https://www.alfresco.com/develop/cloud/signup&#34;&gt;registration process&lt;/a&gt; with Alfresco to obtain api access by following the steps on the &lt;a href=&#34;http://www.alfresco.com/develop&#34;&gt;Alfresco developer portal&lt;/a&gt; (click on the &amp;lsquo;register for the cloud api&amp;rsquo; button):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-developer-portal.png?raw=true&#34; alt=&#34;portal&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;3. Create an API key&lt;/h3&gt;
+
+&lt;p&gt;Register cmis-workbench on the Alfresco Developer site to to get authentication configuration details&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-manage-applications.png?raw=true&#34; alt=&#34;action&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The application can be called anything, just needs to have a name so can get an &amp;lsquo;API Key&amp;rsquo;, so have called it &amp;lsquo;cmis-workbench to make things easier.&lt;br /&gt;
+Edit the API Details and on the &amp;lsquo;Auth&amp;rsquo; tab enter the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; (this comes from Gethin&amp;rsquo;s repository readme):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-oAuth.png?raw=true&#34; alt=&#34;action&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;4. Configure oAuth web app&lt;/h3&gt;
+
+&lt;p&gt;Follow the next next steps in Gethin&amp;rsquo;s readme:
+* Edit &lt;code&gt;src/main/webapp/config.js&lt;/code&gt; and put in the client_id, client_secret and callback urls registered at The Alfresco Developer Portal (For this app, the redirect_uri should be &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt;)&lt;br /&gt;
+* Run the Alfresco-oAuth-Sample application:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; # change to the folder holding the imported project  
+ ./gradlew  jettyRun
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The first time it runs, the following output will appear:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-1st-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;After the initial build, each subsequent time will output:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;5. Authorisation request&lt;/h3&gt;
+
+&lt;p&gt;In a web browser go to &lt;code&gt;http://localhost:8181/oauthsample&lt;/code&gt; to see the first step in the oAuth protocol flow (authorisation request).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1.png?raw=true&#34; alt=&#34;request&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The values in this screen should come from the &lt;code&gt;config.js&lt;/code&gt; file configured in the previous step so just hit submit.&lt;/p&gt;
+
+&lt;p&gt;The authorisation screen from Alfresco Cloud will appear to allow entry of username and password that was set up when registered for api account:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1-1.png?raw=true&#34; alt=&#34;auth-credentials&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;6. Access token request&lt;/h3&gt;
+
+&lt;p&gt;Send the authorisation grant - nothing to do here but hit submit (the client secret will have come from &lt;code&gt;config.js&lt;/code&gt; - it is blanked out here):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-2.png?raw=true&#34; alt=&#34;step2&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Will get a response from the cloud with the access token:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-3.png?raw=true&#34; alt=&#34;step2-1&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Other oAuth resources:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; describes a number of tools:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://curl.haxx.se&#34;&gt;cURL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[RESTCLient]&lt;a href=&#34;http://restclient.org)&#34;&gt;http://restclient.org)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Jeff Potts uses &lt;a href=&#34;https://code.google.com/p/google-oauth-java-client/&#34;&gt;Google&amp;rsquo;s Java oAuth2 client&lt;/a&gt; in his Alfresco cloud how-to &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; and highlights Jared Ottley&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/spring-social-alfresco&#34;&gt;Spring Social plug-in&lt;/a&gt; in the &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;developer forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CPAN oAuth modules:&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Net::OAuth provides a low-level API for reading and writing OAuth messages (probably should start with Net::OAuth::Client).  Net::OAuth provides; classes that encapsulate OAuth messages (requests and responses),
+message signing, message serialization and parsing, 2-legged requests (aka. tokenless requests, aka. consumer requests)&lt;/li&gt;
+&lt;li&gt;Net::OAuth::Simple - a simple wrapper round the OAuth protocol&lt;/li&gt;
+&lt;li&gt;OAuth::Simple - Simple OAuth authorization on your site&lt;/li&gt;
+&lt;li&gt;OAuth::Consumer - LWP based user agent with OAuth for consumer application&lt;/li&gt;
+&lt;li&gt;OAuth::Lite - OAuth framework (CONSUMER SIDE see OAuth::Lite::Consumer, SERVICE PROVIDER SIDE see OAuth::Lite::ServerUtil or to build server on mod_perl2, see OAuth::Lite::Server::mod_perl2.&lt;/li&gt;
+&lt;li&gt;OAuth::Lite::Util - utility for OAuth&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

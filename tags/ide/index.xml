@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Ide on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/ide/index.xml/</link>
+    
+    
+    
+    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Eclipse</title>
+      <link>http://localhost:1313/retrospectives/eclipse/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/eclipse/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;hidden stuff
+-rw-r&amp;ndash;r&amp;ndash;@.DS_Store
+-rw-r&amp;ndash;r&amp;ndash; .classpath
+drwxr-xr-x .git
+-rw-r&amp;ndash;r&amp;ndash; .gitignore
+drwxr-xr-x .gradle
+-rw-r&amp;ndash;r&amp;ndash; .project
+drwxr-xr-x   .settings&lt;/p&gt;
+
+&lt;p&gt;eclipse project import will create some (particulalry if using the gradle plugin)
+gradle build will create some
+.gitignore is also in the Atlassian SourceTree global gitignore (there is a decision here about whether or not to store the .gitignore stuff in the reporsitory to maintain consistency across the team - prob would put in a dev note so that could have the best of both worlds in case someone is working on a few projects and have different things in their gitignore - although could prob have a base one in here that includes the .gitignore file as well so it doesn&amp;rsquo;t get changed back on commit - would have to add manually through the GitHub gui I think)&lt;/p&gt;
+
+&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
+
+&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
+&lt;li&gt;formatting code so it&amp;rsquo;s readable, valid and conforms to best practice techniques for the language (like project structures)&lt;/li&gt;
+&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
+&lt;li&gt;build/package/implement code&lt;/li&gt;
+&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
+&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Wow, that&amp;rsquo;s a lot of things, but which one to choose?  There are heaps of IDE&amp;rsquo;s out there.  We have chosen &lt;a href=&#34;http://www.eclipse.org&#34;&gt;Eclipse&lt;/a&gt; because; there&amp;rsquo;s tons of documentation, examples and community surrounding it.  Also, because we have also chosen Perl as a development language for the CmisDlnaConnector and Git (GitHub) for source control, Eclipse is a good choice for us because it has really cool plugins &lt;a href=&#34;http://www.epic-ide.org&#34;&gt;EPIC&lt;/a&gt; and &lt;a href=&#34;http://www.eclipse.org/egit/&#34;&gt;EGit&lt;/a&gt; to support both of them.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Getting and configuring Eclipse&lt;/li&gt;
+&lt;li&gt;Getting and configuring Epic&lt;/li&gt;
+&lt;li&gt;Getting and configuring EGit&lt;/li&gt;
+&lt;li&gt;Importing projects&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Getting and configuring Eclipse&lt;/h3&gt;
+
+&lt;p&gt;Downloaded &lt;a href=&#34;http://www.eclipse.org/downloads/&#34;&gt;Eclipse Kepler (4.3.1)&lt;/a&gt; for MacOSX (and can get a Windows and Linux one as well).&lt;/p&gt;
+
+&lt;p&gt;It comes as an archive which we unstuffed. Then &lt;a href=&#34;http://www.imdb.com/title/tt0109045/&#34;&gt;drag&lt;/a&gt; the &amp;ldquo;eclipse&amp;rdquo; folder into your Applications folder. &lt;a href=&#34;http://www.cs.dartmouth.edu/~cs5/install/eclipse-osx/&#34;&gt;The easiest way to do so&lt;/a&gt; is to open a new window in the Finder and click on Applications in the list you get on the left-hand side. Then drag the &amp;ldquo;eclipse&amp;rdquo; folder in with the other applications. Make sure that you do not drag it into a folder that&amp;rsquo;s already within Applications. In other words, when you&amp;rsquo;re done, the Applications folder should have directly within it a folder named &amp;ldquo;eclipse.&amp;rdquo;
+(This step is not required, but handy.) Double click the &amp;ldquo;eclipse&amp;rdquo; folder. You&amp;rsquo;ll see an application named &amp;ldquo;Eclipse&amp;rdquo;; it has a purple icon with white horizontal stripes. Drag it into your dock. Now you will be able to launch Eclipse by clicking on the icon in the dock.&lt;/p&gt;
+
+&lt;p&gt;Launch the application and set up the default workspace preferences (we&amp;rsquo;ve just put it in the ~/Documents/workspace folder ).&lt;/p&gt;
+
+&lt;p&gt;Didn&amp;rsquo;t really do any other configuration as most of the preferences that are important to us are in the Epic and EGit plugins.  Didn&amp;rsquo;t look at many support docs to get going as its pretty self explanatory but the &lt;a href=&#34;http://help.eclipse.org/kepler/topic/org.eclipse.platform.doc.user/gettingStarted/qs-01.htm?cp=0_1_0&#34;&gt;basic tutorial&lt;/a&gt; and some descriptions of the &lt;a href=&#34;http://help.eclipse.org/kepler/index.jsp?topic=/org.eclipse.jdt.doc.user/reference/ref-icons.htm&#34;&gt;icons&lt;/a&gt; were useful (if could find a similar icons ref for Epic that would be cool).&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Getting and configuring Epic&lt;/h3&gt;
+
+&lt;p&gt;Even though the project repository is foundational, we&amp;rsquo;ve put this section in before setting up EGit as when we connect to the repo and import projects we wanted to import them as Perl projects (and wanted Perl frameworks and Epic plugin installed first to do this).&lt;/p&gt;
+
+&lt;p&gt;And, in order to have all EPIC &lt;a href=&#34;http://www.epic-ide.org/articles.php&#34;&gt;features&lt;/a&gt; like template project model (Module::Starter), source formatting (PerlTidy), syntax checking, coding standards (PerlCritic), interactive debug etc., you need to have a &lt;a href=&#34;./Paint-by-numbers:-Perl&#34;&gt;Perl interpreter and some supporting perl modules installed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Epic &lt;a href=&#34;http://www.epic-ide.org/guide/ch01s02.php&#34;&gt;installation&lt;/a&gt; is done by using the Eclipse Update Manager by entering &amp;lsquo;epic - &lt;a href=&#34;http://e-p-i-c.sf.net/updates/testing&#39;&#34;&gt;http://e-p-i-c.sf.net/updates/testing&#39;&lt;/a&gt; into the “Help &amp;gt; Install new software” dialog.  Chose the testing version &amp;lsquo;cause saw some posts that said it was stable and had good advantages over the current released version (and who doesn&amp;rsquo;t like a shiny new toy).&lt;/p&gt;
+
+&lt;p&gt;Once the plugin is installed, updated the &amp;ldquo;Eclipse &amp;gt; Preferences &amp;gt; Perl EPIC&amp;rdquo; preferences:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Perl EPIC:
+  ~ Perl Executable: &amp;ldquo;/usr/bin/perl&amp;rdquo;&lt;br /&gt;
+  ~ Interpreter Type: Standard&lt;br /&gt;
+Module::Starter:&lt;br /&gt;
+  ~ Select Enable Module::Starter&lt;br /&gt;
+  ~ Custom location: /usr/local/bin/module-starter&lt;br /&gt;
+  ~ Select Override module-starter config file&lt;br /&gt;
+  ~ Module Author:&lt;br /&gt;
+  ~ Module Author Email:&lt;br /&gt;
+Perl::Critic:&lt;br /&gt;
+  ~ Select Enable Critic&lt;br /&gt;
+  ~ Custom location: /usr/local/bin/perlcritic&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That&amp;rsquo;s the ones we tweaked but there are heaps of other ones as well.&lt;/p&gt;
+
+&lt;p&gt;So now you&amp;rsquo;ve got the &lt;a href=&#34;http://www.imdb.com/title/tt0659325/&#34;&gt;eagles nest&lt;/a&gt; for a birds eye view of the project.  The main structure of Eclipse are perspectives.  &lt;em&gt;Perspectives control what appears in certain menus and toolbars. They define visible action sets, which you can change to customize a perspective. You can save a perspective that you build in this manner, making your own custom perspective that you can open again later.&lt;/em&gt;
+&lt;em&gt;You can set your Workbench preferences to open perspectives in the same window or in a new window.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The main perspectives for developing Perl applications are:
+* Perl - This is the main perspective for coding Perl scripts.&lt;br /&gt;
+* Debug - Provides the main functionality for debugging and executing Perl scripts.&lt;/p&gt;
+
+&lt;p&gt;Did have an error setting up EPIC;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“An internal error occurred during: &amp;ldquo;Launching MyRSSFeeder&amp;rdquo;.java.lang.NullPointerException&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This happened because had mistakenly set the interpreter type in the Perl EPIC preferences to &amp;lsquo;cygwin&amp;rsquo;. Need to make sure use the “Standard” Interpreter type.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Getting and configuring EGit&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://www.eclipse.org/egit/download/&#34;&gt;download page&lt;/a&gt; for EGit says to; &lt;em&gt;install via one of the update site URLs listed below, copy and paste it into the “Help &amp;gt; Install new software” dialog&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is a &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide&#34;&gt;huge user guide&lt;/a&gt; for EGit.  We skimmed it.&lt;/p&gt;
+
+&lt;p&gt;Once installed go to the Eclipse &amp;gt; Preferences menu and set the &amp;gt;Team&amp;gt;Git Default repository folder: which we set to the Eclipse workspace directory /Documents/workspaces (it will actually go into each imported project&amp;rsquo;s folder).  The other settings within Eclipse will get set when you actually import projects (and these will be stored in ~/.gitconfig).  The later section on importing projects will detail other settings.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;Importing projects&lt;/h3&gt;
+
+&lt;p&gt;Now, you can connect Eclipse through EGit to a locally cloned repository (like one cloned by the Git commandline client or graphical client), which will give you an Eclipse workspace, a local Git repo and an online Git repo.  We have chosen to clone directly into the Eclipse workspace area so only have the Eclipse workspace directory for the project (like /Documents/workspace/allegria) which will have a hidden .git directory in it with relevant repo config files.&lt;/p&gt;
+
+&lt;p&gt;To do this you will need to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;prepare for &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Eclipse_SSH_Configuration&#34;&gt;ssh connection&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories&#34;&gt;clone a remote repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The ssh connection was a bit tricky and when doing it we got a few error messages.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the first error message was a problem with validation and there are many &lt;a href=&#34;http://stackoverflow.com/questions/3225862/multiple-github-accounts-ssh-config&#34;&gt;posts&lt;/a&gt; describing the need to create a ~.ssh/config file (the ~.ssh directory is the same directory that the ssh keys are stored).  We used our favourite editor to create ~.ssh/config with the following entries;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    Host github.com  
+    HostName github.com  
+    User git  
+    PreferredAuthentications publickey  
+    IdentityFile ~/.ssh/id_rsa  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the second error was about &lt;a href=&#34;https://help.github.com/articles/error-permission-denied-publickey&#34;&gt;permission denied public key&lt;/a&gt; and related to the &amp;lsquo;User&amp;rsquo; entry in the ~.ssh/config file, initially we were using the username for the repo but need to use the generic &amp;lsquo;git&amp;rsquo; user name.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;a third error concerned the need to fix the &lt;a href=&#34;http://www.howtogeek.com/168119/fixing-warning-unprotected-private-key-file-on-linux/&#34;&gt;permissions on id_rsa key files&lt;/a&gt; by resetting them back to default;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo chmod 600 ~/.ssh/id_rsa  
+    sudo chmod 600 ~/.ssh/id_rsa.pub  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once have prepared the ssh connection then can clone the remote repo by choosing &amp;ldquo;File &amp;gt; Import &amp;gt; Git &amp;gt; Project from Git&amp;rdquo; and then on the next screen select Clone URI.  Paste in the URI from the repo (in our case github.com/peterwatts/allegria) and select protocol ssh (this will change the URI to ssh://github.com/peterwatts/allegria).  Choose the branches on the next screen and select a directory in the next (in our case ~/Documents/workspace/).  Will then ask you &amp;lsquo;import projects&amp;rsquo; which you can select and do.&lt;/p&gt;
+
+&lt;p&gt;Choose the New Project Wizard (as the other two options; &amp;lsquo;Import existing projects&amp;rsquo; and &amp;lsquo;Import as general project&amp;rsquo; will cause an error as they probably don&amp;rsquo;t have the necessary eclipse setting files).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

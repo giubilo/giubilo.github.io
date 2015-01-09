@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Upnp on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/upnp/index.xml/</link>
+    
+    
+    
+    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>UPnP</title>
+      <link>http://localhost:1313/retrospectives/upnp/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/upnp/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-device-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-av-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

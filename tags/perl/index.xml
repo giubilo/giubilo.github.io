@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Perl on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/perl/index.xml/</link>
+    
+    
+    
+    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Perl</title>
+      <link>http://localhost:1313/retrospectives/perl/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/perl/</guid>
+      <description>
+
+&lt;p&gt;Have chosen to use Perl because;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Perl is common in opensource projects and has extensive documentation and huge community&lt;/li&gt;
+&lt;li&gt;there a &lt;a href=&#34;https://github.com/MichaelDaum/cmis-perl&#34;&gt;CMIS wrapper&lt;/a&gt; written in Perl&lt;/li&gt;
+&lt;li&gt;there&amp;rsquo;s a &lt;a href=&#34;http://www.cybergarage.org/twiki/bin/view/Main/CyberLinkForPerl&#34;&gt;DLNA media server extension&lt;/a&gt; written in Perl&lt;/li&gt;
+&lt;li&gt;handles text stuff (which there is going to be heaps of)&lt;/li&gt;
+&lt;li&gt;it was new to me and I like a challenge&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Going to try and keep it neat and maintainable through the help of the Eclipse - Epic plugin.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;p&gt;Never used perl before so &lt;a href=&#34;http://www.imdb.com/title/tt0066011/?ref_=nm_flmg_com_92&#34;&gt;where do we begin&lt;/a&gt;? At the &lt;a href=&#34;http://www.perl.org/books/beginning-perl/&#34;&gt;beginning&lt;/a&gt; I guess:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;perl is an interpreted language (not compiled to a binary) so need an interpreter&lt;/li&gt;
+&lt;li&gt;get help&lt;/li&gt;
+&lt;li&gt;be good to the &lt;a href=&#34;http://www.imdb.com/title/tt0497116/&#34;&gt;environment&lt;/a&gt; variables&lt;/li&gt;
+&lt;li&gt;reuse, reduce, recycle - live sustainably with the Comprehensive Perl Archive Network&lt;/li&gt;
+&lt;li&gt;EPIC debugging is, well, &lt;a href=&#34;http://www.imdb.com/title/tt0848537/&#34;&gt;epic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;document as you go, who would have thunk it&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;http://www.imdb.com/title/tt0117509/&#34;&gt;name by any other&lt;/a&gt; is conventional&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;The Perl Interpreter&lt;/h3&gt;
+
+&lt;p&gt;To check if already have a perl interpreter installed type the following into a command prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    perl -v 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It should return something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    This is perl 5, version 12, subversion 4 (v5.12.4) built for darwin-thread-multi-2level
+    (with 2 registered patches, see perl -V for more detail)
+    
+    Copyright 1987-2010, Larry Wall
+    
+    Perl may be copied only under the terms of either the Artistic License or the
+    GNU General Public License, which may be found in the Perl 5 source kit.
+    
+    Complete documentation for Perl, including FAQ lists, should be found on
+    this system using &amp;quot;man perl&amp;quot; or &amp;quot;perldoc perl&amp;quot;.  If you have access to the
+    Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If it doesn&amp;rsquo;t, &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;download one&lt;/a&gt; for the relevant platform:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Platform&lt;/th&gt;
+&lt;th&gt;Where&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;mac&lt;/td&gt;
+&lt;td&gt;pretty likely already installed&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;windows&lt;/td&gt;
+&lt;td&gt;could get &lt;a href=&#34;http://www.activestate.com&#34;&gt;activestate&lt;/a&gt; or &lt;a href=&#34;http://strawberryperl.com&#34;&gt;strawberryperl&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;linux&lt;/td&gt;
+&lt;td&gt;consult package manager&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Once have the perl interpreter installed have access to the &lt;a href=&#34;http://www.perlmonks.org/?node_id=640489&#34;&gt;perl shell&lt;/a&gt; with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    perl -MCPAN -e shell   
+    cpan  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;getting help&lt;/h3&gt;
+
+&lt;p&gt;Perl is up to version 5 now and that means there is tons of help out there.  Some of the obvious places are;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://perldoc.perl.org/perl.html&#34;&gt;http://perldoc.perl.org/perl.html&lt;/a&gt; and &lt;a href=&#34;http://www.perl.org/learn.html&#34;&gt;http://www.perl.org/learn.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Intro.pdf&#34;&gt;Beginning Perl Intro&lt;/a&gt; explains about getting text: &lt;em&gt;typing &lt;code&gt;perldoc perl&lt;/code&gt; from a command prompt will get you a table of contents and some basic infomration about Perl.  The pages your probably going to use are the Perl FAQ and &amp;lsquo;perlfunc&amp;rsquo;, which describes the built-in functions&lt;/em&gt;.  Page 10 in here also lists help sources.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlmonks.org&#34;&gt;http://www.perlmonks.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlhowto.com&#34;&gt;http://www.perlhowto.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;these look really simple to go through if have a bit of time: &lt;a href=&#34;http://docstore.mik.ua/orelly/perl3/lperl/index.htm&#34;&gt;http://docstore.mik.ua/orelly/perl3/lperl/index.htm&lt;/a&gt; and &lt;a href=&#34;http://docstore.mik.ua/orelly/perl4/index.htm&#34;&gt;http://docstore.mik.ua/orelly/perl4/index.htm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As with all help / how-to&amp;rsquo;s these established sources sometimes had varying levels of details for some of the start-up type questions like; @INC and the environment, working out what modules are installed or what to call things.  Usually had to put together a couple to get the answer (like the ones below).&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;@INC&lt;/h3&gt;
+
+&lt;p&gt;As start to use (pardon the pun), perl and edit first modules, a number of the errors popped up relating to modules that were &amp;lsquo;using&amp;rsquo; but couldn&amp;rsquo;t find.  This will probably be a path issue but the fix isn&amp;rsquo;t that obvious as there are gazillions of different ideas out there like:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mixture of &lt;a href=&#34;http://stackoverflow.com/questions/2526804/how-is-perls-inc-constructed-aka-what-are-all-the-ways-of-affecting-where-pe&#34;&gt;use, &amp;lsquo;@INC&amp;rsquo; and PERL5LIB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;overview of &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_AppB.pdf&#34;&gt;special variables&lt;/a&gt; like &amp;lsquo;%ENV&amp;rsquo;, &amp;lsquo;@INC&amp;rsquo;, &amp;lsquo;%INC&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;another environment setup &lt;a href=&#34;http://www.perlmonks.org/?node_id=867860&#34;&gt;PERL5LIB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;some more about &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Chap10.pdf&#34;&gt;modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perl.com/pub/2002/05/14/mod_perl.html&#34;&gt;use(), require(), do(), %INC and @INC Explained&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Somewhere in this list (start at the top and work down) and google will probably be the answer.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;CPAN Perl Modules&lt;/h3&gt;
+
+&lt;p&gt;There are a gazilion &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Chap10.pdf&#34;&gt;perl modules&lt;/a&gt; or bits of code already written to do all sorts of things, so where is it?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;installed as part of the interpreter  (File::Find, benchmark etc)&lt;/li&gt;
+&lt;li&gt;code up on repositories like GitHub&lt;/li&gt;
+&lt;li&gt;perl package &lt;a href=&#34;http://docs.activestate.com/activeperl/5.10/faq/ActivePerl-faq2.html#ppm_repositories&#34;&gt;repositories&lt;/a&gt; like for ActiveState&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cpan.org/misc/cpan-faq.html&#34;&gt;Comprehensive Perl Archive Network&lt;/a&gt; (CPAN)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am using macOSX so perl was installed already and installed the cpan addon &lt;a href=&#34;http://www.bioperl.org/wiki/Tutorial:Installing_Perl_modules&#34;&gt;package manager&lt;/a&gt; by entering the &lt;a href=&#34;http://search.cpan.org/~miyagawa/App-cpanminus-1.7001/bin/cpanm&#34;&gt;code below&lt;/a&gt; in a terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo cpan App::cpanminus
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now &lt;a href=&#34;http://www.cpan.org/modules/INSTALL.html&#34;&gt;install&lt;/a&gt; any module you can find on cpan &lt;code&gt;sudo cpanm Module::Name&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To find what modules are currently installed, as with most things perl there seems to be multitude of ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;instmodsh&lt;/code&gt; &lt;a href=&#34;http://www.cyberciti.biz/faq/how-do-i-find-out-what-perl-modules-already-installed-on-my-system/&#34;&gt;to see all installed modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;perldoc -l Net::UPnP&lt;/code&gt; &lt;a href=&#34;http://www.perlhowto.com/list_the_installed_modules&#34;&gt;to see if Net::UPnP is installed&lt;/a&gt;, this will show where the module (.pm) is&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;perl -MTie::Hash -e 1&lt;/code&gt; &lt;a href=&#34;http://www.perlhowto.com/check_if_a_module_is_installed&#34;&gt;to see if Tie::Hash is installed&lt;/a&gt;, this will run it so if not installed will get and error message and if installed then will need to break execution&lt;/li&gt;
+&lt;li&gt;see the &lt;code&gt;perlmodinstall&lt;/code&gt; manpage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;EPIC&lt;/h3&gt;
+
+&lt;p&gt;To get the most out of EPIC, need to install some supporting perl modules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project templates (Module::Starter)&lt;/li&gt;
+&lt;li&gt;source formatting (Perl::Tidy), also get colouring&lt;/li&gt;
+&lt;li&gt;best practice approach (Perl::Critic)&lt;/li&gt;
+&lt;li&gt;syntax (Perl::Debugger and Pad::Walker)&lt;/li&gt;
+&lt;li&gt;commenting / documentation (&lt;a href=&#34;http://perldoc.perl.org/perlpod.html&#34;&gt;perlpod&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;eclipse perspective for outline views of code and consoles for heaps of things like tasks, logs etc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To do that we ran the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo cpanm Module::Starter
+    sudo cpanm Perl::Tidy
+    sudo cpanm Perl::Critic
+    sudo cpanm Pad::Walker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When configuring these into &lt;a href=&#34;./Paint-by-numbers:-Eclipse-with-Epic-and-Egit&#34;&gt;EPIC preferences&lt;/a&gt; need to find where the modules installed to as couldn&amp;rsquo;t use the default locations.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Perldoc&lt;/h3&gt;
+
+&lt;p&gt;Understanding how perldoc works, in particular the syntax for embedding pod into code and then using it to auto-generate documentation was a great place to start understanding perl.  In doing this first, got to see code examples, work out how to see and fix mistakes like forgetting to put in spaces and semicolons at end of lines and had to use the perl interpreter and instal modules.  Also was an easy, practical way to start looking at the perl language, and actually got to produce something helpful.&lt;/p&gt;
+
+&lt;p&gt;Got some help from the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://search.cpan.org/~rjbs/perl-5.18.1/pod/perlpod.pod&#34;&gt;http://search.cpan.org/~rjbs/perl-5.18.1/pod/perlpod.pod&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://perldoc.perl.org/perlpod.html&#34;&gt;http://perldoc.perl.org/perlpod.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlmonks.org/?node_id=252477&#34;&gt;http://www.perlmonks.org/?node_id=252477&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first pod we did was inside one of the pDLNA modules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;create some heading information for the package (remember the = operator needs to be against the margin no spaces and sometimes need space at the end of line to work properly)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=head1 NAME
+
+package PDLNA::SSDP - core module for Simple Service Discovery Protocol (SSDP).
+
+=head1 DESCRIPTION
+
+When a Universal Plug and Play (UPnP) enabled device joins a network.....
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;documentation for the functions used, note the use of &lt;code&gt;over&lt;/code&gt;, &lt;code&gt;begin/end html&lt;/code&gt;, &lt;code&gt;back&lt;/code&gt; and &lt;code&gt;cut&lt;/code&gt;, these give the pod structure (over to start the list and back to end it), also using html inside the pod meant could link between the resulting html docs, so when you &lt;a href=&#34;http://www.imdb.com/title/tt0389860/&#34;&gt;click&lt;/a&gt; on an internal library you get taken to the htmlpod for that module.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=head1 LIBRARY FUNCTIONS
+
+=over 12
+
+=item internal libraries
+
+=begin html
+
+&amp;lt;/p&amp;gt;
+&amp;lt;a href=&amp;quot;./Config.html&amp;quot;&amp;gt;PDLNA::Config&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Database.html&amp;quot;&amp;gt;PDLNA::Database&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Devices.html&amp;quot;&amp;gt;PDLNA::Devices&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Log.html&amp;quot;&amp;gt;PDLNA::Log&amp;lt;/a&amp;gt;.
+&amp;lt;/p&amp;gt;
+
+=end html
+
+=item external libraries
+
+L&amp;lt;IO::Socket::INET&amp;gt;,
+L&amp;lt;IO::Socket::Multicast&amp;gt;,
+L&amp;lt;Net::Netmask&amp;gt;.
+
+=back
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the block of pod like the following gave chance to document as went the modules actions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=item add_receive_socket()
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;this was how wrapped up pod in the module, note the use of &lt;code&gt;back&lt;/code&gt; at start of the podblock below, this is to close off the headings above.  Note also the use of &lt;code&gt;L&amp;lt;&amp;lt;lt&amp;gt;...E&amp;lt;gt&amp;gt;&amp;gt;&lt;/code&gt; this was a fiddly way to get the email link to work, the other web link was easier.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=back
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2010-2013 Stefan Heumader L&amp;lt;E&amp;lt;lt&amp;gt;stefan@heumader.atE&amp;lt;gt&amp;gt;&amp;gt;.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licenses/&amp;gt;.
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once had put all the pod into the modules then created a perl program as below to generate html files like the one for &lt;a href=&#34;../usefuldocs/SSDP.html&#34;&gt;ssdp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    #!/usr/bin/perl
+    
+    use warnings;
+    use strict;
+    
+    use Pod::Simple::HTMLBatch;
+    use Pod::Simple::XHTML;
+
+    my $in_dir = &#39;put directory in here&#39;;
+    my $out_dir = $in_dir . &#39;POD&#39;;
+    
+    my $convert = Pod::Simple::HTMLBatch-&amp;gt;new;
+    $convert-&amp;gt;html_render_class(&#39;Pod::Simple::XHTML&#39;);
+    $convert-&amp;gt;add_css(&#39;http://www.perl.org/css/perl.css&#39;);
+    $convert-&amp;gt;css_flurry(0);
+    $convert-&amp;gt;contents_page_start;
+    $convert-&amp;gt;contents_page_end;
+    $convert-&amp;gt;javascript_flurry(0);
+    $convert-&amp;gt;contents_file(0);
+    $convert-&amp;gt;batch_convert( [ $in_dir ], $out_dir );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Some conventions&lt;/h3&gt;
+
+&lt;p&gt;There seemed to be different naming conventions for different versions of perl but we&amp;rsquo;re using:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;.pl for programs&lt;/li&gt;
+&lt;li&gt;.pm for modules&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This seems to be ok and works in the EPIC plugin to ensure that get nice syntax colouring.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

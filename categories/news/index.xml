@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>News on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/categories/news/index.xml/</link>
+    
+    
+    
+    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Where&#39;s content management heading?</title>
+      <link>http://localhost:1313/blog/wheres-content-management-heading/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/blog/wheres-content-management-heading/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Consumers need a consumer level experience (read:iPhone usage easy) to use content tools.  It&amp;rsquo;s not just using the getting at content while its in the repository but importantly ingestion and publishing need to be easy.&lt;/p&gt;
+
+&lt;p&gt;and put the repository in a secure cloud so someone can do the management and that&amp;rsquo;d be nirvana&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Where&#39;s streaming heading?</title>
+      <link>http://localhost:1313/blog/wheres-streaming-heading/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/blog/wheres-streaming-heading/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;youtube
+Commercial appliances (including NAS) certified for UpnP/DLNA (
+SmartTV / STB (including Telco supplied) with online subscription service - catchup TV, movies
+Airplay
+HTPC / Android Sticks / GoogleTV / OpenSource media systems
+VLC style RTMP
+AdultContent industry&lt;/p&gt;
+
+&lt;p&gt;HDMI/MHL/Wireless app&lt;/p&gt;
+
+&lt;p&gt;universal search&lt;/p&gt;
+
+&lt;p&gt;dropbox, picassa, slideshare&lt;/p&gt;
+
+&lt;p&gt;xbmc model is interesting with roadmaps for peer-to-peer upnp file sharing, universal search, ecosystem of addons and customisations, dlna and airplay support, multiple methods as a control point&lt;/p&gt;
+
+&lt;p&gt;Risks (remember to put in mitigations)
+-   the market is already moving in a way with discrete / point solutions
+-   UPnP security issues&lt;/p&gt;
+
+&lt;p&gt;DLNA and AirPlay won&amp;rsquo;t talk to each other
+Choosing a home entertainment platform is a bit like picking sides in a battle: there are two rival standards, DLNA and AirPlay. Where DLNA works across thousands of different devices, AirPlay (and AirPrint) is more selective and only works on Apple or Apple-approved products. That&amp;rsquo;s the official line, anyway, but there are ways around it: apps such as AirSync bring AirPlay streaming to Android phones, while apps such as media:connect offer DLNA on iOS.&lt;/p&gt;
+
+&lt;p&gt;manuals online&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
