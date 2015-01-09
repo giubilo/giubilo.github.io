@@ -103,6 +103,297 @@ Forecast baseline&lt;/p&gt;
     </item>
     
     <item>
+      <title>Perl</title>
+      <link>http://localhost:1313/retrospectives/perl/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/perl/</guid>
+      <description>
+
+&lt;p&gt;Have chosen to use Perl because;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Perl is common in opensource projects and has extensive documentation and huge community&lt;/li&gt;
+&lt;li&gt;there a &lt;a href=&#34;https://github.com/MichaelDaum/cmis-perl&#34;&gt;CMIS wrapper&lt;/a&gt; written in Perl&lt;/li&gt;
+&lt;li&gt;there&amp;rsquo;s a &lt;a href=&#34;http://www.cybergarage.org/twiki/bin/view/Main/CyberLinkForPerl&#34;&gt;DLNA media server extension&lt;/a&gt; written in Perl&lt;/li&gt;
+&lt;li&gt;handles text stuff (which there is going to be heaps of)&lt;/li&gt;
+&lt;li&gt;it was new to me and I like a challenge&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Going to try and keep it neat and maintainable through the help of the Eclipse - Epic plugin.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;p&gt;Never used perl before so &lt;a href=&#34;http://www.imdb.com/title/tt0066011/?ref_=nm_flmg_com_92&#34;&gt;where do we begin&lt;/a&gt;? At the &lt;a href=&#34;http://www.perl.org/books/beginning-perl/&#34;&gt;beginning&lt;/a&gt; I guess:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;perl is an interpreted language (not compiled to a binary) so need an interpreter&lt;/li&gt;
+&lt;li&gt;get help&lt;/li&gt;
+&lt;li&gt;be good to the &lt;a href=&#34;http://www.imdb.com/title/tt0497116/&#34;&gt;environment&lt;/a&gt; variables&lt;/li&gt;
+&lt;li&gt;reuse, reduce, recycle - live sustainably with the Comprehensive Perl Archive Network&lt;/li&gt;
+&lt;li&gt;EPIC debugging is, well, &lt;a href=&#34;http://www.imdb.com/title/tt0848537/&#34;&gt;epic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;document as you go, who would have thunk it&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;http://www.imdb.com/title/tt0117509/&#34;&gt;name by any other&lt;/a&gt; is conventional&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;The Perl Interpreter&lt;/h3&gt;
+
+&lt;p&gt;To check if already have a perl interpreter installed type the following into a command prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    perl -v 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It should return something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    This is perl 5, version 12, subversion 4 (v5.12.4) built for darwin-thread-multi-2level
+    (with 2 registered patches, see perl -V for more detail)
+    
+    Copyright 1987-2010, Larry Wall
+    
+    Perl may be copied only under the terms of either the Artistic License or the
+    GNU General Public License, which may be found in the Perl 5 source kit.
+    
+    Complete documentation for Perl, including FAQ lists, should be found on
+    this system using &amp;quot;man perl&amp;quot; or &amp;quot;perldoc perl&amp;quot;.  If you have access to the
+    Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If it doesn&amp;rsquo;t, &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;download one&lt;/a&gt; for the relevant platform:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Platform&lt;/th&gt;
+&lt;th&gt;Where&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;mac&lt;/td&gt;
+&lt;td&gt;pretty likely already installed&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;windows&lt;/td&gt;
+&lt;td&gt;could get &lt;a href=&#34;http://www.activestate.com&#34;&gt;activestate&lt;/a&gt; or &lt;a href=&#34;http://strawberryperl.com&#34;&gt;strawberryperl&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;linux&lt;/td&gt;
+&lt;td&gt;consult package manager&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Once have the perl interpreter installed have access to the &lt;a href=&#34;http://www.perlmonks.org/?node_id=640489&#34;&gt;perl shell&lt;/a&gt; with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    perl -MCPAN -e shell   
+    cpan  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;getting help&lt;/h3&gt;
+
+&lt;p&gt;Perl is up to version 5 now and that means there is tons of help out there.  Some of the obvious places are;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://perldoc.perl.org/perl.html&#34;&gt;http://perldoc.perl.org/perl.html&lt;/a&gt; and &lt;a href=&#34;http://www.perl.org/learn.html&#34;&gt;http://www.perl.org/learn.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Intro.pdf&#34;&gt;Beginning Perl Intro&lt;/a&gt; explains about getting text: &lt;em&gt;typing &lt;code&gt;perldoc perl&lt;/code&gt; from a command prompt will get you a table of contents and some basic infomration about Perl.  The pages your probably going to use are the Perl FAQ and &amp;lsquo;perlfunc&amp;rsquo;, which describes the built-in functions&lt;/em&gt;.  Page 10 in here also lists help sources.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlmonks.org&#34;&gt;http://www.perlmonks.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlhowto.com&#34;&gt;http://www.perlhowto.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;these look really simple to go through if have a bit of time: &lt;a href=&#34;http://docstore.mik.ua/orelly/perl3/lperl/index.htm&#34;&gt;http://docstore.mik.ua/orelly/perl3/lperl/index.htm&lt;/a&gt; and &lt;a href=&#34;http://docstore.mik.ua/orelly/perl4/index.htm&#34;&gt;http://docstore.mik.ua/orelly/perl4/index.htm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As with all help / how-to&amp;rsquo;s these established sources sometimes had varying levels of details for some of the start-up type questions like; @INC and the environment, working out what modules are installed or what to call things.  Usually had to put together a couple to get the answer (like the ones below).&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;@INC&lt;/h3&gt;
+
+&lt;p&gt;As start to use (pardon the pun), perl and edit first modules, a number of the errors popped up relating to modules that were &amp;lsquo;using&amp;rsquo; but couldn&amp;rsquo;t find.  This will probably be a path issue but the fix isn&amp;rsquo;t that obvious as there are gazillions of different ideas out there like:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mixture of &lt;a href=&#34;http://stackoverflow.com/questions/2526804/how-is-perls-inc-constructed-aka-what-are-all-the-ways-of-affecting-where-pe&#34;&gt;use, &amp;lsquo;@INC&amp;rsquo; and PERL5LIB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;overview of &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_AppB.pdf&#34;&gt;special variables&lt;/a&gt; like &amp;lsquo;%ENV&amp;rsquo;, &amp;lsquo;@INC&amp;rsquo;, &amp;lsquo;%INC&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;another environment setup &lt;a href=&#34;http://www.perlmonks.org/?node_id=867860&#34;&gt;PERL5LIB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;some more about &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Chap10.pdf&#34;&gt;modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perl.com/pub/2002/05/14/mod_perl.html&#34;&gt;use(), require(), do(), %INC and @INC Explained&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Somewhere in this list (start at the top and work down) and google will probably be the answer.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;CPAN Perl Modules&lt;/h3&gt;
+
+&lt;p&gt;There are a gazilion &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Chap10.pdf&#34;&gt;perl modules&lt;/a&gt; or bits of code already written to do all sorts of things, so where is it?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;installed as part of the interpreter  (File::Find, benchmark etc)&lt;/li&gt;
+&lt;li&gt;code up on repositories like GitHub&lt;/li&gt;
+&lt;li&gt;perl package &lt;a href=&#34;http://docs.activestate.com/activeperl/5.10/faq/ActivePerl-faq2.html#ppm_repositories&#34;&gt;repositories&lt;/a&gt; like for ActiveState&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cpan.org/misc/cpan-faq.html&#34;&gt;Comprehensive Perl Archive Network&lt;/a&gt; (CPAN)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am using macOSX so perl was installed already and installed the cpan addon &lt;a href=&#34;http://www.bioperl.org/wiki/Tutorial:Installing_Perl_modules&#34;&gt;package manager&lt;/a&gt; by entering the &lt;a href=&#34;http://search.cpan.org/~miyagawa/App-cpanminus-1.7001/bin/cpanm&#34;&gt;code below&lt;/a&gt; in a terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo cpan App::cpanminus
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now &lt;a href=&#34;http://www.cpan.org/modules/INSTALL.html&#34;&gt;install&lt;/a&gt; any module you can find on cpan &lt;code&gt;sudo cpanm Module::Name&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To find what modules are currently installed, as with most things perl there seems to be multitude of ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;instmodsh&lt;/code&gt; &lt;a href=&#34;http://www.cyberciti.biz/faq/how-do-i-find-out-what-perl-modules-already-installed-on-my-system/&#34;&gt;to see all installed modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;perldoc -l Net::UPnP&lt;/code&gt; &lt;a href=&#34;http://www.perlhowto.com/list_the_installed_modules&#34;&gt;to see if Net::UPnP is installed&lt;/a&gt;, this will show where the module (.pm) is&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;perl -MTie::Hash -e 1&lt;/code&gt; &lt;a href=&#34;http://www.perlhowto.com/check_if_a_module_is_installed&#34;&gt;to see if Tie::Hash is installed&lt;/a&gt;, this will run it so if not installed will get and error message and if installed then will need to break execution&lt;/li&gt;
+&lt;li&gt;see the &lt;code&gt;perlmodinstall&lt;/code&gt; manpage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;EPIC&lt;/h3&gt;
+
+&lt;p&gt;To get the most out of EPIC, need to install some supporting perl modules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project templates (Module::Starter)&lt;/li&gt;
+&lt;li&gt;source formatting (Perl::Tidy), also get colouring&lt;/li&gt;
+&lt;li&gt;best practice approach (Perl::Critic)&lt;/li&gt;
+&lt;li&gt;syntax (Perl::Debugger and Pad::Walker)&lt;/li&gt;
+&lt;li&gt;commenting / documentation (&lt;a href=&#34;http://perldoc.perl.org/perlpod.html&#34;&gt;perlpod&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;eclipse perspective for outline views of code and consoles for heaps of things like tasks, logs etc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To do that we ran the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo cpanm Module::Starter
+    sudo cpanm Perl::Tidy
+    sudo cpanm Perl::Critic
+    sudo cpanm Pad::Walker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When configuring these into &lt;a href=&#34;./Paint-by-numbers:-Eclipse-with-Epic-and-Egit&#34;&gt;EPIC preferences&lt;/a&gt; need to find where the modules installed to as couldn&amp;rsquo;t use the default locations.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Perldoc&lt;/h3&gt;
+
+&lt;p&gt;Understanding how perldoc works, in particular the syntax for embedding pod into code and then using it to auto-generate documentation was a great place to start understanding perl.  In doing this first, got to see code examples, work out how to see and fix mistakes like forgetting to put in spaces and semicolons at end of lines and had to use the perl interpreter and instal modules.  Also was an easy, practical way to start looking at the perl language, and actually got to produce something helpful.&lt;/p&gt;
+
+&lt;p&gt;Got some help from the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://search.cpan.org/~rjbs/perl-5.18.1/pod/perlpod.pod&#34;&gt;http://search.cpan.org/~rjbs/perl-5.18.1/pod/perlpod.pod&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://perldoc.perl.org/perlpod.html&#34;&gt;http://perldoc.perl.org/perlpod.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlmonks.org/?node_id=252477&#34;&gt;http://www.perlmonks.org/?node_id=252477&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first pod we did was inside one of the pDLNA modules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;create some heading information for the package (remember the = operator needs to be against the margin no spaces and sometimes need space at the end of line to work properly)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=head1 NAME
+
+package PDLNA::SSDP - core module for Simple Service Discovery Protocol (SSDP).
+
+=head1 DESCRIPTION
+
+When a Universal Plug and Play (UPnP) enabled device joins a network.....
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;documentation for the functions used, note the use of &lt;code&gt;over&lt;/code&gt;, &lt;code&gt;begin/end html&lt;/code&gt;, &lt;code&gt;back&lt;/code&gt; and &lt;code&gt;cut&lt;/code&gt;, these give the pod structure (over to start the list and back to end it), also using html inside the pod meant could link between the resulting html docs, so when you &lt;a href=&#34;http://www.imdb.com/title/tt0389860/&#34;&gt;click&lt;/a&gt; on an internal library you get taken to the htmlpod for that module.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=head1 LIBRARY FUNCTIONS
+
+=over 12
+
+=item internal libraries
+
+=begin html
+
+&amp;lt;/p&amp;gt;
+&amp;lt;a href=&amp;quot;./Config.html&amp;quot;&amp;gt;PDLNA::Config&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Database.html&amp;quot;&amp;gt;PDLNA::Database&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Devices.html&amp;quot;&amp;gt;PDLNA::Devices&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Log.html&amp;quot;&amp;gt;PDLNA::Log&amp;lt;/a&amp;gt;.
+&amp;lt;/p&amp;gt;
+
+=end html
+
+=item external libraries
+
+L&amp;lt;IO::Socket::INET&amp;gt;,
+L&amp;lt;IO::Socket::Multicast&amp;gt;,
+L&amp;lt;Net::Netmask&amp;gt;.
+
+=back
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the block of pod like the following gave chance to document as went the modules actions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=item add_receive_socket()
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;this was how wrapped up pod in the module, note the use of &lt;code&gt;back&lt;/code&gt; at start of the podblock below, this is to close off the headings above.  Note also the use of &lt;code&gt;L&amp;lt;&amp;lt;lt&amp;gt;...E&amp;lt;gt&amp;gt;&amp;gt;&lt;/code&gt; this was a fiddly way to get the email link to work, the other web link was easier.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=back
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2010-2013 Stefan Heumader L&amp;lt;E&amp;lt;lt&amp;gt;stefan@heumader.atE&amp;lt;gt&amp;gt;&amp;gt;.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licenses/&amp;gt;.
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once had put all the pod into the modules then created a perl program as below to generate html files like the one for &lt;a href=&#34;../usefuldocs/SSDP.html&#34;&gt;ssdp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    #!/usr/bin/perl
+    
+    use warnings;
+    use strict;
+    
+    use Pod::Simple::HTMLBatch;
+    use Pod::Simple::XHTML;
+
+    my $in_dir = &#39;put directory in here&#39;;
+    my $out_dir = $in_dir . &#39;POD&#39;;
+    
+    my $convert = Pod::Simple::HTMLBatch-&amp;gt;new;
+    $convert-&amp;gt;html_render_class(&#39;Pod::Simple::XHTML&#39;);
+    $convert-&amp;gt;add_css(&#39;http://www.perl.org/css/perl.css&#39;);
+    $convert-&amp;gt;css_flurry(0);
+    $convert-&amp;gt;contents_page_start;
+    $convert-&amp;gt;contents_page_end;
+    $convert-&amp;gt;javascript_flurry(0);
+    $convert-&amp;gt;contents_file(0);
+    $convert-&amp;gt;batch_convert( [ $in_dir ], $out_dir );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Some conventions&lt;/h3&gt;
+
+&lt;p&gt;There seemed to be different naming conventions for different versions of perl but we&amp;rsquo;re using:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;.pl for programs&lt;/li&gt;
+&lt;li&gt;.pm for modules&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This seems to be ok and works in the EPIC plugin to ensure that get nice syntax colouring.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>UPnP</title>
       <link>http://localhost:1313/retrospectives/upnp/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -390,119 +681,6 @@ risk reporting&lt;/p&gt;
 &lt;li&gt;industrialising kickstarter / outsourcing / imaging&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;donations&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Project Success</title>
-      <link>http://localhost:1313/retrospectives/project-success/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/project-success/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Introduction
-It might be stating the obvious but we begin a project with the view that we are going to successfully deliver the project’s outcomes. Right! In general I guess that is true, except for those stakeholders hoping we don’t finish, don’t deliver, don’t succeed.
-Is finishing or delivering, the end-game then? Is that what success is.  How do we know we are at the end? How do we measure the level to which we have achieved the outcomes?
-Who Says What Success Is?
-What success means, is dependant generally on perspective; that is, who we are measuring success for.  There are generally many stakeholders on a project, all with their own views, sometimes conflicting, on what success is.  Success then is defined by the stakeholder’s personal views, professional views, role they play on the project or in society.  Their views are more than likely affected by the impact the project has on the environment, dictated by things like scale (100,000 people, 10 years) and nature (e.g. construction, software, social change) of the project.
-The old saying “the project was brought in on time, on budget and with acceptable quality” is still, in some peoples mind, the measure of project success.  There is much evidence to suggest however, that these are not the only measures of success.&lt;/p&gt;
-
-&lt;p&gt;Turner&lt;br /&gt;
-Hartman&lt;/p&gt;
-
-&lt;p&gt;Success as a Function of Time
-Projects are unique, transient, almost organic entities.  They have a start, middle and end.&lt;br /&gt;
-At the beginning of a project it is important to understand what are the criteria for success and who is measuring success.  This allows the direction of the project to be set and provides a yardstick with which to later evaluate the project.
-During the project we monitor success at useful points to ensure there is a reason to continue, to learn from what we have done right so that we can continue to use successful techniques and use points of success to motivate the team.
-It is important to end the project with success as generally all stakeholders have begun and continued the project with the thought of success.
-The point in time we are measuring success has an enormous influence on what success is and who measures success.  The team may be interested in time and quality during the project, the sponsor in cost at delivery time and the community might be interested in the impact the project had years after it was delivered.&lt;/p&gt;
-
-&lt;p&gt;PIC&lt;/p&gt;
-
-&lt;p&gt;Maximising Success
-Some easy steps to maximise the chances of success;
-* Understand the general drivers, pressures, resistance and dynamics of projects
-* Learn from past mistakes
-* Apply sound management techniques&lt;/p&gt;
-
-&lt;p&gt;Understanding Projects
-The chances of success can be maximised if you manage the forces on the project effectively.&lt;/p&gt;
-
-&lt;p&gt;Turner describes a number of interactions of a project.  Each may have an affect on the other.  Even though most projects by their nature are unique, some of the effects of the interactions may be understood through examining similarities to other projects.  Many of these project integration affects are well documented.&lt;/p&gt;
-
-&lt;p&gt;Of all the project dynamics, Attitude is the most important.
-The chances of success are substantially diminished unless;
-* There is major commitment to making the project a success
-* The motivation of everyone working on the project is high
-* Attitudes are supportive and positive.&lt;/p&gt;
-
-&lt;p&gt;Learning From The Past
-There is an enormous amount of generic information about what teams have done in the past to succeed and what pitfalls caused a less than desirable outcome.  The sheer volume of literature and anecdotal evidence to suggest that projects fail is a strong indicator for being concerned about why projects fail.
-By looking to the past we can see what worked and what didn’t so that we can learn from past successes and avoid past mistakes.&lt;/p&gt;
-
-&lt;p&gt;project failure examples&lt;/p&gt;
-
-&lt;p&gt;Cunning Plan: We&amp;rsquo;ll just do it!!&lt;/p&gt;
-
-&lt;p&gt;If you fail to plan, then plan to fail.&lt;/p&gt;
-
-&lt;p&gt;We never seem to have time to plan our projects, but we always have time to do them twice.&lt;/p&gt;
-
-&lt;p&gt;Project Pitfalls
-3 Grude describes a number of categories of pitfalls that have been observed on projects.  This is not intended as an exhaustive list but useful as a quick health check for a project;&lt;/p&gt;
-
-&lt;p&gt;Establishing the Project&lt;br /&gt;
-Pitfalls in the way the project is set up within the parent organisation;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;project plans not aligned with business plans,&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;procedures for managing projects are not well defined,&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;priorities are not communicated to parties involved,&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;no shared vision.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Planning the Project
-Pitfalls in the way the work is defined, the time &amp;amp; cost schedules calculated and communicated to the project team;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;project plans developed on a single level,&lt;/li&gt;
-&lt;li&gt;using cumbersome tools,&lt;/li&gt;
-&lt;li&gt;creativity discouraged,&lt;/li&gt;
-&lt;li&gt;unrealistic estimates&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Organising &amp;amp; Implementing the Project
-Pitfalls in building the project organisation and assigning work to people;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;lack of cooperation,&lt;/li&gt;
-&lt;li&gt;resource providers not committed,&lt;/li&gt;
-&lt;li&gt;resources not available when required,&lt;/li&gt;
-&lt;li&gt;management responsibility not defined,&lt;/li&gt;
-&lt;li&gt;poor communication,&lt;/li&gt;
-&lt;li&gt;technical vs project management.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Controlling the Project
-Pitfalls in monitoring and control;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;purpose of control not understood,&lt;/li&gt;
-&lt;li&gt;progress is not monitored against the plan,&lt;/li&gt;
-&lt;li&gt;ineffective review meetings,&lt;/li&gt;
-&lt;li&gt;responsibility without authority.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Principles of Good Project Management
-Project Management, just as any other management stream, has it’s own principles upon which a manager can look to for guidance.  There is a huge body of stored knowledge on the principles and professional certification available for those willing.  These will all arm the manager with an enormous amount of skill and techniques on which to build experience.
-In addition to reading through all of the available knowledge and undertaking the available studies a number of simple, practical principles may be relied upon;
- Most large or complex problems become easier if broken down into manageable parts that     allow them all to be absorbed.  Make use of breakdown structures for any part of the project    that requires visibility and understanding, such as tasks, people, product, organisation.  By   breaking then down we can more easily see new information about each piece as it becomes    evident over time.  This makes it possible to monitor and manage the project elaboration.
- People are the biggest factor in nearly all projects, they need to be adequately motivated,    organised, committed, directed, skilled and communicated with.  You need to confirm and     align stakeholder’s success criteria.  Disregard the people factors at your peril.
- Get as many successes as you can.  Organise the team, the schedule &amp;amp; the work so that  successes happy often.  If each small step is a success it will be easier and more likely that  the journey will be a success.  Learn from past successes and avoid the causes for past     failures.
- Continuously carry out health checks and audits.  The old adage, ‘if it isn’t broken, don’t fix it’    doesn’t apply if we don’t know it isn’t broken.  Only by understanding the dynamics and     symptoms of a project can we steer the ship and take corrective actions.&lt;/p&gt;
-
-&lt;p&gt;Above all else KEEP IT SIMPLE.&lt;/p&gt;
 </description>
     </item>
     
@@ -1300,6 +1478,69 @@ Velocity tracking&lt;/p&gt;
     </item>
     
     <item>
+      <title>CMIS</title>
+      <link>http://localhost:1313/retrospectives/cmis/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/cmis/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-types-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-highlevel-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Alfresco CMIS information: &lt;a href=&#34;http://www.alfresco.com/cmis&#34;&gt;http://www.alfresco.com/cmis&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&lt;/a&gt;
+The Browser Binding&lt;/p&gt;
+
+&lt;p&gt;In addition to the existing XML-based AtomPub and Web services bindings, CMIS 1.1 provides a simpler JSON-based binding. The browser binding is designed for web applications and is easy to use just with HTML and JavaScript. It uses just two verbs, GET and POST, and resources are referenced using simple and predictable URLs.
+You reference content in the repository by using the two URLs returned by the getRepositories or getRepositoryInfo service:
+rootFolderUrl
+repositoryUrl
+Objects can then be referenced in two ways;
+by their Id
+&lt;rootFolderUrl&gt;?objectId=&lt;objectId&gt;
+by their path
+&lt;rootFolderUrl&gt;/&lt;object path&gt;
+Content that is independent of a folder, for example a Type definition be accessed using the repositoryUrl service.
+&lt;repositoryUrl&gt;?cmisselector=&lt;selector&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;cmis 1.1 standard&lt;/h2&gt;
+
+&lt;p&gt;new cmis:item type - can use for config - types without content streams, secondary types&amp;hellip;both really cool.new browser binding - preferred&lt;/p&gt;
+
+&lt;p&gt;put in the pictures from the standard for objects, and create a picture that highlights the services&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;basically create a really condensed version of the spec.&lt;/p&gt;
+
+&lt;p&gt;To use CMIS, you can either directly interact with one of the CMIS bindings or develop against a CMIS client API. Several APIs are &amp;ldquo;in development&amp;rdquo; for the following programming languages: &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Client_APIs&#34;&gt;cient cmis api&amp;rsquo;s&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;cmis wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;IBM CMIS
+&lt;a href=&#34;http://www-01.ibm.com/software/ecm/cmis.html&#34;&gt;http://www-01.ibm.com/software/ecm/cmis.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;CMIS Poster Lab videos
+&lt;a href=&#34;https://www.youtube.com/watch?v=_koCqeYic1k&#34;&gt;https://www.youtube.com/watch?v=_koCqeYic1k&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&lt;/a&gt;
+The URL to get all of the children of the root/test node in the repository looks like this:
+&lt;a href=&#34;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&#34;&gt;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>CMIS url</title>
       <link>http://localhost:1313/retrospectives/cmis-url/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -1560,69 +1801,6 @@ For any releases the [CMIS Index] page &lt;code&gt;http://[host]:[port]/alfresco
     </item>
     
     <item>
-      <title>CMIS</title>
-      <link>http://localhost:1313/retrospectives/cmis/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/cmis/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-types-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-highlevel-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Alfresco CMIS information: &lt;a href=&#34;http://www.alfresco.com/cmis&#34;&gt;http://www.alfresco.com/cmis&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&lt;/a&gt;
-The Browser Binding&lt;/p&gt;
-
-&lt;p&gt;In addition to the existing XML-based AtomPub and Web services bindings, CMIS 1.1 provides a simpler JSON-based binding. The browser binding is designed for web applications and is easy to use just with HTML and JavaScript. It uses just two verbs, GET and POST, and resources are referenced using simple and predictable URLs.
-You reference content in the repository by using the two URLs returned by the getRepositories or getRepositoryInfo service:
-rootFolderUrl
-repositoryUrl
-Objects can then be referenced in two ways;
-by their Id
-&lt;rootFolderUrl&gt;?objectId=&lt;objectId&gt;
-by their path
-&lt;rootFolderUrl&gt;/&lt;object path&gt;
-Content that is independent of a folder, for example a Type definition be accessed using the repositoryUrl service.
-&lt;repositoryUrl&gt;?cmisselector=&lt;selector&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;cmis 1.1 standard&lt;/h2&gt;
-
-&lt;p&gt;new cmis:item type - can use for config - types without content streams, secondary types&amp;hellip;both really cool.new browser binding - preferred&lt;/p&gt;
-
-&lt;p&gt;put in the pictures from the standard for objects, and create a picture that highlights the services&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;basically create a really condensed version of the spec.&lt;/p&gt;
-
-&lt;p&gt;To use CMIS, you can either directly interact with one of the CMIS bindings or develop against a CMIS client API. Several APIs are &amp;ldquo;in development&amp;rdquo; for the following programming languages: &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Client_APIs&#34;&gt;cient cmis api&amp;rsquo;s&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;cmis wiki&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;IBM CMIS
-&lt;a href=&#34;http://www-01.ibm.com/software/ecm/cmis.html&#34;&gt;http://www-01.ibm.com/software/ecm/cmis.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;CMIS Poster Lab videos
-&lt;a href=&#34;https://www.youtube.com/watch?v=_koCqeYic1k&#34;&gt;https://www.youtube.com/watch?v=_koCqeYic1k&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&lt;/a&gt;
-The URL to get all of the children of the root/test node in the repository looks like this:
-&lt;a href=&#34;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&#34;&gt;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Building a folder and document based protocol</title>
       <link>http://localhost:1313/retrospectives/building-a-folder-and-document-based-protocol/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -1805,11 +1983,11 @@ This (optional) service is used by the control point to control the “playback�
     </item>
     
     <item>
-      <title>CMIS Workbench</title>
-      <link>http://localhost:1313/retrospectives/cmis-workbench/</link>
+      <title>Launchng OSX scripts</title>
+      <link>http://localhost:1313/retrospectives/launching-osx-scripts/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/cmis-workbench/</guid>
+      <guid>http://localhost:1313/retrospectives/launching-osx-scripts/</guid>
       <description>
 
 &lt;p&gt;&lt;html&gt;
@@ -1829,217 +2007,31 @@ This (optional) service is used by the control point to control the “playback�
 &lt;/table&gt;
 &lt;/html&gt;&lt;/p&gt;
 
-&lt;p&gt;The &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;CMIS Workbench&lt;/a&gt; is a desktop (osx, win, linux) repository browser and development tool for working with the OpenCMIS client API (there&amp;rsquo;s an &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;introductory video&lt;/a&gt; that provides a simple overview).&lt;/p&gt;
-
-&lt;p&gt;Things it&amp;rsquo;s being used on Allegria for include:
-* quickly prototyping and checking content types and properties
-* working out syntax for cmis queries
-* running quick scripts for changing objects in the repositories&lt;/p&gt;
-
-&lt;p&gt;The OpenCMIS API it uses, is an open source implementation of the &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt; provided by the &lt;a href=&#34;http://chemistry.apache.org&#34; title=&#34;target=_blank&#34;&gt;Apache Chemistry project&lt;/a&gt;.  The CMIS Workbench is also one of the tools from the apache project:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/chemistry_tm_logo_small.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
-&lt;br /&gt;
-&lt;img src=&#34;/assets/img/apache-chemistry.png?raw=true&#34; alt=&#34;img&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Alfresco being a cmis-compliant rich content repository, means that it provides a set of [[services for working with objects|Helicopter view: CMIS]] defined by the specification (which are then wrapped in the OpenCMIS implementation that a client like the CMIS Workbench can use).  With CMIS, most capabilities of the Alfresco repository are accessible and for the rest there are [[other interfaces|Helicopter view: Alfresco integration]] available.&lt;/p&gt;
-
-&lt;p&gt;Florian Muller, Jay Brown and Jeff Potts have written &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt;, which they describe as a hands on experience with the [cmis] standard and with the Apache Chemistry libraries and tools [including CMIS Workbench].  In a very similar vein to Allegria, the focus of the book is on:
-&amp;gt;
-getting a good general understanding of CMIS, enough to build a useful (and we hope fun) application&lt;br /&gt;
-&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;This paint-by-numbers is not to redo the work inside their book but does summarise some of the key aspects of the CMIS Workbench, in particular using it with an Alfresco repository.&lt;/p&gt;
+&lt;p&gt;The CMIS Workbench application in its default download launches with a shell script rather than a neat osx package.  The osx Automator can be used to launch it from an icon in the osx launchpad or dock.&lt;/p&gt;
 
 &lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Get CMIS Workbench&lt;/li&gt;
-&lt;li&gt;Connecting the workbench to repositories&lt;/li&gt;
-&lt;li&gt;Browsing objects in the repository&lt;/li&gt;
-&lt;li&gt;Querying the repository&lt;/li&gt;
-&lt;li&gt;CMIS Types&lt;/li&gt;
-&lt;li&gt;The groovy console&lt;/li&gt;
-&lt;li&gt;Advanced features&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Create an &amp;lsquo;application&amp;rsquo; from the osx Automator:&lt;/p&gt;
 
-&lt;h3 id=&#34;toc_1&#34;&gt;1. Get CMIS Workbench&lt;/h3&gt;
-
-&lt;p&gt;The CMIS Workbench can be &lt;a href=&#34;http://www.apache.org/dyn/closer.cgi/chemistry/opencmis/0.10.0/chemistry-opencmis-workbench-0.10.0-full.zip&#34;&gt;downloaded&lt;/a&gt; as a zip from the &lt;a href=&#34;http://chemistry.apache.org&#34;&gt;Apache Chemistry project&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Florian Muller has also created a &lt;a href=&#34;https://github.com/fmui/ApacheChemistryInAction&#34;&gt;GitHub Repository&lt;/a&gt; for readers of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; which contains; a zip of the CMIS Workbench, an in-memory cmis compliant repository (another one of the apache project&amp;rsquo;s tools) and the source code for each chapter&amp;rsquo;s examples.  To use the ApacheChemistryInAction GitHub repository, fork it and import it to Eclipse eGit as per the paint-by-numbers directions for [[GitHub|Paint by numbers: GitHub]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
- and the ones for [[Eclipse|Paint by numbers: Eclipse]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
-.&lt;/p&gt;
-
-&lt;p&gt;Unzip the chemistry-opencmis-workbench-0.10.0-full.zip.  Using a linux or osx terminal type:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd [directory where extracted workbench to]
-./workbench.sh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; the workbench.sh file from Florian&amp;rsquo;s GitHub repo is tailored to use the apache in-memory repository.  To use the CMIS Workbench with Alfresco it is better to also get the one from the ApacheProject (so rename Florian&amp;rsquo;s to something like &lt;code&gt;workbench.in-memory.sh&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;To have a neater installation and run it from the osx launchpad or dock follow this [[paint-by-numbers|Paint by numbers: Launching osx scripts]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
-.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;2. Connecting the workbench&lt;/h3&gt;
-
-&lt;p&gt;The connection window will appear either when starting the application or using the &amp;lsquo;Connection&amp;rsquo; menu button:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;./images/cmis workbench on-premise connection.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator-type.png?raw=true&#34; alt=&#34;automator&#34; /&gt;
 &lt;/p&gt;
 
-&lt;p&gt;The three key items needed to make a connection to a repository host are:
-* &lt;strong&gt;BINDING&lt;/strong&gt; - the bindings (atompub, webservice, browser) are explained in detail in the cmis specification (the &amp;lsquo;browser&amp;rsquo; binding is the fullest and most lightweight implementation but not always available).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Drag run shell script to the action window and enter the path to workbench.sh:&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;URL&lt;/strong&gt; - the url is where the rubber hits the road for cmis on Alfresco, however it is a little tricky to understand just which url is needed as there are many to choose from depending on; what version of Alfresco is running, how the repository is deployed (i.e. on-premise, cloud, public), which binding is being used (atompub, webservice, browser) and whether connecting to the OpenCMIS API or to services or service information.  To keep this step readable the unravelling of this is in [[Spaghetti western: CMIS URL|Spaghetti western: CMIS URL]]&lt;img src=&#34;/assets/img/spaghetti-western-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
- (although the examples below have the answers anyway).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;AUTHENTICATION CREDENTIALS / METHOD&lt;/strong&gt; - just like the url, we are spoilt for choice on what authentication methods and credentials may be used, and there is a proliferation of documentation to go along with that.  To keep things simple going to use the standard, non-https, user name and password for connecting to Alfresco on-premise and when connecting to Alfresco in the cloud, use the required oAuth implementation (how to do this is in the examples below).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The &amp;lsquo;basic&amp;rsquo; tab provides, well, basic input boxes for these key parameters plus some performance tuning parameters (which &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; explains in Part 3 - advanced topics).  The &amp;lsquo;expert&amp;rsquo; tab allows an expanded syntax of &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/org/apache/chemistry/opencmis/commons/SessionParameter.html&#34;&gt;OpenCMIS session parameters&lt;/a&gt; to fine tune the &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/constant-values.html#org.apache&#34;&gt;values&lt;/a&gt; that can be used.  The expert tab has a drop down of some preset connection parameters (such as Alfresco) to make things easier.&lt;/p&gt;
-
-&lt;p&gt;So, to connect to an Alfresco 4.2e, on-premise repository with the OpenCMIS browser binding use the following parameters:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;org.apache.chemistry.opencmis.binding.spi.type=browser
-org.apache.chemistry.opencmis.binding.browser.url=http://[host]/alfresco/cmisbrowser
-org.apache.chemistry.opencmis.user=&amp;lt;user&amp;gt;
-org.apache.chemistry.opencmis.password=&amp;lt;password&amp;gt;
-org.apache.chemistry.opencmis.binding.compression=true
-org.apache.chemistry.opencmis.binding.cookies=true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Given only simple parameters were chosen in the on-premise example above, they could have also been entered in the basic tab for the same result.  Connecting to the Alfresco in the cloud repository requires the use of the expert tab though as it uses parameter values that cannot be set on the basic tab.&lt;/p&gt;
-
-&lt;p&gt;The example syntax below was generated by selecting &amp;lsquo;Alfresco Cloud AtomPub&amp;rsquo; from the parameter template drop down list at the top of the expert tab (at present it doesn&amp;rsquo;t seem like the browser binding is available in the cloud repository). The value for the oAuth access token is obtained from an oAuth authentication flow which is described in [[Paint by numbers: Alfresco oAuth sample application|Paint by numbers: Alfresco oAuth sample application]]&lt;img src=&#34;./images/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
-:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# Alfresco Cloud (CMIS 1.0 AtomPub)
-org.apache.chemistry.opencmis.binding.spi.type=atompub
-org.apache.chemistry.opencmis.binding.atompub.url=https://api.alfresco.com/cmis/versions/1.0/atom
-org.apache.chemistry.opencmis.binding.auth.http.basic=false
-
-# Please provide a valid OAuth access token in the following property
-# Note that Alfresco Cloud access tokens have a limited lifetime (currently 1 hour) and the OpenCMIS Workbench does not auto-refresh the access token when it expires
-org.apache.chemistry.opencmis.binding.header.0=Authorization:Bearer ####ACCESS_TOKEN####
-
-# Other optional options - compression etc. - may be provided here
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Once all the relevant parameters are entered, pressing the &amp;lsquo;load repositories&amp;rsquo; button, presents a choice of instances on the host (as can run multiples), choose a repository from the drop down, press the login button and &lt;a href=&#34;http://www.imdb.com/title/tt2379418/&#34;&gt;voila!&lt;/a&gt; you are into the default configuration of the CMIS Workbench user interface.&lt;/p&gt;
-
-&lt;p&gt;The CMIS Workbench can also be configured through &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;system properties or additional properties&lt;/a&gt; in the expert login dialog. An &lt;a href=&#34;http://forums.alfresco.com/comment/75223#comment-75223&#34;&gt;Alfresco forum post&lt;/a&gt; explains this as:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The CMIS Workbench, for example, makes use of the OperationContext. It sets up two OperationContext objects when it starts:&lt;br /&gt;
-* One OperationContext object is used for the folder list on left. This OperationContext only selects the data that is needed for this view: a handful of properties, no Allowable Actions, no ACLs, etc. That [as with paging] speeds up the retrieval of the list.&lt;br /&gt;
-* The second OperationContext is used to populate the right hand panels. It selects everything because it displays everything.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The current values for the OperationContexts can be seen if press the Info button.  The notion of OperationContext is explained more fully in &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; and the &lt;a href=&#34;http://chemistry.apache.org/java/developing/guide.html&#34;&gt;Apache OpenCMIS API docs&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once connected the features of the tool are available.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;3. Browsing objects in the repository&lt;/h3&gt;
-
-&lt;p&gt;Browse the repository&amp;rsquo;s objects, actions, properties, relationships, ACL, policies, versions, types and extensions:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-main.png?raw=true&#34; alt=&#34;browse&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator.png?raw=true&#34; alt=&#34;action&#34; /&gt;
 &lt;/p&gt;
 
-&lt;h3 id=&#34;toc_4&#34;&gt;4. Querying the repository&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Save the package as &amp;lsquo;CMIS Workbench.app&amp;rsquo; to the &amp;lsquo;Applications&amp;rsquo; folder.&lt;/p&gt;
 
-&lt;p&gt;The CMIS query syntax is defined in detail in:&lt;br /&gt;
-* 2.1.14 Query of &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt;
-* &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS_Query_Language&#34;&gt;Alfresco wiki&lt;/a&gt;
-* Chapter 5 - Query of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Go to the &amp;lsquo;Applications&amp;rsquo; folder, right-click on the &amp;lsquo;CMIS Workbench.app&amp;rsquo; file,&amp;lsquo;Get Info&amp;rsquo;and and click on the icon at the top left until it has a blue outline:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-query.png?raw=true&#34; alt=&#34;query&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-getinfo.png?raw=true&#34; alt=&#34;finder&#34; /&gt;
 &lt;/p&gt;
 
-&lt;h3 id=&#34;toc_5&#34;&gt;5. CMIS Types&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; &lt;a href=&#34;https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/chemistry-opencmis-workbench/chemistry-opencmis-workbench/src/main/resources/images/&#34;&gt;Download&lt;/a&gt; the CMIS Workbench icon (or use the pic below), open it in a paint application, copy to the clipboard and use the Finder [Edit] menu to paste the CMIS Workbench icon onto the &amp;lsquo;Get Info&amp;rsquo; icon.&lt;/p&gt;
 
-&lt;p&gt;The type function exposes the content model through the workbench:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-type.png?raw=true&#34; alt=&#34;type&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-wb-icon.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
 &lt;/p&gt;
-
-&lt;p&gt;The ability to create and update types allows programatic deployment of a content model eliminating the need for custom configuration scripts for the various repositories to configure types.&lt;/p&gt;
-
-&lt;p&gt;Chapter 4 - CMIS metadata: types and properties of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; describes how:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;OpenCMIS provides the TypeUtils class, which can read and write type definitions from and to XML and JSON.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;toc_6&#34;&gt;6. The groovy console&lt;/h3&gt;
-
-&lt;p&gt;The groovy console provides a quick and easy development environment to use the &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/overview-summary.html&#34;&gt;Apache Chemistry OpenCMIS API&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-groovy.png?raw=true&#34; alt=&#34;groovy&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;In addition to the default API, &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; highlights two other API&amp;rsquo;s that can be accessed from the Groovy console:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Chapter 3: Part 3 Advanced Topics - low-level api&lt;/em&gt;
-&amp;gt;
-The APIs provide an object-oriented interface with a lot of convenience, simplified data structures, and high-level operations that don’t exist in CMIS. On the other hand, these APIs hide extension points and access to the data structures that are transferred over the wire.&lt;br /&gt;
-It turns out that there’s a layer between the bindings and these APIs called the low- level API. The low-level API provides a set of interfaces and operations that model all the services and operations in the CMIS specification one-to-one. For each of the nine CMIS services, there’s an interface. For each operation, there’s a method with exactly the same name and the same parameters, in the same order. The data objects are very close to the data structures used on the wire. The semantics and behavior are as described in the CMIS domain model. You can use the CMIS specification as a manual for these interfaces.
-&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Chapter 3: Creating, updating, and deleting objects with CMIS - groovy helper scripts&lt;/em&gt;
-&amp;gt;
-CMIS helper scripts distributed with the CMIS Workbench can make your Groovy code more succinct. What other shortcuts are available? If you take a look at the source code for the CMIS Workbench, you’ll find the Groovy file that defines the CMIS helper scripts in /src/main/resources/scripts/CMIS.groovy. Consult that file for the full list.
-&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;The Florian Muller GitHub Repository workbench version ships with chapter scripts which can be accessed when use the Console button.  The apache project&amp;rsquo;s version ships with other scripts that can be accessed from the Console button of that version.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; if get the unauthorised error when accessing the cloud repository then the token has probably timed out - need to close the groovy console, regenerate an access token, reconnect with the new token and reopen the console.&lt;/p&gt;
-
-&lt;p&gt;For information on groovy:
-* &lt;a href=&#34;http://groovy.codehaus.org&#34;&gt;Groovy home&lt;/a&gt;
-* &lt;a href=&#34;http://groovy.codehaus.org/Documentation&#34;&gt;documentation&lt;/a&gt; including getting started and tutorials
-* &lt;a href=&#34;http://www.gradle.org&#34;&gt;Gradle&lt;/a&gt; build system for groovy&lt;/p&gt;
-
-&lt;p&gt;Some books on Groovy and CMIS (with source code):&lt;/p&gt;
-
-&lt;p&gt;&lt;html&gt;
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/mueller&#34; target=&#34;_blank&#34;&gt;
-      &lt;img src=&#34;./images/manning-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/koenig2&#34; target=&#34;_blank&#34;&gt;
-      &lt;img src=&#34;./images/manning-groovy.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;a href=&#34;http://www.packtpub.com/develop-applications-and-integrations-that-can-interact-with-cmis-alfresco/book&#34; target=&#34;_blank&#34;&gt;
-      &lt;img src=&#34;./images/pakt-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;a href=&#34;http://www.packtpub.com/groovy-2-cookbook/book&#34; target=&#34;_blank&#34;&gt;
-      &lt;img src=&#34;./images/pakt-groovy.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_7&#34;&gt;7. Advanced features&lt;/h3&gt;
-
-&lt;p&gt;Other features of CMIS Workbench are:&lt;br /&gt;
-* Repository info
-* &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#Change_Log&#34;&gt;Change Logger&lt;/a&gt;
-* TCK (Test Compatibility Kit)
-* CMIS Client Logging (filtered logging)&lt;/p&gt;
 </description>
     </item>
     

@@ -19,6 +19,69 @@
     </item>
     
     <item>
+      <title>CMIS</title>
+      <link>http://localhost:1313/retrospectives/cmis/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/cmis/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-types-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-highlevel-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Alfresco CMIS information: &lt;a href=&#34;http://www.alfresco.com/cmis&#34;&gt;http://www.alfresco.com/cmis&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&lt;/a&gt;
+The Browser Binding&lt;/p&gt;
+
+&lt;p&gt;In addition to the existing XML-based AtomPub and Web services bindings, CMIS 1.1 provides a simpler JSON-based binding. The browser binding is designed for web applications and is easy to use just with HTML and JavaScript. It uses just two verbs, GET and POST, and resources are referenced using simple and predictable URLs.
+You reference content in the repository by using the two URLs returned by the getRepositories or getRepositoryInfo service:
+rootFolderUrl
+repositoryUrl
+Objects can then be referenced in two ways;
+by their Id
+&lt;rootFolderUrl&gt;?objectId=&lt;objectId&gt;
+by their path
+&lt;rootFolderUrl&gt;/&lt;object path&gt;
+Content that is independent of a folder, for example a Type definition be accessed using the repositoryUrl service.
+&lt;repositoryUrl&gt;?cmisselector=&lt;selector&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;cmis 1.1 standard&lt;/h2&gt;
+
+&lt;p&gt;new cmis:item type - can use for config - types without content streams, secondary types&amp;hellip;both really cool.new browser binding - preferred&lt;/p&gt;
+
+&lt;p&gt;put in the pictures from the standard for objects, and create a picture that highlights the services&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;basically create a really condensed version of the spec.&lt;/p&gt;
+
+&lt;p&gt;To use CMIS, you can either directly interact with one of the CMIS bindings or develop against a CMIS client API. Several APIs are &amp;ldquo;in development&amp;rdquo; for the following programming languages: &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Client_APIs&#34;&gt;cient cmis api&amp;rsquo;s&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;cmis wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;IBM CMIS
+&lt;a href=&#34;http://www-01.ibm.com/software/ecm/cmis.html&#34;&gt;http://www-01.ibm.com/software/ecm/cmis.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;CMIS Poster Lab videos
+&lt;a href=&#34;https://www.youtube.com/watch?v=_koCqeYic1k&#34;&gt;https://www.youtube.com/watch?v=_koCqeYic1k&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&lt;/a&gt;
+The URL to get all of the children of the root/test node in the repository looks like this:
+&lt;a href=&#34;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&#34;&gt;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>CMIS url</title>
       <link>http://localhost:1313/retrospectives/cmis-url/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -275,69 +338,6 @@ For any releases the [CMIS Index] page &lt;code&gt;http://[host]:[port]/alfresco
 
 &lt;p&gt;&lt;img src=&#34;/assets/img/cmis-cxf-service-url.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
 &lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>CMIS</title>
-      <link>http://localhost:1313/retrospectives/cmis/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/cmis/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-types-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-highlevel-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Alfresco CMIS information: &lt;a href=&#34;http://www.alfresco.com/cmis&#34;&gt;http://www.alfresco.com/cmis&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&lt;/a&gt;
-The Browser Binding&lt;/p&gt;
-
-&lt;p&gt;In addition to the existing XML-based AtomPub and Web services bindings, CMIS 1.1 provides a simpler JSON-based binding. The browser binding is designed for web applications and is easy to use just with HTML and JavaScript. It uses just two verbs, GET and POST, and resources are referenced using simple and predictable URLs.
-You reference content in the repository by using the two URLs returned by the getRepositories or getRepositoryInfo service:
-rootFolderUrl
-repositoryUrl
-Objects can then be referenced in two ways;
-by their Id
-&lt;rootFolderUrl&gt;?objectId=&lt;objectId&gt;
-by their path
-&lt;rootFolderUrl&gt;/&lt;object path&gt;
-Content that is independent of a folder, for example a Type definition be accessed using the repositoryUrl service.
-&lt;repositoryUrl&gt;?cmisselector=&lt;selector&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;cmis 1.1 standard&lt;/h2&gt;
-
-&lt;p&gt;new cmis:item type - can use for config - types without content streams, secondary types&amp;hellip;both really cool.new browser binding - preferred&lt;/p&gt;
-
-&lt;p&gt;put in the pictures from the standard for objects, and create a picture that highlights the services&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;basically create a really condensed version of the spec.&lt;/p&gt;
-
-&lt;p&gt;To use CMIS, you can either directly interact with one of the CMIS bindings or develop against a CMIS client API. Several APIs are &amp;ldquo;in development&amp;rdquo; for the following programming languages: &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Client_APIs&#34;&gt;cient cmis api&amp;rsquo;s&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;cmis wiki&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;IBM CMIS
-&lt;a href=&#34;http://www-01.ibm.com/software/ecm/cmis.html&#34;&gt;http://www-01.ibm.com/software/ecm/cmis.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;CMIS Poster Lab videos
-&lt;a href=&#34;https://www.youtube.com/watch?v=_koCqeYic1k&#34;&gt;https://www.youtube.com/watch?v=_koCqeYic1k&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&lt;/a&gt;
-The URL to get all of the children of the root/test node in the repository looks like this:
-&lt;a href=&#34;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&#34;&gt;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
