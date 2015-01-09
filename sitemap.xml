@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/retrospectives/reporting-project-effort/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/retrospectives/setting-up-project-resources/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
@@ -38,12 +43,12 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/perl/</loc>
+    <loc>http://localhost:1313/retrospectives/project-success/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/project-success/</loc>
+    <loc>http://localhost:1313/retrospectives/modifying-content-types/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -58,7 +63,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/building-a-folder-and-document-based-protocol/</loc>
+    <loc>http://localhost:1313/retrospectives/alfresco-oauth-sample-application/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,12 +73,17 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/retrospectives/cmis-url/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/retrospectives/cmis/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/cmis-url/</loc>
+    <loc>http://localhost:1313/retrospectives/building-a-folder-and-document-based-protocol/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -93,33 +103,18 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/overview/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/retrospectives/eclipse/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/alfresco-oauth-sample-application/</loc>
+    <loc>http://localhost:1313/retrospectives/overview/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/modifying-content-types/</loc>
+    <loc>http://localhost:1313/retrospectives/perl/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/reporting-project-effort/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/concepts/overview/</loc>
-    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -133,12 +128,22 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/concepts/roadmap/</loc>
+    <loc>http://localhost:1313/concepts/overview/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://localhost:1313/retrospectives/template/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/concepts/roadmap/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/topic-summary/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
