@@ -60,72 +60,6 @@ Forecast baseline&lt;/p&gt;
     </item>
     
     <item>
-      <title>Setting up project resources</title>
-      <link>http://localhost:1313/retrospectives/setting-up-project-resources/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/setting-up-project-resources/</guid>
-      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Technology choice&lt;/th&gt;
-&lt;th&gt;Use&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;[[GitHub&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Eclipse&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Perl&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;VMWare&lt;/td&gt;
-&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;MySQL Workbench&lt;/td&gt;
-&lt;td&gt;data / content modelling&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Makefile&lt;/td&gt;
-&lt;td&gt;packaging installations&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
-&lt;td&gt;implementing installation files&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Perl</title>
       <link>http://localhost:1313/retrospectives/perl/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -413,6 +347,72 @@ it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licens
 &lt;/ul&gt;
 
 &lt;p&gt;This seems to be ok and works in the EPIC plugin to ensure that get nice syntax colouring.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up project resources</title>
+      <link>http://localhost:1313/retrospectives/setting-up-project-resources/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/setting-up-project-resources/</guid>
+      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Technology choice&lt;/th&gt;
+&lt;th&gt;Use&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[[GitHub&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Eclipse&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Perl&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;VMWare&lt;/td&gt;
+&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;MySQL Workbench&lt;/td&gt;
+&lt;td&gt;data / content modelling&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Makefile&lt;/td&gt;
+&lt;td&gt;packaging installations&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
+&lt;td&gt;implementing installation files&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     

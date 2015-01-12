@@ -37,72 +37,6 @@ Forecast baseline&lt;/p&gt;
     </item>
     
     <item>
-      <title>Setting up project resources</title>
-      <link>http://localhost:1313/retrospectives/setting-up-project-resources/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/setting-up-project-resources/</guid>
-      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Technology choice&lt;/th&gt;
-&lt;th&gt;Use&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;[[GitHub&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Eclipse&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Perl&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;VMWare&lt;/td&gt;
-&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;MySQL Workbench&lt;/td&gt;
-&lt;td&gt;data / content modelling&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Makefile&lt;/td&gt;
-&lt;td&gt;packaging installations&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
-&lt;td&gt;implementing installation files&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Perl</title>
       <link>http://localhost:1313/retrospectives/perl/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -390,6 +324,72 @@ it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licens
 &lt;/ul&gt;
 
 &lt;p&gt;This seems to be ok and works in the EPIC plugin to ensure that get nice syntax colouring.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up project resources</title>
+      <link>http://localhost:1313/retrospectives/setting-up-project-resources/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/setting-up-project-resources/</guid>
+      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Technology choice&lt;/th&gt;
+&lt;th&gt;Use&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[[GitHub&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Eclipse&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Perl&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;VMWare&lt;/td&gt;
+&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;MySQL Workbench&lt;/td&gt;
+&lt;td&gt;data / content modelling&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Makefile&lt;/td&gt;
+&lt;td&gt;packaging installations&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
+&lt;td&gt;implementing installation files&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
@@ -1959,6 +1959,245 @@ This (optional) service is used by the control point to control the “playback�
     </item>
     
     <item>
+      <title>CMIS Workbench</title>
+      <link>http://localhost:1313/retrospectives/cmis-workbench/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/cmis-workbench/</guid>
+      <description>
+
+&lt;p&gt;&lt;html&gt;
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+    &lt;p&gt;
+      &lt;img src=&#34;./images/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;CMIS Workbench&lt;/a&gt; is a desktop (osx, win, linux) repository browser and development tool for working with the OpenCMIS client API (there&amp;rsquo;s an &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;introductory video&lt;/a&gt; that provides a simple overview).&lt;/p&gt;
+
+&lt;p&gt;Things it&amp;rsquo;s being used on Allegria for include:
+* quickly prototyping and checking content types and properties
+* working out syntax for cmis queries
+* running quick scripts for changing objects in the repositories&lt;/p&gt;
+
+&lt;p&gt;The OpenCMIS API it uses, is an open source implementation of the &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt; provided by the &lt;a href=&#34;http://chemistry.apache.org&#34; title=&#34;target=_blank&#34;&gt;Apache Chemistry project&lt;/a&gt;.  The CMIS Workbench is also one of the tools from the apache project:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/chemistry_tm_logo_small.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
+&lt;br /&gt;
+&lt;img src=&#34;/assets/img/apache-chemistry.png?raw=true&#34; alt=&#34;img&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Alfresco being a cmis-compliant rich content repository, means that it provides a set of [[services for working with objects|Helicopter view: CMIS]] defined by the specification (which are then wrapped in the OpenCMIS implementation that a client like the CMIS Workbench can use).  With CMIS, most capabilities of the Alfresco repository are accessible and for the rest there are [[other interfaces|Helicopter view: Alfresco integration]] available.&lt;/p&gt;
+
+&lt;p&gt;Florian Muller, Jay Brown and Jeff Potts have written &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt;, which they describe as a hands on experience with the [cmis] standard and with the Apache Chemistry libraries and tools [including CMIS Workbench].  In a very similar vein to Allegria, the focus of the book is on:
+&amp;gt;
+getting a good general understanding of CMIS, enough to build a useful (and we hope fun) application&lt;br /&gt;
+&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;This paint-by-numbers is not to redo the work inside their book but does summarise some of the key aspects of the CMIS Workbench, in particular using it with an Alfresco repository.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Get CMIS Workbench&lt;/li&gt;
+&lt;li&gt;Connecting the workbench to repositories&lt;/li&gt;
+&lt;li&gt;Browsing objects in the repository&lt;/li&gt;
+&lt;li&gt;Querying the repository&lt;/li&gt;
+&lt;li&gt;CMIS Types&lt;/li&gt;
+&lt;li&gt;The groovy console&lt;/li&gt;
+&lt;li&gt;Advanced features&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;1. Get CMIS Workbench&lt;/h3&gt;
+
+&lt;p&gt;The CMIS Workbench can be &lt;a href=&#34;http://www.apache.org/dyn/closer.cgi/chemistry/opencmis/0.10.0/chemistry-opencmis-workbench-0.10.0-full.zip&#34;&gt;downloaded&lt;/a&gt; as a zip from the &lt;a href=&#34;http://chemistry.apache.org&#34;&gt;Apache Chemistry project&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Florian Muller has also created a &lt;a href=&#34;https://github.com/fmui/ApacheChemistryInAction&#34;&gt;GitHub Repository&lt;/a&gt; for readers of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; which contains; a zip of the CMIS Workbench, an in-memory cmis compliant repository (another one of the apache project&amp;rsquo;s tools) and the source code for each chapter&amp;rsquo;s examples.  To use the ApacheChemistryInAction GitHub repository, fork it and import it to Eclipse eGit as per the paint-by-numbers directions for [[GitHub|Paint by numbers: GitHub]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+ and the ones for [[Eclipse|Paint by numbers: Eclipse]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+.&lt;/p&gt;
+
+&lt;p&gt;Unzip the chemistry-opencmis-workbench-0.10.0-full.zip.  Using a linux or osx terminal type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd [directory where extracted workbench to]
+./workbench.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; the workbench.sh file from Florian&amp;rsquo;s GitHub repo is tailored to use the apache in-memory repository.  To use the CMIS Workbench with Alfresco it is better to also get the one from the ApacheProject (so rename Florian&amp;rsquo;s to something like &lt;code&gt;workbench.in-memory.sh&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;To have a neater installation and run it from the osx launchpad or dock follow this [[paint-by-numbers|Paint by numbers: Launching osx scripts]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;2. Connecting the workbench&lt;/h3&gt;
+
+&lt;p&gt;The connection window will appear either when starting the application or using the &amp;lsquo;Connection&amp;rsquo; menu button:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/cmis workbench on-premise connection.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The three key items needed to make a connection to a repository host are:
+* &lt;strong&gt;BINDING&lt;/strong&gt; - the bindings (atompub, webservice, browser) are explained in detail in the cmis specification (the &amp;lsquo;browser&amp;rsquo; binding is the fullest and most lightweight implementation but not always available).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;URL&lt;/strong&gt; - the url is where the rubber hits the road for cmis on Alfresco, however it is a little tricky to understand just which url is needed as there are many to choose from depending on; what version of Alfresco is running, how the repository is deployed (i.e. on-premise, cloud, public), which binding is being used (atompub, webservice, browser) and whether connecting to the OpenCMIS API or to services or service information.  To keep this step readable the unravelling of this is in [[Spaghetti western: CMIS URL|Spaghetti western: CMIS URL]]&lt;img src=&#34;/assets/img/spaghetti-western-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+ (although the examples below have the answers anyway).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;AUTHENTICATION CREDENTIALS / METHOD&lt;/strong&gt; - just like the url, we are spoilt for choice on what authentication methods and credentials may be used, and there is a proliferation of documentation to go along with that.  To keep things simple going to use the standard, non-https, user name and password for connecting to Alfresco on-premise and when connecting to Alfresco in the cloud, use the required oAuth implementation (how to do this is in the examples below).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &amp;lsquo;basic&amp;rsquo; tab provides, well, basic input boxes for these key parameters plus some performance tuning parameters (which &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; explains in Part 3 - advanced topics).  The &amp;lsquo;expert&amp;rsquo; tab allows an expanded syntax of &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/org/apache/chemistry/opencmis/commons/SessionParameter.html&#34;&gt;OpenCMIS session parameters&lt;/a&gt; to fine tune the &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/constant-values.html#org.apache&#34;&gt;values&lt;/a&gt; that can be used.  The expert tab has a drop down of some preset connection parameters (such as Alfresco) to make things easier.&lt;/p&gt;
+
+&lt;p&gt;So, to connect to an Alfresco 4.2e, on-premise repository with the OpenCMIS browser binding use the following parameters:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;org.apache.chemistry.opencmis.binding.spi.type=browser
+org.apache.chemistry.opencmis.binding.browser.url=http://[host]/alfresco/cmisbrowser
+org.apache.chemistry.opencmis.user=&amp;lt;user&amp;gt;
+org.apache.chemistry.opencmis.password=&amp;lt;password&amp;gt;
+org.apache.chemistry.opencmis.binding.compression=true
+org.apache.chemistry.opencmis.binding.cookies=true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Given only simple parameters were chosen in the on-premise example above, they could have also been entered in the basic tab for the same result.  Connecting to the Alfresco in the cloud repository requires the use of the expert tab though as it uses parameter values that cannot be set on the basic tab.&lt;/p&gt;
+
+&lt;p&gt;The example syntax below was generated by selecting &amp;lsquo;Alfresco Cloud AtomPub&amp;rsquo; from the parameter template drop down list at the top of the expert tab (at present it doesn&amp;rsquo;t seem like the browser binding is available in the cloud repository). The value for the oAuth access token is obtained from an oAuth authentication flow which is described in [[Paint by numbers: Alfresco oAuth sample application|Paint by numbers: Alfresco oAuth sample application]]&lt;img src=&#34;./images/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Alfresco Cloud (CMIS 1.0 AtomPub)
+org.apache.chemistry.opencmis.binding.spi.type=atompub
+org.apache.chemistry.opencmis.binding.atompub.url=https://api.alfresco.com/cmis/versions/1.0/atom
+org.apache.chemistry.opencmis.binding.auth.http.basic=false
+
+# Please provide a valid OAuth access token in the following property
+# Note that Alfresco Cloud access tokens have a limited lifetime (currently 1 hour) and the OpenCMIS Workbench does not auto-refresh the access token when it expires
+org.apache.chemistry.opencmis.binding.header.0=Authorization:Bearer ####ACCESS_TOKEN####
+
+# Other optional options - compression etc. - may be provided here
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once all the relevant parameters are entered, pressing the &amp;lsquo;load repositories&amp;rsquo; button, presents a choice of instances on the host (as can run multiples), choose a repository from the drop down, press the login button and &lt;a href=&#34;http://www.imdb.com/title/tt2379418/&#34;&gt;voila!&lt;/a&gt; you are into the default configuration of the CMIS Workbench user interface.&lt;/p&gt;
+
+&lt;p&gt;The CMIS Workbench can also be configured through &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;system properties or additional properties&lt;/a&gt; in the expert login dialog. An &lt;a href=&#34;http://forums.alfresco.com/comment/75223#comment-75223&#34;&gt;Alfresco forum post&lt;/a&gt; explains this as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The CMIS Workbench, for example, makes use of the OperationContext. It sets up two OperationContext objects when it starts:&lt;br /&gt;
+* One OperationContext object is used for the folder list on left. This OperationContext only selects the data that is needed for this view: a handful of properties, no Allowable Actions, no ACLs, etc. That [as with paging] speeds up the retrieval of the list.&lt;br /&gt;
+* The second OperationContext is used to populate the right hand panels. It selects everything because it displays everything.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The current values for the OperationContexts can be seen if press the Info button.  The notion of OperationContext is explained more fully in &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; and the &lt;a href=&#34;http://chemistry.apache.org/java/developing/guide.html&#34;&gt;Apache OpenCMIS API docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once connected the features of the tool are available.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;3. Browsing objects in the repository&lt;/h3&gt;
+
+&lt;p&gt;Browse the repository&amp;rsquo;s objects, actions, properties, relationships, ACL, policies, versions, types and extensions:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-main.png?raw=true&#34; alt=&#34;browse&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;4. Querying the repository&lt;/h3&gt;
+
+&lt;p&gt;The CMIS query syntax is defined in detail in:&lt;br /&gt;
+* 2.1.14 Query of &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt;
+* &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS_Query_Language&#34;&gt;Alfresco wiki&lt;/a&gt;
+* Chapter 5 - Query of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-query.png?raw=true&#34; alt=&#34;query&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;5. CMIS Types&lt;/h3&gt;
+
+&lt;p&gt;The type function exposes the content model through the workbench:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-type.png?raw=true&#34; alt=&#34;type&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The ability to create and update types allows programatic deployment of a content model eliminating the need for custom configuration scripts for the various repositories to configure types.&lt;/p&gt;
+
+&lt;p&gt;Chapter 4 - CMIS metadata: types and properties of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; describes how:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;OpenCMIS provides the TypeUtils class, which can read and write type definitions from and to XML and JSON.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;6. The groovy console&lt;/h3&gt;
+
+&lt;p&gt;The groovy console provides a quick and easy development environment to use the &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/overview-summary.html&#34;&gt;Apache Chemistry OpenCMIS API&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-groovy.png?raw=true&#34; alt=&#34;groovy&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;In addition to the default API, &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; highlights two other API&amp;rsquo;s that can be accessed from the Groovy console:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Chapter 3: Part 3 Advanced Topics - low-level api&lt;/em&gt;
+&amp;gt;
+The APIs provide an object-oriented interface with a lot of convenience, simplified data structures, and high-level operations that don’t exist in CMIS. On the other hand, these APIs hide extension points and access to the data structures that are transferred over the wire.&lt;br /&gt;
+It turns out that there’s a layer between the bindings and these APIs called the low- level API. The low-level API provides a set of interfaces and operations that model all the services and operations in the CMIS specification one-to-one. For each of the nine CMIS services, there’s an interface. For each operation, there’s a method with exactly the same name and the same parameters, in the same order. The data objects are very close to the data structures used on the wire. The semantics and behavior are as described in the CMIS domain model. You can use the CMIS specification as a manual for these interfaces.
+&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Chapter 3: Creating, updating, and deleting objects with CMIS - groovy helper scripts&lt;/em&gt;
+&amp;gt;
+CMIS helper scripts distributed with the CMIS Workbench can make your Groovy code more succinct. What other shortcuts are available? If you take a look at the source code for the CMIS Workbench, you’ll find the Groovy file that defines the CMIS helper scripts in /src/main/resources/scripts/CMIS.groovy. Consult that file for the full list.
+&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;The Florian Muller GitHub Repository workbench version ships with chapter scripts which can be accessed when use the Console button.  The apache project&amp;rsquo;s version ships with other scripts that can be accessed from the Console button of that version.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; if get the unauthorised error when accessing the cloud repository then the token has probably timed out - need to close the groovy console, regenerate an access token, reconnect with the new token and reopen the console.&lt;/p&gt;
+
+&lt;p&gt;For information on groovy:
+* &lt;a href=&#34;http://groovy.codehaus.org&#34;&gt;Groovy home&lt;/a&gt;
+* &lt;a href=&#34;http://groovy.codehaus.org/Documentation&#34;&gt;documentation&lt;/a&gt; including getting started and tutorials
+* &lt;a href=&#34;http://www.gradle.org&#34;&gt;Gradle&lt;/a&gt; build system for groovy&lt;/p&gt;
+
+&lt;p&gt;Some books on Groovy and CMIS (with source code):&lt;/p&gt;
+
+&lt;p&gt;&lt;html&gt;
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/mueller&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/manning-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/koenig2&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/manning-groovy.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.packtpub.com/develop-applications-and-integrations-that-can-interact-with-cmis-alfresco/book&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/pakt-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.packtpub.com/groovy-2-cookbook/book&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/pakt-groovy.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;7. Advanced features&lt;/h3&gt;
+
+&lt;p&gt;Other features of CMIS Workbench are:&lt;br /&gt;
+* Repository info
+* &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#Change_Log&#34;&gt;Change Logger&lt;/a&gt;
+* TCK (Test Compatibility Kit)
+* CMIS Client Logging (filtered logging)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Java</title>
       <link>http://localhost:1313/retrospectives/java/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -1979,59 +2218,6 @@ This (optional) service is used by the control point to control the “playback�
 &lt;a href=&#34;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&#34;&gt;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;maven in Eclipse:  &lt;a href=&#34;http://www.youtube.com/watch?v=xE2F4Z_wKCU&#34;&gt;http://www.youtube.com/watch?v=xE2F4Z_wKCU&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Launchng OSX scripts</title>
-      <link>http://localhost:1313/retrospectives/launching-osx-scripts/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/launching-osx-scripts/</guid>
-      <description>
-
-&lt;p&gt;&lt;html&gt;
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;
-    &lt;p&gt;
-      &lt;img src=&#34;./images/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;The CMIS Workbench application in its default download launches with a shell script rather than a neat osx package.  The osx Automator can be used to launch it from an icon in the osx launchpad or dock.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Create an &amp;lsquo;application&amp;rsquo; from the osx Automator:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator-type.png?raw=true&#34; alt=&#34;automator&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Drag run shell script to the action window and enter the path to workbench.sh:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator.png?raw=true&#34; alt=&#34;action&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Save the package as &amp;lsquo;CMIS Workbench.app&amp;rsquo; to the &amp;lsquo;Applications&amp;rsquo; folder.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Go to the &amp;lsquo;Applications&amp;rsquo; folder, right-click on the &amp;lsquo;CMIS Workbench.app&amp;rsquo; file,&amp;lsquo;Get Info&amp;rsquo;and and click on the icon at the top left until it has a blue outline:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-getinfo.png?raw=true&#34; alt=&#34;finder&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; &lt;a href=&#34;https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/chemistry-opencmis-workbench/chemistry-opencmis-workbench/src/main/resources/images/&#34;&gt;Download&lt;/a&gt; the CMIS Workbench icon (or use the pic below), open it in a paint application, copy to the clipboard and use the Finder [Edit] menu to paste the CMIS Workbench icon onto the &amp;lsquo;Get Info&amp;rsquo; icon.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-wb-icon.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
-&lt;/p&gt;
 </description>
     </item>
     
