@@ -137,30 +137,6 @@ Velocity tracking&lt;/p&gt;
     </item>
     
     <item>
-      <title>Java</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/java/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/java/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/totalbeginner.html&#34;&gt;http://eclipsetutorial.sourceforge.net/totalbeginner.html&lt;/a&gt;
-&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&#34;&gt;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&lt;/a&gt;
-&lt;a href=&#34;http://sourceforge.net/projects/eclipsetutorial/files/&#34;&gt;http://sourceforge.net/projects/eclipsetutorial/files/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The companion has resources listed in the back including (gold standard):
-&lt;a href=&#34;http://docs.oracle.com/javase/tutorial/java/index.html&#34;&gt;http://docs.oracle.com/javase/tutorial/java/index.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&#34;&gt;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=al7bRZzz4oU&#34;&gt;http://www.youtube.com/watch?v=al7bRZzz4oU&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&#34;&gt;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;maven in Eclipse:  &lt;a href=&#34;http://www.youtube.com/watch?v=xE2F4Z_wKCU&#34;&gt;http://www.youtube.com/watch?v=xE2F4Z_wKCU&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Github</title>
       <link>http://localhost:1313/retrospectives/paint-by-numbers/github/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -335,6 +311,30 @@ Velocity tracking&lt;/p&gt;
 &lt;li&gt;project issues / key decisions&lt;/li&gt;
 &lt;li&gt;bugs, enhancements etc&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/java/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/java/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/totalbeginner.html&#34;&gt;http://eclipsetutorial.sourceforge.net/totalbeginner.html&lt;/a&gt;
+&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&#34;&gt;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&lt;/a&gt;
+&lt;a href=&#34;http://sourceforge.net/projects/eclipsetutorial/files/&#34;&gt;http://sourceforge.net/projects/eclipsetutorial/files/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The companion has resources listed in the back including (gold standard):
+&lt;a href=&#34;http://docs.oracle.com/javase/tutorial/java/index.html&#34;&gt;http://docs.oracle.com/javase/tutorial/java/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&#34;&gt;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=al7bRZzz4oU&#34;&gt;http://www.youtube.com/watch?v=al7bRZzz4oU&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&#34;&gt;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;maven in Eclipse:  &lt;a href=&#34;http://www.youtube.com/watch?v=xE2F4Z_wKCU&#34;&gt;http://www.youtube.com/watch?v=xE2F4Z_wKCU&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

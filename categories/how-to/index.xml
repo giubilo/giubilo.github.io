@@ -10,470 +10,6 @@
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>Application Lifecycle Management</title>
-      <link>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;how to manage all the activities that occur from birth to death of an application (includes strategy / portfolio performance management, project management, Agile/DevOps including capacity/incident/problem/config/change etc, Financial Management - CAPEX/OPEX, supplier management / strategic sourcing, license management) - all the stuff ITIL/CObIT talk about.&lt;/p&gt;
-
-&lt;p&gt;Agile/DevOps about focus/flow&lt;/p&gt;
-
-&lt;p&gt;something to do - task / context used to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;build a project schedule / demand forecast&lt;/li&gt;
-&lt;li&gt;focus work by attaching task to requirements / defect and relevant source code / documentation (and when work is attached end to end like that then it is also self documenting so don&amp;rsquo;t have to explain to the next person who picks it up either for review or later maintenance tasks what all the relevant bits are + get traceability)&lt;/li&gt;
-&lt;li&gt;at the really detailed end can build as go by putting in TODO&amp;rsquo; in the code so know what is left, less to fall through the cracks&lt;/li&gt;
-&lt;li&gt;easy to see status
-(need a user interface for developer to pick and use tasks, project manager to summarise, a task bus to shuffle tasks from developers code, issues logged - and the social commentary around them, code reviews, builds and a repository to store the tasks - mylyn / tasktop / jira - all about focus and flow - books aplenty on this like mikado, lean/alm, requirements management, project management)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;develop some code&lt;/p&gt;
-
-&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
-
-&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - java, go, ruby, json, perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
-&lt;li&gt;model driven development / test driven development / content driven development (all wrapped up in Agile)&lt;/li&gt;
-&lt;li&gt;formatting code so it&amp;rsquo;s readable (syntax highlighting), valid (syntax checking) and conforms to best practice techniques for the language (like project structures, code quality and vulnerabilities)&lt;/li&gt;
-&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
-&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
-&lt;li&gt;source code management / version control - branching / merging strategies (GitFlow)&lt;/li&gt;
-&lt;li&gt;code review - GitHub pull request vs Gerrit review&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(Eclipse + plugins, Atlassian SourceTree + GitFlow, Mou - sometimes it makes sense to come outside of the IDE, Gerrit, GitHub + badges)&lt;/p&gt;
-
-&lt;p&gt;environments&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;build/package/implement code - release strategy / cycle&lt;/li&gt;
-&lt;li&gt;testing not a separate step but baked into everything else (e.g. requirements management, code reviews)&lt;/li&gt;
-&lt;li&gt;Vagrant + Docker (+ CoreOS) + Chef/Puppet - continuous build / integration (DevOps)&lt;/li&gt;
-&lt;li&gt;Gradle&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(need a repository to put released code, binaries, release notes and setup scripts + badges)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://secretgeek.net/lifecycle.asp&#34;&gt;http://secretgeek.net/lifecycle.asp&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.top-q.co.il/services/alm/&#34;&gt;http://www.top-q.co.il/services/alm/&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&#34;&gt;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&#34;&gt;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&#34;&gt;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Systems_development_life-cycle&#34;&gt;http://en.wikipedia.org/wiki/Systems_development_life-cycle&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;somewhere between what&amp;rsquo;s needed to deliver a textbook hello world output example application and enterprise methodologies and frameworks for delivering outcomes.&lt;/p&gt;
-
-&lt;p&gt;Application lifecycle management (ALM) is the product lifecycle management (governance, development, and maintenance) of application software. It encompasses requirements management, software architecture, computer programming, software testing, software maintenance, change management, project management, and release management.&lt;/p&gt;
-
-&lt;p&gt;In software engineering, software configuration management (SCM)[1] is the task of tracking and controlling changes in the software, part of the larger cross-discipline field of configuration management.[2] SCM practices include revision control and the establishment of baselines - software development is considered separately.&lt;/p&gt;
-
-&lt;p&gt;The goals of SCM are generally:[citation needed]
-* Configuration identification - Identifying configurations, configuration items and baselines.
-* Configuration control - Implementing a controlled change process. This is usually achieved by setting up a change control board whose primary function is to approve or reject all change requests that are sent against any baseline.
-* Configuration status accounting - Recording and reporting all the necessary information on the status of the development process.
-* Configuration auditing - Ensuring that configurations contain all their intended parts and are sound with respect to their specifying documents, including requirements, architectural specifications and user manuals.
-* Build management - Managing the process and tools used for builds.
-* Process management - Ensuring adherence to the organization&amp;rsquo;s development process.
-* Environment management - Managing the software and hardware that host the system.
-* Teamwork - Facilitate team interactions related to the process.
-* Defect tracking - Making sure every defect has traceability back to the source.&lt;/p&gt;
-
-&lt;p&gt;DevOps integration targets product delivery, quality testing, feature development and maintenance releases in order to improve reliability and security and faster development and deployment cycles.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Agile_software_development&#34;&gt;http://en.wikipedia.org/wiki/Agile_software_development&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://guide.agilealliance.org/subway.html&#34;&gt;http://guide.agilealliance.org/subway.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Community-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Community-driven_development&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Kanban_(development&#34;&gt;http://en.wikipedia.org/wiki/Kanban_(development&lt;/a&gt;)  kanban / process driven development  / content driven development&lt;br /&gt;
-The Kanban method – An approach to incremental, evolutionary process improvement for organisations.&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Feature-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Feature-driven_development&lt;/a&gt;  (decomposition approach)&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Test-driven_development&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Model-driven_software_development&#34;&gt;http://en.wikipedia.org/wiki/Model-driven_software_development&lt;/a&gt; / business driven development&lt;br /&gt;
-Model-driven software development (MDSD) is an alternative to round-trip engineering. Round-trip engineering is the concept of being able to make any kind of change to a model as well as to the code generated from that model. The changes always propagate bidirectional and both artifacts are always consistent.&lt;/p&gt;
-
-&lt;p&gt;The Agile Manifesto is based on twelve principles:[9]&lt;br /&gt;
-Customer satisfaction by rapid delivery of useful software&lt;br /&gt;
-Welcome changing requirements, even late in development&lt;br /&gt;
-Working software is delivered frequently (weeks rather than months)&lt;br /&gt;
-Working software is the principal measure of progress&lt;br /&gt;
-Sustainable development, able to maintain a constant pace&lt;br /&gt;
-Close, daily cooperation between business people and developers&lt;br /&gt;
-Face-to-face conversation is the best form of communication (co-location)&lt;br /&gt;
-Projects are built around motivated individuals, who should be trusted&lt;br /&gt;
-Continuous attention to technical excellence and good design&lt;br /&gt;
-Simplicity—the art of maximizing the amount of work not done—is essential&lt;br /&gt;
-Self-organizing teams&lt;br /&gt;
-Regular adaptation to changing circumstances&lt;/p&gt;
-
-&lt;p&gt;Agile development is supported by a bundle of concrete practices suggested by the agile methods, covering areas like requirements, design, modeling, coding, testing, project management, process, quality, etc. Some notable agile practices include:
-Acceptance test-driven development (ATDD)&lt;br /&gt;
-Agile Modeling&lt;br /&gt;
-Backlogs (Product and Sprint)&lt;br /&gt;
-Behavior-driven development (BDD)&lt;br /&gt;
-Cross-functional team&lt;br /&gt;
-Continuous integration (CI)&lt;br /&gt;
-Domain-driven design (DDD)&lt;br /&gt;
-Information radiators (Scrum board, Kanban board, Task board, Burndown chart)&lt;br /&gt;
-Iterative and incremental development (IID)&lt;br /&gt;
-Pair programming&lt;br /&gt;
-Planning poker&lt;br /&gt;
-Refactoring&lt;br /&gt;
-Scrum meetings (Sprint planning, Daily scrum, Sprint review and retrospective)&lt;br /&gt;
-Test-driven development (TDD)&lt;br /&gt;
-Agile testing&lt;br /&gt;
-Timeboxing&lt;br /&gt;
-Use case&lt;br /&gt;
-User story&lt;br /&gt;
-Story-driven modelling&lt;br /&gt;
-Velocity tracking&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Project Success</title>
-      <link>http://localhost:1313/retrospectives/how-to/project-success/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/project-success/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Introduction
-It might be stating the obvious but we begin a project with the view that we are going to successfully deliver the project’s outcomes. Right! In general I guess that is true, except for those stakeholders hoping we don’t finish, don’t deliver, don’t succeed.
-Is finishing or delivering, the end-game then? Is that what success is.  How do we know we are at the end? How do we measure the level to which we have achieved the outcomes?
-Who Says What Success Is?
-What success means, is dependant generally on perspective; that is, who we are measuring success for.  There are generally many stakeholders on a project, all with their own views, sometimes conflicting, on what success is.  Success then is defined by the stakeholder’s personal views, professional views, role they play on the project or in society.  Their views are more than likely affected by the impact the project has on the environment, dictated by things like scale (100,000 people, 10 years) and nature (e.g. construction, software, social change) of the project.
-The old saying “the project was brought in on time, on budget and with acceptable quality” is still, in some peoples mind, the measure of project success.  There is much evidence to suggest however, that these are not the only measures of success.&lt;/p&gt;
-
-&lt;p&gt;Turner&lt;br /&gt;
-Hartman&lt;/p&gt;
-
-&lt;p&gt;Success as a Function of Time
-Projects are unique, transient, almost organic entities.  They have a start, middle and end.&lt;br /&gt;
-At the beginning of a project it is important to understand what are the criteria for success and who is measuring success.  This allows the direction of the project to be set and provides a yardstick with which to later evaluate the project.
-During the project we monitor success at useful points to ensure there is a reason to continue, to learn from what we have done right so that we can continue to use successful techniques and use points of success to motivate the team.
-It is important to end the project with success as generally all stakeholders have begun and continued the project with the thought of success.
-The point in time we are measuring success has an enormous influence on what success is and who measures success.  The team may be interested in time and quality during the project, the sponsor in cost at delivery time and the community might be interested in the impact the project had years after it was delivered.&lt;/p&gt;
-
-&lt;p&gt;PIC&lt;/p&gt;
-
-&lt;p&gt;Maximising Success
-Some easy steps to maximise the chances of success;
-* Understand the general drivers, pressures, resistance and dynamics of projects
-* Learn from past mistakes
-* Apply sound management techniques&lt;/p&gt;
-
-&lt;p&gt;Understanding Projects
-The chances of success can be maximised if you manage the forces on the project effectively.&lt;/p&gt;
-
-&lt;p&gt;Turner describes a number of interactions of a project.  Each may have an affect on the other.  Even though most projects by their nature are unique, some of the effects of the interactions may be understood through examining similarities to other projects.  Many of these project integration affects are well documented.&lt;/p&gt;
-
-&lt;p&gt;Of all the project dynamics, Attitude is the most important.
-The chances of success are substantially diminished unless;
-* There is major commitment to making the project a success
-* The motivation of everyone working on the project is high
-* Attitudes are supportive and positive.&lt;/p&gt;
-
-&lt;p&gt;Learning From The Past
-There is an enormous amount of generic information about what teams have done in the past to succeed and what pitfalls caused a less than desirable outcome.  The sheer volume of literature and anecdotal evidence to suggest that projects fail is a strong indicator for being concerned about why projects fail.
-By looking to the past we can see what worked and what didn’t so that we can learn from past successes and avoid past mistakes.&lt;/p&gt;
-
-&lt;p&gt;project failure examples&lt;/p&gt;
-
-&lt;p&gt;Cunning Plan: We&amp;rsquo;ll just do it!!&lt;/p&gt;
-
-&lt;p&gt;If you fail to plan, then plan to fail.&lt;/p&gt;
-
-&lt;p&gt;We never seem to have time to plan our projects, but we always have time to do them twice.&lt;/p&gt;
-
-&lt;p&gt;Project Pitfalls
-3 Grude describes a number of categories of pitfalls that have been observed on projects.  This is not intended as an exhaustive list but useful as a quick health check for a project;&lt;/p&gt;
-
-&lt;p&gt;Establishing the Project&lt;br /&gt;
-Pitfalls in the way the project is set up within the parent organisation;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;project plans not aligned with business plans,&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;procedures for managing projects are not well defined,&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;priorities are not communicated to parties involved,&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;no shared vision.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Planning the Project
-Pitfalls in the way the work is defined, the time &amp;amp; cost schedules calculated and communicated to the project team;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;project plans developed on a single level,&lt;/li&gt;
-&lt;li&gt;using cumbersome tools,&lt;/li&gt;
-&lt;li&gt;creativity discouraged,&lt;/li&gt;
-&lt;li&gt;unrealistic estimates&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Organising &amp;amp; Implementing the Project
-Pitfalls in building the project organisation and assigning work to people;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;lack of cooperation,&lt;/li&gt;
-&lt;li&gt;resource providers not committed,&lt;/li&gt;
-&lt;li&gt;resources not available when required,&lt;/li&gt;
-&lt;li&gt;management responsibility not defined,&lt;/li&gt;
-&lt;li&gt;poor communication,&lt;/li&gt;
-&lt;li&gt;technical vs project management.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Controlling the Project
-Pitfalls in monitoring and control;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;purpose of control not understood,&lt;/li&gt;
-&lt;li&gt;progress is not monitored against the plan,&lt;/li&gt;
-&lt;li&gt;ineffective review meetings,&lt;/li&gt;
-&lt;li&gt;responsibility without authority.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Principles of Good Project Management
-Project Management, just as any other management stream, has it’s own principles upon which a manager can look to for guidance.  There is a huge body of stored knowledge on the principles and professional certification available for those willing.  These will all arm the manager with an enormous amount of skill and techniques on which to build experience.
-In addition to reading through all of the available knowledge and undertaking the available studies a number of simple, practical principles may be relied upon;
- Most large or complex problems become easier if broken down into manageable parts that     allow them all to be absorbed.  Make use of breakdown structures for any part of the project    that requires visibility and understanding, such as tasks, people, product, organisation.  By   breaking then down we can more easily see new information about each piece as it becomes    evident over time.  This makes it possible to monitor and manage the project elaboration.
- People are the biggest factor in nearly all projects, they need to be adequately motivated,    organised, committed, directed, skilled and communicated with.  You need to confirm and     align stakeholder’s success criteria.  Disregard the people factors at your peril.
- Get as many successes as you can.  Organise the team, the schedule &amp;amp; the work so that  successes happy often.  If each small step is a success it will be easier and more likely that  the journey will be a success.  Learn from past successes and avoid the causes for past     failures.
- Continuously carry out health checks and audits.  The old adage, ‘if it isn’t broken, don’t fix it’    doesn’t apply if we don’t know it isn’t broken.  Only by understanding the dynamics and     symptoms of a project can we steer the ship and take corrective actions.&lt;/p&gt;
-
-&lt;p&gt;Above all else KEEP IT SIMPLE.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Setting up project resources</title>
-      <link>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</guid>
-      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Technology choice&lt;/th&gt;
-&lt;th&gt;Use&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;[[GitHub&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Eclipse&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Perl&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;VMWare&lt;/td&gt;
-&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;MySQL Workbench&lt;/td&gt;
-&lt;td&gt;data / content modelling&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Makefile&lt;/td&gt;
-&lt;td&gt;packaging installations&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
-&lt;td&gt;implementing installation files&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Building a folder and document based protocol</title>
-      <link>http://localhost:1313/retrospectives/how-to/building-a-folder-and-document-based-protocol/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/building-a-folder-and-document-based-protocol/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;MediaGate for Java
-UPnP Stacks + a picture
-Apache Felix + Alfresco development tool roadmap
-OpenCMIS
-Learning Java&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.1/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.1/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.videolan.org/vlc/streaming.html&#34;&gt;http://www.videolan.org/vlc/streaming.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://shop.oreilly.com/product/9781849511384.do&#34;&gt;http://shop.oreilly.com/product/9781849511384.do&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.upnp-database.info/listDevices.jsp?filterType=servers&#34;&gt;http://www.upnp-database.info/listDevices.jsp?filterType=servers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The Alfresco content application server supports many folder and document-based protocols to access and manage content held within the content repository using familiar client tools.
-All the protocol bindings expose folders and documents held in the Alfresco content repository. This means a client tool accessing the repository using the protocol can navigate through folders, examine properties, and read content. Most protocols also permit updates, allowing a client tool to modify the folder structure, create and update documents, and write content. Some protocols also allow interaction with capabilities such as version histories, search, and tasks.&lt;/p&gt;
-
-&lt;p&gt;Internally, the protocol bindings interact with the content repository services, which encapsulate the behavior of working with folders and files. This ensures a consistent view and update approach across all client tools interacting with the Alfresco content application server.&lt;/p&gt;
-
-&lt;p&gt;An Alfresco subsystem for file servers allows configuration and lifecycle management for each of the protocols either through property files or JMX.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&#34;&gt;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&lt;/a&gt;
-&lt;a href=&#34;https://github.com/peterwatts/allegria/wiki/1.2.1-Where&#39;s-streaming-heading%3F:-IN-PROGRESS&#34;&gt;https://github.com/peterwatts/allegria/wiki/1.2.1-Where&#39;s-streaming-heading%3F:-IN-PROGRESS&lt;/a&gt;
-&lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html&#34;&gt;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;http://wiki.alfresco.com/wiki/CMIS&lt;/a&gt;
-&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&lt;/a&gt;
-&lt;a href=&#34;http://cmis.alfresco.com/cmis-cheatsheet.pdf&#34;&gt;http://cmis.alfresco.com/cmis-cheatsheet.pdf&lt;/a&gt;
-&lt;a href=&#34;http://tech.wrighting.org/category/cmis/&#34;&gt;http://tech.wrighting.org/category/cmis/&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#Query_Language&#34;&gt;http://wiki.alfresco.com/wiki/CMIS#Query_Language&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS_Query_Language&#34;&gt;http://wiki.alfresco.com/wiki/CMIS_Query_Language&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax&#34;&gt;http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax&lt;/a&gt;
-&lt;a href=&#34;http://www.scribd.com/doc/18495354/CMIS-CMIS-SQL-Search-Tutorial-ENG&#34;&gt;http://www.scribd.com/doc/18495354/CMIS-CMIS-SQL-Search-Tutorial-ENG&lt;/a&gt;
-&lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/using-cmis-get-list-document-urls-11302011-2029&#34;&gt;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/using-cmis-get-list-document-urls-11302011-2029&lt;/a&gt;
-&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/web-scripts/cmis-query-get-path-cmisdocument-11302011-1630&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/web-scripts/cmis-query-get-path-cmisdocument-11302011-1630&lt;/a&gt;
-&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/web-scripts/searching-documents-using-cmis-query-folder-hierarchy&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/web-scripts/searching-documents-using-cmis-query-folder-hierarchy&lt;/a&gt;
-&lt;a href=&#34;http://yonaweb.be/using_cmis_query_content_query_navigation_model&#34;&gt;http://yonaweb.be/using_cmis_query_content_query_navigation_model&lt;/a&gt;
-&lt;a href=&#34;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&#34;&gt;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;(consider use of CMIS protocol and Apache Felix upnp-av tools, consider also if content is stored in the cloud how can get to it).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;joining cmis libraries / capabilities to dlna libraries / capabilities with a smart set of queries&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Regardless of the binding, there is a set of services that a CMIS repository must provide. These services include:
-•   Repository Services: Used to discover information and capabilities of the repository.
-•   Navigation Services: Used to traverse the repository’s folder hierarchy.
-•   Object Services: Used to perform CRUD functions on objects.
-•   Multi-filing Services: If the repository supports putting an object in  more than one folder, this service handles it.
-•   Discovery Services: Used to handle queries.
-•   Versioning Services: Used to checkout documents and work with  document versions.
-•   Relationship Services: Used to query an object for its relationships.
-•   Policy Services: Used to apply, remove, and query for policies.
-•   ACL Services: Not supported by all repositories, this service is used  to return and manage the ACL of an object.
-Some of these services share common characteristics. For example:
-• Almost every service that returns a list can be returned as a paged
-result set.
-• Services that return objects can often return additional information
-about those objects, if you ask for it, like relationships, ACLs,
-renditions, and allowable actions.
-• A repository may choose to give you a change token with an object to
-reduce the chance that you don’t update an out-of-date object. If a repository gives you a change token, it expects it back when you post the change.
-• Any of the services may throw an exception. For a list, check the spec.&lt;/p&gt;
-
-&lt;p&gt;Repository Services
-•   Get Repositories: Get a list of repositories that can be accessed from this service endpoint
-•   Get Repository Info: Get information about the specified repository
-•   Get Type Children, Get Type Descendants: Various ways to discover the object types in a repository
-•   Get Type Definition: Get the definition (list of properties) of the specified type
-Navigation Services
-▪   Get Folder Tree, Get Descendants, Get Children: Retrieve descendant objects (each one has slightly different nuances)
-▪   Get Folder Parent, Get Object Parents: Retrieve an object&amp;rsquo;s parent folder(s)
-▪   Get Checkedout Docs: Retrieve list of checked out documents
-Discovery Services
-▪   Query: Execute a CMIS query
-▪   Get Content Changes: Gets a list of changes to the repository; the client can provide an optional change log token that specifies the first event to be included in the list.
-Object Services
-▪   Get Object, Get Object By Path: Retrieve objects
-▪   Get Properties, Get Allowable Actions, Get Renditions: Get information about objects
-▪   Get Content Stream: Retrieve an object&amp;rsquo;s content stream
-▪   Create Relationship, Create Document, Create Document From Source, Create Policy, Create Folder: Create objects
-▪   Update Properties, Move Object: Update objects
-▪   Delete Object, Delete Tree: Remove objects
-▪   Set Content Stream, Delete Content Stream: Update content streams
-Versioning Services
-▪   Get Properties Of Latest Version, Get Object Of Latest Version: Get information about latest version of object
-▪   Get All Versions: Retrieve an object&amp;rsquo;s version history
-▪   Check Out, Check In, Cancel Check Out: Control locking/unlocking of an object for the purpose of updating
-▪   Delete All Versions: Remove version history
-Relationship Services
-▪   Get Object Relationships: Get the relationships associated with an object
-Multi-Filing Services
-▪   Add Object To Folder, Remove Object From Folder: File and un-file objects;
-▪   If multi-filing is supported in the repository, then an object can be added to multiple folders
-▪   If un-filing is supported in the repository, then an object can be removed from all folders that it is filed in without deleting the object
-ACL Services
-▪   Get ACL: Get the permissions associated with an object
-▪   Apply ACL: Set the permissions associated with an object
-Policy Services
-▪   Get Applied Policies: Get the policies that are applied to an object
-Apply Policy, Remove Policy: Apply and remove policies to/from an object&lt;/p&gt;
-
-&lt;p&gt;CMIS Query  What it does
-SELECT cmis:name FROM sc:whitepaper where contains(‘sample’)    Select the name of every whitepaper with “sample” somewhere in their text.
-SELECT cmis:name, Score() as relevance FROM sc:whitepaper where contains(&amp;lsquo;sample&amp;rsquo;) order by relevance DESC  Select the name of whitepapers with “sample” somewhere in their text, ordered by full-text relevance, descending.
-SELECT cmis:name from sc:whitepaper where sc:isActive = true
-    Select whitepapers with the isActive flag set to true (which happens to be a property defined by an aspect).&lt;/p&gt;
-
-&lt;p&gt;SELECT cmis:name from sc:whitepaper where not(sc:isActive = true)   Select whitepapers with the isActive flag not set to true. This will return whitepapers where the property is not true as well as whitepapers where the property is unset.&lt;/p&gt;
-
-&lt;p&gt;SELECT cmis:name from sc:marketingDoc where any sc:campaign in (&amp;lsquo;Social Shopping&amp;rsquo;)  Select instances of Marketing Documents and their children where the multi-value property, sc:campaign, contains the value “Social Shopping” (note that Whitepaper is a child type of Marketing Document).
-SELECT cmis:name,sc:published from sc:whitepaper where sc:published &amp;gt;= &amp;lsquo;2009-11-10T00:00:00.000-06:00&amp;rsquo; and sc:published &amp;lt; &amp;lsquo;2009-11- 18T00:00:00.000-06:00&amp;rsquo;  Select whitepapers published (sc:published, a property of the sc:webable aspect) on or after November 10, 2009 and before 18, 2009.
-SELECT cmis:name from cmis:document where in_folder(&amp;lsquo;workspace://SpacesStore/393 5ce21-9f6f-4d46-9e22-4f97e1d5d9d8&amp;rsquo;) and contains(&amp;lsquo;contract&amp;rsquo;)   Select all content in the Sales folder containing the word “contract”.&lt;/p&gt;
-
-&lt;p&gt;SELECT cmis:name from cmis:document where in_tree(&amp;lsquo;workspace://SpacesStore/3935c e21-9f6f-4d46-9e22-4f97e1d5d9d8&amp;rsquo;) and contains(&amp;lsquo;contract&amp;rsquo;) and cm:description like “%sign%”    Select all content in the Sales folder or any of its descendant folders containing the word “contract” and a description like “%sign%”.&lt;/p&gt;
-
-&lt;p&gt;The DLNA Certified Device Classes are separated as follows:[9]
-Home Network Devices[edit source | editbeta]
-•   Digital Media Server (DMS): store content and make it available to networked digital media players (DMP) and digital media renderers (DMR). Examples include PCs and network-attached storage(NAS) devices.
-•   Digital Media Player (DMP): find content on digital media servers (DMS) and provide playback and rendering capabilities. Examples include TVs, stereos and home theaters, wireless monitors and game consoles.
-•   Digital Media Renderer (DMR): play content as instructed by a digital media controller (DMC), which will find content from a digital media server (DMS). Examples include TVs, audio/video receivers, video displays and remote speakers for music. It is possible for a single device (e.g. TV, A/V receiver, etc.) to function both as a DMR (receives &amp;ldquo;pushed&amp;rdquo; content from DMS) and DMP (&amp;ldquo;pulls&amp;rdquo; content from DMS)
-•   Digital Media Controller (DMC): find content on digital media servers (DMS) and instruct digital media renderers (DMR) to play the content. Content doesn&amp;rsquo;t stream from or through the DMC. Examples include Internet tablets, Wi-Fi enabled digital cameras and smartphones.
-•   Digital Media Printer (DMPr): provide printing services to the DLNA home network. Generally, digital media players (DMP) and digital media controllers (DMC) with print capability can print to DMPr. Examples include networked photo printers and networked all-in-one printers
-Mobile Handheld Devices[edit source | editbeta]
-▪   Mobile Digital Media Server (M-DMS): store content and make it available to wired/wireless networked mobile digital media players (M-DMP), digital media renderers (DMR) and digital media printers (DMPr). Examples include mobile phones and portable music players.
-▪   Mobile Digital Media Player (M-DMP): find and play content on a digital media server (DMS) or mobile digital media server (M-DMS). Examples include mobile phones and mobile media tablets designed for viewing multimedia content.
-▪   Mobile Digital Media Uploader (M-DMU): send (upload) content to a digital media server (DMS) or mobile digital media server (M-DMS). Examples include digital cameras and mobile phones.
-▪   Mobile Digital Media Downloader (M-DMD): find and store (download) content from a digital media server (DMS) or mobile digital media server (M-DMS). Examples include portable music players and mobile phones.
-▪   Mobile Digital Media Controller (M-DMC): find content on a digital media server (DMS) or mobile digital media server (M-DMS) and send it to digital media renderers (DMR). Examples include personal digital assistants (PDAs) and mobile phones.
-Home Infrastructure Devices[edit source | editbeta]
-▪   Mobile Network Connectivity Function (M-NCF): provide a bridge between mobile handheld device network connectivity and home network connectivity.
-▪   Media Interoperability Unit (MIU): provide content transformation between required media formats for home network and mobile handheld devices.
-The specification uses Digital Transmission Content Protection|DTCP-IP as &amp;ldquo;link protection&amp;rdquo; for copyright-protected commercial content between one device to another.[1][10]&lt;/p&gt;
-
-&lt;p&gt;Durable storage (glacier), resilient storage.
-Commercial Content Management -&amp;gt; Consumer Content Management &amp;lt;-Consumer media management.
-UPnP Design by Example, by Michael Jeronimo and Jack Weast
-UPnP Media Server implements the;
--   Content Directory Service - provides a logical structure for the media library available in the Server
--   Connection Manager Service&lt;/p&gt;
-
-&lt;p&gt;Most AV scenarios involve the flow of (entertainment) content (i.e. a movie, song, picture, etc.) from one device to another. As shown in Figure 2, an AV control point interacts with two or more UPnP devices acting as source and sink, respectively. Although the control point coordinates and synchronizes the behavior of both devices, the devices themselves interact with each other using a non-UPnP (“out-of- band”) communication protocol. The control point uses UPnP to initialize and configure both devices so that the desired content is transferred from one device to the other. However, since the content is transferred using an “out-of-band” transfer protocol, the control point is not directly involved in the actual transfer of the content. The control point configures the devices as needed, triggers the flow of content, then gets out of the way. Thus, after the transfer has begun, the control point can be disconnected without disrupting the flow of content. In other words, the core task (i.e. transferring the content) continues to function even without the control point present.&lt;/p&gt;
-
-&lt;p&gt;A MediaServer’s primary purpose is to allow control points to enumerate (i.e. browse or search for) content items that are available for the user to render. The MediaServer contains a ContentDirectory Service [CDS], a ConnectionManager Service [CM], and an optional AVTransport Service &lt;a href=&#34;depending on the supported transfer protocols&#34;&gt;AVT&lt;/a&gt;.
-Some MediaServers are capable of transferring multiple content items at the same time, e.g. a hard-disk- based audio jukebox may be able to simultaneously stream multiple audio files to the network. In order to support this type of MediaServer, the ConnectionManager assigns a unique Connection ID to each “connection” (i.e. each stream) that is made. This ConnectionID allows a third-party control points to obtain information about active connections of the MediaServer.
-3.1.1. Content Directory Service
-This service provides a set of actions that allow the control point to enumerate the content that the Server can provide to the home network. The primary action of this service is ContentDirectory::Browse(). This action allows control points to obtain detailed information about each Content Item that the Server can provide. This information (i.e. meta-data) includes properties such as its name, artist, date created, size, etc. Additionally, the returned meta-data identifies the transfer protocols and data formats that are supported by the Server for that particular Content Item. The control point uses this information to determine if a given MediaRenderer is capable of rendering that content in its available format.
-3.1.2. ConnectionManager Service
-This service is used to manage the connections associated with a particular device. The primary action of this service (within the context of a MediaServer) is ConnectionManager::PrepareForConnection(). When implemented, this optional action is invoked by the control point to give the Server an opportunity to prepare itself for an upcoming transfer. Depending on the specified transfer protocol and data format, this action may return the InstanceID of an AVTransport service that the control point can use to control the flow of this content (e.g. Stop, Pause, Seek, etc). As described below, this InstanceID is used to distinguish multiple (virtual) instances of the AVTransport service, each of which is associated with a particular connection to Renderer. Multiple (virtual) instances of the AVTransport service allow the MediaServer to support multiple Renderers at the same time. When the control point wants to terminate this connection, it should invoke the MediaServer’s ConnectionManager::ConnectionComplete() action (if implemented) to release the connection.
-If the ConnectionManager::PrepareForConnection() action is not implemented, the control point is only able to support a single Renderer at an given time. In this case, the control point should use InstanceID=0.
-3.1.3. AVTransport Service
-This (optional) service is used by the control point to control the “playback” of the content that is associated with the specified AVTransport. This includes the ability to Stop, Pause, Seek, etc. Depending on the supported transfer protocols and/or data formats, a MediaServer may or may not implement this service. If supported, the MediaServer can distinguish between multiple instances of the service by using the InstanceID that is included in each AVTransport action. New instances of the AVTransport service are created via the ConnectionManager’s ConnectionManager::PrepareForConnection() action. A new Instance Id is allocated for each new Service Instance.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Modifying content types</title>
       <link>http://localhost:1313/retrospectives/how-to/modifying-content-types/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -935,6 +471,470 @@ There are other things you might like to do to the Share user interface, but the
 &lt;a href=&#34;http://wiki.alfresco.com/wiki/Displaying_Custom_Metadata&#34;&gt;http://wiki.alfresco.com/wiki/Displaying_Custom_Metadata&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;../tree/master/aaContentModel&#34;&gt;aaContentModel&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Application Lifecycle Management</title>
+      <link>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;how to manage all the activities that occur from birth to death of an application (includes strategy / portfolio performance management, project management, Agile/DevOps including capacity/incident/problem/config/change etc, Financial Management - CAPEX/OPEX, supplier management / strategic sourcing, license management) - all the stuff ITIL/CObIT talk about.&lt;/p&gt;
+
+&lt;p&gt;Agile/DevOps about focus/flow&lt;/p&gt;
+
+&lt;p&gt;something to do - task / context used to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;build a project schedule / demand forecast&lt;/li&gt;
+&lt;li&gt;focus work by attaching task to requirements / defect and relevant source code / documentation (and when work is attached end to end like that then it is also self documenting so don&amp;rsquo;t have to explain to the next person who picks it up either for review or later maintenance tasks what all the relevant bits are + get traceability)&lt;/li&gt;
+&lt;li&gt;at the really detailed end can build as go by putting in TODO&amp;rsquo; in the code so know what is left, less to fall through the cracks&lt;/li&gt;
+&lt;li&gt;easy to see status
+(need a user interface for developer to pick and use tasks, project manager to summarise, a task bus to shuffle tasks from developers code, issues logged - and the social commentary around them, code reviews, builds and a repository to store the tasks - mylyn / tasktop / jira - all about focus and flow - books aplenty on this like mikado, lean/alm, requirements management, project management)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;develop some code&lt;/p&gt;
+
+&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
+
+&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - java, go, ruby, json, perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
+&lt;li&gt;model driven development / test driven development / content driven development (all wrapped up in Agile)&lt;/li&gt;
+&lt;li&gt;formatting code so it&amp;rsquo;s readable (syntax highlighting), valid (syntax checking) and conforms to best practice techniques for the language (like project structures, code quality and vulnerabilities)&lt;/li&gt;
+&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
+&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
+&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
+&lt;li&gt;source code management / version control - branching / merging strategies (GitFlow)&lt;/li&gt;
+&lt;li&gt;code review - GitHub pull request vs Gerrit review&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(Eclipse + plugins, Atlassian SourceTree + GitFlow, Mou - sometimes it makes sense to come outside of the IDE, Gerrit, GitHub + badges)&lt;/p&gt;
+
+&lt;p&gt;environments&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;build/package/implement code - release strategy / cycle&lt;/li&gt;
+&lt;li&gt;testing not a separate step but baked into everything else (e.g. requirements management, code reviews)&lt;/li&gt;
+&lt;li&gt;Vagrant + Docker (+ CoreOS) + Chef/Puppet - continuous build / integration (DevOps)&lt;/li&gt;
+&lt;li&gt;Gradle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(need a repository to put released code, binaries, release notes and setup scripts + badges)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://secretgeek.net/lifecycle.asp&#34;&gt;http://secretgeek.net/lifecycle.asp&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.top-q.co.il/services/alm/&#34;&gt;http://www.top-q.co.il/services/alm/&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&#34;&gt;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&#34;&gt;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&#34;&gt;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Systems_development_life-cycle&#34;&gt;http://en.wikipedia.org/wiki/Systems_development_life-cycle&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;somewhere between what&amp;rsquo;s needed to deliver a textbook hello world output example application and enterprise methodologies and frameworks for delivering outcomes.&lt;/p&gt;
+
+&lt;p&gt;Application lifecycle management (ALM) is the product lifecycle management (governance, development, and maintenance) of application software. It encompasses requirements management, software architecture, computer programming, software testing, software maintenance, change management, project management, and release management.&lt;/p&gt;
+
+&lt;p&gt;In software engineering, software configuration management (SCM)[1] is the task of tracking and controlling changes in the software, part of the larger cross-discipline field of configuration management.[2] SCM practices include revision control and the establishment of baselines - software development is considered separately.&lt;/p&gt;
+
+&lt;p&gt;The goals of SCM are generally:[citation needed]
+* Configuration identification - Identifying configurations, configuration items and baselines.
+* Configuration control - Implementing a controlled change process. This is usually achieved by setting up a change control board whose primary function is to approve or reject all change requests that are sent against any baseline.
+* Configuration status accounting - Recording and reporting all the necessary information on the status of the development process.
+* Configuration auditing - Ensuring that configurations contain all their intended parts and are sound with respect to their specifying documents, including requirements, architectural specifications and user manuals.
+* Build management - Managing the process and tools used for builds.
+* Process management - Ensuring adherence to the organization&amp;rsquo;s development process.
+* Environment management - Managing the software and hardware that host the system.
+* Teamwork - Facilitate team interactions related to the process.
+* Defect tracking - Making sure every defect has traceability back to the source.&lt;/p&gt;
+
+&lt;p&gt;DevOps integration targets product delivery, quality testing, feature development and maintenance releases in order to improve reliability and security and faster development and deployment cycles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Agile_software_development&#34;&gt;http://en.wikipedia.org/wiki/Agile_software_development&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://guide.agilealliance.org/subway.html&#34;&gt;http://guide.agilealliance.org/subway.html&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Community-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Community-driven_development&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Kanban_(development&#34;&gt;http://en.wikipedia.org/wiki/Kanban_(development&lt;/a&gt;)  kanban / process driven development  / content driven development&lt;br /&gt;
+The Kanban method – An approach to incremental, evolutionary process improvement for organisations.&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Feature-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Feature-driven_development&lt;/a&gt;  (decomposition approach)&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Test-driven_development&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Model-driven_software_development&#34;&gt;http://en.wikipedia.org/wiki/Model-driven_software_development&lt;/a&gt; / business driven development&lt;br /&gt;
+Model-driven software development (MDSD) is an alternative to round-trip engineering. Round-trip engineering is the concept of being able to make any kind of change to a model as well as to the code generated from that model. The changes always propagate bidirectional and both artifacts are always consistent.&lt;/p&gt;
+
+&lt;p&gt;The Agile Manifesto is based on twelve principles:[9]&lt;br /&gt;
+Customer satisfaction by rapid delivery of useful software&lt;br /&gt;
+Welcome changing requirements, even late in development&lt;br /&gt;
+Working software is delivered frequently (weeks rather than months)&lt;br /&gt;
+Working software is the principal measure of progress&lt;br /&gt;
+Sustainable development, able to maintain a constant pace&lt;br /&gt;
+Close, daily cooperation between business people and developers&lt;br /&gt;
+Face-to-face conversation is the best form of communication (co-location)&lt;br /&gt;
+Projects are built around motivated individuals, who should be trusted&lt;br /&gt;
+Continuous attention to technical excellence and good design&lt;br /&gt;
+Simplicity—the art of maximizing the amount of work not done—is essential&lt;br /&gt;
+Self-organizing teams&lt;br /&gt;
+Regular adaptation to changing circumstances&lt;/p&gt;
+
+&lt;p&gt;Agile development is supported by a bundle of concrete practices suggested by the agile methods, covering areas like requirements, design, modeling, coding, testing, project management, process, quality, etc. Some notable agile practices include:
+Acceptance test-driven development (ATDD)&lt;br /&gt;
+Agile Modeling&lt;br /&gt;
+Backlogs (Product and Sprint)&lt;br /&gt;
+Behavior-driven development (BDD)&lt;br /&gt;
+Cross-functional team&lt;br /&gt;
+Continuous integration (CI)&lt;br /&gt;
+Domain-driven design (DDD)&lt;br /&gt;
+Information radiators (Scrum board, Kanban board, Task board, Burndown chart)&lt;br /&gt;
+Iterative and incremental development (IID)&lt;br /&gt;
+Pair programming&lt;br /&gt;
+Planning poker&lt;br /&gt;
+Refactoring&lt;br /&gt;
+Scrum meetings (Sprint planning, Daily scrum, Sprint review and retrospective)&lt;br /&gt;
+Test-driven development (TDD)&lt;br /&gt;
+Agile testing&lt;br /&gt;
+Timeboxing&lt;br /&gt;
+Use case&lt;br /&gt;
+User story&lt;br /&gt;
+Story-driven modelling&lt;br /&gt;
+Velocity tracking&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Project Success</title>
+      <link>http://localhost:1313/retrospectives/how-to/project-success/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/project-success/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Introduction
+It might be stating the obvious but we begin a project with the view that we are going to successfully deliver the project’s outcomes. Right! In general I guess that is true, except for those stakeholders hoping we don’t finish, don’t deliver, don’t succeed.
+Is finishing or delivering, the end-game then? Is that what success is.  How do we know we are at the end? How do we measure the level to which we have achieved the outcomes?
+Who Says What Success Is?
+What success means, is dependant generally on perspective; that is, who we are measuring success for.  There are generally many stakeholders on a project, all with their own views, sometimes conflicting, on what success is.  Success then is defined by the stakeholder’s personal views, professional views, role they play on the project or in society.  Their views are more than likely affected by the impact the project has on the environment, dictated by things like scale (100,000 people, 10 years) and nature (e.g. construction, software, social change) of the project.
+The old saying “the project was brought in on time, on budget and with acceptable quality” is still, in some peoples mind, the measure of project success.  There is much evidence to suggest however, that these are not the only measures of success.&lt;/p&gt;
+
+&lt;p&gt;Turner&lt;br /&gt;
+Hartman&lt;/p&gt;
+
+&lt;p&gt;Success as a Function of Time
+Projects are unique, transient, almost organic entities.  They have a start, middle and end.&lt;br /&gt;
+At the beginning of a project it is important to understand what are the criteria for success and who is measuring success.  This allows the direction of the project to be set and provides a yardstick with which to later evaluate the project.
+During the project we monitor success at useful points to ensure there is a reason to continue, to learn from what we have done right so that we can continue to use successful techniques and use points of success to motivate the team.
+It is important to end the project with success as generally all stakeholders have begun and continued the project with the thought of success.
+The point in time we are measuring success has an enormous influence on what success is and who measures success.  The team may be interested in time and quality during the project, the sponsor in cost at delivery time and the community might be interested in the impact the project had years after it was delivered.&lt;/p&gt;
+
+&lt;p&gt;PIC&lt;/p&gt;
+
+&lt;p&gt;Maximising Success
+Some easy steps to maximise the chances of success;
+* Understand the general drivers, pressures, resistance and dynamics of projects
+* Learn from past mistakes
+* Apply sound management techniques&lt;/p&gt;
+
+&lt;p&gt;Understanding Projects
+The chances of success can be maximised if you manage the forces on the project effectively.&lt;/p&gt;
+
+&lt;p&gt;Turner describes a number of interactions of a project.  Each may have an affect on the other.  Even though most projects by their nature are unique, some of the effects of the interactions may be understood through examining similarities to other projects.  Many of these project integration affects are well documented.&lt;/p&gt;
+
+&lt;p&gt;Of all the project dynamics, Attitude is the most important.
+The chances of success are substantially diminished unless;
+* There is major commitment to making the project a success
+* The motivation of everyone working on the project is high
+* Attitudes are supportive and positive.&lt;/p&gt;
+
+&lt;p&gt;Learning From The Past
+There is an enormous amount of generic information about what teams have done in the past to succeed and what pitfalls caused a less than desirable outcome.  The sheer volume of literature and anecdotal evidence to suggest that projects fail is a strong indicator for being concerned about why projects fail.
+By looking to the past we can see what worked and what didn’t so that we can learn from past successes and avoid past mistakes.&lt;/p&gt;
+
+&lt;p&gt;project failure examples&lt;/p&gt;
+
+&lt;p&gt;Cunning Plan: We&amp;rsquo;ll just do it!!&lt;/p&gt;
+
+&lt;p&gt;If you fail to plan, then plan to fail.&lt;/p&gt;
+
+&lt;p&gt;We never seem to have time to plan our projects, but we always have time to do them twice.&lt;/p&gt;
+
+&lt;p&gt;Project Pitfalls
+3 Grude describes a number of categories of pitfalls that have been observed on projects.  This is not intended as an exhaustive list but useful as a quick health check for a project;&lt;/p&gt;
+
+&lt;p&gt;Establishing the Project&lt;br /&gt;
+Pitfalls in the way the project is set up within the parent organisation;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project plans not aligned with business plans,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;procedures for managing projects are not well defined,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;priorities are not communicated to parties involved,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;no shared vision.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Planning the Project
+Pitfalls in the way the work is defined, the time &amp;amp; cost schedules calculated and communicated to the project team;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project plans developed on a single level,&lt;/li&gt;
+&lt;li&gt;using cumbersome tools,&lt;/li&gt;
+&lt;li&gt;creativity discouraged,&lt;/li&gt;
+&lt;li&gt;unrealistic estimates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Organising &amp;amp; Implementing the Project
+Pitfalls in building the project organisation and assigning work to people;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lack of cooperation,&lt;/li&gt;
+&lt;li&gt;resource providers not committed,&lt;/li&gt;
+&lt;li&gt;resources not available when required,&lt;/li&gt;
+&lt;li&gt;management responsibility not defined,&lt;/li&gt;
+&lt;li&gt;poor communication,&lt;/li&gt;
+&lt;li&gt;technical vs project management.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Controlling the Project
+Pitfalls in monitoring and control;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;purpose of control not understood,&lt;/li&gt;
+&lt;li&gt;progress is not monitored against the plan,&lt;/li&gt;
+&lt;li&gt;ineffective review meetings,&lt;/li&gt;
+&lt;li&gt;responsibility without authority.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Principles of Good Project Management
+Project Management, just as any other management stream, has it’s own principles upon which a manager can look to for guidance.  There is a huge body of stored knowledge on the principles and professional certification available for those willing.  These will all arm the manager with an enormous amount of skill and techniques on which to build experience.
+In addition to reading through all of the available knowledge and undertaking the available studies a number of simple, practical principles may be relied upon;
+ Most large or complex problems become easier if broken down into manageable parts that     allow them all to be absorbed.  Make use of breakdown structures for any part of the project    that requires visibility and understanding, such as tasks, people, product, organisation.  By   breaking then down we can more easily see new information about each piece as it becomes    evident over time.  This makes it possible to monitor and manage the project elaboration.
+ People are the biggest factor in nearly all projects, they need to be adequately motivated,    organised, committed, directed, skilled and communicated with.  You need to confirm and     align stakeholder’s success criteria.  Disregard the people factors at your peril.
+ Get as many successes as you can.  Organise the team, the schedule &amp;amp; the work so that  successes happy often.  If each small step is a success it will be easier and more likely that  the journey will be a success.  Learn from past successes and avoid the causes for past     failures.
+ Continuously carry out health checks and audits.  The old adage, ‘if it isn’t broken, don’t fix it’    doesn’t apply if we don’t know it isn’t broken.  Only by understanding the dynamics and     symptoms of a project can we steer the ship and take corrective actions.&lt;/p&gt;
+
+&lt;p&gt;Above all else KEEP IT SIMPLE.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up project resources</title>
+      <link>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</guid>
+      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Technology choice&lt;/th&gt;
+&lt;th&gt;Use&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[[GitHub&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Eclipse&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Perl&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;VMWare&lt;/td&gt;
+&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;MySQL Workbench&lt;/td&gt;
+&lt;td&gt;data / content modelling&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Makefile&lt;/td&gt;
+&lt;td&gt;packaging installations&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
+&lt;td&gt;implementing installation files&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building a folder and document based protocol</title>
+      <link>http://localhost:1313/retrospectives/how-to/building-a-folder-and-document-based-protocol/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/building-a-folder-and-document-based-protocol/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;MediaGate for Java
+UPnP Stacks + a picture
+Apache Felix + Alfresco development tool roadmap
+OpenCMIS
+Learning Java&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.1/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.1/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.videolan.org/vlc/streaming.html&#34;&gt;http://www.videolan.org/vlc/streaming.html&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://shop.oreilly.com/product/9781849511384.do&#34;&gt;http://shop.oreilly.com/product/9781849511384.do&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.upnp-database.info/listDevices.jsp?filterType=servers&#34;&gt;http://www.upnp-database.info/listDevices.jsp?filterType=servers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Alfresco content application server supports many folder and document-based protocols to access and manage content held within the content repository using familiar client tools.
+All the protocol bindings expose folders and documents held in the Alfresco content repository. This means a client tool accessing the repository using the protocol can navigate through folders, examine properties, and read content. Most protocols also permit updates, allowing a client tool to modify the folder structure, create and update documents, and write content. Some protocols also allow interaction with capabilities such as version histories, search, and tasks.&lt;/p&gt;
+
+&lt;p&gt;Internally, the protocol bindings interact with the content repository services, which encapsulate the behavior of working with folders and files. This ensures a consistent view and update approach across all client tools interacting with the Alfresco content application server.&lt;/p&gt;
+
+&lt;p&gt;An Alfresco subsystem for file servers allows configuration and lifecycle management for each of the protocols either through property files or JMX.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&#34;&gt;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&lt;/a&gt;
+&lt;a href=&#34;https://github.com/peterwatts/allegria/wiki/1.2.1-Where&#39;s-streaming-heading%3F:-IN-PROGRESS&#34;&gt;https://github.com/peterwatts/allegria/wiki/1.2.1-Where&#39;s-streaming-heading%3F:-IN-PROGRESS&lt;/a&gt;
+&lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html&#34;&gt;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html&lt;/a&gt;
+&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;http://wiki.alfresco.com/wiki/CMIS&lt;/a&gt;
+&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&lt;/a&gt;
+&lt;a href=&#34;http://cmis.alfresco.com/cmis-cheatsheet.pdf&#34;&gt;http://cmis.alfresco.com/cmis-cheatsheet.pdf&lt;/a&gt;
+&lt;a href=&#34;http://tech.wrighting.org/category/cmis/&#34;&gt;http://tech.wrighting.org/category/cmis/&lt;/a&gt;
+&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#Query_Language&#34;&gt;http://wiki.alfresco.com/wiki/CMIS#Query_Language&lt;/a&gt;
+&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS_Query_Language&#34;&gt;http://wiki.alfresco.com/wiki/CMIS_Query_Language&lt;/a&gt;
+&lt;a href=&#34;http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax&#34;&gt;http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax&lt;/a&gt;
+&lt;a href=&#34;http://www.scribd.com/doc/18495354/CMIS-CMIS-SQL-Search-Tutorial-ENG&#34;&gt;http://www.scribd.com/doc/18495354/CMIS-CMIS-SQL-Search-Tutorial-ENG&lt;/a&gt;
+&lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/using-cmis-get-list-document-urls-11302011-2029&#34;&gt;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/using-cmis-get-list-document-urls-11302011-2029&lt;/a&gt;
+&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/web-scripts/cmis-query-get-path-cmisdocument-11302011-1630&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/web-scripts/cmis-query-get-path-cmisdocument-11302011-1630&lt;/a&gt;
+&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/web-scripts/searching-documents-using-cmis-query-folder-hierarchy&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/web-scripts/searching-documents-using-cmis-query-folder-hierarchy&lt;/a&gt;
+&lt;a href=&#34;http://yonaweb.be/using_cmis_query_content_query_navigation_model&#34;&gt;http://yonaweb.be/using_cmis_query_content_query_navigation_model&lt;/a&gt;
+&lt;a href=&#34;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&#34;&gt;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(consider use of CMIS protocol and Apache Felix upnp-av tools, consider also if content is stored in the cloud how can get to it).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;joining cmis libraries / capabilities to dlna libraries / capabilities with a smart set of queries&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Regardless of the binding, there is a set of services that a CMIS repository must provide. These services include:
+•   Repository Services: Used to discover information and capabilities of the repository.
+•   Navigation Services: Used to traverse the repository’s folder hierarchy.
+•   Object Services: Used to perform CRUD functions on objects.
+•   Multi-filing Services: If the repository supports putting an object in  more than one folder, this service handles it.
+•   Discovery Services: Used to handle queries.
+•   Versioning Services: Used to checkout documents and work with  document versions.
+•   Relationship Services: Used to query an object for its relationships.
+•   Policy Services: Used to apply, remove, and query for policies.
+•   ACL Services: Not supported by all repositories, this service is used  to return and manage the ACL of an object.
+Some of these services share common characteristics. For example:
+• Almost every service that returns a list can be returned as a paged
+result set.
+• Services that return objects can often return additional information
+about those objects, if you ask for it, like relationships, ACLs,
+renditions, and allowable actions.
+• A repository may choose to give you a change token with an object to
+reduce the chance that you don’t update an out-of-date object. If a repository gives you a change token, it expects it back when you post the change.
+• Any of the services may throw an exception. For a list, check the spec.&lt;/p&gt;
+
+&lt;p&gt;Repository Services
+•   Get Repositories: Get a list of repositories that can be accessed from this service endpoint
+•   Get Repository Info: Get information about the specified repository
+•   Get Type Children, Get Type Descendants: Various ways to discover the object types in a repository
+•   Get Type Definition: Get the definition (list of properties) of the specified type
+Navigation Services
+▪   Get Folder Tree, Get Descendants, Get Children: Retrieve descendant objects (each one has slightly different nuances)
+▪   Get Folder Parent, Get Object Parents: Retrieve an object&amp;rsquo;s parent folder(s)
+▪   Get Checkedout Docs: Retrieve list of checked out documents
+Discovery Services
+▪   Query: Execute a CMIS query
+▪   Get Content Changes: Gets a list of changes to the repository; the client can provide an optional change log token that specifies the first event to be included in the list.
+Object Services
+▪   Get Object, Get Object By Path: Retrieve objects
+▪   Get Properties, Get Allowable Actions, Get Renditions: Get information about objects
+▪   Get Content Stream: Retrieve an object&amp;rsquo;s content stream
+▪   Create Relationship, Create Document, Create Document From Source, Create Policy, Create Folder: Create objects
+▪   Update Properties, Move Object: Update objects
+▪   Delete Object, Delete Tree: Remove objects
+▪   Set Content Stream, Delete Content Stream: Update content streams
+Versioning Services
+▪   Get Properties Of Latest Version, Get Object Of Latest Version: Get information about latest version of object
+▪   Get All Versions: Retrieve an object&amp;rsquo;s version history
+▪   Check Out, Check In, Cancel Check Out: Control locking/unlocking of an object for the purpose of updating
+▪   Delete All Versions: Remove version history
+Relationship Services
+▪   Get Object Relationships: Get the relationships associated with an object
+Multi-Filing Services
+▪   Add Object To Folder, Remove Object From Folder: File and un-file objects;
+▪   If multi-filing is supported in the repository, then an object can be added to multiple folders
+▪   If un-filing is supported in the repository, then an object can be removed from all folders that it is filed in without deleting the object
+ACL Services
+▪   Get ACL: Get the permissions associated with an object
+▪   Apply ACL: Set the permissions associated with an object
+Policy Services
+▪   Get Applied Policies: Get the policies that are applied to an object
+Apply Policy, Remove Policy: Apply and remove policies to/from an object&lt;/p&gt;
+
+&lt;p&gt;CMIS Query  What it does
+SELECT cmis:name FROM sc:whitepaper where contains(‘sample’)    Select the name of every whitepaper with “sample” somewhere in their text.
+SELECT cmis:name, Score() as relevance FROM sc:whitepaper where contains(&amp;lsquo;sample&amp;rsquo;) order by relevance DESC  Select the name of whitepapers with “sample” somewhere in their text, ordered by full-text relevance, descending.
+SELECT cmis:name from sc:whitepaper where sc:isActive = true
+    Select whitepapers with the isActive flag set to true (which happens to be a property defined by an aspect).&lt;/p&gt;
+
+&lt;p&gt;SELECT cmis:name from sc:whitepaper where not(sc:isActive = true)   Select whitepapers with the isActive flag not set to true. This will return whitepapers where the property is not true as well as whitepapers where the property is unset.&lt;/p&gt;
+
+&lt;p&gt;SELECT cmis:name from sc:marketingDoc where any sc:campaign in (&amp;lsquo;Social Shopping&amp;rsquo;)  Select instances of Marketing Documents and their children where the multi-value property, sc:campaign, contains the value “Social Shopping” (note that Whitepaper is a child type of Marketing Document).
+SELECT cmis:name,sc:published from sc:whitepaper where sc:published &amp;gt;= &amp;lsquo;2009-11-10T00:00:00.000-06:00&amp;rsquo; and sc:published &amp;lt; &amp;lsquo;2009-11- 18T00:00:00.000-06:00&amp;rsquo;  Select whitepapers published (sc:published, a property of the sc:webable aspect) on or after November 10, 2009 and before 18, 2009.
+SELECT cmis:name from cmis:document where in_folder(&amp;lsquo;workspace://SpacesStore/393 5ce21-9f6f-4d46-9e22-4f97e1d5d9d8&amp;rsquo;) and contains(&amp;lsquo;contract&amp;rsquo;)   Select all content in the Sales folder containing the word “contract”.&lt;/p&gt;
+
+&lt;p&gt;SELECT cmis:name from cmis:document where in_tree(&amp;lsquo;workspace://SpacesStore/3935c e21-9f6f-4d46-9e22-4f97e1d5d9d8&amp;rsquo;) and contains(&amp;lsquo;contract&amp;rsquo;) and cm:description like “%sign%”    Select all content in the Sales folder or any of its descendant folders containing the word “contract” and a description like “%sign%”.&lt;/p&gt;
+
+&lt;p&gt;The DLNA Certified Device Classes are separated as follows:[9]
+Home Network Devices[edit source | editbeta]
+•   Digital Media Server (DMS): store content and make it available to networked digital media players (DMP) and digital media renderers (DMR). Examples include PCs and network-attached storage(NAS) devices.
+•   Digital Media Player (DMP): find content on digital media servers (DMS) and provide playback and rendering capabilities. Examples include TVs, stereos and home theaters, wireless monitors and game consoles.
+•   Digital Media Renderer (DMR): play content as instructed by a digital media controller (DMC), which will find content from a digital media server (DMS). Examples include TVs, audio/video receivers, video displays and remote speakers for music. It is possible for a single device (e.g. TV, A/V receiver, etc.) to function both as a DMR (receives &amp;ldquo;pushed&amp;rdquo; content from DMS) and DMP (&amp;ldquo;pulls&amp;rdquo; content from DMS)
+•   Digital Media Controller (DMC): find content on digital media servers (DMS) and instruct digital media renderers (DMR) to play the content. Content doesn&amp;rsquo;t stream from or through the DMC. Examples include Internet tablets, Wi-Fi enabled digital cameras and smartphones.
+•   Digital Media Printer (DMPr): provide printing services to the DLNA home network. Generally, digital media players (DMP) and digital media controllers (DMC) with print capability can print to DMPr. Examples include networked photo printers and networked all-in-one printers
+Mobile Handheld Devices[edit source | editbeta]
+▪   Mobile Digital Media Server (M-DMS): store content and make it available to wired/wireless networked mobile digital media players (M-DMP), digital media renderers (DMR) and digital media printers (DMPr). Examples include mobile phones and portable music players.
+▪   Mobile Digital Media Player (M-DMP): find and play content on a digital media server (DMS) or mobile digital media server (M-DMS). Examples include mobile phones and mobile media tablets designed for viewing multimedia content.
+▪   Mobile Digital Media Uploader (M-DMU): send (upload) content to a digital media server (DMS) or mobile digital media server (M-DMS). Examples include digital cameras and mobile phones.
+▪   Mobile Digital Media Downloader (M-DMD): find and store (download) content from a digital media server (DMS) or mobile digital media server (M-DMS). Examples include portable music players and mobile phones.
+▪   Mobile Digital Media Controller (M-DMC): find content on a digital media server (DMS) or mobile digital media server (M-DMS) and send it to digital media renderers (DMR). Examples include personal digital assistants (PDAs) and mobile phones.
+Home Infrastructure Devices[edit source | editbeta]
+▪   Mobile Network Connectivity Function (M-NCF): provide a bridge between mobile handheld device network connectivity and home network connectivity.
+▪   Media Interoperability Unit (MIU): provide content transformation between required media formats for home network and mobile handheld devices.
+The specification uses Digital Transmission Content Protection|DTCP-IP as &amp;ldquo;link protection&amp;rdquo; for copyright-protected commercial content between one device to another.[1][10]&lt;/p&gt;
+
+&lt;p&gt;Durable storage (glacier), resilient storage.
+Commercial Content Management -&amp;gt; Consumer Content Management &amp;lt;-Consumer media management.
+UPnP Design by Example, by Michael Jeronimo and Jack Weast
+UPnP Media Server implements the;
+-   Content Directory Service - provides a logical structure for the media library available in the Server
+-   Connection Manager Service&lt;/p&gt;
+
+&lt;p&gt;Most AV scenarios involve the flow of (entertainment) content (i.e. a movie, song, picture, etc.) from one device to another. As shown in Figure 2, an AV control point interacts with two or more UPnP devices acting as source and sink, respectively. Although the control point coordinates and synchronizes the behavior of both devices, the devices themselves interact with each other using a non-UPnP (“out-of- band”) communication protocol. The control point uses UPnP to initialize and configure both devices so that the desired content is transferred from one device to the other. However, since the content is transferred using an “out-of-band” transfer protocol, the control point is not directly involved in the actual transfer of the content. The control point configures the devices as needed, triggers the flow of content, then gets out of the way. Thus, after the transfer has begun, the control point can be disconnected without disrupting the flow of content. In other words, the core task (i.e. transferring the content) continues to function even without the control point present.&lt;/p&gt;
+
+&lt;p&gt;A MediaServer’s primary purpose is to allow control points to enumerate (i.e. browse or search for) content items that are available for the user to render. The MediaServer contains a ContentDirectory Service [CDS], a ConnectionManager Service [CM], and an optional AVTransport Service &lt;a href=&#34;depending on the supported transfer protocols&#34;&gt;AVT&lt;/a&gt;.
+Some MediaServers are capable of transferring multiple content items at the same time, e.g. a hard-disk- based audio jukebox may be able to simultaneously stream multiple audio files to the network. In order to support this type of MediaServer, the ConnectionManager assigns a unique Connection ID to each “connection” (i.e. each stream) that is made. This ConnectionID allows a third-party control points to obtain information about active connections of the MediaServer.
+3.1.1. Content Directory Service
+This service provides a set of actions that allow the control point to enumerate the content that the Server can provide to the home network. The primary action of this service is ContentDirectory::Browse(). This action allows control points to obtain detailed information about each Content Item that the Server can provide. This information (i.e. meta-data) includes properties such as its name, artist, date created, size, etc. Additionally, the returned meta-data identifies the transfer protocols and data formats that are supported by the Server for that particular Content Item. The control point uses this information to determine if a given MediaRenderer is capable of rendering that content in its available format.
+3.1.2. ConnectionManager Service
+This service is used to manage the connections associated with a particular device. The primary action of this service (within the context of a MediaServer) is ConnectionManager::PrepareForConnection(). When implemented, this optional action is invoked by the control point to give the Server an opportunity to prepare itself for an upcoming transfer. Depending on the specified transfer protocol and data format, this action may return the InstanceID of an AVTransport service that the control point can use to control the flow of this content (e.g. Stop, Pause, Seek, etc). As described below, this InstanceID is used to distinguish multiple (virtual) instances of the AVTransport service, each of which is associated with a particular connection to Renderer. Multiple (virtual) instances of the AVTransport service allow the MediaServer to support multiple Renderers at the same time. When the control point wants to terminate this connection, it should invoke the MediaServer’s ConnectionManager::ConnectionComplete() action (if implemented) to release the connection.
+If the ConnectionManager::PrepareForConnection() action is not implemented, the control point is only able to support a single Renderer at an given time. In this case, the control point should use InstanceID=0.
+3.1.3. AVTransport Service
+This (optional) service is used by the control point to control the “playback” of the content that is associated with the specified AVTransport. This includes the ability to Stop, Pause, Seek, etc. Depending on the supported transfer protocols and/or data formats, a MediaServer may or may not implement this service. If supported, the MediaServer can distinguish between multiple instances of the service by using the InstanceID that is included in each AVTransport action. New instances of the AVTransport service are created via the ConnectionManager’s ConnectionManager::PrepareForConnection() action. A new Instance Id is allocated for each new Service Instance.&lt;/p&gt;
 </description>
     </item>
     
