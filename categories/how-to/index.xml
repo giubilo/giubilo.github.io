@@ -715,72 +715,6 @@ In addition to reading through all of the available knowledge and undertaking th
     </item>
     
     <item>
-      <title>Setting up project resources</title>
-      <link>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</guid>
-      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Technology choice&lt;/th&gt;
-&lt;th&gt;Use&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;[[GitHub&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Eclipse&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Perl&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;VMWare&lt;/td&gt;
-&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;MySQL Workbench&lt;/td&gt;
-&lt;td&gt;data / content modelling&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Makefile&lt;/td&gt;
-&lt;td&gt;packaging installations&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
-&lt;td&gt;implementing installation files&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Building a folder and document based protocol</title>
       <link>http://localhost:1313/retrospectives/how-to/building-a-folder-and-document-based-protocol/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -935,6 +869,72 @@ This service is used to manage the connections associated with a particular devi
 If the ConnectionManager::PrepareForConnection() action is not implemented, the control point is only able to support a single Renderer at an given time. In this case, the control point should use InstanceID=0.
 3.1.3. AVTransport Service
 This (optional) service is used by the control point to control the “playback” of the content that is associated with the specified AVTransport. This includes the ability to Stop, Pause, Seek, etc. Depending on the supported transfer protocols and/or data formats, a MediaServer may or may not implement this service. If supported, the MediaServer can distinguish between multiple instances of the service by using the InstanceID that is included in each AVTransport action. New instances of the AVTransport service are created via the ConnectionManager’s ConnectionManager::PrepareForConnection() action. A new Instance Id is allocated for each new Service Instance.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up project resources</title>
+      <link>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</guid>
+      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Technology choice&lt;/th&gt;
+&lt;th&gt;Use&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[[GitHub&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Eclipse&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Perl&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;VMWare&lt;/td&gt;
+&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;MySQL Workbench&lt;/td&gt;
+&lt;td&gt;data / content modelling&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Makefile&lt;/td&gt;
+&lt;td&gt;packaging installations&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
+&lt;td&gt;implementing installation files&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
