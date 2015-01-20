@@ -11,10 +11,10 @@
     
     <item>
       <title>Alfresco Integration</title>
-      <link>http://localhost:1313/retrospectives/alfresco-integration/</link>
+      <link>http://localhost:1313/retrospectives/1000ft/alfresco-integration/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/alfresco-integration/</guid>
+      <guid>http://localhost:1313/retrospectives/1000ft/alfresco-integration/</guid>
       <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;caching content stores, syncing content stores, s3 content stores&amp;hellip;this detail is from the 2013 summit press - &lt;a href=&#34;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&#34;&gt;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&lt;/a&gt;&lt;/p&gt;

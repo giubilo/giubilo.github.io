@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Project-Setup on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/series/project-setup/index.xml/</link>
+    
+    
+    
+    <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Setting up project resources</title>
+      <link>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</guid>
+      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Technology choice&lt;/th&gt;
+&lt;th&gt;Use&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[[GitHub&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Eclipse&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Perl&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;VMWare&lt;/td&gt;
+&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;MySQL Workbench&lt;/td&gt;
+&lt;td&gt;data / content modelling&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Makefile&lt;/td&gt;
+&lt;td&gt;packaging installations&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
+&lt;td&gt;implementing installation files&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/java/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/java/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/totalbeginner.html&#34;&gt;http://eclipsetutorial.sourceforge.net/totalbeginner.html&lt;/a&gt;
+&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&#34;&gt;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&lt;/a&gt;
+&lt;a href=&#34;http://sourceforge.net/projects/eclipsetutorial/files/&#34;&gt;http://sourceforge.net/projects/eclipsetutorial/files/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The companion has resources listed in the back including (gold standard):
+&lt;a href=&#34;http://docs.oracle.com/javase/tutorial/java/index.html&#34;&gt;http://docs.oracle.com/javase/tutorial/java/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&#34;&gt;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=al7bRZzz4oU&#34;&gt;http://www.youtube.com/watch?v=al7bRZzz4oU&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&#34;&gt;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;maven in Eclipse:  &lt;a href=&#34;http://www.youtube.com/watch?v=xE2F4Z_wKCU&#34;&gt;http://www.youtube.com/watch?v=xE2F4Z_wKCU&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/github/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/github/</guid>
+      <description>
+
+&lt;p&gt;First things first! There&amp;rsquo;s a lot of stuff to manage; source code objects, project information, documentation, issues and will need to see how this stuff changes over time.  Had mainly used commercial implementations of source repositories and team collaboration / wiki tools.  Looked at a few open source ones (GitHub, BitBucket, SourceForge) and chose GitHub because; it had plenty of &lt;a href=&#34;http://git-scm.com/about&#34;&gt;documentation&lt;/a&gt; and &lt;a href=&#34;http://teach.github.com&#34;&gt;training&lt;/a&gt;, active community, mac client, eclipse plug-in and there are other modules such as cmis-perl, pDLNA and ember media manager - that the project will be leveraging - are also on GitHub.&lt;/p&gt;
+
+&lt;p&gt;So we are going to use Git for:&lt;/p&gt;
+
+&lt;p&gt;|GitHub Capability  |Use  |
+|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;|&lt;br /&gt;
+|GitHubPages |project information  |&lt;br /&gt;
+|source code management tools (&amp;lt;&amp;gt; icon) | code storage, organisation, versioning, collaboration, backup, code review  |&lt;br /&gt;
+|wiki (the book icon) | how to documentation  |&lt;br /&gt;
+|issues (the (!) icon) | requirements and issue tracking   |
+|GitHub stats  | use the graphs and &lt;a href=&#34;https://help.github.com/articles/be-social&#34;&gt;social stuff&lt;/a&gt; to see how we are going |&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s a bit of a hill to climb to get the most out of Git but it was great to put a &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resource&lt;/a&gt; in like this as a first thing for the project as everything had a place to go and when talking to people could point them to it no matter where they were in the world.  We&amp;rsquo;re just using some of the basic bits.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Setup GitHub account&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup repository&lt;/li&gt;
+&lt;li&gt;Clone to desktop&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Edit README&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup GitHubPages&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup wiki&lt;/li&gt;
+&lt;li&gt;Setup issues&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;1. Setup GitHub account&lt;/h3&gt;
+
+&lt;p&gt;Simple registration, can do a free account or various paid ones if want more functionality, just go to &lt;a href=&#34;github.com&#34;&gt;github.com&lt;/a&gt;.  Can have individual accounts or organisation accounts.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;2. Setup repository(s)&lt;/h3&gt;
+
+&lt;p&gt;Just used the online prompts but there is an excellent &lt;a href=&#34;https://help.github.com&#34;&gt;bootcamp tutorial&lt;/a&gt;. Currently the project has repos for;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;allegria - the main repository that this wiki is in&lt;/li&gt;
+&lt;li&gt;pDLNA - a &amp;lsquo;forked&amp;rsquo; repository of some modules that allegria will customise&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have initially set the allegria repo up as a catchall for all the concepts being developed.  Later on may make submodules of each of the big areas to make cloning easier but just keeping it simple for now.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;3. Clone to desktop&lt;/h3&gt;
+
+&lt;p&gt;So you need a client application on your desktop to clone your repository to so that you can work on it.  Can do this with the &lt;a href=&#34;http://git-scm.com/downloads&#34;&gt;commandline client&lt;/a&gt;, which is ok and has lots of &lt;a href=&#34;http://git-scm.com/about&#34;&gt;documentation&lt;/a&gt;.  Or can use a &lt;a href=&#34;http://git-scm.com/downloads/guis&#34;&gt;graphical client&lt;/a&gt; (had a brief look at the mac client and it was pretty cool).  But for this project&amp;rsquo;s purposes we are using a graphical client that is embedded into the Eclipse Integrated Development Environment &lt;a href=&#34;./Paint-by-numbers:-Eclipse-with-Epic-and-Egit&#34;&gt;see the paint-by numbers here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;4. Edit README&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://help.github.com/articles/create-a-repo&#34;&gt;create a repo&lt;/a&gt; tutorial suggests that it is a good idea for your GitHub repository to have a &lt;a href=&#34;.&#34;&gt;README&lt;/a&gt; (or README.md) file which is like a summary landing page for the online webclient. If you create a repo through the command line there&amp;rsquo;s a few hoops to jump through but if you use the online webclient there is a checkbox to initialise the repo with a readme (that&amp;rsquo;s the easiest way to go).  The readme&amp;rsquo;s a good place to put some summary detail about the project and kick off some links to things like a project page, the wiki or to related sites.&lt;/p&gt;
+
+&lt;p&gt;The readme can use a &amp;lsquo;markdown&amp;rsquo; type language and there is tons of help for it like; &lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown&#34;&gt;articles in GitHub&lt;/a&gt; or &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax#link&#34;&gt;blogs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;5. Setup GitHub Pages&lt;/h3&gt;
+
+&lt;p&gt;The readme file is a good start to give people a snapshot of the project, but we wanted to have something a bit more, so are using &lt;a href=&#34;http://pages.github.com&#34;&gt;GitHubPages&lt;/a&gt;.  It is initially a bit tricky to set up. We used the wizard that is on the GitHubPages site but it seemed to not do anything (it says to wait 10 mins).  After a while if you go to the url (username.github.io/repository) that the wizard gives you (in our case it was &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;http://peterwatts.github.io/allegria/&lt;/a&gt;) then you should see the default page.&lt;/p&gt;
+
+&lt;p&gt;Underneath, the GitHubPages is a gh-pages branch under your repo and you can go into there and customise it to your heart&amp;rsquo;s content (we initially just tweaked the index page (by editing it online) with project information).  You could probably use some cool tools to manage it much as you would any normal html website but we are doing it all manually at the moment.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;6. Setup wiki&lt;/h3&gt;
+
+&lt;p&gt;Using the wiki for the majority of documentation for the project other than read-me&amp;rsquo;s and release notes etc which are included in each of the development directories.&lt;/p&gt;
+
+&lt;p&gt;Generally the wiki makes it easy to put up some information relatively quickly.  Needed to play around with getting the markup correct (e.g. putting spaces after text on end of line to get to display on next line, using relative links and embedding images in the pages).&lt;/p&gt;
+
+&lt;p&gt;Using predominantly the &amp;ldquo;Markdown&amp;rdquo; editing mode as it&amp;rsquo;s the default (&lt;a href=&#34;http://www.mediawiki.org/wiki/MediaWiki&#34;&gt;MediaWiki&lt;/a&gt; would also be useful) and just using basic functionality to begin with including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;simple naming standard of Home, Concept, HowTo, Paint-by-numbers, Point-of-view so the &amp;lsquo;Pages&amp;rsquo; page looks organised and relative links are easy to guess.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;formatting like; headings, bold, code blocks, unordered lists, ordered lists and quotes.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;relative links for content inside the Github repository (including for images).&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is plenty of raw documentation out there about the wiki syntax including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/categories/88/articles&#34;&gt;GitHub Help&lt;/a&gt; including; Writing on GitHub, Markdown Basics and GitHub Flavoured Markdown&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://guides.github.com/overviews/mastering-markdown/&#34;&gt;http://guides.github.com/overviews/mastering-markdown/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gollum/gollum/wiki&#34;&gt;https://github.com/gollum/gollum/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mojombo/gollum-demo/wiki&#34;&gt;https://github.com/mojombo/gollum-demo/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown&#34;&gt;https://help.github.com/articles/github-flavored-markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/blog/1395-relative-links-in-markup-files&#34;&gt;https://github.com/blog/1395-relative-links-in-markup-files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/relative-links-in-readmes&#34;&gt;https://help.github.com/articles/relative-links-in-readmes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;http://daringfireball.net/projects/markdown/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://designshack.net/articles/html/mastering-markdown-30-resources-apps-and-tutorials-to-get-you-started/&#34;&gt;http://designshack.net/articles/html/mastering-markdown-30-resources-apps-and-tutorials-to-get-you-started/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also a few forum examples for some of the trickier formatting stuff such as:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webapps.stackexchange.com/questions/29602/markdown-to-insert-and-display-an-image-on-github-repo&#34;&gt;embedding images into a wiki page&lt;/a&gt; - some of the standard information available looked confusing or inaccurate - but this explanation seems to work.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/snowplow/snowplow/wiki&#34;&gt;example Github wiki&lt;/a&gt; that has some nice table footer and sidebar functionality.&lt;/li&gt;
+&lt;li&gt;plenty of forum examples out there on using the Eclipse IDE to author the wiki rather than typing into the online webclient but need to test out how to do this before write about it.&lt;/li&gt;
+&lt;li&gt;can get some of the work in formatting tables done with a &lt;a href=&#34;http://www.tablesgenerator.com/markdown_tables&#34;&gt;table generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;ldquo;Github Flavoured Markdown (GFM) Markdown table syntax is quite simple. It does not allow row or cell spanning as well as putting multi-line text in a cell&amp;rdquo;.  To get a bit fancier can use some inline HTML.  The &lt;a href=&#34;http://www.w3schools.com/html/html_tables.asp&#34;&gt;W3Schools site&lt;/a&gt; has some good documentation for this (and syntax in general).&lt;/p&gt;
+
+&lt;p&gt;Simple example using the info from W3Schools:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;table border=&amp;quot;0&amp;quot;&amp;gt;
+  &amp;lt;!--tr gives you a new table row and td gives you a new cell in the row--&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;For more information on using groovy with cmis:
+     &amp;lt;ul&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://groovy.codehaus.org&amp;quot;&amp;gt;Groovy home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://groovy.codehaus.org/Documentation&amp;quot;&amp;gt;Groovy documentation&amp;lt;/a&amp;gt; including getting started and tutorials&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.ibm.com/developerworks/java/tutorials/j-groovy&amp;quot;&amp;gt;IBM groovy tutorial&amp;lt;/a&amp;gt; includes using with Eclipse IDE&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.gradle.org&amp;quot;&amp;gt;Gradle&amp;lt;/a&amp;gt; build system for groovy&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;books with groovy code examples&amp;lt;/li&amp;gt;
+     &amp;lt;/ul&amp;gt;
+    &amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;
+      &amp;lt;!--The target=&amp;quot;_blank&amp;quot; tag opens in a new browser tab when click on image--&amp;gt;
+      &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://www.manning.com/mueller&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;
+        &amp;lt;img src=&amp;quot;./images/manning-cmis.png?raw=true&amp;quot; alt=&amp;quot;book&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;/table&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which produces:&lt;/p&gt;
+
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;For more information on using groovy with cmis:
+   &lt;ul&gt;
+   &lt;li&gt;&lt;a href=&#34;http://groovy.codehaus.org&#34;&gt;Groovy home&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://groovy.codehaus.org/Documentation&#34;&gt;Groovy documentation&lt;/a&gt; including getting started and tutorials&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/java/tutorials/j-groovy&#34;&gt;IBM groovy tutorial&lt;/a&gt; includes using with Eclipse IDE&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://www.gradle.org&#34;&gt;Gradle&lt;/a&gt; build system for groovy&lt;/li&gt;
+   &lt;li&gt;books with groovy code examples&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/mueller&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/manning-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Examples of coding with images:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a name=&amp;quot;PaintByNumbers&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 
+##![Paint](/assets/img/paint-by-numbers-50.png?raw=true) Paint by Numbers  
+
+&amp;lt;a name=&amp;quot;HowTo&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 
+&amp;lt;html&amp;gt;
+  &amp;lt;h2&amp;gt;
+      &amp;lt;img src=&amp;quot;../blob/master/images/paint-by-numbers-50.png?raw=true&amp;quot; alt=&amp;quot;icon&amp;quot; style=&amp;quot;float:left&amp;quot;&amp;gt; How To&#39;s
+  &amp;lt;/h2&amp;gt;
+&amp;lt;/html&amp;gt; 
+
+[![Gem Version](https://badge.fury.io/rb/gollum.png)](http://rubygems.org/gems/gollum)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;7. Setup issues log&lt;/h3&gt;
+
+&lt;p&gt;Not getting too funky here but will use the issues list capability to store:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;requirements definitions (green label)&lt;/li&gt;
+&lt;li&gt;project issues / key decisions&lt;/li&gt;
+&lt;li&gt;bugs, enhancements etc&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Eclipse</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;hidden stuff
+-rw-r&amp;ndash;r&amp;ndash;@.DS_Store
+-rw-r&amp;ndash;r&amp;ndash; .classpath
+drwxr-xr-x .git
+-rw-r&amp;ndash;r&amp;ndash; .gitignore
+drwxr-xr-x .gradle
+-rw-r&amp;ndash;r&amp;ndash; .project
+drwxr-xr-x   .settings&lt;/p&gt;
+
+&lt;p&gt;eclipse project import will create some (particulalry if using the gradle plugin)
+gradle build will create some
+.gitignore is also in the Atlassian SourceTree global gitignore (there is a decision here about whether or not to store the .gitignore stuff in the reporsitory to maintain consistency across the team - prob would put in a dev note so that could have the best of both worlds in case someone is working on a few projects and have different things in their gitignore - although could prob have a base one in here that includes the .gitignore file as well so it doesn&amp;rsquo;t get changed back on commit - would have to add manually through the GitHub gui I think)&lt;/p&gt;
+
+&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
+
+&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
+&lt;li&gt;formatting code so it&amp;rsquo;s readable, valid and conforms to best practice techniques for the language (like project structures)&lt;/li&gt;
+&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
+&lt;li&gt;build/package/implement code&lt;/li&gt;
+&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
+&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Wow, that&amp;rsquo;s a lot of things, but which one to choose?  There are heaps of IDE&amp;rsquo;s out there.  We have chosen &lt;a href=&#34;http://www.eclipse.org&#34;&gt;Eclipse&lt;/a&gt; because; there&amp;rsquo;s tons of documentation, examples and community surrounding it.  Also, because we have also chosen Perl as a development language for the CmisDlnaConnector and Git (GitHub) for source control, Eclipse is a good choice for us because it has really cool plugins &lt;a href=&#34;http://www.epic-ide.org&#34;&gt;EPIC&lt;/a&gt; and &lt;a href=&#34;http://www.eclipse.org/egit/&#34;&gt;EGit&lt;/a&gt; to support both of them.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Getting and configuring Eclipse&lt;/li&gt;
+&lt;li&gt;Getting and configuring Epic&lt;/li&gt;
+&lt;li&gt;Getting and configuring EGit&lt;/li&gt;
+&lt;li&gt;Importing projects&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Getting and configuring Eclipse&lt;/h3&gt;
+
+&lt;p&gt;Downloaded &lt;a href=&#34;http://www.eclipse.org/downloads/&#34;&gt;Eclipse Kepler (4.3.1)&lt;/a&gt; for MacOSX (and can get a Windows and Linux one as well).&lt;/p&gt;
+
+&lt;p&gt;It comes as an archive which we unstuffed. Then &lt;a href=&#34;http://www.imdb.com/title/tt0109045/&#34;&gt;drag&lt;/a&gt; the &amp;ldquo;eclipse&amp;rdquo; folder into your Applications folder. &lt;a href=&#34;http://www.cs.dartmouth.edu/~cs5/install/eclipse-osx/&#34;&gt;The easiest way to do so&lt;/a&gt; is to open a new window in the Finder and click on Applications in the list you get on the left-hand side. Then drag the &amp;ldquo;eclipse&amp;rdquo; folder in with the other applications. Make sure that you do not drag it into a folder that&amp;rsquo;s already within Applications. In other words, when you&amp;rsquo;re done, the Applications folder should have directly within it a folder named &amp;ldquo;eclipse.&amp;rdquo;
+(This step is not required, but handy.) Double click the &amp;ldquo;eclipse&amp;rdquo; folder. You&amp;rsquo;ll see an application named &amp;ldquo;Eclipse&amp;rdquo;; it has a purple icon with white horizontal stripes. Drag it into your dock. Now you will be able to launch Eclipse by clicking on the icon in the dock.&lt;/p&gt;
+
+&lt;p&gt;Launch the application and set up the default workspace preferences (we&amp;rsquo;ve just put it in the ~/Documents/workspace folder ).&lt;/p&gt;
+
+&lt;p&gt;Didn&amp;rsquo;t really do any other configuration as most of the preferences that are important to us are in the Epic and EGit plugins.  Didn&amp;rsquo;t look at many support docs to get going as its pretty self explanatory but the &lt;a href=&#34;http://help.eclipse.org/kepler/topic/org.eclipse.platform.doc.user/gettingStarted/qs-01.htm?cp=0_1_0&#34;&gt;basic tutorial&lt;/a&gt; and some descriptions of the &lt;a href=&#34;http://help.eclipse.org/kepler/index.jsp?topic=/org.eclipse.jdt.doc.user/reference/ref-icons.htm&#34;&gt;icons&lt;/a&gt; were useful (if could find a similar icons ref for Epic that would be cool).&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Getting and configuring Epic&lt;/h3&gt;
+
+&lt;p&gt;Even though the project repository is foundational, we&amp;rsquo;ve put this section in before setting up EGit as when we connect to the repo and import projects we wanted to import them as Perl projects (and wanted Perl frameworks and Epic plugin installed first to do this).&lt;/p&gt;
+
+&lt;p&gt;And, in order to have all EPIC &lt;a href=&#34;http://www.epic-ide.org/articles.php&#34;&gt;features&lt;/a&gt; like template project model (Module::Starter), source formatting (PerlTidy), syntax checking, coding standards (PerlCritic), interactive debug etc., you need to have a &lt;a href=&#34;./Paint-by-numbers:-Perl&#34;&gt;Perl interpreter and some supporting perl modules installed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Epic &lt;a href=&#34;http://www.epic-ide.org/guide/ch01s02.php&#34;&gt;installation&lt;/a&gt; is done by using the Eclipse Update Manager by entering &amp;lsquo;epic - &lt;a href=&#34;http://e-p-i-c.sf.net/updates/testing&#39;&#34;&gt;http://e-p-i-c.sf.net/updates/testing&#39;&lt;/a&gt; into the “Help &amp;gt; Install new software” dialog.  Chose the testing version &amp;lsquo;cause saw some posts that said it was stable and had good advantages over the current released version (and who doesn&amp;rsquo;t like a shiny new toy).&lt;/p&gt;
+
+&lt;p&gt;Once the plugin is installed, updated the &amp;ldquo;Eclipse &amp;gt; Preferences &amp;gt; Perl EPIC&amp;rdquo; preferences:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Perl EPIC:
+  ~ Perl Executable: &amp;ldquo;/usr/bin/perl&amp;rdquo;&lt;br /&gt;
+  ~ Interpreter Type: Standard&lt;br /&gt;
+Module::Starter:&lt;br /&gt;
+  ~ Select Enable Module::Starter&lt;br /&gt;
+  ~ Custom location: /usr/local/bin/module-starter&lt;br /&gt;
+  ~ Select Override module-starter config file&lt;br /&gt;
+  ~ Module Author:&lt;br /&gt;
+  ~ Module Author Email:&lt;br /&gt;
+Perl::Critic:&lt;br /&gt;
+  ~ Select Enable Critic&lt;br /&gt;
+  ~ Custom location: /usr/local/bin/perlcritic&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That&amp;rsquo;s the ones we tweaked but there are heaps of other ones as well.&lt;/p&gt;
+
+&lt;p&gt;So now you&amp;rsquo;ve got the &lt;a href=&#34;http://www.imdb.com/title/tt0659325/&#34;&gt;eagles nest&lt;/a&gt; for a birds eye view of the project.  The main structure of Eclipse are perspectives.  &lt;em&gt;Perspectives control what appears in certain menus and toolbars. They define visible action sets, which you can change to customize a perspective. You can save a perspective that you build in this manner, making your own custom perspective that you can open again later.&lt;/em&gt;
+&lt;em&gt;You can set your Workbench preferences to open perspectives in the same window or in a new window.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The main perspectives for developing Perl applications are:
+* Perl - This is the main perspective for coding Perl scripts.&lt;br /&gt;
+* Debug - Provides the main functionality for debugging and executing Perl scripts.&lt;/p&gt;
+
+&lt;p&gt;Did have an error setting up EPIC;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“An internal error occurred during: &amp;ldquo;Launching MyRSSFeeder&amp;rdquo;.java.lang.NullPointerException&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This happened because had mistakenly set the interpreter type in the Perl EPIC preferences to &amp;lsquo;cygwin&amp;rsquo;. Need to make sure use the “Standard” Interpreter type.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Getting and configuring EGit&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://www.eclipse.org/egit/download/&#34;&gt;download page&lt;/a&gt; for EGit says to; &lt;em&gt;install via one of the update site URLs listed below, copy and paste it into the “Help &amp;gt; Install new software” dialog&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is a &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide&#34;&gt;huge user guide&lt;/a&gt; for EGit.  We skimmed it.&lt;/p&gt;
+
+&lt;p&gt;Once installed go to the Eclipse &amp;gt; Preferences menu and set the &amp;gt;Team&amp;gt;Git Default repository folder: which we set to the Eclipse workspace directory /Documents/workspaces (it will actually go into each imported project&amp;rsquo;s folder).  The other settings within Eclipse will get set when you actually import projects (and these will be stored in ~/.gitconfig).  The later section on importing projects will detail other settings.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;Importing projects&lt;/h3&gt;
+
+&lt;p&gt;Now, you can connect Eclipse through EGit to a locally cloned repository (like one cloned by the Git commandline client or graphical client), which will give you an Eclipse workspace, a local Git repo and an online Git repo.  We have chosen to clone directly into the Eclipse workspace area so only have the Eclipse workspace directory for the project (like /Documents/workspace/allegria) which will have a hidden .git directory in it with relevant repo config files.&lt;/p&gt;
+
+&lt;p&gt;To do this you will need to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;prepare for &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Eclipse_SSH_Configuration&#34;&gt;ssh connection&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories&#34;&gt;clone a remote repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The ssh connection was a bit tricky and when doing it we got a few error messages.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the first error message was a problem with validation and there are many &lt;a href=&#34;http://stackoverflow.com/questions/3225862/multiple-github-accounts-ssh-config&#34;&gt;posts&lt;/a&gt; describing the need to create a ~.ssh/config file (the ~.ssh directory is the same directory that the ssh keys are stored).  We used our favourite editor to create ~.ssh/config with the following entries;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    Host github.com  
+    HostName github.com  
+    User git  
+    PreferredAuthentications publickey  
+    IdentityFile ~/.ssh/id_rsa  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the second error was about &lt;a href=&#34;https://help.github.com/articles/error-permission-denied-publickey&#34;&gt;permission denied public key&lt;/a&gt; and related to the &amp;lsquo;User&amp;rsquo; entry in the ~.ssh/config file, initially we were using the username for the repo but need to use the generic &amp;lsquo;git&amp;rsquo; user name.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;a third error concerned the need to fix the &lt;a href=&#34;http://www.howtogeek.com/168119/fixing-warning-unprotected-private-key-file-on-linux/&#34;&gt;permissions on id_rsa key files&lt;/a&gt; by resetting them back to default;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo chmod 600 ~/.ssh/id_rsa  
+    sudo chmod 600 ~/.ssh/id_rsa.pub  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once have prepared the ssh connection then can clone the remote repo by choosing &amp;ldquo;File &amp;gt; Import &amp;gt; Git &amp;gt; Project from Git&amp;rdquo; and then on the next screen select Clone URI.  Paste in the URI from the repo (in our case github.com/peterwatts/allegria) and select protocol ssh (this will change the URI to ssh://github.com/peterwatts/allegria).  Choose the branches on the next screen and select a directory in the next (in our case ~/Documents/workspace/).  Will then ask you &amp;lsquo;import projects&amp;rsquo; which you can select and do.&lt;/p&gt;
+
+&lt;p&gt;Choose the New Project Wizard (as the other two options; &amp;lsquo;Import existing projects&amp;rsquo; and &amp;lsquo;Import as general project&amp;rsquo; will cause an error as they probably don&amp;rsquo;t have the necessary eclipse setting files).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Perl</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/perl/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/perl/</guid>
+      <description>
+
+&lt;p&gt;Have chosen to use Perl because;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Perl is common in opensource projects and has extensive documentation and huge community&lt;/li&gt;
+&lt;li&gt;there a &lt;a href=&#34;https://github.com/MichaelDaum/cmis-perl&#34;&gt;CMIS wrapper&lt;/a&gt; written in Perl&lt;/li&gt;
+&lt;li&gt;there&amp;rsquo;s a &lt;a href=&#34;http://www.cybergarage.org/twiki/bin/view/Main/CyberLinkForPerl&#34;&gt;DLNA media server extension&lt;/a&gt; written in Perl&lt;/li&gt;
+&lt;li&gt;handles text stuff (which there is going to be heaps of)&lt;/li&gt;
+&lt;li&gt;it was new to me and I like a challenge&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Going to try and keep it neat and maintainable through the help of the Eclipse - Epic plugin.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;p&gt;Never used perl before so &lt;a href=&#34;http://www.imdb.com/title/tt0066011/?ref_=nm_flmg_com_92&#34;&gt;where do we begin&lt;/a&gt;? At the &lt;a href=&#34;http://www.perl.org/books/beginning-perl/&#34;&gt;beginning&lt;/a&gt; I guess:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;perl is an interpreted language (not compiled to a binary) so need an interpreter&lt;/li&gt;
+&lt;li&gt;get help&lt;/li&gt;
+&lt;li&gt;be good to the &lt;a href=&#34;http://www.imdb.com/title/tt0497116/&#34;&gt;environment&lt;/a&gt; variables&lt;/li&gt;
+&lt;li&gt;reuse, reduce, recycle - live sustainably with the Comprehensive Perl Archive Network&lt;/li&gt;
+&lt;li&gt;EPIC debugging is, well, &lt;a href=&#34;http://www.imdb.com/title/tt0848537/&#34;&gt;epic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;document as you go, who would have thunk it&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;http://www.imdb.com/title/tt0117509/&#34;&gt;name by any other&lt;/a&gt; is conventional&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;The Perl Interpreter&lt;/h3&gt;
+
+&lt;p&gt;To check if already have a perl interpreter installed type the following into a command prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    perl -v 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It should return something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    This is perl 5, version 12, subversion 4 (v5.12.4) built for darwin-thread-multi-2level
+    (with 2 registered patches, see perl -V for more detail)
+    
+    Copyright 1987-2010, Larry Wall
+    
+    Perl may be copied only under the terms of either the Artistic License or the
+    GNU General Public License, which may be found in the Perl 5 source kit.
+    
+    Complete documentation for Perl, including FAQ lists, should be found on
+    this system using &amp;quot;man perl&amp;quot; or &amp;quot;perldoc perl&amp;quot;.  If you have access to the
+    Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If it doesn&amp;rsquo;t, &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;download one&lt;/a&gt; for the relevant platform:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Platform&lt;/th&gt;
+&lt;th&gt;Where&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;mac&lt;/td&gt;
+&lt;td&gt;pretty likely already installed&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;windows&lt;/td&gt;
+&lt;td&gt;could get &lt;a href=&#34;http://www.activestate.com&#34;&gt;activestate&lt;/a&gt; or &lt;a href=&#34;http://strawberryperl.com&#34;&gt;strawberryperl&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;linux&lt;/td&gt;
+&lt;td&gt;consult package manager&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Once have the perl interpreter installed have access to the &lt;a href=&#34;http://www.perlmonks.org/?node_id=640489&#34;&gt;perl shell&lt;/a&gt; with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    perl -MCPAN -e shell   
+    cpan  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;getting help&lt;/h3&gt;
+
+&lt;p&gt;Perl is up to version 5 now and that means there is tons of help out there.  Some of the obvious places are;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://perldoc.perl.org/perl.html&#34;&gt;http://perldoc.perl.org/perl.html&lt;/a&gt; and &lt;a href=&#34;http://www.perl.org/learn.html&#34;&gt;http://www.perl.org/learn.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Intro.pdf&#34;&gt;Beginning Perl Intro&lt;/a&gt; explains about getting text: &lt;em&gt;typing &lt;code&gt;perldoc perl&lt;/code&gt; from a command prompt will get you a table of contents and some basic infomration about Perl.  The pages your probably going to use are the Perl FAQ and &amp;lsquo;perlfunc&amp;rsquo;, which describes the built-in functions&lt;/em&gt;.  Page 10 in here also lists help sources.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlmonks.org&#34;&gt;http://www.perlmonks.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlhowto.com&#34;&gt;http://www.perlhowto.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;these look really simple to go through if have a bit of time: &lt;a href=&#34;http://docstore.mik.ua/orelly/perl3/lperl/index.htm&#34;&gt;http://docstore.mik.ua/orelly/perl3/lperl/index.htm&lt;/a&gt; and &lt;a href=&#34;http://docstore.mik.ua/orelly/perl4/index.htm&#34;&gt;http://docstore.mik.ua/orelly/perl4/index.htm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As with all help / how-to&amp;rsquo;s these established sources sometimes had varying levels of details for some of the start-up type questions like; @INC and the environment, working out what modules are installed or what to call things.  Usually had to put together a couple to get the answer (like the ones below).&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;@INC&lt;/h3&gt;
+
+&lt;p&gt;As start to use (pardon the pun), perl and edit first modules, a number of the errors popped up relating to modules that were &amp;lsquo;using&amp;rsquo; but couldn&amp;rsquo;t find.  This will probably be a path issue but the fix isn&amp;rsquo;t that obvious as there are gazillions of different ideas out there like:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mixture of &lt;a href=&#34;http://stackoverflow.com/questions/2526804/how-is-perls-inc-constructed-aka-what-are-all-the-ways-of-affecting-where-pe&#34;&gt;use, &amp;lsquo;@INC&amp;rsquo; and PERL5LIB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;overview of &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_AppB.pdf&#34;&gt;special variables&lt;/a&gt; like &amp;lsquo;%ENV&amp;rsquo;, &amp;lsquo;@INC&amp;rsquo;, &amp;lsquo;%INC&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;another environment setup &lt;a href=&#34;http://www.perlmonks.org/?node_id=867860&#34;&gt;PERL5LIB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;some more about &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Chap10.pdf&#34;&gt;modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perl.com/pub/2002/05/14/mod_perl.html&#34;&gt;use(), require(), do(), %INC and @INC Explained&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Somewhere in this list (start at the top and work down) and google will probably be the answer.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;CPAN Perl Modules&lt;/h3&gt;
+
+&lt;p&gt;There are a gazilion &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Chap10.pdf&#34;&gt;perl modules&lt;/a&gt; or bits of code already written to do all sorts of things, so where is it?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;installed as part of the interpreter  (File::Find, benchmark etc)&lt;/li&gt;
+&lt;li&gt;code up on repositories like GitHub&lt;/li&gt;
+&lt;li&gt;perl package &lt;a href=&#34;http://docs.activestate.com/activeperl/5.10/faq/ActivePerl-faq2.html#ppm_repositories&#34;&gt;repositories&lt;/a&gt; like for ActiveState&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cpan.org/misc/cpan-faq.html&#34;&gt;Comprehensive Perl Archive Network&lt;/a&gt; (CPAN)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am using macOSX so perl was installed already and installed the cpan addon &lt;a href=&#34;http://www.bioperl.org/wiki/Tutorial:Installing_Perl_modules&#34;&gt;package manager&lt;/a&gt; by entering the &lt;a href=&#34;http://search.cpan.org/~miyagawa/App-cpanminus-1.7001/bin/cpanm&#34;&gt;code below&lt;/a&gt; in a terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo cpan App::cpanminus
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now &lt;a href=&#34;http://www.cpan.org/modules/INSTALL.html&#34;&gt;install&lt;/a&gt; any module you can find on cpan &lt;code&gt;sudo cpanm Module::Name&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To find what modules are currently installed, as with most things perl there seems to be multitude of ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;instmodsh&lt;/code&gt; &lt;a href=&#34;http://www.cyberciti.biz/faq/how-do-i-find-out-what-perl-modules-already-installed-on-my-system/&#34;&gt;to see all installed modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;perldoc -l Net::UPnP&lt;/code&gt; &lt;a href=&#34;http://www.perlhowto.com/list_the_installed_modules&#34;&gt;to see if Net::UPnP is installed&lt;/a&gt;, this will show where the module (.pm) is&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;perl -MTie::Hash -e 1&lt;/code&gt; &lt;a href=&#34;http://www.perlhowto.com/check_if_a_module_is_installed&#34;&gt;to see if Tie::Hash is installed&lt;/a&gt;, this will run it so if not installed will get and error message and if installed then will need to break execution&lt;/li&gt;
+&lt;li&gt;see the &lt;code&gt;perlmodinstall&lt;/code&gt; manpage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;EPIC&lt;/h3&gt;
+
+&lt;p&gt;To get the most out of EPIC, need to install some supporting perl modules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project templates (Module::Starter)&lt;/li&gt;
+&lt;li&gt;source formatting (Perl::Tidy), also get colouring&lt;/li&gt;
+&lt;li&gt;best practice approach (Perl::Critic)&lt;/li&gt;
+&lt;li&gt;syntax (Perl::Debugger and Pad::Walker)&lt;/li&gt;
+&lt;li&gt;commenting / documentation (&lt;a href=&#34;http://perldoc.perl.org/perlpod.html&#34;&gt;perlpod&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;eclipse perspective for outline views of code and consoles for heaps of things like tasks, logs etc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To do that we ran the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo cpanm Module::Starter
+    sudo cpanm Perl::Tidy
+    sudo cpanm Perl::Critic
+    sudo cpanm Pad::Walker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When configuring these into &lt;a href=&#34;./Paint-by-numbers:-Eclipse-with-Epic-and-Egit&#34;&gt;EPIC preferences&lt;/a&gt; need to find where the modules installed to as couldn&amp;rsquo;t use the default locations.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Perldoc&lt;/h3&gt;
+
+&lt;p&gt;Understanding how perldoc works, in particular the syntax for embedding pod into code and then using it to auto-generate documentation was a great place to start understanding perl.  In doing this first, got to see code examples, work out how to see and fix mistakes like forgetting to put in spaces and semicolons at end of lines and had to use the perl interpreter and instal modules.  Also was an easy, practical way to start looking at the perl language, and actually got to produce something helpful.&lt;/p&gt;
+
+&lt;p&gt;Got some help from the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://search.cpan.org/~rjbs/perl-5.18.1/pod/perlpod.pod&#34;&gt;http://search.cpan.org/~rjbs/perl-5.18.1/pod/perlpod.pod&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://perldoc.perl.org/perlpod.html&#34;&gt;http://perldoc.perl.org/perlpod.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlmonks.org/?node_id=252477&#34;&gt;http://www.perlmonks.org/?node_id=252477&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first pod we did was inside one of the pDLNA modules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;create some heading information for the package (remember the = operator needs to be against the margin no spaces and sometimes need space at the end of line to work properly)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=head1 NAME
+
+package PDLNA::SSDP - core module for Simple Service Discovery Protocol (SSDP).
+
+=head1 DESCRIPTION
+
+When a Universal Plug and Play (UPnP) enabled device joins a network.....
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;documentation for the functions used, note the use of &lt;code&gt;over&lt;/code&gt;, &lt;code&gt;begin/end html&lt;/code&gt;, &lt;code&gt;back&lt;/code&gt; and &lt;code&gt;cut&lt;/code&gt;, these give the pod structure (over to start the list and back to end it), also using html inside the pod meant could link between the resulting html docs, so when you &lt;a href=&#34;http://www.imdb.com/title/tt0389860/&#34;&gt;click&lt;/a&gt; on an internal library you get taken to the htmlpod for that module.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=head1 LIBRARY FUNCTIONS
+
+=over 12
+
+=item internal libraries
+
+=begin html
+
+&amp;lt;/p&amp;gt;
+&amp;lt;a href=&amp;quot;./Config.html&amp;quot;&amp;gt;PDLNA::Config&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Database.html&amp;quot;&amp;gt;PDLNA::Database&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Devices.html&amp;quot;&amp;gt;PDLNA::Devices&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Log.html&amp;quot;&amp;gt;PDLNA::Log&amp;lt;/a&amp;gt;.
+&amp;lt;/p&amp;gt;
+
+=end html
+
+=item external libraries
+
+L&amp;lt;IO::Socket::INET&amp;gt;,
+L&amp;lt;IO::Socket::Multicast&amp;gt;,
+L&amp;lt;Net::Netmask&amp;gt;.
+
+=back
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the block of pod like the following gave chance to document as went the modules actions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=item add_receive_socket()
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;this was how wrapped up pod in the module, note the use of &lt;code&gt;back&lt;/code&gt; at start of the podblock below, this is to close off the headings above.  Note also the use of &lt;code&gt;L&amp;lt;&amp;lt;lt&amp;gt;...E&amp;lt;gt&amp;gt;&amp;gt;&lt;/code&gt; this was a fiddly way to get the email link to work, the other web link was easier.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=back
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2010-2013 Stefan Heumader L&amp;lt;E&amp;lt;lt&amp;gt;stefan@heumader.atE&amp;lt;gt&amp;gt;&amp;gt;.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licenses/&amp;gt;.
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once had put all the pod into the modules then created a perl program as below to generate html files like the one for &lt;a href=&#34;../usefuldocs/SSDP.html&#34;&gt;ssdp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    #!/usr/bin/perl
+    
+    use warnings;
+    use strict;
+    
+    use Pod::Simple::HTMLBatch;
+    use Pod::Simple::XHTML;
+
+    my $in_dir = &#39;put directory in here&#39;;
+    my $out_dir = $in_dir . &#39;POD&#39;;
+    
+    my $convert = Pod::Simple::HTMLBatch-&amp;gt;new;
+    $convert-&amp;gt;html_render_class(&#39;Pod::Simple::XHTML&#39;);
+    $convert-&amp;gt;add_css(&#39;http://www.perl.org/css/perl.css&#39;);
+    $convert-&amp;gt;css_flurry(0);
+    $convert-&amp;gt;contents_page_start;
+    $convert-&amp;gt;contents_page_end;
+    $convert-&amp;gt;javascript_flurry(0);
+    $convert-&amp;gt;contents_file(0);
+    $convert-&amp;gt;batch_convert( [ $in_dir ], $out_dir );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Some conventions&lt;/h3&gt;
+
+&lt;p&gt;There seemed to be different naming conventions for different versions of perl but we&amp;rsquo;re using:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;.pl for programs&lt;/li&gt;
+&lt;li&gt;.pm for modules&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This seems to be ok and works in the EPIC plugin to ensure that get nice syntax colouring.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

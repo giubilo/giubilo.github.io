@@ -1,0 +1,34 @@
+<tr class="clickableRow" href="{{ .RelPermalink}}">
+	{{ $page := . }}
+	<td>{{ $page.Title }}</td>
+	<td>
+	<p>{{ $page.Description }}</p>
+	{{ if $page.Params.series }}
+	    {{ $name := index $page.Params.series 0 }}		
+		<p>Other posts in this series:</p>	
+	    {{ $name := $name | urlize }}
+	    {{ $series := index .Site.Taxonomies.series $name }}
+	    <ul>
+		    {{ range $series.Pages }}
+			    {{ if ne $page.Title .Title }}
+		    		<li>{{.Title}}</li>
+			    {{end}}
+		    {{end}}
+	    </ul>
+	{{end}} 
+	</td>
+	<td>
+		{{ if eq .Status "to-start" }}
+			<button  class="btn-u btn-u-sm rounded btn-u-aqua" type="button">{{ .Status }}</button>
+		{{ end }}
+		{{ if eq .Status "research" }}
+			<button  class="btn-u btn-u-sm rounded btn-u-purple" type="button">{{ .Status }}</button>
+		{{ end }}
+		{{ if eq .Status "edit" }}
+			<button  class="btn-u btn-u-sm rounded btn-u-orange" type="button">{{ .Status }}</button>
+		{{ end }}
+		{{ if eq .Status "readable" }}
+			<button  class="btn-u btn-u-sm rounded btn-u-green" type="button">{{ .Status }}</button>
+		{{ end }}
+	</td>
+</tr>

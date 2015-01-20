@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Metadata on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/metadata/index.xml/</link>
+    
+    
+    
+    <updated>Tue, 01 Jan 2008 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Ingestion</title>
+      <link>http://localhost:1313/concepts/captag/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/captag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Playlist</title>
+      <link>http://localhost:1313/concepts/playlist/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/playlist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Facetted Search</title>
+      <link>http://localhost:1313/concepts/facetedsearch/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/facetedsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linkages</title>
+      <link>http://localhost:1313/concepts/linkages/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/linkages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deployment</title>
+      <link>http://localhost:1313/concepts/deployment/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tag Sync</title>
+      <link>http://localhost:1313/concepts/tagsync/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/tagsync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Navigation Plus</title>
+      <link>http://localhost:1313/concepts/navplus/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/navplus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Social Connector</title>
+      <link>http://localhost:1313/concepts/socialconnector/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/socialconnector/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mavigation Plus 2</title>
+      <link>http://localhost:1313/concepts/navplus2/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/navplus2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BAM CAM</title>
+      <link>http://localhost:1313/concepts/bamcam/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/bamcam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BAM CAM Plus</title>
+      <link>http://localhost:1313/concepts/bamcamplus/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/bamcamplus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BAM CAM Plus 2</title>
+      <link>http://localhost:1313/concepts/bacamplus2/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/bacamplus2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

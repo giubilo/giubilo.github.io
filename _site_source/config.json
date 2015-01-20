@@ -1,12 +1,12 @@
 {
-    "theme": "project",
     "contentdir": "content",
     "layoutdir": "layouts",
     "publishdir": "../",
     "builddrafts": false,
     "taxonomies": {
        "category": "categories",
-       "tag": "tags"
+       "tag": "tags",
+       "series": "series"
     },
   "baseurl": "http://giubilo.org",
     "title": "giubilo project site",

@@ -10,53 +10,11 @@
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>Alfresco Integration</title>
-      <link>http://localhost:1313/retrospectives/alfresco-integration/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/alfresco-integration/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;caching content stores, syncing content stores, s3 content stores&amp;hellip;this detail is from the 2013 summit press - &lt;a href=&#34;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&#34;&gt;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;include Alfresco Rumours XMPP.&lt;/p&gt;
-
-&lt;p&gt;alfresco embedded api
-&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;cmis protocols
-&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco api documentation&lt;/a&gt;&lt;img src=&#34;/assets/img/wiki-ext-link.jpg?raw=true&#34; alt=&#34;img&#34; /&gt;
-&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;The Alfresco API lets you access content managed by Alfresco Cloud from your own applications. The API is RESTful, which means each call is an HTTP request, so you don&amp;rsquo;t even need a programming language to try it out. You can just type a URL address in a web browser. It consists of two parts, the standard CMIS API, which lets you manage and access content, and the new Alfresco REST API which lets you manage Alfresco&amp;rsquo;s additional features such as ratings and comments, that are not covered by the CMIS standard.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Integration options: &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CMIS (Content Management Interoperability Services)&lt;/li&gt;
-&lt;li&gt;Web scripts (RESTful api)&lt;/li&gt;
-&lt;li&gt;File-based access (CIFS, WebDAV, NFS, or FTP)&lt;/li&gt;
-&lt;li&gt;OpenSearch and feeds (RSS or Atom subscription protocols)&lt;/li&gt;
-&lt;li&gt;Java applications (using the core API directly)&lt;/li&gt;
-&lt;li&gt;PHP applications (through CMIS, through web scripts as a RESTful interface, or directly from the same application server as Alfresco. Alfresco has an optional extension that includes the Quercus PHP interpreter in a Tomcat server. The Quercus PHP interpreter is capable of running popular PHP applications, such as Joomla!, Drupal, WordPress, and MediaWiki.)&lt;/li&gt;
-&lt;li&gt;.NET applications (similar to integrations with Java applications through remote interfaces such as web scripts or CMIS. Either the SOAP or Atom Publishing interfaces can be used.)
-Integration patterns: &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Surf components&lt;/li&gt;
-&lt;li&gt;Authentication and directory services&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>CMIS url</title>
-      <link>http://localhost:1313/retrospectives/cmis-url/</link>
+      <link>http://localhost:1313/retrospectives/spaghetti-western/cmis-url/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/cmis-url/</guid>
+      <guid>http://localhost:1313/retrospectives/spaghetti-western/cmis-url/</guid>
       <description>
 
 &lt;p&gt;&lt;html&gt;
@@ -308,6 +266,48 @@ For any releases the [CMIS Index] page &lt;code&gt;http://[host]:[port]/alfresco
 
 &lt;p&gt;&lt;img src=&#34;/assets/img/cmis-cxf-service-url.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
 &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Alfresco Integration</title>
+      <link>http://localhost:1313/retrospectives/1000ft/alfresco-integration/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/1000ft/alfresco-integration/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;caching content stores, syncing content stores, s3 content stores&amp;hellip;this detail is from the 2013 summit press - &lt;a href=&#34;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&#34;&gt;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;include Alfresco Rumours XMPP.&lt;/p&gt;
+
+&lt;p&gt;alfresco embedded api
+&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;cmis protocols
+&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco api documentation&lt;/a&gt;&lt;img src=&#34;/assets/img/wiki-ext-link.jpg?raw=true&#34; alt=&#34;img&#34; /&gt;
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The Alfresco API lets you access content managed by Alfresco Cloud from your own applications. The API is RESTful, which means each call is an HTTP request, so you don&amp;rsquo;t even need a programming language to try it out. You can just type a URL address in a web browser. It consists of two parts, the standard CMIS API, which lets you manage and access content, and the new Alfresco REST API which lets you manage Alfresco&amp;rsquo;s additional features such as ratings and comments, that are not covered by the CMIS standard.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Integration options: &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CMIS (Content Management Interoperability Services)&lt;/li&gt;
+&lt;li&gt;Web scripts (RESTful api)&lt;/li&gt;
+&lt;li&gt;File-based access (CIFS, WebDAV, NFS, or FTP)&lt;/li&gt;
+&lt;li&gt;OpenSearch and feeds (RSS or Atom subscription protocols)&lt;/li&gt;
+&lt;li&gt;Java applications (using the core API directly)&lt;/li&gt;
+&lt;li&gt;PHP applications (through CMIS, through web scripts as a RESTful interface, or directly from the same application server as Alfresco. Alfresco has an optional extension that includes the Quercus PHP interpreter in a Tomcat server. The Quercus PHP interpreter is capable of running popular PHP applications, such as Joomla!, Drupal, WordPress, and MediaWiki.)&lt;/li&gt;
+&lt;li&gt;.NET applications (similar to integrations with Java applications through remote interfaces such as web scripts or CMIS. Either the SOAP or Atom Publishing interfaces can be used.)
+Integration patterns: &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Surf components&lt;/li&gt;
+&lt;li&gt;Authentication and directory services&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

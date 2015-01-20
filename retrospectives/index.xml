@@ -10,320 +10,330 @@
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>Reporting project effort</title>
-      <link>http://localhost:1313/retrospectives/reporting-project-effort/</link>
+      <title>CMIS</title>
+      <link>http://localhost:1313/retrospectives/1000ft/cmis/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/reporting-project-effort/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/retrospectives/1000ft/cmis/</guid>
+      <description>
 
-&lt;p&gt;A model for reporting the status of project effort:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Multi-level messages&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-types-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
+&lt;/p&gt;
 
-&lt;p&gt;Budget baseline
-Actual baseline
-Forecast baseline&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-highlevel-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Alfresco CMIS information: &lt;a href=&#34;http://www.alfresco.com/cmis&#34;&gt;http://www.alfresco.com/cmis&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&lt;/a&gt;
+The Browser Binding&lt;/p&gt;
+
+&lt;p&gt;In addition to the existing XML-based AtomPub and Web services bindings, CMIS 1.1 provides a simpler JSON-based binding. The browser binding is designed for web applications and is easy to use just with HTML and JavaScript. It uses just two verbs, GET and POST, and resources are referenced using simple and predictable URLs.
+You reference content in the repository by using the two URLs returned by the getRepositories or getRepositoryInfo service:
+rootFolderUrl
+repositoryUrl
+Objects can then be referenced in two ways;
+by their Id
+&lt;rootFolderUrl&gt;?objectId=&lt;objectId&gt;
+by their path
+&lt;rootFolderUrl&gt;/&lt;object path&gt;
+Content that is independent of a folder, for example a Type definition be accessed using the repositoryUrl service.
+&lt;repositoryUrl&gt;?cmisselector=&lt;selector&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;cmis 1.1 standard&lt;/h2&gt;
+
+&lt;p&gt;new cmis:item type - can use for config - types without content streams, secondary types&amp;hellip;both really cool.new browser binding - preferred&lt;/p&gt;
+
+&lt;p&gt;put in the pictures from the standard for objects, and create a picture that highlights the services&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;basically create a really condensed version of the spec.&lt;/p&gt;
+
+&lt;p&gt;To use CMIS, you can either directly interact with one of the CMIS bindings or develop against a CMIS client API. Several APIs are &amp;ldquo;in development&amp;rdquo; for the following programming languages: &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Client_APIs&#34;&gt;cient cmis api&amp;rsquo;s&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;cmis wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;IBM CMIS
+&lt;a href=&#34;http://www-01.ibm.com/software/ecm/cmis.html&#34;&gt;http://www-01.ibm.com/software/ecm/cmis.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;CMIS Poster Lab videos
+&lt;a href=&#34;https://www.youtube.com/watch?v=_koCqeYic1k&#34;&gt;https://www.youtube.com/watch?v=_koCqeYic1k&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&lt;/a&gt;
+The URL to get all of the children of the root/test node in the repository looks like this:
+&lt;a href=&#34;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&#34;&gt;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Perl</title>
-      <link>http://localhost:1313/retrospectives/perl/</link>
+      <title>UPnP</title>
+      <link>http://localhost:1313/retrospectives/1000ft/upnp/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/perl/</guid>
-      <description>
+      <guid>http://localhost:1313/retrospectives/1000ft/upnp/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Have chosen to use Perl because;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-device-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
+&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Perl is common in opensource projects and has extensive documentation and huge community&lt;/li&gt;
-&lt;li&gt;there a &lt;a href=&#34;https://github.com/MichaelDaum/cmis-perl&#34;&gt;CMIS wrapper&lt;/a&gt; written in Perl&lt;/li&gt;
-&lt;li&gt;there&amp;rsquo;s a &lt;a href=&#34;http://www.cybergarage.org/twiki/bin/view/Main/CyberLinkForPerl&#34;&gt;DLNA media server extension&lt;/a&gt; written in Perl&lt;/li&gt;
-&lt;li&gt;handles text stuff (which there is going to be heaps of)&lt;/li&gt;
-&lt;li&gt;it was new to me and I like a challenge&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Going to try and keep it neat and maintainable through the help of the Eclipse - Epic plugin.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
-
-&lt;p&gt;Never used perl before so &lt;a href=&#34;http://www.imdb.com/title/tt0066011/?ref_=nm_flmg_com_92&#34;&gt;where do we begin&lt;/a&gt;? At the &lt;a href=&#34;http://www.perl.org/books/beginning-perl/&#34;&gt;beginning&lt;/a&gt; I guess:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;perl is an interpreted language (not compiled to a binary) so need an interpreter&lt;/li&gt;
-&lt;li&gt;get help&lt;/li&gt;
-&lt;li&gt;be good to the &lt;a href=&#34;http://www.imdb.com/title/tt0497116/&#34;&gt;environment&lt;/a&gt; variables&lt;/li&gt;
-&lt;li&gt;reuse, reduce, recycle - live sustainably with the Comprehensive Perl Archive Network&lt;/li&gt;
-&lt;li&gt;EPIC debugging is, well, &lt;a href=&#34;http://www.imdb.com/title/tt0848537/&#34;&gt;epic&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;document as you go, who would have thunk it&lt;/li&gt;
-&lt;li&gt;a &lt;a href=&#34;http://www.imdb.com/title/tt0117509/&#34;&gt;name by any other&lt;/a&gt; is conventional&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;The Perl Interpreter&lt;/h3&gt;
-
-&lt;p&gt;To check if already have a perl interpreter installed type the following into a command prompt:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    perl -v 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;It should return something like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    This is perl 5, version 12, subversion 4 (v5.12.4) built for darwin-thread-multi-2level
-    (with 2 registered patches, see perl -V for more detail)
+&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-av-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
     
-    Copyright 1987-2010, Larry Wall
+    <item>
+      <title>Application Lifecycle Management</title>
+      <link>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;how to manage all the activities that occur from birth to death of an application (includes strategy / portfolio performance management, project management, Agile/DevOps including capacity/incident/problem/config/change etc, Financial Management - CAPEX/OPEX, supplier management / strategic sourcing, license management) - all the stuff ITIL/CObIT talk about.&lt;/p&gt;
+
+&lt;p&gt;Agile/DevOps about focus/flow&lt;/p&gt;
+
+&lt;p&gt;something to do - task / context used to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;build a project schedule / demand forecast&lt;/li&gt;
+&lt;li&gt;focus work by attaching task to requirements / defect and relevant source code / documentation (and when work is attached end to end like that then it is also self documenting so don&amp;rsquo;t have to explain to the next person who picks it up either for review or later maintenance tasks what all the relevant bits are + get traceability)&lt;/li&gt;
+&lt;li&gt;at the really detailed end can build as go by putting in TODO&amp;rsquo; in the code so know what is left, less to fall through the cracks&lt;/li&gt;
+&lt;li&gt;easy to see status
+(need a user interface for developer to pick and use tasks, project manager to summarise, a task bus to shuffle tasks from developers code, issues logged - and the social commentary around them, code reviews, builds and a repository to store the tasks - mylyn / tasktop / jira - all about focus and flow - books aplenty on this like mikado, lean/alm, requirements management, project management)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;develop some code&lt;/p&gt;
+
+&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
+
+&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - java, go, ruby, json, perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
+&lt;li&gt;model driven development / test driven development / content driven development (all wrapped up in Agile)&lt;/li&gt;
+&lt;li&gt;formatting code so it&amp;rsquo;s readable (syntax highlighting), valid (syntax checking) and conforms to best practice techniques for the language (like project structures, code quality and vulnerabilities)&lt;/li&gt;
+&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
+&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
+&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
+&lt;li&gt;source code management / version control - branching / merging strategies (GitFlow)&lt;/li&gt;
+&lt;li&gt;code review - GitHub pull request vs Gerrit review&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(Eclipse + plugins, Atlassian SourceTree + GitFlow, Mou - sometimes it makes sense to come outside of the IDE, Gerrit, GitHub + badges)&lt;/p&gt;
+
+&lt;p&gt;environments&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;build/package/implement code - release strategy / cycle&lt;/li&gt;
+&lt;li&gt;testing not a separate step but baked into everything else (e.g. requirements management, code reviews)&lt;/li&gt;
+&lt;li&gt;Vagrant + Docker (+ CoreOS) + Chef/Puppet - continuous build / integration (DevOps)&lt;/li&gt;
+&lt;li&gt;Gradle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(need a repository to put released code, binaries, release notes and setup scripts + badges)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://secretgeek.net/lifecycle.asp&#34;&gt;http://secretgeek.net/lifecycle.asp&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.top-q.co.il/services/alm/&#34;&gt;http://www.top-q.co.il/services/alm/&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&#34;&gt;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&#34;&gt;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&#34;&gt;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Systems_development_life-cycle&#34;&gt;http://en.wikipedia.org/wiki/Systems_development_life-cycle&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;somewhere between what&amp;rsquo;s needed to deliver a textbook hello world output example application and enterprise methodologies and frameworks for delivering outcomes.&lt;/p&gt;
+
+&lt;p&gt;Application lifecycle management (ALM) is the product lifecycle management (governance, development, and maintenance) of application software. It encompasses requirements management, software architecture, computer programming, software testing, software maintenance, change management, project management, and release management.&lt;/p&gt;
+
+&lt;p&gt;In software engineering, software configuration management (SCM)[1] is the task of tracking and controlling changes in the software, part of the larger cross-discipline field of configuration management.[2] SCM practices include revision control and the establishment of baselines - software development is considered separately.&lt;/p&gt;
+
+&lt;p&gt;The goals of SCM are generally:[citation needed]
+* Configuration identification - Identifying configurations, configuration items and baselines.
+* Configuration control - Implementing a controlled change process. This is usually achieved by setting up a change control board whose primary function is to approve or reject all change requests that are sent against any baseline.
+* Configuration status accounting - Recording and reporting all the necessary information on the status of the development process.
+* Configuration auditing - Ensuring that configurations contain all their intended parts and are sound with respect to their specifying documents, including requirements, architectural specifications and user manuals.
+* Build management - Managing the process and tools used for builds.
+* Process management - Ensuring adherence to the organization&amp;rsquo;s development process.
+* Environment management - Managing the software and hardware that host the system.
+* Teamwork - Facilitate team interactions related to the process.
+* Defect tracking - Making sure every defect has traceability back to the source.&lt;/p&gt;
+
+&lt;p&gt;DevOps integration targets product delivery, quality testing, feature development and maintenance releases in order to improve reliability and security and faster development and deployment cycles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Agile_software_development&#34;&gt;http://en.wikipedia.org/wiki/Agile_software_development&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://guide.agilealliance.org/subway.html&#34;&gt;http://guide.agilealliance.org/subway.html&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Community-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Community-driven_development&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Kanban_(development&#34;&gt;http://en.wikipedia.org/wiki/Kanban_(development&lt;/a&gt;)  kanban / process driven development  / content driven development&lt;br /&gt;
+The Kanban method – An approach to incremental, evolutionary process improvement for organisations.&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Feature-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Feature-driven_development&lt;/a&gt;  (decomposition approach)&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Test-driven_development&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Model-driven_software_development&#34;&gt;http://en.wikipedia.org/wiki/Model-driven_software_development&lt;/a&gt; / business driven development&lt;br /&gt;
+Model-driven software development (MDSD) is an alternative to round-trip engineering. Round-trip engineering is the concept of being able to make any kind of change to a model as well as to the code generated from that model. The changes always propagate bidirectional and both artifacts are always consistent.&lt;/p&gt;
+
+&lt;p&gt;The Agile Manifesto is based on twelve principles:[9]&lt;br /&gt;
+Customer satisfaction by rapid delivery of useful software&lt;br /&gt;
+Welcome changing requirements, even late in development&lt;br /&gt;
+Working software is delivered frequently (weeks rather than months)&lt;br /&gt;
+Working software is the principal measure of progress&lt;br /&gt;
+Sustainable development, able to maintain a constant pace&lt;br /&gt;
+Close, daily cooperation between business people and developers&lt;br /&gt;
+Face-to-face conversation is the best form of communication (co-location)&lt;br /&gt;
+Projects are built around motivated individuals, who should be trusted&lt;br /&gt;
+Continuous attention to technical excellence and good design&lt;br /&gt;
+Simplicity—the art of maximizing the amount of work not done—is essential&lt;br /&gt;
+Self-organizing teams&lt;br /&gt;
+Regular adaptation to changing circumstances&lt;/p&gt;
+
+&lt;p&gt;Agile development is supported by a bundle of concrete practices suggested by the agile methods, covering areas like requirements, design, modeling, coding, testing, project management, process, quality, etc. Some notable agile practices include:
+Acceptance test-driven development (ATDD)&lt;br /&gt;
+Agile Modeling&lt;br /&gt;
+Backlogs (Product and Sprint)&lt;br /&gt;
+Behavior-driven development (BDD)&lt;br /&gt;
+Cross-functional team&lt;br /&gt;
+Continuous integration (CI)&lt;br /&gt;
+Domain-driven design (DDD)&lt;br /&gt;
+Information radiators (Scrum board, Kanban board, Task board, Burndown chart)&lt;br /&gt;
+Iterative and incremental development (IID)&lt;br /&gt;
+Pair programming&lt;br /&gt;
+Planning poker&lt;br /&gt;
+Refactoring&lt;br /&gt;
+Scrum meetings (Sprint planning, Daily scrum, Sprint review and retrospective)&lt;br /&gt;
+Test-driven development (TDD)&lt;br /&gt;
+Agile testing&lt;br /&gt;
+Timeboxing&lt;br /&gt;
+Use case&lt;br /&gt;
+User story&lt;br /&gt;
+Story-driven modelling&lt;br /&gt;
+Velocity tracking&lt;/p&gt;
+</description>
+    </item>
     
-    Perl may be copied only under the terms of either the Artistic License or the
-    GNU General Public License, which may be found in the Perl 5 source kit.
-    
-    Complete documentation for Perl, including FAQ lists, should be found on
-    this system using &amp;quot;man perl&amp;quot; or &amp;quot;perldoc perl&amp;quot;.  If you have access to the
-    Internet, point your browser at http://www.perl.org/, the Perl Home Page.
-&lt;/code&gt;&lt;/pre&gt;
+    <item>
+      <title>Project Success</title>
+      <link>http://localhost:1313/retrospectives/how-to/project-success/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/project-success/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;If it doesn&amp;rsquo;t, &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;download one&lt;/a&gt; for the relevant platform:&lt;/p&gt;
+&lt;p&gt;Introduction
+It might be stating the obvious but we begin a project with the view that we are going to successfully deliver the project’s outcomes. Right! In general I guess that is true, except for those stakeholders hoping we don’t finish, don’t deliver, don’t succeed.
+Is finishing or delivering, the end-game then? Is that what success is.  How do we know we are at the end? How do we measure the level to which we have achieved the outcomes?
+Who Says What Success Is?
+What success means, is dependant generally on perspective; that is, who we are measuring success for.  There are generally many stakeholders on a project, all with their own views, sometimes conflicting, on what success is.  Success then is defined by the stakeholder’s personal views, professional views, role they play on the project or in society.  Their views are more than likely affected by the impact the project has on the environment, dictated by things like scale (100,000 people, 10 years) and nature (e.g. construction, software, social change) of the project.
+The old saying “the project was brought in on time, on budget and with acceptable quality” is still, in some peoples mind, the measure of project success.  There is much evidence to suggest however, that these are not the only measures of success.&lt;/p&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Platform&lt;/th&gt;
-&lt;th&gt;Where&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
+&lt;p&gt;Turner&lt;br /&gt;
+Hartman&lt;/p&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;mac&lt;/td&gt;
-&lt;td&gt;pretty likely already installed&lt;/td&gt;
-&lt;/tr&gt;
+&lt;p&gt;Success as a Function of Time
+Projects are unique, transient, almost organic entities.  They have a start, middle and end.&lt;br /&gt;
+At the beginning of a project it is important to understand what are the criteria for success and who is measuring success.  This allows the direction of the project to be set and provides a yardstick with which to later evaluate the project.
+During the project we monitor success at useful points to ensure there is a reason to continue, to learn from what we have done right so that we can continue to use successful techniques and use points of success to motivate the team.
+It is important to end the project with success as generally all stakeholders have begun and continued the project with the thought of success.
+The point in time we are measuring success has an enormous influence on what success is and who measures success.  The team may be interested in time and quality during the project, the sponsor in cost at delivery time and the community might be interested in the impact the project had years after it was delivered.&lt;/p&gt;
 
-&lt;tr&gt;
-&lt;td&gt;windows&lt;/td&gt;
-&lt;td&gt;could get &lt;a href=&#34;http://www.activestate.com&#34;&gt;activestate&lt;/a&gt; or &lt;a href=&#34;http://strawberryperl.com&#34;&gt;strawberryperl&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
+&lt;p&gt;PIC&lt;/p&gt;
 
-&lt;tr&gt;
-&lt;td&gt;linux&lt;/td&gt;
-&lt;td&gt;consult package manager&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;Maximising Success
+Some easy steps to maximise the chances of success;
+* Understand the general drivers, pressures, resistance and dynamics of projects
+* Learn from past mistakes
+* Apply sound management techniques&lt;/p&gt;
 
-&lt;p&gt;Once have the perl interpreter installed have access to the &lt;a href=&#34;http://www.perlmonks.org/?node_id=640489&#34;&gt;perl shell&lt;/a&gt; with:&lt;/p&gt;
+&lt;p&gt;Understanding Projects
+The chances of success can be maximised if you manage the forces on the project effectively.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    perl -MCPAN -e shell   
-    cpan  
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Turner describes a number of interactions of a project.  Each may have an affect on the other.  Even though most projects by their nature are unique, some of the effects of the interactions may be understood through examining similarities to other projects.  Many of these project integration affects are well documented.&lt;/p&gt;
 
-&lt;h3 id=&#34;toc_2&#34;&gt;getting help&lt;/h3&gt;
+&lt;p&gt;Of all the project dynamics, Attitude is the most important.
+The chances of success are substantially diminished unless;
+* There is major commitment to making the project a success
+* The motivation of everyone working on the project is high
+* Attitudes are supportive and positive.&lt;/p&gt;
 
-&lt;p&gt;Perl is up to version 5 now and that means there is tons of help out there.  Some of the obvious places are;&lt;/p&gt;
+&lt;p&gt;Learning From The Past
+There is an enormous amount of generic information about what teams have done in the past to succeed and what pitfalls caused a less than desirable outcome.  The sheer volume of literature and anecdotal evidence to suggest that projects fail is a strong indicator for being concerned about why projects fail.
+By looking to the past we can see what worked and what didn’t so that we can learn from past successes and avoid past mistakes.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://perldoc.perl.org/perl.html&#34;&gt;http://perldoc.perl.org/perl.html&lt;/a&gt; and &lt;a href=&#34;http://www.perl.org/learn.html&#34;&gt;http://www.perl.org/learn.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Intro.pdf&#34;&gt;Beginning Perl Intro&lt;/a&gt; explains about getting text: &lt;em&gt;typing &lt;code&gt;perldoc perl&lt;/code&gt; from a command prompt will get you a table of contents and some basic infomration about Perl.  The pages your probably going to use are the Perl FAQ and &amp;lsquo;perlfunc&amp;rsquo;, which describes the built-in functions&lt;/em&gt;.  Page 10 in here also lists help sources.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.perlmonks.org&#34;&gt;http://www.perlmonks.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.perlhowto.com&#34;&gt;http://www.perlhowto.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;these look really simple to go through if have a bit of time: &lt;a href=&#34;http://docstore.mik.ua/orelly/perl3/lperl/index.htm&#34;&gt;http://docstore.mik.ua/orelly/perl3/lperl/index.htm&lt;/a&gt; and &lt;a href=&#34;http://docstore.mik.ua/orelly/perl4/index.htm&#34;&gt;http://docstore.mik.ua/orelly/perl4/index.htm&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;project failure examples&lt;/p&gt;
 
-&lt;p&gt;As with all help / how-to&amp;rsquo;s these established sources sometimes had varying levels of details for some of the start-up type questions like; @INC and the environment, working out what modules are installed or what to call things.  Usually had to put together a couple to get the answer (like the ones below).&lt;/p&gt;
+&lt;p&gt;Cunning Plan: We&amp;rsquo;ll just do it!!&lt;/p&gt;
 
-&lt;h3 id=&#34;toc_3&#34;&gt;@INC&lt;/h3&gt;
+&lt;p&gt;If you fail to plan, then plan to fail.&lt;/p&gt;
 
-&lt;p&gt;As start to use (pardon the pun), perl and edit first modules, a number of the errors popped up relating to modules that were &amp;lsquo;using&amp;rsquo; but couldn&amp;rsquo;t find.  This will probably be a path issue but the fix isn&amp;rsquo;t that obvious as there are gazillions of different ideas out there like:&lt;/p&gt;
+&lt;p&gt;We never seem to have time to plan our projects, but we always have time to do them twice.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;mixture of &lt;a href=&#34;http://stackoverflow.com/questions/2526804/how-is-perls-inc-constructed-aka-what-are-all-the-ways-of-affecting-where-pe&#34;&gt;use, &amp;lsquo;@INC&amp;rsquo; and PERL5LIB&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;overview of &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_AppB.pdf&#34;&gt;special variables&lt;/a&gt; like &amp;lsquo;%ENV&amp;rsquo;, &amp;lsquo;@INC&amp;rsquo;, &amp;lsquo;%INC&amp;rsquo;&lt;/li&gt;
-&lt;li&gt;another environment setup &lt;a href=&#34;http://www.perlmonks.org/?node_id=867860&#34;&gt;PERL5LIB&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;some more about &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Chap10.pdf&#34;&gt;modules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.perl.com/pub/2002/05/14/mod_perl.html&#34;&gt;use(), require(), do(), %INC and @INC Explained&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Project Pitfalls
+3 Grude describes a number of categories of pitfalls that have been observed on projects.  This is not intended as an exhaustive list but useful as a quick health check for a project;&lt;/p&gt;
 
-&lt;p&gt;Somewhere in this list (start at the top and work down) and google will probably be the answer.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_4&#34;&gt;CPAN Perl Modules&lt;/h3&gt;
-
-&lt;p&gt;There are a gazilion &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Chap10.pdf&#34;&gt;perl modules&lt;/a&gt; or bits of code already written to do all sorts of things, so where is it?&lt;/p&gt;
+&lt;p&gt;Establishing the Project&lt;br /&gt;
+Pitfalls in the way the project is set up within the parent organisation;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;installed as part of the interpreter  (File::Find, benchmark etc)&lt;/li&gt;
-&lt;li&gt;code up on repositories like GitHub&lt;/li&gt;
-&lt;li&gt;perl package &lt;a href=&#34;http://docs.activestate.com/activeperl/5.10/faq/ActivePerl-faq2.html#ppm_repositories&#34;&gt;repositories&lt;/a&gt; like for ActiveState&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cpan.org/misc/cpan-faq.html&#34;&gt;Comprehensive Perl Archive Network&lt;/a&gt; (CPAN)&lt;/li&gt;
+&lt;li&gt;project plans not aligned with business plans,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;procedures for managing projects are not well defined,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;priorities are not communicated to parties involved,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;no shared vision.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I am using macOSX so perl was installed already and installed the cpan addon &lt;a href=&#34;http://www.bioperl.org/wiki/Tutorial:Installing_Perl_modules&#34;&gt;package manager&lt;/a&gt; by entering the &lt;a href=&#34;http://search.cpan.org/~miyagawa/App-cpanminus-1.7001/bin/cpanm&#34;&gt;code below&lt;/a&gt; in a terminal:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    sudo cpan App::cpanminus
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now &lt;a href=&#34;http://www.cpan.org/modules/INSTALL.html&#34;&gt;install&lt;/a&gt; any module you can find on cpan &lt;code&gt;sudo cpanm Module::Name&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;To find what modules are currently installed, as with most things perl there seems to be multitude of ways:&lt;/p&gt;
+&lt;p&gt;Planning the Project
+Pitfalls in the way the work is defined, the time &amp;amp; cost schedules calculated and communicated to the project team;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;instmodsh&lt;/code&gt; &lt;a href=&#34;http://www.cyberciti.biz/faq/how-do-i-find-out-what-perl-modules-already-installed-on-my-system/&#34;&gt;to see all installed modules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;perldoc -l Net::UPnP&lt;/code&gt; &lt;a href=&#34;http://www.perlhowto.com/list_the_installed_modules&#34;&gt;to see if Net::UPnP is installed&lt;/a&gt;, this will show where the module (.pm) is&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;perl -MTie::Hash -e 1&lt;/code&gt; &lt;a href=&#34;http://www.perlhowto.com/check_if_a_module_is_installed&#34;&gt;to see if Tie::Hash is installed&lt;/a&gt;, this will run it so if not installed will get and error message and if installed then will need to break execution&lt;/li&gt;
-&lt;li&gt;see the &lt;code&gt;perlmodinstall&lt;/code&gt; manpage&lt;/li&gt;
+&lt;li&gt;project plans developed on a single level,&lt;/li&gt;
+&lt;li&gt;using cumbersome tools,&lt;/li&gt;
+&lt;li&gt;creativity discouraged,&lt;/li&gt;
+&lt;li&gt;unrealistic estimates&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;toc_5&#34;&gt;EPIC&lt;/h3&gt;
-
-&lt;p&gt;To get the most out of EPIC, need to install some supporting perl modules:&lt;/p&gt;
+&lt;p&gt;Organising &amp;amp; Implementing the Project
+Pitfalls in building the project organisation and assigning work to people;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;project templates (Module::Starter)&lt;/li&gt;
-&lt;li&gt;source formatting (Perl::Tidy), also get colouring&lt;/li&gt;
-&lt;li&gt;best practice approach (Perl::Critic)&lt;/li&gt;
-&lt;li&gt;syntax (Perl::Debugger and Pad::Walker)&lt;/li&gt;
-&lt;li&gt;commenting / documentation (&lt;a href=&#34;http://perldoc.perl.org/perlpod.html&#34;&gt;perlpod&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;eclipse perspective for outline views of code and consoles for heaps of things like tasks, logs etc&lt;/li&gt;
+&lt;li&gt;lack of cooperation,&lt;/li&gt;
+&lt;li&gt;resource providers not committed,&lt;/li&gt;
+&lt;li&gt;resources not available when required,&lt;/li&gt;
+&lt;li&gt;management responsibility not defined,&lt;/li&gt;
+&lt;li&gt;poor communication,&lt;/li&gt;
+&lt;li&gt;technical vs project management.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;To do that we ran the following code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    sudo cpanm Module::Starter
-    sudo cpanm Perl::Tidy
-    sudo cpanm Perl::Critic
-    sudo cpanm Pad::Walker
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;When configuring these into &lt;a href=&#34;./Paint-by-numbers:-Eclipse-with-Epic-and-Egit&#34;&gt;EPIC preferences&lt;/a&gt; need to find where the modules installed to as couldn&amp;rsquo;t use the default locations.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_6&#34;&gt;Perldoc&lt;/h3&gt;
-
-&lt;p&gt;Understanding how perldoc works, in particular the syntax for embedding pod into code and then using it to auto-generate documentation was a great place to start understanding perl.  In doing this first, got to see code examples, work out how to see and fix mistakes like forgetting to put in spaces and semicolons at end of lines and had to use the perl interpreter and instal modules.  Also was an easy, practical way to start looking at the perl language, and actually got to produce something helpful.&lt;/p&gt;
-
-&lt;p&gt;Got some help from the following:&lt;/p&gt;
+&lt;p&gt;Controlling the Project
+Pitfalls in monitoring and control;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://search.cpan.org/~rjbs/perl-5.18.1/pod/perlpod.pod&#34;&gt;http://search.cpan.org/~rjbs/perl-5.18.1/pod/perlpod.pod&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://perldoc.perl.org/perlpod.html&#34;&gt;http://perldoc.perl.org/perlpod.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.perlmonks.org/?node_id=252477&#34;&gt;http://www.perlmonks.org/?node_id=252477&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;purpose of control not understood,&lt;/li&gt;
+&lt;li&gt;progress is not monitored against the plan,&lt;/li&gt;
+&lt;li&gt;ineffective review meetings,&lt;/li&gt;
+&lt;li&gt;responsibility without authority.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The first pod we did was inside one of the pDLNA modules:&lt;/p&gt;
+&lt;p&gt;Principles of Good Project Management
+Project Management, just as any other management stream, has it’s own principles upon which a manager can look to for guidance.  There is a huge body of stored knowledge on the principles and professional certification available for those willing.  These will all arm the manager with an enormous amount of skill and techniques on which to build experience.
+In addition to reading through all of the available knowledge and undertaking the available studies a number of simple, practical principles may be relied upon;
+ Most large or complex problems become easier if broken down into manageable parts that     allow them all to be absorbed.  Make use of breakdown structures for any part of the project    that requires visibility and understanding, such as tasks, people, product, organisation.  By   breaking then down we can more easily see new information about each piece as it becomes    evident over time.  This makes it possible to monitor and manage the project elaboration.
+ People are the biggest factor in nearly all projects, they need to be adequately motivated,    organised, committed, directed, skilled and communicated with.  You need to confirm and     align stakeholder’s success criteria.  Disregard the people factors at your peril.
+ Get as many successes as you can.  Organise the team, the schedule &amp;amp; the work so that  successes happy often.  If each small step is a success it will be easier and more likely that  the journey will be a success.  Learn from past successes and avoid the causes for past     failures.
+ Continuously carry out health checks and audits.  The old adage, ‘if it isn’t broken, don’t fix it’    doesn’t apply if we don’t know it isn’t broken.  Only by understanding the dynamics and     symptoms of a project can we steer the ship and take corrective actions.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;create some heading information for the package (remember the = operator needs to be against the margin no spaces and sometimes need space at the end of line to work properly)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;=head1 NAME
-
-package PDLNA::SSDP - core module for Simple Service Discovery Protocol (SSDP).
-
-=head1 DESCRIPTION
-
-When a Universal Plug and Play (UPnP) enabled device joins a network.....
-
-=cut
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;documentation for the functions used, note the use of &lt;code&gt;over&lt;/code&gt;, &lt;code&gt;begin/end html&lt;/code&gt;, &lt;code&gt;back&lt;/code&gt; and &lt;code&gt;cut&lt;/code&gt;, these give the pod structure (over to start the list and back to end it), also using html inside the pod meant could link between the resulting html docs, so when you &lt;a href=&#34;http://www.imdb.com/title/tt0389860/&#34;&gt;click&lt;/a&gt; on an internal library you get taken to the htmlpod for that module.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;=head1 LIBRARY FUNCTIONS
-
-=over 12
-
-=item internal libraries
-
-=begin html
-
-&amp;lt;/p&amp;gt;
-&amp;lt;a href=&amp;quot;./Config.html&amp;quot;&amp;gt;PDLNA::Config&amp;lt;/a&amp;gt;,
-&amp;lt;a href=&amp;quot;./Database.html&amp;quot;&amp;gt;PDLNA::Database&amp;lt;/a&amp;gt;,
-&amp;lt;a href=&amp;quot;./Devices.html&amp;quot;&amp;gt;PDLNA::Devices&amp;lt;/a&amp;gt;,
-&amp;lt;a href=&amp;quot;./Log.html&amp;quot;&amp;gt;PDLNA::Log&amp;lt;/a&amp;gt;.
-&amp;lt;/p&amp;gt;
-
-=end html
-
-=item external libraries
-
-L&amp;lt;IO::Socket::INET&amp;gt;,
-L&amp;lt;IO::Socket::Multicast&amp;gt;,
-L&amp;lt;Net::Netmask&amp;gt;.
-
-=back
-
-=cut
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;the block of pod like the following gave chance to document as went the modules actions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;=item add_receive_socket()
-
-=cut
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;this was how wrapped up pod in the module, note the use of &lt;code&gt;back&lt;/code&gt; at start of the podblock below, this is to close off the headings above.  Note also the use of &lt;code&gt;L&amp;lt;&amp;lt;lt&amp;gt;...E&amp;lt;gt&amp;gt;&amp;gt;&lt;/code&gt; this was a fiddly way to get the email link to work, the other web link was easier.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;=back
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (C) 2010-2013 Stefan Heumader L&amp;lt;E&amp;lt;lt&amp;gt;stefan@heumader.atE&amp;lt;gt&amp;gt;&amp;gt;.
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licenses/&amp;gt;.
-
-=cut
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Once had put all the pod into the modules then created a perl program as below to generate html files like the one for &lt;a href=&#34;../usefuldocs/SSDP.html&#34;&gt;ssdp&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    #!/usr/bin/perl
-    
-    use warnings;
-    use strict;
-    
-    use Pod::Simple::HTMLBatch;
-    use Pod::Simple::XHTML;
-
-    my $in_dir = &#39;put directory in here&#39;;
-    my $out_dir = $in_dir . &#39;POD&#39;;
-    
-    my $convert = Pod::Simple::HTMLBatch-&amp;gt;new;
-    $convert-&amp;gt;html_render_class(&#39;Pod::Simple::XHTML&#39;);
-    $convert-&amp;gt;add_css(&#39;http://www.perl.org/css/perl.css&#39;);
-    $convert-&amp;gt;css_flurry(0);
-    $convert-&amp;gt;contents_page_start;
-    $convert-&amp;gt;contents_page_end;
-    $convert-&amp;gt;javascript_flurry(0);
-    $convert-&amp;gt;contents_file(0);
-    $convert-&amp;gt;batch_convert( [ $in_dir ], $out_dir );
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;toc_7&#34;&gt;Some conventions&lt;/h3&gt;
-
-&lt;p&gt;There seemed to be different naming conventions for different versions of perl but we&amp;rsquo;re using:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;.pl for programs&lt;/li&gt;
-&lt;li&gt;.pm for modules&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This seems to be ok and works in the EPIC plugin to ensure that get nice syntax colouring.&lt;/p&gt;
+&lt;p&gt;Above all else KEEP IT SIMPLE.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Setting up project resources</title>
-      <link>http://localhost:1313/retrospectives/setting-up-project-resources/</link>
+      <link>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/setting-up-project-resources/</guid>
+      <guid>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</guid>
       <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
 
 &lt;table&gt;
@@ -385,27 +395,11 @@ it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licens
     </item>
     
     <item>
-      <title>UPnP</title>
-      <link>http://localhost:1313/retrospectives/upnp/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/upnp/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-device-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-av-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
-&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Project Management</title>
-      <link>http://localhost:1313/retrospectives/project-management/</link>
+      <link>http://localhost:1313/retrospectives/1000ft/project-management/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/project-management/</guid>
+      <guid>http://localhost:1313/retrospectives/1000ft/project-management/</guid>
       <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;allegria&amp;rsquo;s objectives seem straightforward enough:&lt;/p&gt;
@@ -676,11 +670,328 @@ risk reporting&lt;/p&gt;
     </item>
     
     <item>
-      <title>Modifying content types</title>
-      <link>http://localhost:1313/retrospectives/modifying-content-types/</link>
+      <title>Alfresco oAuth sample application</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/alfresco-oauth-sample-application/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/modifying-content-types/</guid>
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/alfresco-oauth-sample-application/</guid>
+      <description>
+
+&lt;p&gt;&lt;html&gt;
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+    &lt;p&gt;
+      &lt;img src=&#34;/assets/mages/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;oAuth Sample webapp&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;In October 2012, Alfresco &lt;a href=&#34;http://www.alfresco.com/news/press-releases/alfrescos-cloud-api-mobile-apps-now-available&#34;&gt;announced&lt;/a&gt; an open application-programming interface &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;(API) for Alfresco in the cloud&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are some great resources available to show how to use the cloud api, including:&lt;br /&gt;
+* &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; from Jeff Potts
+* &lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation&lt;/a&gt; from the &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;Alfresco Developer Portal&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To access Alfresco in the cloud:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;an Alfresco application uses the OAuth 2.0 authorization code flow to authenticate itself with Alfresco Cloud and to allow users to authorize the application to access data on their behalf.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://oauth.net&#34;&gt;oAuth&lt;/a&gt; is an open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications.  The &lt;a href=&#34;http://tools.ietf.org/html/rfc6749#section-1.2&#34;&gt;oAuth protocol flow&lt;/a&gt; starts with making an authorisation request through to receiving initial and refresh access tokens for using in sessions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/ietf-oauth-flow.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;In addition to the &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529 and [Jeff Potts&#39; video tutorials](https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; showing how to do this, &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;Jeff also highlights&lt;/a&gt; on the developer forum Gethin Jame&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;oAuth sample application&lt;/a&gt; that demonstrates using the oAuth authentication protocol.&lt;/p&gt;
+
+&lt;p&gt;To get an access token to use with CMIS Workbench, Allegria has used Gethin&amp;rsquo;s oAuth sample application:&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Get the Alfresco oAuth application&lt;/li&gt;
+&lt;li&gt;Register for the Cloud api&lt;/li&gt;
+&lt;li&gt;Create an API key&lt;/li&gt;
+&lt;li&gt;Configure oAuth web app&lt;/li&gt;
+&lt;li&gt;Authorisation request&lt;/li&gt;
+&lt;li&gt;Access token request&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;1. Get the Alfresco oAuth application&lt;/h3&gt;
+
+&lt;p&gt;Gethin&amp;rsquo;s Alfresco oAuth Sample Application (uses gradle and runs in jetty servlet engine and http server) is easily used with CMIS workbench, so [[fork|Paint-by-numbers:-GitHub]] his &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;alfresco-oauth-sample repository&lt;/a&gt; and [[import|Paint-by-numbers:-Eclipse]] it to Eclipse eGit.&lt;/p&gt;
+
+&lt;p&gt;The readme has simple instructions to get things running.  For now just need to :
+* Ensure you have an &lt;a href=&#34;https://www.java.com/en/download/installed.jsp&#34; target=&#34;_blank&#34;&gt;up to date Java VM&lt;/a&gt; installed and port 8181 is not in use&lt;br /&gt;
+* take note of the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; which will be used when registering the application with Alfresco in later steps&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;2. Register for the Cloud api&lt;/h3&gt;
+
+&lt;p&gt;Need to follow a &lt;a href=&#34;https://www.alfresco.com/develop/cloud/signup&#34;&gt;registration process&lt;/a&gt; with Alfresco to obtain api access by following the steps on the &lt;a href=&#34;http://www.alfresco.com/develop&#34;&gt;Alfresco developer portal&lt;/a&gt; (click on the &amp;lsquo;register for the cloud api&amp;rsquo; button):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-developer-portal.png?raw=true&#34; alt=&#34;portal&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;3. Create an API key&lt;/h3&gt;
+
+&lt;p&gt;Register cmis-workbench on the Alfresco Developer site to to get authentication configuration details&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-manage-applications.png?raw=true&#34; alt=&#34;action&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The application can be called anything, just needs to have a name so can get an &amp;lsquo;API Key&amp;rsquo;, so have called it &amp;lsquo;cmis-workbench to make things easier.&lt;br /&gt;
+Edit the API Details and on the &amp;lsquo;Auth&amp;rsquo; tab enter the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; (this comes from Gethin&amp;rsquo;s repository readme):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-oAuth.png?raw=true&#34; alt=&#34;action&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;4. Configure oAuth web app&lt;/h3&gt;
+
+&lt;p&gt;Follow the next next steps in Gethin&amp;rsquo;s readme:
+* Edit &lt;code&gt;src/main/webapp/config.js&lt;/code&gt; and put in the client_id, client_secret and callback urls registered at The Alfresco Developer Portal (For this app, the redirect_uri should be &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt;)&lt;br /&gt;
+* Run the Alfresco-oAuth-Sample application:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; # change to the folder holding the imported project  
+ ./gradlew  jettyRun
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The first time it runs, the following output will appear:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-1st-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;After the initial build, each subsequent time will output:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;5. Authorisation request&lt;/h3&gt;
+
+&lt;p&gt;In a web browser go to &lt;code&gt;http://localhost:8181/oauthsample&lt;/code&gt; to see the first step in the oAuth protocol flow (authorisation request).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1.png?raw=true&#34; alt=&#34;request&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The values in this screen should come from the &lt;code&gt;config.js&lt;/code&gt; file configured in the previous step so just hit submit.&lt;/p&gt;
+
+&lt;p&gt;The authorisation screen from Alfresco Cloud will appear to allow entry of username and password that was set up when registered for api account:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1-1.png?raw=true&#34; alt=&#34;auth-credentials&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;6. Access token request&lt;/h3&gt;
+
+&lt;p&gt;Send the authorisation grant - nothing to do here but hit submit (the client secret will have come from &lt;code&gt;config.js&lt;/code&gt; - it is blanked out here):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-2.png?raw=true&#34; alt=&#34;step2&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Will get a response from the cloud with the access token:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-3.png?raw=true&#34; alt=&#34;step2-1&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Other oAuth resources:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; describes a number of tools:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://curl.haxx.se&#34;&gt;cURL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[RESTCLient]&lt;a href=&#34;http://restclient.org)&#34;&gt;http://restclient.org)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Jeff Potts uses &lt;a href=&#34;https://code.google.com/p/google-oauth-java-client/&#34;&gt;Google&amp;rsquo;s Java oAuth2 client&lt;/a&gt; in his Alfresco cloud how-to &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; and highlights Jared Ottley&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/spring-social-alfresco&#34;&gt;Spring Social plug-in&lt;/a&gt; in the &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;developer forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CPAN oAuth modules:&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Net::OAuth provides a low-level API for reading and writing OAuth messages (probably should start with Net::OAuth::Client).  Net::OAuth provides; classes that encapsulate OAuth messages (requests and responses),
+message signing, message serialization and parsing, 2-legged requests (aka. tokenless requests, aka. consumer requests)&lt;/li&gt;
+&lt;li&gt;Net::OAuth::Simple - a simple wrapper round the OAuth protocol&lt;/li&gt;
+&lt;li&gt;OAuth::Simple - Simple OAuth authorization on your site&lt;/li&gt;
+&lt;li&gt;OAuth::Consumer - LWP based user agent with OAuth for consumer application&lt;/li&gt;
+&lt;li&gt;OAuth::Lite - OAuth framework (CONSUMER SIDE see OAuth::Lite::Consumer, SERVICE PROVIDER SIDE see OAuth::Lite::ServerUtil or to build server on mod_perl2, see OAuth::Lite::Server::mod_perl2.&lt;/li&gt;
+&lt;li&gt;OAuth::Lite::Util - utility for OAuth&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building a folder and document based protocol</title>
+      <link>http://localhost:1313/retrospectives/how-to/building-a-folder-and-document-based-protocol/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/building-a-folder-and-document-based-protocol/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;MediaGate for Java
+UPnP Stacks + a picture
+Apache Felix + Alfresco development tool roadmap
+OpenCMIS
+Learning Java&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.1/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.1/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.videolan.org/vlc/streaming.html&#34;&gt;http://www.videolan.org/vlc/streaming.html&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://shop.oreilly.com/product/9781849511384.do&#34;&gt;http://shop.oreilly.com/product/9781849511384.do&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.upnp-database.info/listDevices.jsp?filterType=servers&#34;&gt;http://www.upnp-database.info/listDevices.jsp?filterType=servers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Alfresco content application server supports many folder and document-based protocols to access and manage content held within the content repository using familiar client tools.
+All the protocol bindings expose folders and documents held in the Alfresco content repository. This means a client tool accessing the repository using the protocol can navigate through folders, examine properties, and read content. Most protocols also permit updates, allowing a client tool to modify the folder structure, create and update documents, and write content. Some protocols also allow interaction with capabilities such as version histories, search, and tasks.&lt;/p&gt;
+
+&lt;p&gt;Internally, the protocol bindings interact with the content repository services, which encapsulate the behavior of working with folders and files. This ensures a consistent view and update approach across all client tools interacting with the Alfresco content application server.&lt;/p&gt;
+
+&lt;p&gt;An Alfresco subsystem for file servers allows configuration and lifecycle management for each of the protocols either through property files or JMX.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&#34;&gt;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&lt;/a&gt;
+&lt;a href=&#34;https://github.com/peterwatts/allegria/wiki/1.2.1-Where&#39;s-streaming-heading%3F:-IN-PROGRESS&#34;&gt;https://github.com/peterwatts/allegria/wiki/1.2.1-Where&#39;s-streaming-heading%3F:-IN-PROGRESS&lt;/a&gt;
+&lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html&#34;&gt;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html&lt;/a&gt;
+&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;http://wiki.alfresco.com/wiki/CMIS&lt;/a&gt;
+&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&lt;/a&gt;
+&lt;a href=&#34;http://cmis.alfresco.com/cmis-cheatsheet.pdf&#34;&gt;http://cmis.alfresco.com/cmis-cheatsheet.pdf&lt;/a&gt;
+&lt;a href=&#34;http://tech.wrighting.org/category/cmis/&#34;&gt;http://tech.wrighting.org/category/cmis/&lt;/a&gt;
+&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#Query_Language&#34;&gt;http://wiki.alfresco.com/wiki/CMIS#Query_Language&lt;/a&gt;
+&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS_Query_Language&#34;&gt;http://wiki.alfresco.com/wiki/CMIS_Query_Language&lt;/a&gt;
+&lt;a href=&#34;http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax&#34;&gt;http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax&lt;/a&gt;
+&lt;a href=&#34;http://www.scribd.com/doc/18495354/CMIS-CMIS-SQL-Search-Tutorial-ENG&#34;&gt;http://www.scribd.com/doc/18495354/CMIS-CMIS-SQL-Search-Tutorial-ENG&lt;/a&gt;
+&lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/using-cmis-get-list-document-urls-11302011-2029&#34;&gt;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/using-cmis-get-list-document-urls-11302011-2029&lt;/a&gt;
+&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/web-scripts/cmis-query-get-path-cmisdocument-11302011-1630&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/web-scripts/cmis-query-get-path-cmisdocument-11302011-1630&lt;/a&gt;
+&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/web-scripts/searching-documents-using-cmis-query-folder-hierarchy&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/web-scripts/searching-documents-using-cmis-query-folder-hierarchy&lt;/a&gt;
+&lt;a href=&#34;http://yonaweb.be/using_cmis_query_content_query_navigation_model&#34;&gt;http://yonaweb.be/using_cmis_query_content_query_navigation_model&lt;/a&gt;
+&lt;a href=&#34;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&#34;&gt;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(consider use of CMIS protocol and Apache Felix upnp-av tools, consider also if content is stored in the cloud how can get to it).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;joining cmis libraries / capabilities to dlna libraries / capabilities with a smart set of queries&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Regardless of the binding, there is a set of services that a CMIS repository must provide. These services include:
+•   Repository Services: Used to discover information and capabilities of the repository.
+•   Navigation Services: Used to traverse the repository’s folder hierarchy.
+•   Object Services: Used to perform CRUD functions on objects.
+•   Multi-filing Services: If the repository supports putting an object in  more than one folder, this service handles it.
+•   Discovery Services: Used to handle queries.
+•   Versioning Services: Used to checkout documents and work with  document versions.
+•   Relationship Services: Used to query an object for its relationships.
+•   Policy Services: Used to apply, remove, and query for policies.
+•   ACL Services: Not supported by all repositories, this service is used  to return and manage the ACL of an object.
+Some of these services share common characteristics. For example:
+• Almost every service that returns a list can be returned as a paged
+result set.
+• Services that return objects can often return additional information
+about those objects, if you ask for it, like relationships, ACLs,
+renditions, and allowable actions.
+• A repository may choose to give you a change token with an object to
+reduce the chance that you don’t update an out-of-date object. If a repository gives you a change token, it expects it back when you post the change.
+• Any of the services may throw an exception. For a list, check the spec.&lt;/p&gt;
+
+&lt;p&gt;Repository Services
+•   Get Repositories: Get a list of repositories that can be accessed from this service endpoint
+•   Get Repository Info: Get information about the specified repository
+•   Get Type Children, Get Type Descendants: Various ways to discover the object types in a repository
+•   Get Type Definition: Get the definition (list of properties) of the specified type
+Navigation Services
+▪   Get Folder Tree, Get Descendants, Get Children: Retrieve descendant objects (each one has slightly different nuances)
+▪   Get Folder Parent, Get Object Parents: Retrieve an object&amp;rsquo;s parent folder(s)
+▪   Get Checkedout Docs: Retrieve list of checked out documents
+Discovery Services
+▪   Query: Execute a CMIS query
+▪   Get Content Changes: Gets a list of changes to the repository; the client can provide an optional change log token that specifies the first event to be included in the list.
+Object Services
+▪   Get Object, Get Object By Path: Retrieve objects
+▪   Get Properties, Get Allowable Actions, Get Renditions: Get information about objects
+▪   Get Content Stream: Retrieve an object&amp;rsquo;s content stream
+▪   Create Relationship, Create Document, Create Document From Source, Create Policy, Create Folder: Create objects
+▪   Update Properties, Move Object: Update objects
+▪   Delete Object, Delete Tree: Remove objects
+▪   Set Content Stream, Delete Content Stream: Update content streams
+Versioning Services
+▪   Get Properties Of Latest Version, Get Object Of Latest Version: Get information about latest version of object
+▪   Get All Versions: Retrieve an object&amp;rsquo;s version history
+▪   Check Out, Check In, Cancel Check Out: Control locking/unlocking of an object for the purpose of updating
+▪   Delete All Versions: Remove version history
+Relationship Services
+▪   Get Object Relationships: Get the relationships associated with an object
+Multi-Filing Services
+▪   Add Object To Folder, Remove Object From Folder: File and un-file objects;
+▪   If multi-filing is supported in the repository, then an object can be added to multiple folders
+▪   If un-filing is supported in the repository, then an object can be removed from all folders that it is filed in without deleting the object
+ACL Services
+▪   Get ACL: Get the permissions associated with an object
+▪   Apply ACL: Set the permissions associated with an object
+Policy Services
+▪   Get Applied Policies: Get the policies that are applied to an object
+Apply Policy, Remove Policy: Apply and remove policies to/from an object&lt;/p&gt;
+
+&lt;p&gt;CMIS Query  What it does
+SELECT cmis:name FROM sc:whitepaper where contains(‘sample’)    Select the name of every whitepaper with “sample” somewhere in their text.
+SELECT cmis:name, Score() as relevance FROM sc:whitepaper where contains(&amp;lsquo;sample&amp;rsquo;) order by relevance DESC  Select the name of whitepapers with “sample” somewhere in their text, ordered by full-text relevance, descending.
+SELECT cmis:name from sc:whitepaper where sc:isActive = true
+    Select whitepapers with the isActive flag set to true (which happens to be a property defined by an aspect).&lt;/p&gt;
+
+&lt;p&gt;SELECT cmis:name from sc:whitepaper where not(sc:isActive = true)   Select whitepapers with the isActive flag not set to true. This will return whitepapers where the property is not true as well as whitepapers where the property is unset.&lt;/p&gt;
+
+&lt;p&gt;SELECT cmis:name from sc:marketingDoc where any sc:campaign in (&amp;lsquo;Social Shopping&amp;rsquo;)  Select instances of Marketing Documents and their children where the multi-value property, sc:campaign, contains the value “Social Shopping” (note that Whitepaper is a child type of Marketing Document).
+SELECT cmis:name,sc:published from sc:whitepaper where sc:published &amp;gt;= &amp;lsquo;2009-11-10T00:00:00.000-06:00&amp;rsquo; and sc:published &amp;lt; &amp;lsquo;2009-11- 18T00:00:00.000-06:00&amp;rsquo;  Select whitepapers published (sc:published, a property of the sc:webable aspect) on or after November 10, 2009 and before 18, 2009.
+SELECT cmis:name from cmis:document where in_folder(&amp;lsquo;workspace://SpacesStore/393 5ce21-9f6f-4d46-9e22-4f97e1d5d9d8&amp;rsquo;) and contains(&amp;lsquo;contract&amp;rsquo;)   Select all content in the Sales folder containing the word “contract”.&lt;/p&gt;
+
+&lt;p&gt;SELECT cmis:name from cmis:document where in_tree(&amp;lsquo;workspace://SpacesStore/3935c e21-9f6f-4d46-9e22-4f97e1d5d9d8&amp;rsquo;) and contains(&amp;lsquo;contract&amp;rsquo;) and cm:description like “%sign%”    Select all content in the Sales folder or any of its descendant folders containing the word “contract” and a description like “%sign%”.&lt;/p&gt;
+
+&lt;p&gt;The DLNA Certified Device Classes are separated as follows:[9]
+Home Network Devices[edit source | editbeta]
+•   Digital Media Server (DMS): store content and make it available to networked digital media players (DMP) and digital media renderers (DMR). Examples include PCs and network-attached storage(NAS) devices.
+•   Digital Media Player (DMP): find content on digital media servers (DMS) and provide playback and rendering capabilities. Examples include TVs, stereos and home theaters, wireless monitors and game consoles.
+•   Digital Media Renderer (DMR): play content as instructed by a digital media controller (DMC), which will find content from a digital media server (DMS). Examples include TVs, audio/video receivers, video displays and remote speakers for music. It is possible for a single device (e.g. TV, A/V receiver, etc.) to function both as a DMR (receives &amp;ldquo;pushed&amp;rdquo; content from DMS) and DMP (&amp;ldquo;pulls&amp;rdquo; content from DMS)
+•   Digital Media Controller (DMC): find content on digital media servers (DMS) and instruct digital media renderers (DMR) to play the content. Content doesn&amp;rsquo;t stream from or through the DMC. Examples include Internet tablets, Wi-Fi enabled digital cameras and smartphones.
+•   Digital Media Printer (DMPr): provide printing services to the DLNA home network. Generally, digital media players (DMP) and digital media controllers (DMC) with print capability can print to DMPr. Examples include networked photo printers and networked all-in-one printers
+Mobile Handheld Devices[edit source | editbeta]
+▪   Mobile Digital Media Server (M-DMS): store content and make it available to wired/wireless networked mobile digital media players (M-DMP), digital media renderers (DMR) and digital media printers (DMPr). Examples include mobile phones and portable music players.
+▪   Mobile Digital Media Player (M-DMP): find and play content on a digital media server (DMS) or mobile digital media server (M-DMS). Examples include mobile phones and mobile media tablets designed for viewing multimedia content.
+▪   Mobile Digital Media Uploader (M-DMU): send (upload) content to a digital media server (DMS) or mobile digital media server (M-DMS). Examples include digital cameras and mobile phones.
+▪   Mobile Digital Media Downloader (M-DMD): find and store (download) content from a digital media server (DMS) or mobile digital media server (M-DMS). Examples include portable music players and mobile phones.
+▪   Mobile Digital Media Controller (M-DMC): find content on a digital media server (DMS) or mobile digital media server (M-DMS) and send it to digital media renderers (DMR). Examples include personal digital assistants (PDAs) and mobile phones.
+Home Infrastructure Devices[edit source | editbeta]
+▪   Mobile Network Connectivity Function (M-NCF): provide a bridge between mobile handheld device network connectivity and home network connectivity.
+▪   Media Interoperability Unit (MIU): provide content transformation between required media formats for home network and mobile handheld devices.
+The specification uses Digital Transmission Content Protection|DTCP-IP as &amp;ldquo;link protection&amp;rdquo; for copyright-protected commercial content between one device to another.[1][10]&lt;/p&gt;
+
+&lt;p&gt;Durable storage (glacier), resilient storage.
+Commercial Content Management -&amp;gt; Consumer Content Management &amp;lt;-Consumer media management.
+UPnP Design by Example, by Michael Jeronimo and Jack Weast
+UPnP Media Server implements the;
+-   Content Directory Service - provides a logical structure for the media library available in the Server
+-   Connection Manager Service&lt;/p&gt;
+
+&lt;p&gt;Most AV scenarios involve the flow of (entertainment) content (i.e. a movie, song, picture, etc.) from one device to another. As shown in Figure 2, an AV control point interacts with two or more UPnP devices acting as source and sink, respectively. Although the control point coordinates and synchronizes the behavior of both devices, the devices themselves interact with each other using a non-UPnP (“out-of- band”) communication protocol. The control point uses UPnP to initialize and configure both devices so that the desired content is transferred from one device to the other. However, since the content is transferred using an “out-of-band” transfer protocol, the control point is not directly involved in the actual transfer of the content. The control point configures the devices as needed, triggers the flow of content, then gets out of the way. Thus, after the transfer has begun, the control point can be disconnected without disrupting the flow of content. In other words, the core task (i.e. transferring the content) continues to function even without the control point present.&lt;/p&gt;
+
+&lt;p&gt;A MediaServer’s primary purpose is to allow control points to enumerate (i.e. browse or search for) content items that are available for the user to render. The MediaServer contains a ContentDirectory Service [CDS], a ConnectionManager Service [CM], and an optional AVTransport Service &lt;a href=&#34;depending on the supported transfer protocols&#34;&gt;AVT&lt;/a&gt;.
+Some MediaServers are capable of transferring multiple content items at the same time, e.g. a hard-disk- based audio jukebox may be able to simultaneously stream multiple audio files to the network. In order to support this type of MediaServer, the ConnectionManager assigns a unique Connection ID to each “connection” (i.e. each stream) that is made. This ConnectionID allows a third-party control points to obtain information about active connections of the MediaServer.
+3.1.1. Content Directory Service
+This service provides a set of actions that allow the control point to enumerate the content that the Server can provide to the home network. The primary action of this service is ContentDirectory::Browse(). This action allows control points to obtain detailed information about each Content Item that the Server can provide. This information (i.e. meta-data) includes properties such as its name, artist, date created, size, etc. Additionally, the returned meta-data identifies the transfer protocols and data formats that are supported by the Server for that particular Content Item. The control point uses this information to determine if a given MediaRenderer is capable of rendering that content in its available format.
+3.1.2. ConnectionManager Service
+This service is used to manage the connections associated with a particular device. The primary action of this service (within the context of a MediaServer) is ConnectionManager::PrepareForConnection(). When implemented, this optional action is invoked by the control point to give the Server an opportunity to prepare itself for an upcoming transfer. Depending on the specified transfer protocol and data format, this action may return the InstanceID of an AVTransport service that the control point can use to control the flow of this content (e.g. Stop, Pause, Seek, etc). As described below, this InstanceID is used to distinguish multiple (virtual) instances of the AVTransport service, each of which is associated with a particular connection to Renderer. Multiple (virtual) instances of the AVTransport service allow the MediaServer to support multiple Renderers at the same time. When the control point wants to terminate this connection, it should invoke the MediaServer’s ConnectionManager::ConnectionComplete() action (if implemented) to release the connection.
+If the ConnectionManager::PrepareForConnection() action is not implemented, the control point is only able to support a single Renderer at an given time. In this case, the control point should use InstanceID=0.
+3.1.3. AVTransport Service
+This (optional) service is used by the control point to control the “playback” of the content that is associated with the specified AVTransport. This includes the ability to Stop, Pause, Seek, etc. Depending on the supported transfer protocols and/or data formats, a MediaServer may or may not implement this service. If supported, the MediaServer can distinguish between multiple instances of the service by using the InstanceID that is included in each AVTransport action. New instances of the AVTransport service are created via the ConnectionManager’s ConnectionManager::PrepareForConnection() action. A new Instance Id is allocated for each new Service Instance.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Modifying content types</title>
+      <link>http://localhost:1313/retrospectives/how-to/modifying-content-types/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/modifying-content-types/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
@@ -1141,820 +1452,11 @@ There are other things you might like to do to the Share user interface, but the
     </item>
     
     <item>
-      <title>Alfresco Integration</title>
-      <link>http://localhost:1313/retrospectives/alfresco-integration/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/alfresco-integration/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;caching content stores, syncing content stores, s3 content stores&amp;hellip;this detail is from the 2013 summit press - &lt;a href=&#34;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&#34;&gt;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;include Alfresco Rumours XMPP.&lt;/p&gt;
-
-&lt;p&gt;alfresco embedded api
-&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;cmis protocols
-&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco api documentation&lt;/a&gt;&lt;img src=&#34;/assets/img/wiki-ext-link.jpg?raw=true&#34; alt=&#34;img&#34; /&gt;
-&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;The Alfresco API lets you access content managed by Alfresco Cloud from your own applications. The API is RESTful, which means each call is an HTTP request, so you don&amp;rsquo;t even need a programming language to try it out. You can just type a URL address in a web browser. It consists of two parts, the standard CMIS API, which lets you manage and access content, and the new Alfresco REST API which lets you manage Alfresco&amp;rsquo;s additional features such as ratings and comments, that are not covered by the CMIS standard.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Integration options: &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CMIS (Content Management Interoperability Services)&lt;/li&gt;
-&lt;li&gt;Web scripts (RESTful api)&lt;/li&gt;
-&lt;li&gt;File-based access (CIFS, WebDAV, NFS, or FTP)&lt;/li&gt;
-&lt;li&gt;OpenSearch and feeds (RSS or Atom subscription protocols)&lt;/li&gt;
-&lt;li&gt;Java applications (using the core API directly)&lt;/li&gt;
-&lt;li&gt;PHP applications (through CMIS, through web scripts as a RESTful interface, or directly from the same application server as Alfresco. Alfresco has an optional extension that includes the Quercus PHP interpreter in a Tomcat server. The Quercus PHP interpreter is capable of running popular PHP applications, such as Joomla!, Drupal, WordPress, and MediaWiki.)&lt;/li&gt;
-&lt;li&gt;.NET applications (similar to integrations with Java applications through remote interfaces such as web scripts or CMIS. Either the SOAP or Atom Publishing interfaces can be used.)
-Integration patterns: &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Surf components&lt;/li&gt;
-&lt;li&gt;Authentication and directory services&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Alfresco oAuth sample application</title>
-      <link>http://localhost:1313/retrospectives/alfresco-oauth-sample-application/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/alfresco-oauth-sample-application/</guid>
-      <description>
-
-&lt;p&gt;&lt;html&gt;
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;
-    &lt;p&gt;
-      &lt;img src=&#34;/assets/mages/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;oAuth Sample webapp&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;In October 2012, Alfresco &lt;a href=&#34;http://www.alfresco.com/news/press-releases/alfrescos-cloud-api-mobile-apps-now-available&#34;&gt;announced&lt;/a&gt; an open application-programming interface &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;(API) for Alfresco in the cloud&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;There are some great resources available to show how to use the cloud api, including:&lt;br /&gt;
-* &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; from Jeff Potts
-* &lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation&lt;/a&gt; from the &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;Alfresco Developer Portal&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;To access Alfresco in the cloud:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;an Alfresco application uses the OAuth 2.0 authorization code flow to authenticate itself with Alfresco Cloud and to allow users to authorize the application to access data on their behalf.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://oauth.net&#34;&gt;oAuth&lt;/a&gt; is an open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications.  The &lt;a href=&#34;http://tools.ietf.org/html/rfc6749#section-1.2&#34;&gt;oAuth protocol flow&lt;/a&gt; starts with making an authorisation request through to receiving initial and refresh access tokens for using in sessions.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/ietf-oauth-flow.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;In addition to the &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529 and [Jeff Potts&#39; video tutorials](https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; showing how to do this, &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;Jeff also highlights&lt;/a&gt; on the developer forum Gethin Jame&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;oAuth sample application&lt;/a&gt; that demonstrates using the oAuth authentication protocol.&lt;/p&gt;
-
-&lt;p&gt;To get an access token to use with CMIS Workbench, Allegria has used Gethin&amp;rsquo;s oAuth sample application:&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Get the Alfresco oAuth application&lt;/li&gt;
-&lt;li&gt;Register for the Cloud api&lt;/li&gt;
-&lt;li&gt;Create an API key&lt;/li&gt;
-&lt;li&gt;Configure oAuth web app&lt;/li&gt;
-&lt;li&gt;Authorisation request&lt;/li&gt;
-&lt;li&gt;Access token request&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;1. Get the Alfresco oAuth application&lt;/h3&gt;
-
-&lt;p&gt;Gethin&amp;rsquo;s Alfresco oAuth Sample Application (uses gradle and runs in jetty servlet engine and http server) is easily used with CMIS workbench, so [[fork|Paint-by-numbers:-GitHub]] his &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;alfresco-oauth-sample repository&lt;/a&gt; and [[import|Paint-by-numbers:-Eclipse]] it to Eclipse eGit.&lt;/p&gt;
-
-&lt;p&gt;The readme has simple instructions to get things running.  For now just need to :
-* Ensure you have an &lt;a href=&#34;https://www.java.com/en/download/installed.jsp&#34; target=&#34;_blank&#34;&gt;up to date Java VM&lt;/a&gt; installed and port 8181 is not in use&lt;br /&gt;
-* take note of the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; which will be used when registering the application with Alfresco in later steps&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;2. Register for the Cloud api&lt;/h3&gt;
-
-&lt;p&gt;Need to follow a &lt;a href=&#34;https://www.alfresco.com/develop/cloud/signup&#34;&gt;registration process&lt;/a&gt; with Alfresco to obtain api access by following the steps on the &lt;a href=&#34;http://www.alfresco.com/develop&#34;&gt;Alfresco developer portal&lt;/a&gt; (click on the &amp;lsquo;register for the cloud api&amp;rsquo; button):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-developer-portal.png?raw=true&#34; alt=&#34;portal&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;3. Create an API key&lt;/h3&gt;
-
-&lt;p&gt;Register cmis-workbench on the Alfresco Developer site to to get authentication configuration details&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-manage-applications.png?raw=true&#34; alt=&#34;action&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The application can be called anything, just needs to have a name so can get an &amp;lsquo;API Key&amp;rsquo;, so have called it &amp;lsquo;cmis-workbench to make things easier.&lt;br /&gt;
-Edit the API Details and on the &amp;lsquo;Auth&amp;rsquo; tab enter the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; (this comes from Gethin&amp;rsquo;s repository readme):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-oAuth.png?raw=true&#34; alt=&#34;action&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_4&#34;&gt;4. Configure oAuth web app&lt;/h3&gt;
-
-&lt;p&gt;Follow the next next steps in Gethin&amp;rsquo;s readme:
-* Edit &lt;code&gt;src/main/webapp/config.js&lt;/code&gt; and put in the client_id, client_secret and callback urls registered at The Alfresco Developer Portal (For this app, the redirect_uri should be &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt;)&lt;br /&gt;
-* Run the Alfresco-oAuth-Sample application:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; # change to the folder holding the imported project  
- ./gradlew  jettyRun
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The first time it runs, the following output will appear:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-1st-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;After the initial build, each subsequent time will output:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_5&#34;&gt;5. Authorisation request&lt;/h3&gt;
-
-&lt;p&gt;In a web browser go to &lt;code&gt;http://localhost:8181/oauthsample&lt;/code&gt; to see the first step in the oAuth protocol flow (authorisation request).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1.png?raw=true&#34; alt=&#34;request&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The values in this screen should come from the &lt;code&gt;config.js&lt;/code&gt; file configured in the previous step so just hit submit.&lt;/p&gt;
-
-&lt;p&gt;The authorisation screen from Alfresco Cloud will appear to allow entry of username and password that was set up when registered for api account:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1-1.png?raw=true&#34; alt=&#34;auth-credentials&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_6&#34;&gt;6. Access token request&lt;/h3&gt;
-
-&lt;p&gt;Send the authorisation grant - nothing to do here but hit submit (the client secret will have come from &lt;code&gt;config.js&lt;/code&gt; - it is blanked out here):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-2.png?raw=true&#34; alt=&#34;step2&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Will get a response from the cloud with the access token:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-3.png?raw=true&#34; alt=&#34;step2-1&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_7&#34;&gt;Other oAuth resources:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; describes a number of tools:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://curl.haxx.se&#34;&gt;cURL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[RESTCLient]&lt;a href=&#34;http://restclient.org)&#34;&gt;http://restclient.org)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Jeff Potts uses &lt;a href=&#34;https://code.google.com/p/google-oauth-java-client/&#34;&gt;Google&amp;rsquo;s Java oAuth2 client&lt;/a&gt; in his Alfresco cloud how-to &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; and highlights Jared Ottley&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/spring-social-alfresco&#34;&gt;Spring Social plug-in&lt;/a&gt; in the &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;developer forums&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;CPAN oAuth modules:&lt;br /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Net::OAuth provides a low-level API for reading and writing OAuth messages (probably should start with Net::OAuth::Client).  Net::OAuth provides; classes that encapsulate OAuth messages (requests and responses),
-message signing, message serialization and parsing, 2-legged requests (aka. tokenless requests, aka. consumer requests)&lt;/li&gt;
-&lt;li&gt;Net::OAuth::Simple - a simple wrapper round the OAuth protocol&lt;/li&gt;
-&lt;li&gt;OAuth::Simple - Simple OAuth authorization on your site&lt;/li&gt;
-&lt;li&gt;OAuth::Consumer - LWP based user agent with OAuth for consumer application&lt;/li&gt;
-&lt;li&gt;OAuth::Lite - OAuth framework (CONSUMER SIDE see OAuth::Lite::Consumer, SERVICE PROVIDER SIDE see OAuth::Lite::ServerUtil or to build server on mod_perl2, see OAuth::Lite::Server::mod_perl2.&lt;/li&gt;
-&lt;li&gt;OAuth::Lite::Util - utility for OAuth&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Application Lifecycle Management</title>
-      <link>http://localhost:1313/retrospectives/application-lifecycle-management/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/application-lifecycle-management/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;how to manage all the activities that occur from birth to death of an application (includes strategy / portfolio performance management, project management, Agile/DevOps including capacity/incident/problem/config/change etc, Financial Management - CAPEX/OPEX, supplier management / strategic sourcing, license management) - all the stuff ITIL/CObIT talk about.&lt;/p&gt;
-
-&lt;p&gt;Agile/DevOps about focus/flow&lt;/p&gt;
-
-&lt;p&gt;something to do - task / context used to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;build a project schedule / demand forecast&lt;/li&gt;
-&lt;li&gt;focus work by attaching task to requirements / defect and relevant source code / documentation (and when work is attached end to end like that then it is also self documenting so don&amp;rsquo;t have to explain to the next person who picks it up either for review or later maintenance tasks what all the relevant bits are + get traceability)&lt;/li&gt;
-&lt;li&gt;at the really detailed end can build as go by putting in TODO&amp;rsquo; in the code so know what is left, less to fall through the cracks&lt;/li&gt;
-&lt;li&gt;easy to see status
-(need a user interface for developer to pick and use tasks, project manager to summarise, a task bus to shuffle tasks from developers code, issues logged - and the social commentary around them, code reviews, builds and a repository to store the tasks - mylyn / tasktop / jira - all about focus and flow - books aplenty on this like mikado, lean/alm, requirements management, project management)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;develop some code&lt;/p&gt;
-
-&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
-
-&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - java, go, ruby, json, perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
-&lt;li&gt;model driven development / test driven development / content driven development (all wrapped up in Agile)&lt;/li&gt;
-&lt;li&gt;formatting code so it&amp;rsquo;s readable (syntax highlighting), valid (syntax checking) and conforms to best practice techniques for the language (like project structures, code quality and vulnerabilities)&lt;/li&gt;
-&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
-&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
-&lt;li&gt;source code management / version control - branching / merging strategies (GitFlow)&lt;/li&gt;
-&lt;li&gt;code review - GitHub pull request vs Gerrit review&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(Eclipse + plugins, Atlassian SourceTree + GitFlow, Mou - sometimes it makes sense to come outside of the IDE, Gerrit, GitHub + badges)&lt;/p&gt;
-
-&lt;p&gt;environments&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;build/package/implement code - release strategy / cycle&lt;/li&gt;
-&lt;li&gt;testing not a separate step but baked into everything else (e.g. requirements management, code reviews)&lt;/li&gt;
-&lt;li&gt;Vagrant + Docker (+ CoreOS) + Chef/Puppet - continuous build / integration (DevOps)&lt;/li&gt;
-&lt;li&gt;Gradle&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(need a repository to put released code, binaries, release notes and setup scripts + badges)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://secretgeek.net/lifecycle.asp&#34;&gt;http://secretgeek.net/lifecycle.asp&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.top-q.co.il/services/alm/&#34;&gt;http://www.top-q.co.il/services/alm/&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&#34;&gt;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&#34;&gt;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&#34;&gt;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Systems_development_life-cycle&#34;&gt;http://en.wikipedia.org/wiki/Systems_development_life-cycle&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;somewhere between what&amp;rsquo;s needed to deliver a textbook hello world output example application and enterprise methodologies and frameworks for delivering outcomes.&lt;/p&gt;
-
-&lt;p&gt;Application lifecycle management (ALM) is the product lifecycle management (governance, development, and maintenance) of application software. It encompasses requirements management, software architecture, computer programming, software testing, software maintenance, change management, project management, and release management.&lt;/p&gt;
-
-&lt;p&gt;In software engineering, software configuration management (SCM)[1] is the task of tracking and controlling changes in the software, part of the larger cross-discipline field of configuration management.[2] SCM practices include revision control and the establishment of baselines - software development is considered separately.&lt;/p&gt;
-
-&lt;p&gt;The goals of SCM are generally:[citation needed]
-* Configuration identification - Identifying configurations, configuration items and baselines.
-* Configuration control - Implementing a controlled change process. This is usually achieved by setting up a change control board whose primary function is to approve or reject all change requests that are sent against any baseline.
-* Configuration status accounting - Recording and reporting all the necessary information on the status of the development process.
-* Configuration auditing - Ensuring that configurations contain all their intended parts and are sound with respect to their specifying documents, including requirements, architectural specifications and user manuals.
-* Build management - Managing the process and tools used for builds.
-* Process management - Ensuring adherence to the organization&amp;rsquo;s development process.
-* Environment management - Managing the software and hardware that host the system.
-* Teamwork - Facilitate team interactions related to the process.
-* Defect tracking - Making sure every defect has traceability back to the source.&lt;/p&gt;
-
-&lt;p&gt;DevOps integration targets product delivery, quality testing, feature development and maintenance releases in order to improve reliability and security and faster development and deployment cycles.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Agile_software_development&#34;&gt;http://en.wikipedia.org/wiki/Agile_software_development&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://guide.agilealliance.org/subway.html&#34;&gt;http://guide.agilealliance.org/subway.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Community-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Community-driven_development&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Kanban_(development&#34;&gt;http://en.wikipedia.org/wiki/Kanban_(development&lt;/a&gt;)  kanban / process driven development  / content driven development&lt;br /&gt;
-The Kanban method – An approach to incremental, evolutionary process improvement for organisations.&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Feature-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Feature-driven_development&lt;/a&gt;  (decomposition approach)&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Test-driven_development&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Model-driven_software_development&#34;&gt;http://en.wikipedia.org/wiki/Model-driven_software_development&lt;/a&gt; / business driven development&lt;br /&gt;
-Model-driven software development (MDSD) is an alternative to round-trip engineering. Round-trip engineering is the concept of being able to make any kind of change to a model as well as to the code generated from that model. The changes always propagate bidirectional and both artifacts are always consistent.&lt;/p&gt;
-
-&lt;p&gt;The Agile Manifesto is based on twelve principles:[9]&lt;br /&gt;
-Customer satisfaction by rapid delivery of useful software&lt;br /&gt;
-Welcome changing requirements, even late in development&lt;br /&gt;
-Working software is delivered frequently (weeks rather than months)&lt;br /&gt;
-Working software is the principal measure of progress&lt;br /&gt;
-Sustainable development, able to maintain a constant pace&lt;br /&gt;
-Close, daily cooperation between business people and developers&lt;br /&gt;
-Face-to-face conversation is the best form of communication (co-location)&lt;br /&gt;
-Projects are built around motivated individuals, who should be trusted&lt;br /&gt;
-Continuous attention to technical excellence and good design&lt;br /&gt;
-Simplicity—the art of maximizing the amount of work not done—is essential&lt;br /&gt;
-Self-organizing teams&lt;br /&gt;
-Regular adaptation to changing circumstances&lt;/p&gt;
-
-&lt;p&gt;Agile development is supported by a bundle of concrete practices suggested by the agile methods, covering areas like requirements, design, modeling, coding, testing, project management, process, quality, etc. Some notable agile practices include:
-Acceptance test-driven development (ATDD)&lt;br /&gt;
-Agile Modeling&lt;br /&gt;
-Backlogs (Product and Sprint)&lt;br /&gt;
-Behavior-driven development (BDD)&lt;br /&gt;
-Cross-functional team&lt;br /&gt;
-Continuous integration (CI)&lt;br /&gt;
-Domain-driven design (DDD)&lt;br /&gt;
-Information radiators (Scrum board, Kanban board, Task board, Burndown chart)&lt;br /&gt;
-Iterative and incremental development (IID)&lt;br /&gt;
-Pair programming&lt;br /&gt;
-Planning poker&lt;br /&gt;
-Refactoring&lt;br /&gt;
-Scrum meetings (Sprint planning, Daily scrum, Sprint review and retrospective)&lt;br /&gt;
-Test-driven development (TDD)&lt;br /&gt;
-Agile testing&lt;br /&gt;
-Timeboxing&lt;br /&gt;
-Use case&lt;br /&gt;
-User story&lt;br /&gt;
-Story-driven modelling&lt;br /&gt;
-Velocity tracking&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>CMIS</title>
-      <link>http://localhost:1313/retrospectives/cmis/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/cmis/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-types-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-highlevel-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Alfresco CMIS information: &lt;a href=&#34;http://www.alfresco.com/cmis&#34;&gt;http://www.alfresco.com/cmis&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&lt;/a&gt;
-The Browser Binding&lt;/p&gt;
-
-&lt;p&gt;In addition to the existing XML-based AtomPub and Web services bindings, CMIS 1.1 provides a simpler JSON-based binding. The browser binding is designed for web applications and is easy to use just with HTML and JavaScript. It uses just two verbs, GET and POST, and resources are referenced using simple and predictable URLs.
-You reference content in the repository by using the two URLs returned by the getRepositories or getRepositoryInfo service:
-rootFolderUrl
-repositoryUrl
-Objects can then be referenced in two ways;
-by their Id
-&lt;rootFolderUrl&gt;?objectId=&lt;objectId&gt;
-by their path
-&lt;rootFolderUrl&gt;/&lt;object path&gt;
-Content that is independent of a folder, for example a Type definition be accessed using the repositoryUrl service.
-&lt;repositoryUrl&gt;?cmisselector=&lt;selector&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;cmis 1.1 standard&lt;/h2&gt;
-
-&lt;p&gt;new cmis:item type - can use for config - types without content streams, secondary types&amp;hellip;both really cool.new browser binding - preferred&lt;/p&gt;
-
-&lt;p&gt;put in the pictures from the standard for objects, and create a picture that highlights the services&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;basically create a really condensed version of the spec.&lt;/p&gt;
-
-&lt;p&gt;To use CMIS, you can either directly interact with one of the CMIS bindings or develop against a CMIS client API. Several APIs are &amp;ldquo;in development&amp;rdquo; for the following programming languages: &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Client_APIs&#34;&gt;cient cmis api&amp;rsquo;s&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;cmis wiki&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;IBM CMIS
-&lt;a href=&#34;http://www-01.ibm.com/software/ecm/cmis.html&#34;&gt;http://www-01.ibm.com/software/ecm/cmis.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;CMIS Poster Lab videos
-&lt;a href=&#34;https://www.youtube.com/watch?v=_koCqeYic1k&#34;&gt;https://www.youtube.com/watch?v=_koCqeYic1k&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&lt;/a&gt;
-The URL to get all of the children of the root/test node in the repository looks like this:
-&lt;a href=&#34;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&#34;&gt;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>CMIS url</title>
-      <link>http://localhost:1313/retrospectives/cmis-url/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/cmis-url/</guid>
-      <description>
-
-&lt;p&gt;&lt;html&gt;
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;
-    &lt;p&gt;
-      &lt;img src=&#34;./images/spaghetti-western.png?raw=true&#34; alt=&#34;book&#34;&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;This spaghetti western applicable for:&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;CMIS 1.1&lt;/b&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;The url is where the rubber hits the road for cmis on Alfresco - a client will access a CMIS service endpoint described by a URL by either directly interacting with one of the CMIS bindings or against a CMIS client API.  It can be a little tricky to understand just which url is needed as there are many to choose from depending on:&lt;br /&gt;
-* what version of Alfresco is running&lt;br /&gt;
-* how the repository is deployed (i.e. on-premise, cloud, public)&lt;br /&gt;
-* which binding is being used (atompub, webservice, browser) and what version (1.0 or 1.1)&lt;br /&gt;
-* whether connecting using the OpenCMIS API or to services or service information.&lt;/p&gt;
-
-&lt;p&gt;Signs along the way to understanding what cmis url to use are in the following sections:
-* on-premise model url
-* cloud model url
-* theory and practice
-* other url styles
-* other interesting url&amp;rsquo;s&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;on-premise model url&lt;/h2&gt;
-
-&lt;p&gt;The &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-request-url-format-onpremise.html&#34;&gt;official documentation&lt;/a&gt; for version 4.2 defines the request url for an on-premise repository using the bindings available in CMIS version 1.1 as:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;on-premise model url&lt;/strong&gt;: &lt;code&gt;{protocol}://{host}[:{port}]/{fixed ref}/{repository}/{api}/{versions/n}/{binding}/{cmis method}&lt;/code&gt;&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;url part&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Example value&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;protocol&lt;/td&gt;
-&lt;td&gt;likely to be (or should be) https but is dependant on what is set up in the &lt;code&gt;alfresco-global.properties&lt;/code&gt; &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/tasks/global-props-config.html&#34;&gt;file&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;https&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;host&lt;/td&gt;
-&lt;td&gt;ip address or hostname of the host&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;localhost&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[port]&lt;/td&gt;
-&lt;td&gt;optional - usually 8080 but could be configured (usually in &lt;code&gt;alfresco-global.properties&lt;/code&gt;)&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;8080&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;fixed ref&lt;/td&gt;
-&lt;td&gt;this is set to &lt;code&gt;alfresco/api&lt;/code&gt; for the alfresco one on-premise api&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;alfresco/api&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;repository&lt;/td&gt;
-&lt;td&gt;this is sort of a pseudo fixed name for the repository (see further explanation in &amp;lsquo;other url styles&amp;rsquo;  below)&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;-default&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;api&lt;/td&gt;
-&lt;td&gt;using the public cmis api (could use public/cmis or cmis here) but there are others including alfresco rest and workflow&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;cmis&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;versions/n&lt;/td&gt;
-&lt;td&gt;version using of &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt; currently either 1.0 or 1.1 (should use 1.1 if can, as get access to newer capabilities such as the browser binding and secondary object types)&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;1.1&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;binding&lt;/td&gt;
-&lt;td&gt;atompub (atom), webservices (cmisws) or browser (browser) - use browser if can as it is the fullest and most lightweight&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;browser&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;cmis method&lt;/td&gt;
-&lt;td&gt;from the specification, but won&amp;rsquo;t need to use if interacting through a cmis client API such as Apache&amp;rsquo;s OpenCMIS&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;em&gt;resultant on-premise example url&lt;/em&gt;: &lt;code&gt;https://localhost:8080/alfresco/api/-default-/cmis/versions/1.1/browser/&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_1&#34;&gt;cloud model url&lt;/h2&gt;
-
-&lt;p&gt;The &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Fconcepts%2Fcmis-get-service-document.html&#34;&gt;official documentation&lt;/a&gt; for version 4.2 defines the request url for a cloud repository using the bindings available in CMIS version 1.1 as:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;cloud model url&lt;/strong&gt;: &lt;code&gt;{protocol}://{host}/{network id}/{api}/{versions/n}/{binding}/{cmis method}&lt;/code&gt;&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;url part&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Example value&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;protocol&lt;/td&gt;
-&lt;td&gt;will always be https&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;https&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;host&lt;/td&gt;
-&lt;td&gt;will always be api.alfresco.com&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;api.alfresco.com&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;network id&lt;/td&gt;
-&lt;td&gt;name of the company registered with alfresco&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;yourcompany.com&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;api&lt;/td&gt;
-&lt;td&gt;using the public cmis api (could use public/cmis or cmis here) but there are others including alfresco rest and workflow&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;cmis&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;versions/n&lt;/td&gt;
-&lt;td&gt;version using of &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt; currently either 1.0 or 1.1 (should use 1.1 as newer)&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;1.1&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;binding&lt;/td&gt;
-&lt;td&gt;atompub (atom), webservices (cmisws) or browser (browser)&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;atom&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;cmis method&lt;/td&gt;
-&lt;td&gt;from the specification, but won&amp;rsquo;t need to use if interacting through a cmis client API such as Apache&amp;rsquo;s OpenCMIS&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;em&gt;resultant cloud example url&lt;/em&gt;: &lt;code&gt;https://api.alfresco.com/yourcompany.com/cmis/versions/1.1/atom/&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_2&#34;&gt;theory and practice&lt;/h2&gt;
-
-&lt;p&gt;That&amp;rsquo;s the theory&amp;hellip;in practice using the model url in the CMIS Workbench, while it&amp;rsquo;s &lt;a href=&#34;www.imdb.com/title/tt0172505/‎&#34;&gt;just right&lt;/a&gt; for some, it doesn&amp;rsquo;t necessarily work for all combinations:
-* the on-premise atom binding with cmis version 1.1 will get a parsing error
-* for on-premise, webservices won&amp;rsquo;t work with this model so will need to use the CMIS Workbench template (see below)
-* the browser binding is not available for the cloud version (even though running cmis version 1.1 and the documentation says it is)&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_3&#34;&gt;other url styles&lt;/h2&gt;
-
-&lt;p&gt;There are also some other styles of url&amp;rsquo;s out there in &lt;a href=&#34;www.imdb.com/title/tt0069762/‎&#34;&gt;documentation land&lt;/a&gt;, (adding to the confusion). Some still work with the 4.2 implementation of the api including:&lt;br /&gt;
-* The Alfresco &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Index_Page&#34;&gt;CMIS Wiki&lt;/a&gt; hasn&amp;rsquo;t caught up yet (it&amp;rsquo;s describing 4.1 and cmis 1.0 but the url&amp;rsquo;s for the defined AtomPub &lt;code&gt;http://[host]:[port]/alfresco/cmisatom&lt;/code&gt; and webservices &lt;code&gt;http://[host]:[port]/alfresco/cmisw&lt;/code&gt; still work.
-* The &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&#34;&gt;Alfresco developer forum&lt;/a&gt; describes some great cmis information and an update to the atom url which works:&lt;br /&gt;
-    &amp;gt;
-  please note that when you are using the CMIS ATOM Pub binding against Alfresco 4, you should use the new OpenCMIS-based URL (&lt;code&gt;http://localhost:8080/alfresco/cmisatom&lt;/code&gt;) instead of the old web script-based URL (&lt;a href=&#34;http://localhost:8080/alfresco/s/api/cmis&#34;&gt;http://localhost:8080/alfresco/s/api/cmis&lt;/a&gt;). The old URL should be considered deprecated. This is not just a URL change - these are two different implementations, so you will see differences in how they behave
-    &amp;gt;&lt;br /&gt;
-* The Apache Chemistry download for CMIS Workbench tool itself has connection templates that describe a range of url&amp;rsquo;s that work:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  # Alfresco 4 AtomPub
-  http://&amp;lt;host&amp;gt;/alfresco/cmisatom
-
-  # Alfresco 4 Web Services
-  http://&amp;lt;host&amp;gt;/alfresco/cmisws/RepositoryService?wsdl
-  http://&amp;lt;host&amp;gt;/alfresco/cmisws/NavigationService?wsdl
-  http://&amp;lt;host&amp;gt;/alfresco/cmisws/ObjectService?wsdl
-  http://&amp;lt;host&amp;gt;/alfresco/cmisws/VersioningService?wsdl
-  http://&amp;lt;host&amp;gt;/alfresco/cmisws/DiscoveryService?wsdl
-  http://&amp;lt;host&amp;gt;/alfresco/cmisws/MultiFilingService?wsdl
-  http://&amp;lt;host&amp;gt;/alfresco/cmisws/RelationshipService?wsdl
-  http://&amp;lt;host&amp;gt;/alfresco/cmisws/ACLService?wsdl
-  http://&amp;lt;host&amp;gt;/alfresco/cmisws/PolicyService?wsdl
-
-  # Alfresco Cloud (CMIS 1.0 AtomPub)
-  https://api.alfresco.com/cmis/versions/1.0/atom
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The CMIS specification allows a CMIS service endpoint to advertise one or more repositories.  This may be the thinking behind the &lt;code&gt;-default-&lt;/code&gt;, part of the on-premise url - &lt;code&gt;https://localhost:8080/alfresco/api/-default-/cmis/versions/1.1/browser/&lt;/code&gt;.  In CMIS Workbench when use the model url -default- appears in the repository list:&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;./images/cmis-wb-repo-default.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;When use the CMIS Workbench template url &lt;code&gt;http://&amp;lt;host&amp;gt;/alfresco/cmisatom&lt;/code&gt; then see the actual repository name in the list:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;.images/cmis-wb-repo-name.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Even though you can connect with these other url styles it is probably best to try and move to the model urls as this is driving towards a more consistent approach.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_4&#34;&gt;other interesting url&amp;rsquo;s&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The Alfresco &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Index_Page&#34;&gt;CMIS Wiki&lt;/a&gt; describes the &lt;em&gt;CMIS Index Page&lt;/em&gt;:
-&amp;gt;
-For any releases the [CMIS Index] page &lt;code&gt;http://[host]:[port]/alfresco/service/cmis/index.html&lt;/code&gt; provides an overview of the Alfresco CMIS implementation, and links to all the resources you&amp;rsquo;ll need to use the CMIS bindings.
-&amp;gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-index.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;This page has some useful information about cmis compliance of the running version and some tools including the OpenCMIS Browser and the Web Scripts CMIS Browser.  This would be an awesome page it it also listed the binding url&amp;rsquo;s for connection - just saying - must put it on Allegria&amp;rsquo;s things to do list.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The Alfresco &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-get-service-document.html&#34;&gt;Official Documentation for 4.2&lt;/a&gt; describes getting the cmis service document at:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;  https://localhost:8080/alfresco/api/cmis/versions/1.1/atom/              #on-premise repository
-  https://api.alfresco.com/cmis/versions/1.1/atom/                         #cloud repository (current authenticated network)
-  https://api.alfresco.com/yourcompany.com/public/cmis/versions/1.1/atom   #specific cloud network
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Retrieving the service document using the HTTP GET method to one of those URL&amp;rsquo;s will return a response body that is an AtomPub XML document which describes the CMIS capabilities in a standard way (see the CMIS specification for more details).  The service document contains information on the repository, the CMIS methods that can be called on it, and the parameters for those methods.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-service-document.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
-&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The cxf service list url &lt;code&gt;http://[host]/alfresco/cmis&lt;/code&gt; lists cmis services available with web services:&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-cxf-service-url.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
-&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Building a folder and document based protocol</title>
-      <link>http://localhost:1313/retrospectives/building-a-folder-and-document-based-protocol/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/building-a-folder-and-document-based-protocol/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;MediaGate for Java
-UPnP Stacks + a picture
-Apache Felix + Alfresco development tool roadmap
-OpenCMIS
-Learning Java&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.1/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.1/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.videolan.org/vlc/streaming.html&#34;&gt;http://www.videolan.org/vlc/streaming.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://shop.oreilly.com/product/9781849511384.do&#34;&gt;http://shop.oreilly.com/product/9781849511384.do&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.upnp-database.info/listDevices.jsp?filterType=servers&#34;&gt;http://www.upnp-database.info/listDevices.jsp?filterType=servers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The Alfresco content application server supports many folder and document-based protocols to access and manage content held within the content repository using familiar client tools.
-All the protocol bindings expose folders and documents held in the Alfresco content repository. This means a client tool accessing the repository using the protocol can navigate through folders, examine properties, and read content. Most protocols also permit updates, allowing a client tool to modify the folder structure, create and update documents, and write content. Some protocols also allow interaction with capabilities such as version histories, search, and tasks.&lt;/p&gt;
-
-&lt;p&gt;Internally, the protocol bindings interact with the content repository services, which encapsulate the behavior of working with folders and files. This ensures a consistent view and update approach across all client tools interacting with the Alfresco content application server.&lt;/p&gt;
-
-&lt;p&gt;An Alfresco subsystem for file servers allows configuration and lifecycle management for each of the protocols either through property files or JMX.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&#34;&gt;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&lt;/a&gt;
-&lt;a href=&#34;https://github.com/peterwatts/allegria/wiki/1.2.1-Where&#39;s-streaming-heading%3F:-IN-PROGRESS&#34;&gt;https://github.com/peterwatts/allegria/wiki/1.2.1-Where&#39;s-streaming-heading%3F:-IN-PROGRESS&lt;/a&gt;
-&lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html&#34;&gt;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;http://wiki.alfresco.com/wiki/CMIS&lt;/a&gt;
-&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&lt;/a&gt;
-&lt;a href=&#34;http://cmis.alfresco.com/cmis-cheatsheet.pdf&#34;&gt;http://cmis.alfresco.com/cmis-cheatsheet.pdf&lt;/a&gt;
-&lt;a href=&#34;http://tech.wrighting.org/category/cmis/&#34;&gt;http://tech.wrighting.org/category/cmis/&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#Query_Language&#34;&gt;http://wiki.alfresco.com/wiki/CMIS#Query_Language&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS_Query_Language&#34;&gt;http://wiki.alfresco.com/wiki/CMIS_Query_Language&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax&#34;&gt;http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax&lt;/a&gt;
-&lt;a href=&#34;http://www.scribd.com/doc/18495354/CMIS-CMIS-SQL-Search-Tutorial-ENG&#34;&gt;http://www.scribd.com/doc/18495354/CMIS-CMIS-SQL-Search-Tutorial-ENG&lt;/a&gt;
-&lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/using-cmis-get-list-document-urls-11302011-2029&#34;&gt;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/using-cmis-get-list-document-urls-11302011-2029&lt;/a&gt;
-&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/web-scripts/cmis-query-get-path-cmisdocument-11302011-1630&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/web-scripts/cmis-query-get-path-cmisdocument-11302011-1630&lt;/a&gt;
-&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/web-scripts/searching-documents-using-cmis-query-folder-hierarchy&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/web-scripts/searching-documents-using-cmis-query-folder-hierarchy&lt;/a&gt;
-&lt;a href=&#34;http://yonaweb.be/using_cmis_query_content_query_navigation_model&#34;&gt;http://yonaweb.be/using_cmis_query_content_query_navigation_model&lt;/a&gt;
-&lt;a href=&#34;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&#34;&gt;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;(consider use of CMIS protocol and Apache Felix upnp-av tools, consider also if content is stored in the cloud how can get to it).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;joining cmis libraries / capabilities to dlna libraries / capabilities with a smart set of queries&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Regardless of the binding, there is a set of services that a CMIS repository must provide. These services include:
-•   Repository Services: Used to discover information and capabilities of the repository.
-•   Navigation Services: Used to traverse the repository’s folder hierarchy.
-•   Object Services: Used to perform CRUD functions on objects.
-•   Multi-filing Services: If the repository supports putting an object in  more than one folder, this service handles it.
-•   Discovery Services: Used to handle queries.
-•   Versioning Services: Used to checkout documents and work with  document versions.
-•   Relationship Services: Used to query an object for its relationships.
-•   Policy Services: Used to apply, remove, and query for policies.
-•   ACL Services: Not supported by all repositories, this service is used  to return and manage the ACL of an object.
-Some of these services share common characteristics. For example:
-• Almost every service that returns a list can be returned as a paged
-result set.
-• Services that return objects can often return additional information
-about those objects, if you ask for it, like relationships, ACLs,
-renditions, and allowable actions.
-• A repository may choose to give you a change token with an object to
-reduce the chance that you don’t update an out-of-date object. If a repository gives you a change token, it expects it back when you post the change.
-• Any of the services may throw an exception. For a list, check the spec.&lt;/p&gt;
-
-&lt;p&gt;Repository Services
-•   Get Repositories: Get a list of repositories that can be accessed from this service endpoint
-•   Get Repository Info: Get information about the specified repository
-•   Get Type Children, Get Type Descendants: Various ways to discover the object types in a repository
-•   Get Type Definition: Get the definition (list of properties) of the specified type
-Navigation Services
-▪   Get Folder Tree, Get Descendants, Get Children: Retrieve descendant objects (each one has slightly different nuances)
-▪   Get Folder Parent, Get Object Parents: Retrieve an object&amp;rsquo;s parent folder(s)
-▪   Get Checkedout Docs: Retrieve list of checked out documents
-Discovery Services
-▪   Query: Execute a CMIS query
-▪   Get Content Changes: Gets a list of changes to the repository; the client can provide an optional change log token that specifies the first event to be included in the list.
-Object Services
-▪   Get Object, Get Object By Path: Retrieve objects
-▪   Get Properties, Get Allowable Actions, Get Renditions: Get information about objects
-▪   Get Content Stream: Retrieve an object&amp;rsquo;s content stream
-▪   Create Relationship, Create Document, Create Document From Source, Create Policy, Create Folder: Create objects
-▪   Update Properties, Move Object: Update objects
-▪   Delete Object, Delete Tree: Remove objects
-▪   Set Content Stream, Delete Content Stream: Update content streams
-Versioning Services
-▪   Get Properties Of Latest Version, Get Object Of Latest Version: Get information about latest version of object
-▪   Get All Versions: Retrieve an object&amp;rsquo;s version history
-▪   Check Out, Check In, Cancel Check Out: Control locking/unlocking of an object for the purpose of updating
-▪   Delete All Versions: Remove version history
-Relationship Services
-▪   Get Object Relationships: Get the relationships associated with an object
-Multi-Filing Services
-▪   Add Object To Folder, Remove Object From Folder: File and un-file objects;
-▪   If multi-filing is supported in the repository, then an object can be added to multiple folders
-▪   If un-filing is supported in the repository, then an object can be removed from all folders that it is filed in without deleting the object
-ACL Services
-▪   Get ACL: Get the permissions associated with an object
-▪   Apply ACL: Set the permissions associated with an object
-Policy Services
-▪   Get Applied Policies: Get the policies that are applied to an object
-Apply Policy, Remove Policy: Apply and remove policies to/from an object&lt;/p&gt;
-
-&lt;p&gt;CMIS Query  What it does
-SELECT cmis:name FROM sc:whitepaper where contains(‘sample’)    Select the name of every whitepaper with “sample” somewhere in their text.
-SELECT cmis:name, Score() as relevance FROM sc:whitepaper where contains(&amp;lsquo;sample&amp;rsquo;) order by relevance DESC  Select the name of whitepapers with “sample” somewhere in their text, ordered by full-text relevance, descending.
-SELECT cmis:name from sc:whitepaper where sc:isActive = true
-    Select whitepapers with the isActive flag set to true (which happens to be a property defined by an aspect).&lt;/p&gt;
-
-&lt;p&gt;SELECT cmis:name from sc:whitepaper where not(sc:isActive = true)   Select whitepapers with the isActive flag not set to true. This will return whitepapers where the property is not true as well as whitepapers where the property is unset.&lt;/p&gt;
-
-&lt;p&gt;SELECT cmis:name from sc:marketingDoc where any sc:campaign in (&amp;lsquo;Social Shopping&amp;rsquo;)  Select instances of Marketing Documents and their children where the multi-value property, sc:campaign, contains the value “Social Shopping” (note that Whitepaper is a child type of Marketing Document).
-SELECT cmis:name,sc:published from sc:whitepaper where sc:published &amp;gt;= &amp;lsquo;2009-11-10T00:00:00.000-06:00&amp;rsquo; and sc:published &amp;lt; &amp;lsquo;2009-11- 18T00:00:00.000-06:00&amp;rsquo;  Select whitepapers published (sc:published, a property of the sc:webable aspect) on or after November 10, 2009 and before 18, 2009.
-SELECT cmis:name from cmis:document where in_folder(&amp;lsquo;workspace://SpacesStore/393 5ce21-9f6f-4d46-9e22-4f97e1d5d9d8&amp;rsquo;) and contains(&amp;lsquo;contract&amp;rsquo;)   Select all content in the Sales folder containing the word “contract”.&lt;/p&gt;
-
-&lt;p&gt;SELECT cmis:name from cmis:document where in_tree(&amp;lsquo;workspace://SpacesStore/3935c e21-9f6f-4d46-9e22-4f97e1d5d9d8&amp;rsquo;) and contains(&amp;lsquo;contract&amp;rsquo;) and cm:description like “%sign%”    Select all content in the Sales folder or any of its descendant folders containing the word “contract” and a description like “%sign%”.&lt;/p&gt;
-
-&lt;p&gt;The DLNA Certified Device Classes are separated as follows:[9]
-Home Network Devices[edit source | editbeta]
-•   Digital Media Server (DMS): store content and make it available to networked digital media players (DMP) and digital media renderers (DMR). Examples include PCs and network-attached storage(NAS) devices.
-•   Digital Media Player (DMP): find content on digital media servers (DMS) and provide playback and rendering capabilities. Examples include TVs, stereos and home theaters, wireless monitors and game consoles.
-•   Digital Media Renderer (DMR): play content as instructed by a digital media controller (DMC), which will find content from a digital media server (DMS). Examples include TVs, audio/video receivers, video displays and remote speakers for music. It is possible for a single device (e.g. TV, A/V receiver, etc.) to function both as a DMR (receives &amp;ldquo;pushed&amp;rdquo; content from DMS) and DMP (&amp;ldquo;pulls&amp;rdquo; content from DMS)
-•   Digital Media Controller (DMC): find content on digital media servers (DMS) and instruct digital media renderers (DMR) to play the content. Content doesn&amp;rsquo;t stream from or through the DMC. Examples include Internet tablets, Wi-Fi enabled digital cameras and smartphones.
-•   Digital Media Printer (DMPr): provide printing services to the DLNA home network. Generally, digital media players (DMP) and digital media controllers (DMC) with print capability can print to DMPr. Examples include networked photo printers and networked all-in-one printers
-Mobile Handheld Devices[edit source | editbeta]
-▪   Mobile Digital Media Server (M-DMS): store content and make it available to wired/wireless networked mobile digital media players (M-DMP), digital media renderers (DMR) and digital media printers (DMPr). Examples include mobile phones and portable music players.
-▪   Mobile Digital Media Player (M-DMP): find and play content on a digital media server (DMS) or mobile digital media server (M-DMS). Examples include mobile phones and mobile media tablets designed for viewing multimedia content.
-▪   Mobile Digital Media Uploader (M-DMU): send (upload) content to a digital media server (DMS) or mobile digital media server (M-DMS). Examples include digital cameras and mobile phones.
-▪   Mobile Digital Media Downloader (M-DMD): find and store (download) content from a digital media server (DMS) or mobile digital media server (M-DMS). Examples include portable music players and mobile phones.
-▪   Mobile Digital Media Controller (M-DMC): find content on a digital media server (DMS) or mobile digital media server (M-DMS) and send it to digital media renderers (DMR). Examples include personal digital assistants (PDAs) and mobile phones.
-Home Infrastructure Devices[edit source | editbeta]
-▪   Mobile Network Connectivity Function (M-NCF): provide a bridge between mobile handheld device network connectivity and home network connectivity.
-▪   Media Interoperability Unit (MIU): provide content transformation between required media formats for home network and mobile handheld devices.
-The specification uses Digital Transmission Content Protection|DTCP-IP as &amp;ldquo;link protection&amp;rdquo; for copyright-protected commercial content between one device to another.[1][10]&lt;/p&gt;
-
-&lt;p&gt;Durable storage (glacier), resilient storage.
-Commercial Content Management -&amp;gt; Consumer Content Management &amp;lt;-Consumer media management.
-UPnP Design by Example, by Michael Jeronimo and Jack Weast
-UPnP Media Server implements the;
--   Content Directory Service - provides a logical structure for the media library available in the Server
--   Connection Manager Service&lt;/p&gt;
-
-&lt;p&gt;Most AV scenarios involve the flow of (entertainment) content (i.e. a movie, song, picture, etc.) from one device to another. As shown in Figure 2, an AV control point interacts with two or more UPnP devices acting as source and sink, respectively. Although the control point coordinates and synchronizes the behavior of both devices, the devices themselves interact with each other using a non-UPnP (“out-of- band”) communication protocol. The control point uses UPnP to initialize and configure both devices so that the desired content is transferred from one device to the other. However, since the content is transferred using an “out-of-band” transfer protocol, the control point is not directly involved in the actual transfer of the content. The control point configures the devices as needed, triggers the flow of content, then gets out of the way. Thus, after the transfer has begun, the control point can be disconnected without disrupting the flow of content. In other words, the core task (i.e. transferring the content) continues to function even without the control point present.&lt;/p&gt;
-
-&lt;p&gt;A MediaServer’s primary purpose is to allow control points to enumerate (i.e. browse or search for) content items that are available for the user to render. The MediaServer contains a ContentDirectory Service [CDS], a ConnectionManager Service [CM], and an optional AVTransport Service &lt;a href=&#34;depending on the supported transfer protocols&#34;&gt;AVT&lt;/a&gt;.
-Some MediaServers are capable of transferring multiple content items at the same time, e.g. a hard-disk- based audio jukebox may be able to simultaneously stream multiple audio files to the network. In order to support this type of MediaServer, the ConnectionManager assigns a unique Connection ID to each “connection” (i.e. each stream) that is made. This ConnectionID allows a third-party control points to obtain information about active connections of the MediaServer.
-3.1.1. Content Directory Service
-This service provides a set of actions that allow the control point to enumerate the content that the Server can provide to the home network. The primary action of this service is ContentDirectory::Browse(). This action allows control points to obtain detailed information about each Content Item that the Server can provide. This information (i.e. meta-data) includes properties such as its name, artist, date created, size, etc. Additionally, the returned meta-data identifies the transfer protocols and data formats that are supported by the Server for that particular Content Item. The control point uses this information to determine if a given MediaRenderer is capable of rendering that content in its available format.
-3.1.2. ConnectionManager Service
-This service is used to manage the connections associated with a particular device. The primary action of this service (within the context of a MediaServer) is ConnectionManager::PrepareForConnection(). When implemented, this optional action is invoked by the control point to give the Server an opportunity to prepare itself for an upcoming transfer. Depending on the specified transfer protocol and data format, this action may return the InstanceID of an AVTransport service that the control point can use to control the flow of this content (e.g. Stop, Pause, Seek, etc). As described below, this InstanceID is used to distinguish multiple (virtual) instances of the AVTransport service, each of which is associated with a particular connection to Renderer. Multiple (virtual) instances of the AVTransport service allow the MediaServer to support multiple Renderers at the same time. When the control point wants to terminate this connection, it should invoke the MediaServer’s ConnectionManager::ConnectionComplete() action (if implemented) to release the connection.
-If the ConnectionManager::PrepareForConnection() action is not implemented, the control point is only able to support a single Renderer at an given time. In this case, the control point should use InstanceID=0.
-3.1.3. AVTransport Service
-This (optional) service is used by the control point to control the “playback” of the content that is associated with the specified AVTransport. This includes the ability to Stop, Pause, Seek, etc. Depending on the supported transfer protocols and/or data formats, a MediaServer may or may not implement this service. If supported, the MediaServer can distinguish between multiple instances of the service by using the InstanceID that is included in each AVTransport action. New instances of the AVTransport service are created via the ConnectionManager’s ConnectionManager::PrepareForConnection() action. A new Instance Id is allocated for each new Service Instance.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>CMIS Workbench</title>
-      <link>http://localhost:1313/retrospectives/cmis-workbench/</link>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/cmis-workbench/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/cmis-workbench/</guid>
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/cmis-workbench/</guid>
       <description>
 
 &lt;p&gt;&lt;html&gt;
@@ -2190,10 +1692,10 @@ CMIS helper scripts distributed with the CMIS Workbench can make your Groovy cod
     
     <item>
       <title>Java</title>
-      <link>http://localhost:1313/retrospectives/java/</link>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/java/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/java/</guid>
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/java/</guid>
       <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/totalbeginner.html&#34;&gt;http://eclipsetutorial.sourceforge.net/totalbeginner.html&lt;/a&gt;
@@ -2213,11 +1715,260 @@ CMIS helper scripts distributed with the CMIS Workbench can make your Groovy cod
     </item>
     
     <item>
-      <title>Eclipse</title>
-      <link>http://localhost:1313/retrospectives/eclipse/</link>
+      <title>Launchng OSX scripts</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/launching-osx-scripts/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/eclipse/</guid>
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/launching-osx-scripts/</guid>
+      <description>
+
+&lt;p&gt;&lt;html&gt;
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+    &lt;p&gt;
+      &lt;img src=&#34;./images/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;The CMIS Workbench application in its default download launches with a shell script rather than a neat osx package.  The osx Automator can be used to launch it from an icon in the osx launchpad or dock.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Create an &amp;lsquo;application&amp;rsquo; from the osx Automator:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator-type.png?raw=true&#34; alt=&#34;automator&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Drag run shell script to the action window and enter the path to workbench.sh:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator.png?raw=true&#34; alt=&#34;action&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Save the package as &amp;lsquo;CMIS Workbench.app&amp;rsquo; to the &amp;lsquo;Applications&amp;rsquo; folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Go to the &amp;lsquo;Applications&amp;rsquo; folder, right-click on the &amp;lsquo;CMIS Workbench.app&amp;rsquo; file,&amp;lsquo;Get Info&amp;rsquo;and and click on the icon at the top left until it has a blue outline:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-getinfo.png?raw=true&#34; alt=&#34;finder&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; &lt;a href=&#34;https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/chemistry-opencmis-workbench/chemistry-opencmis-workbench/src/main/resources/images/&#34;&gt;Download&lt;/a&gt; the CMIS Workbench icon (or use the pic below), open it in a paint application, copy to the clipboard and use the Finder [Edit] menu to paste the CMIS Workbench icon onto the &amp;lsquo;Get Info&amp;rsquo; icon.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-wb-icon.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/github/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/github/</guid>
+      <description>
+
+&lt;p&gt;First things first! There&amp;rsquo;s a lot of stuff to manage; source code objects, project information, documentation, issues and will need to see how this stuff changes over time.  Had mainly used commercial implementations of source repositories and team collaboration / wiki tools.  Looked at a few open source ones (GitHub, BitBucket, SourceForge) and chose GitHub because; it had plenty of &lt;a href=&#34;http://git-scm.com/about&#34;&gt;documentation&lt;/a&gt; and &lt;a href=&#34;http://teach.github.com&#34;&gt;training&lt;/a&gt;, active community, mac client, eclipse plug-in and there are other modules such as cmis-perl, pDLNA and ember media manager - that the project will be leveraging - are also on GitHub.&lt;/p&gt;
+
+&lt;p&gt;So we are going to use Git for:&lt;/p&gt;
+
+&lt;p&gt;|GitHub Capability  |Use  |
+|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;|&lt;br /&gt;
+|GitHubPages |project information  |&lt;br /&gt;
+|source code management tools (&amp;lt;&amp;gt; icon) | code storage, organisation, versioning, collaboration, backup, code review  |&lt;br /&gt;
+|wiki (the book icon) | how to documentation  |&lt;br /&gt;
+|issues (the (!) icon) | requirements and issue tracking   |
+|GitHub stats  | use the graphs and &lt;a href=&#34;https://help.github.com/articles/be-social&#34;&gt;social stuff&lt;/a&gt; to see how we are going |&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s a bit of a hill to climb to get the most out of Git but it was great to put a &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resource&lt;/a&gt; in like this as a first thing for the project as everything had a place to go and when talking to people could point them to it no matter where they were in the world.  We&amp;rsquo;re just using some of the basic bits.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Setup GitHub account&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup repository&lt;/li&gt;
+&lt;li&gt;Clone to desktop&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Edit README&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup GitHubPages&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup wiki&lt;/li&gt;
+&lt;li&gt;Setup issues&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;1. Setup GitHub account&lt;/h3&gt;
+
+&lt;p&gt;Simple registration, can do a free account or various paid ones if want more functionality, just go to &lt;a href=&#34;github.com&#34;&gt;github.com&lt;/a&gt;.  Can have individual accounts or organisation accounts.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;2. Setup repository(s)&lt;/h3&gt;
+
+&lt;p&gt;Just used the online prompts but there is an excellent &lt;a href=&#34;https://help.github.com&#34;&gt;bootcamp tutorial&lt;/a&gt;. Currently the project has repos for;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;allegria - the main repository that this wiki is in&lt;/li&gt;
+&lt;li&gt;pDLNA - a &amp;lsquo;forked&amp;rsquo; repository of some modules that allegria will customise&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have initially set the allegria repo up as a catchall for all the concepts being developed.  Later on may make submodules of each of the big areas to make cloning easier but just keeping it simple for now.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;3. Clone to desktop&lt;/h3&gt;
+
+&lt;p&gt;So you need a client application on your desktop to clone your repository to so that you can work on it.  Can do this with the &lt;a href=&#34;http://git-scm.com/downloads&#34;&gt;commandline client&lt;/a&gt;, which is ok and has lots of &lt;a href=&#34;http://git-scm.com/about&#34;&gt;documentation&lt;/a&gt;.  Or can use a &lt;a href=&#34;http://git-scm.com/downloads/guis&#34;&gt;graphical client&lt;/a&gt; (had a brief look at the mac client and it was pretty cool).  But for this project&amp;rsquo;s purposes we are using a graphical client that is embedded into the Eclipse Integrated Development Environment &lt;a href=&#34;./Paint-by-numbers:-Eclipse-with-Epic-and-Egit&#34;&gt;see the paint-by numbers here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;4. Edit README&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://help.github.com/articles/create-a-repo&#34;&gt;create a repo&lt;/a&gt; tutorial suggests that it is a good idea for your GitHub repository to have a &lt;a href=&#34;.&#34;&gt;README&lt;/a&gt; (or README.md) file which is like a summary landing page for the online webclient. If you create a repo through the command line there&amp;rsquo;s a few hoops to jump through but if you use the online webclient there is a checkbox to initialise the repo with a readme (that&amp;rsquo;s the easiest way to go).  The readme&amp;rsquo;s a good place to put some summary detail about the project and kick off some links to things like a project page, the wiki or to related sites.&lt;/p&gt;
+
+&lt;p&gt;The readme can use a &amp;lsquo;markdown&amp;rsquo; type language and there is tons of help for it like; &lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown&#34;&gt;articles in GitHub&lt;/a&gt; or &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax#link&#34;&gt;blogs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;5. Setup GitHub Pages&lt;/h3&gt;
+
+&lt;p&gt;The readme file is a good start to give people a snapshot of the project, but we wanted to have something a bit more, so are using &lt;a href=&#34;http://pages.github.com&#34;&gt;GitHubPages&lt;/a&gt;.  It is initially a bit tricky to set up. We used the wizard that is on the GitHubPages site but it seemed to not do anything (it says to wait 10 mins).  After a while if you go to the url (username.github.io/repository) that the wizard gives you (in our case it was &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;http://peterwatts.github.io/allegria/&lt;/a&gt;) then you should see the default page.&lt;/p&gt;
+
+&lt;p&gt;Underneath, the GitHubPages is a gh-pages branch under your repo and you can go into there and customise it to your heart&amp;rsquo;s content (we initially just tweaked the index page (by editing it online) with project information).  You could probably use some cool tools to manage it much as you would any normal html website but we are doing it all manually at the moment.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;6. Setup wiki&lt;/h3&gt;
+
+&lt;p&gt;Using the wiki for the majority of documentation for the project other than read-me&amp;rsquo;s and release notes etc which are included in each of the development directories.&lt;/p&gt;
+
+&lt;p&gt;Generally the wiki makes it easy to put up some information relatively quickly.  Needed to play around with getting the markup correct (e.g. putting spaces after text on end of line to get to display on next line, using relative links and embedding images in the pages).&lt;/p&gt;
+
+&lt;p&gt;Using predominantly the &amp;ldquo;Markdown&amp;rdquo; editing mode as it&amp;rsquo;s the default (&lt;a href=&#34;http://www.mediawiki.org/wiki/MediaWiki&#34;&gt;MediaWiki&lt;/a&gt; would also be useful) and just using basic functionality to begin with including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;simple naming standard of Home, Concept, HowTo, Paint-by-numbers, Point-of-view so the &amp;lsquo;Pages&amp;rsquo; page looks organised and relative links are easy to guess.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;formatting like; headings, bold, code blocks, unordered lists, ordered lists and quotes.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;relative links for content inside the Github repository (including for images).&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is plenty of raw documentation out there about the wiki syntax including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/categories/88/articles&#34;&gt;GitHub Help&lt;/a&gt; including; Writing on GitHub, Markdown Basics and GitHub Flavoured Markdown&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://guides.github.com/overviews/mastering-markdown/&#34;&gt;http://guides.github.com/overviews/mastering-markdown/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gollum/gollum/wiki&#34;&gt;https://github.com/gollum/gollum/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mojombo/gollum-demo/wiki&#34;&gt;https://github.com/mojombo/gollum-demo/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown&#34;&gt;https://help.github.com/articles/github-flavored-markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/blog/1395-relative-links-in-markup-files&#34;&gt;https://github.com/blog/1395-relative-links-in-markup-files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/relative-links-in-readmes&#34;&gt;https://help.github.com/articles/relative-links-in-readmes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;http://daringfireball.net/projects/markdown/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://designshack.net/articles/html/mastering-markdown-30-resources-apps-and-tutorials-to-get-you-started/&#34;&gt;http://designshack.net/articles/html/mastering-markdown-30-resources-apps-and-tutorials-to-get-you-started/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also a few forum examples for some of the trickier formatting stuff such as:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webapps.stackexchange.com/questions/29602/markdown-to-insert-and-display-an-image-on-github-repo&#34;&gt;embedding images into a wiki page&lt;/a&gt; - some of the standard information available looked confusing or inaccurate - but this explanation seems to work.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/snowplow/snowplow/wiki&#34;&gt;example Github wiki&lt;/a&gt; that has some nice table footer and sidebar functionality.&lt;/li&gt;
+&lt;li&gt;plenty of forum examples out there on using the Eclipse IDE to author the wiki rather than typing into the online webclient but need to test out how to do this before write about it.&lt;/li&gt;
+&lt;li&gt;can get some of the work in formatting tables done with a &lt;a href=&#34;http://www.tablesgenerator.com/markdown_tables&#34;&gt;table generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;ldquo;Github Flavoured Markdown (GFM) Markdown table syntax is quite simple. It does not allow row or cell spanning as well as putting multi-line text in a cell&amp;rdquo;.  To get a bit fancier can use some inline HTML.  The &lt;a href=&#34;http://www.w3schools.com/html/html_tables.asp&#34;&gt;W3Schools site&lt;/a&gt; has some good documentation for this (and syntax in general).&lt;/p&gt;
+
+&lt;p&gt;Simple example using the info from W3Schools:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;table border=&amp;quot;0&amp;quot;&amp;gt;
+  &amp;lt;!--tr gives you a new table row and td gives you a new cell in the row--&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;For more information on using groovy with cmis:
+     &amp;lt;ul&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://groovy.codehaus.org&amp;quot;&amp;gt;Groovy home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://groovy.codehaus.org/Documentation&amp;quot;&amp;gt;Groovy documentation&amp;lt;/a&amp;gt; including getting started and tutorials&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.ibm.com/developerworks/java/tutorials/j-groovy&amp;quot;&amp;gt;IBM groovy tutorial&amp;lt;/a&amp;gt; includes using with Eclipse IDE&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.gradle.org&amp;quot;&amp;gt;Gradle&amp;lt;/a&amp;gt; build system for groovy&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;books with groovy code examples&amp;lt;/li&amp;gt;
+     &amp;lt;/ul&amp;gt;
+    &amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;
+      &amp;lt;!--The target=&amp;quot;_blank&amp;quot; tag opens in a new browser tab when click on image--&amp;gt;
+      &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://www.manning.com/mueller&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;
+        &amp;lt;img src=&amp;quot;./images/manning-cmis.png?raw=true&amp;quot; alt=&amp;quot;book&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;/table&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which produces:&lt;/p&gt;
+
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;For more information on using groovy with cmis:
+   &lt;ul&gt;
+   &lt;li&gt;&lt;a href=&#34;http://groovy.codehaus.org&#34;&gt;Groovy home&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://groovy.codehaus.org/Documentation&#34;&gt;Groovy documentation&lt;/a&gt; including getting started and tutorials&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/java/tutorials/j-groovy&#34;&gt;IBM groovy tutorial&lt;/a&gt; includes using with Eclipse IDE&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://www.gradle.org&#34;&gt;Gradle&lt;/a&gt; build system for groovy&lt;/li&gt;
+   &lt;li&gt;books with groovy code examples&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/mueller&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/manning-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Examples of coding with images:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a name=&amp;quot;PaintByNumbers&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 
+##![Paint](/assets/img/paint-by-numbers-50.png?raw=true) Paint by Numbers  
+
+&amp;lt;a name=&amp;quot;HowTo&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 
+&amp;lt;html&amp;gt;
+  &amp;lt;h2&amp;gt;
+      &amp;lt;img src=&amp;quot;../blob/master/images/paint-by-numbers-50.png?raw=true&amp;quot; alt=&amp;quot;icon&amp;quot; style=&amp;quot;float:left&amp;quot;&amp;gt; How To&#39;s
+  &amp;lt;/h2&amp;gt;
+&amp;lt;/html&amp;gt; 
+
+[![Gem Version](https://badge.fury.io/rb/gollum.png)](http://rubygems.org/gems/gollum)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;7. Setup issues log&lt;/h3&gt;
+
+&lt;p&gt;Not getting too funky here but will use the issues list capability to store:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;requirements definitions (green label)&lt;/li&gt;
+&lt;li&gt;project issues / key decisions&lt;/li&gt;
+&lt;li&gt;bugs, enhancements etc&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reporting project effort</title>
+      <link>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A model for reporting the status of project effort:&lt;/p&gt;
+
+&lt;p&gt;Multi-level messages&lt;/p&gt;
+
+&lt;p&gt;Budget baseline
+Actual baseline
+Forecast baseline&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Eclipse</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;

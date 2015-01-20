@@ -8,12 +8,92 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:1313/about/about/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/concepts/contentmodel/</loc>
+    <loc>http://localhost:1313/retrospectives/1000ft/cmis/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/1000ft/upnp/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/how-to/project-success/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/1000ft/project-management/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/paint-by-numbers/alfresco-oauth-sample-application/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/how-to/building-a-folder-and-document-based-protocol/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/how-to/modifying-content-types/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/paint-by-numbers/cmis-workbench/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/paint-by-numbers/java/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/paint-by-numbers/launching-osx-scripts/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/paint-by-numbers/github/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/paint-by-numbers/perl/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/retrospectives/spaghetti-western/cmis-url/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,97 +103,32 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/reporting-project-effort/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/perl/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/setting-up-project-resources/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/upnp/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/project-management/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/modifying-content-types/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/blog/wheres-streaming-heading/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/alfresco-integration/</loc>
+    <loc>http://localhost:1313/retrospectives/1000ft/alfresco-integration/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/alfresco-oauth-sample-application/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/community/adopters/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/application-lifecycle-management/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/community/relatedprojects/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/cmis/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/community/gettinginvolved/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/cmis-url/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/building-a-folder-and-document-based-protocol/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/cmis-workbench/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/java/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/eclipse/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/launching-osx-scripts/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/overview/</loc>
-    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/retrospectives/project-success/</loc>
+    <loc>http://localhost:1313/concepts/contentmodel/</loc>
     <lastmod>2014-02-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -123,27 +138,62 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/template/</loc>
+    <loc>http://localhost:1313/concepts/captag/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/concepts/overview/</loc>
+    <loc>http://localhost:1313/concepts/playlist/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/concepts/roadmap/</loc>
+    <loc>http://localhost:1313/concepts/facetedsearch/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/topic-summary/</loc>
+    <loc>http://localhost:1313/concepts/linkages/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/retrospectives/gitHub/</loc>
+    <loc>http://localhost:1313/concepts/deployment/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/concepts/tagsync/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/concepts/navplus/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/concepts/socialconnector/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/concepts/navplus2/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/concepts/bamcam/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/concepts/bamcamplus/</loc>
+    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/concepts/bacamplus2/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
   </url>
   

@@ -22,25 +22,15 @@
 		{{ partial "navbar.html" . }}
     </div>
 
-    <!--=== Breadcrumbs ===-->
-    <div class="breadcrumbs">
-        <div class="container">
-            <h1 class="pull-left">{{.Title}} ({{.PublishDate.Format "2 Jan, 2006"}})</h1>
-            <ul class="pull-right breadcrumb">
-                <li><a href="/index.html">Home</a></li>
-                <li class="active">{{title .Type}}</li>
-            </ul>
+	{{ partial "breadcrumbs.html" . }}
+   
+    <div class="container">
+        <div class="row margin-top-30">
+            <div class="col-md-12">					
+                <p>{{ .Content }}</p>
+            </div>            
         </div>
-    </div><!--/breadcrumbs-->
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">					
-					<p>{{ printf "%#v" }}</p>
-                    <p>{{ .Content }}</p>
-                </div>            
-            </div>
-        </div>
+    </div>
 
 	{{ partial "copyright.html" . }}
 

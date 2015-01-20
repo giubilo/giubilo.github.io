@@ -11,10 +11,10 @@
     
     <item>
       <title>UPnP</title>
-      <link>http://localhost:1313/retrospectives/upnp/</link>
+      <link>http://localhost:1313/retrospectives/1000ft/upnp/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/upnp/</guid>
+      <guid>http://localhost:1313/retrospectives/1000ft/upnp/</guid>
       <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;/assets/img/upnp-device-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;

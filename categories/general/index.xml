@@ -11,10 +11,10 @@
     
     <item>
       <title>about</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://localhost:1313/about/about/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://localhost:1313/about/about/</guid>
       <description></description>
     </item>
     

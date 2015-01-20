@@ -6,5 +6,6 @@
     	 "posts"
     ],
     "tags": [ "cmis", "model" ],
-    "status": "research"
+    "status": "research",
+    "weight": 1
 }

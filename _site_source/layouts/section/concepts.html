@@ -1,0 +1,98 @@
+{{ partial "pre_header.html" . }}
+<head>
+
+	{{ partial "std_header.html" . }}
+
+    <!-- CSS Implementing Plugins -->
+    {{ partial "std_impl_plugins.html" . }}
+
+    <!-- CSS Page Style -->    
+    <link rel="stylesheet" href="/assets/css/pages/page_job.css">
+
+
+	{{ partial "std_css_theme.html" . }}
+
+</head>
+<body class="header-fixed">
+
+<div class="wrapper">
+
+    <div class="header">
+		{{ partial "topbar.html" . }}
+		{{ partial "navbar.html" . }}
+    </div>
+
+	 <!--=== Breadcrumbs ===-->
+	 <div class="breadcrumbs">
+	     <div class="container">
+	         <h1 class="pull-left">Roadmap</h1>
+	         <ul class="pull-right breadcrumb">
+	             <li><a href="/index.html">Home</a></li>
+	             <li class="active">{{.Title}}</li>
+	         </ul>
+	     </div>
+	 </div><!--/breadcrumbs-->
+
+	<div class="container">
+	    <div class="row margin-top-30">
+	        <div class="col-md-12">					
+	
+			<p>Building a full platform for Consumer Content Management is a big job and doing it in an open source project (read: in spare time) could take forever.
+			To get things moving - and get some early successes to keep the momentum rolling - the elephant has been broken down into some interesting bite sized pieces 
+			that build on each other.  As get success with each one and <a href="/retrospectives/#howto">learn</a> more about what giubilo looks like this list will change.  
+			Eventually should have enough things in the bag to move far enough along the roadmap below to get some funding to industrialise the project:</p>
+	
+	          <!--Table Bordered-->
+	        <div class="panel panel-grey margin-bottom-40">
+	            <div class="panel-heading">
+	                <h3 class="panel-title"><i class="fa fa-globe"></i> Table Bordered</h3>
+	            </div>
+	            <div class="panel-body">
+	                <table class="table table-bordered table-hover">
+	                    <thead>
+	                        <tr>
+	                            <th>Reference</th>
+	                            <th>Description</th>
+	                            <th>Status</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+							{{ range .Data.Pages.ByWeight }}
+		             		{{ .Render "tbl"}}
+		         			{{ end }}
+	                    </tbody>
+	                </table>
+	            </div>                      
+	        </div>
+	        <!--End Table Bordered-->
+	
+	        </div>            
+	    </div>
+	</div>
+
+	{{ partial "copyright.html" . }}
+
+</div><!--/wrapper-->
+
+{{ partial "js_global_compulsory.html" . }}
+
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+
+<!-- JS Page Level -->           
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/pages/index.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+      $(".clickableRow").click(function() {
+            window.document.location = $(this).attr("href");
+      });
+});
+</script>
+
+
+{{ partial "ie9_plugin.html" . }}
+
+</body>
+</html>

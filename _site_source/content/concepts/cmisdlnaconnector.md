@@ -1,11 +1,13 @@
 {
-    "title": "cmis dlna connector",
+    "title": "CMIS DLNA Connector",
     "description": "library to connect cmis compliant repository to dlna devices.",
     "publishdate": "2014-02-01",
     "categories" : [
-    	 "posts"
+    	 "posts", "concepts"
     ],
-    "tags": [ "cmis", "dlna" ]
+    "tags": [ "cmis", "dlna" ],
+    "status": "research",
+    "weight": 2
 }
 
 _this page is not finished, see the [faq](/about) to find out why..._ 
