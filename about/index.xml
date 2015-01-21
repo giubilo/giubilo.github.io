@@ -10,12 +10,160 @@
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>about</title>
-      <link>http://localhost:1313/about/about/</link>
+      <title>Contacts</title>
+      <link>http://localhost:1313/about/contacts/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/about/about/</guid>
+      <guid>http://localhost:1313/about/contacts/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Motivation</title>
+      <link>http://localhost:1313/about/motivation/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/about/motivation/</guid>
+      <description>&lt;p&gt;Your family is probably more organised than ours but we generate or collect a ton of stuff including;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;closets full of paper&lt;/li&gt;
+&lt;li&gt;photo albums and video tapes with handwritten reminders of locations, dates, and people&lt;/li&gt;
+&lt;li&gt;recipe books with post-it-notes to highlight favourite meals and tips to make them turn out&lt;/li&gt;
+&lt;li&gt;on-line social media photo sites or photo browsing applications to share holiday snaps and stories&lt;/li&gt;
+&lt;li&gt;boxes of receipts and bills or magazine clippings of housing renovations&lt;/li&gt;
+&lt;li&gt;shelves stacked with music, books and movies&lt;/li&gt;
+&lt;li&gt;a fridge and walls covered in school notices and reminders, report cards, holiday programs for the kids or things to do around the house&lt;/li&gt;
+&lt;li&gt;music docks and subscription services to play tunes and create playlists&lt;/li&gt;
+&lt;li&gt;on-line social bookmark communities or private collections of browser bookmarks to interesting sites&lt;/li&gt;
+&lt;li&gt;blogs of hints, comments, reviews, gists, likes and tips&lt;/li&gt;
+&lt;li&gt;on-line file sharing or hard drives to hold electronic documents or emails&lt;/li&gt;
+&lt;li&gt;on-line video channels or media centre appliances to stream tv-shows, ebooks, podcasts and movies to big and small screens.&lt;/li&gt;  
+&lt;/ul&gt;
+
+&lt;p&gt;This all works but it can be hard to find things or the links between them and it can take time to create folders and labels to store things. And things change over time (like assignments) or are sensitive (like a Last Will), or are age inappropriate (like violent movies) or are highly sentimental (like family snaps) --it can be hard to work out which is the latest version, who can access something we&#39;ve shared and know if it is protected from loss --it can be hard to stay in control when some of these things are in other&#39;s hands (like on-line sharing or backup sites).&lt;/p&gt;
+
+&lt;p&gt;We&#39;d love to be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;store all our stuff forever, regardless of what it is and not worry about losing it because it got deleted, misplaced or was overwritten&lt;/li&gt;
+&lt;li&gt;save stuff easily without needing to spend ages creating folder structures and labels.&lt;/li&gt;
+&lt;li&gt;find stuff, no matter where it is or where we are, or what it&#39;s being used for&lt;/li&gt;
+&lt;li&gt;be in control of our stuff, but also still be able to get help from others to manage it.&lt;/li&gt;
+&lt;li&gt;be able to safely and easily share stuff and know what its being used for&lt;/li&gt;
+&lt;/ul&gt;  
+
+&lt;p&gt;That way we&#39;d:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;know the wedding and baby snaps are safe if our hard disk fails or the on-line back-up site disappears&lt;/li&gt;
+&lt;li&gt;reprint the latest version of an assignment at uni that forgot to pick up off the kitchen table&lt;/li&gt;
+&lt;li&gt;get this year’s tax notes and receipts while at a bank filling out loan forms&lt;/li&gt;
+&lt;li&gt;know that the kids aren’t watching blood and guts zombie movies or how much television is being watched&lt;/li&gt;
+&lt;li&gt;cook a favourite recipe at a friends house and use aunty’s email of tips and a how-to demonstration video to improve the chances of it working out&lt;/li&gt;
+&lt;li&gt;bring together subscription services in one place, play them anywhere in the house and even work out if it’s worth having all of them&lt;/li&gt;
+&lt;li&gt;see what things everyone in the family has on&lt;/li&gt;
+&lt;li&gt;have a list of home contents that includes a photo of each item, a scan of its purchase receipt, and its user manual to help with insurance or warranty repairs&lt;/li&gt;  
+&lt;li&gt;show the architect working on the extension a gallery of ideas collected from magazines and realestate sites&lt;/li&gt;
+&lt;li&gt;see a things to do list with materials needed while at the hardware store&lt;/li&gt;
+&lt;li&gt;double check that have set to record a favourite show while out camping&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;
+&lt;a name=&#34;The Idea&#34; class=&#34;anchor&#34; href=&#34;#idea&#34;&gt;&lt;span class=&#34;octicon octicon-link&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+The Idea
+&lt;/h3&gt;
+
+&lt;p&gt;We want a simple access point to the family&#39;s entire digital life&lt;/p&gt;
+&lt;p&gt;--a virtual personal assistant to tie up the loose ends of how we organise our important documents and entertainment.&lt;/p&gt;
+
+&lt;p&gt;The processes and tools to do this aren&#39;t new concepts.  For years:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Corporations have been able to do this by digitising file-rooms full of paper and storing it in Enterprise Content Management (ECM) systems so it can then be more easily; routed through business processes, secured, and searched.&lt;/li&gt;
+&lt;li&gt;Software developers have had Distributed Version Control systems to manage multiple versions, differences and dependencies with source code, builds and documentation.&lt;/li&gt;
+&lt;li&gt;Researchers have had distributed immutable repositories to preserve research papers with integrity.&lt;/li&gt;
+&lt;li&gt;Webmasters have had sophisticated content tools to organise digital assets for publishing on cool sites.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; Between these they have had; sophisticated linking, analytics, collaboration and search, version control, file signing for preservation, integrity, encryption, licensing and citability, granular security models, flexible rules-based workflows and tools for backup and cloud access &lt;/p&gt;
+&lt;p&gt;It could make a lot of sense to take these cool capabilities and consumerise them for home use.&lt;/p&gt;
+
+&lt;h3&gt;
+&lt;a name=&#34;Objectives&#34; class=&#34;anchor&#34; href=&#34;#objectives&#34;&gt;&lt;span class=&#34;octicon octicon-link&#34;&gt;&lt;/span&gt;&lt;/a&gt;Objectives&lt;/h3&gt;
+
+&lt;p&gt;&lt;p&gt;allegria will hopefully be a fun and interesting experience in creating something to organise and preserve all the family&amp;rsquo;s electronic stuff while at the same time:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;working out how to make the processes and tools large organisations use to organise stuff (like Enterprise Content Management, Advanced Case Management,
+Business Process Management) practical for a household.&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;learning how to use some open source project techniques, tools and technologies (like Portfolio Management, Agile Development, Application Lifecycle Management and DevOps).&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;passing back what&amp;rsquo;s been learned to the community.&lt;/li&gt;&lt;br /&gt;
+&lt;/ol&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Service Terms</title>
+      <link>http://localhost:1313/about/serviceterms/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/about/serviceterms/</guid>
+      <description>&lt;p&gt;This program is free software; you can redistribute it and/or modify it
+under the terms of the the Artistic License (2.0). You may obtain a
+copy of the full license at: &lt;a href=&#34;http://www.perlfoundation.org/artistic_license_2_0&#34;&gt;http://www.perlfoundation.org/artistic_license_2_0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Disclaimer of Warranty: THE PACKAGE IS PROVIDED BY THE COPYRIGHT HOLDER
+AND CONTRIBUTORS &amp;lsquo;AS IS&amp;rsquo; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
+THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, OR NON-INFRINGEMENT ARE DISCLAIMED TO THE EXTENT PERMITTED BY
+YOUR LOCAL LAW. UNLESS REQUIRED BY LAW, NO COPYRIGHT HOLDER OR
+CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR
+CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/start/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/about/start/</guid>
+      <description>
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Objectives:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;work out how to make the processes and tools large organisations use to organise stuff, practical for a household.&lt;/li&gt;
+&lt;li&gt;learn how to use some open source application lifecycle techniques, tools and technologies.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;have some fun and pass back what&amp;rsquo;s been learned to the community.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An explanatory note for the word &amp;lsquo;content&amp;rsquo; (which is used everywhere in this wiki):
+&amp;gt;in the context of allegria it is a catch-all phrase that means all the stuff families are trying to organise - documents, photos, music, movies, tasks, likes, comments etc. etc.  Could just as easily have used the word &amp;lsquo;elephants&amp;rsquo; but &amp;lsquo;content&amp;rsquo; seems to be a generally accepted word&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Wiki:&lt;/h2&gt;
+
+&lt;p&gt;This wiki is trying to describe how these objectives are being achieved.  The pages will build up as things are &amp;lsquo;put in the bag&amp;rsquo; (i.e. lessons are learned, code is written).&lt;/p&gt;
+
+&lt;p&gt;The key areas in the wiki are:&lt;br /&gt;
+* [[concepts|Topic Summary#Concepts]] - list of concepts / modules that are building to make up the Consumer Content Management platform.&lt;br /&gt;
+* [[how-to&amp;rsquo;s|Topic Summary#HowTo]] - these are a record of how we did things (hope they are helpful).
+* [[paint by numbers|Topic Summary#PaintByNumbers]] - provide step by step instructions for a particular concept (usually in support of a how-to).&lt;br /&gt;
+* [[Helicopter view|Topic Summary#HelicopterView]] - a 10,000ft view of an area (usually pictures).
+* &lt;a href=&#34;a.k.a it&#39;s all greek to me&#34;&gt;[Spaghetti western|Topic Summary#SpaghettiWestern]&lt;/a&gt; - a more detailed explanation about a particularly confusing concept.
+* [[Point of view|Topic Summary#PointOfView]] - some crystal ball gazing opinion on a topic.&lt;/p&gt;
+
+&lt;p&gt;The wiki isn&amp;rsquo;t designed to be a collection of highly polished specs (hands up if you like writing or reading design or technical documents - nobody - that&amp;rsquo;s what I thought).  It&amp;rsquo;s really just a collection of tips from the internet that have worked in the context of allegria or where the original blog has been expanded upon to make it dead simple to understand and replicate.  The wiki is trying to be a creative outlet, so the techie stuff will be wrapped up in some stories.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;And, given allegria has its roots in media there&amp;rsquo;ll be a liberal sprinkling of movie and music references - some of them might need a bit of thinking to see the relevance - to make it [hopefully] interesting and engaging too&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;oh btw, If you see at the start of a page&lt;/strong&gt; &lt;em&gt;&amp;ldquo;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&amp;rdquo;&lt;/em&gt; &lt;strong&gt;well the why is as follows:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As more lessons are learned, links will start popping up to underlying pages and the underlying pages will begin to get filled. So &lt;strong&gt;in many cases you will see the work as it is being developed - warts and all&lt;/strong&gt; (could be a few random thoughts, or some structure, or some copy and paste of some information that looked interesting and thought provoking - you will be watching the creative writing process and hopefully collaborating with it as it happens). The [[Topic Summary|Topic Summary]] has a description and to what extent the pages are finished.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s still early days so there&amp;rsquo;s not much in the bag yet but we&amp;rsquo;ll get there. &lt;strong&gt;Keep watching&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So then, [[where do we begin|HowTo: Project Management]]?&lt;/p&gt;
+</description>
     </item>
     
   </channel>

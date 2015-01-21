@@ -10,513 +10,6 @@
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>Modifying content types</title>
-      <link>http://localhost:1313/retrospectives/how-to/modifying-content-types/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/modifying-content-types/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;There really is no need to write a &lt;a href=&#34;http://www.imdb.com/title/tt0077631/&#34;&gt;fully blown&lt;/a&gt; how-to of the technical aspects for &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/tasks/kb-define-custom-model.html&#34;&gt;modifying content models in Alfresco&lt;/a&gt; as Jeff Potts has written a &lt;a href=&#34;http://ecmarchitect.com/images/articles/alfresco-content/content-article-2ed.pdf&#34;&gt;concise and complete tutorial&lt;/a&gt; already including:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;what are the building blocks of a &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/concepts/content-modeling-about.html&#34;&gt;content model&lt;/a&gt; (Types, Properties, Property types, Constraints, Associations, and Aspects) and &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/concepts/metadata-model-define.html&#34;&gt;relationships&lt;/a&gt; between them&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;how to build on the out-of-the-box models&lt;/li&gt;
-&lt;li&gt;best practices&lt;/li&gt;
-&lt;li&gt;bootstrap or dynamic &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/concepts/content-model-deploy.html&#34;&gt;approaches&lt;/a&gt; to deploying custom model&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;what configuration of the interface is needed to take advantage of the custom model (e.g. change type selector)&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;how to create, read, update and delete (crud) content not using the share or explorer interfaces (e.g. with cmis)&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This how-to instead describes how we applied those principles to come up with the specific model to use for allegria (so we&amp;rsquo;re not trying to re-invent the wheel here -although we have lifted some summary cliffsnotes out of Jeff&amp;rsquo;s stuff):&lt;/p&gt;
-
-&lt;p&gt;Also, given allegria is adding to an existing piece of software and essentially borrowing from some pre-existing ideas, we&amp;rsquo;re following a &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;software development life cycle approach&lt;/a&gt; down the leaner end of the &amp;lsquo;blast away and code&amp;rsquo; to &amp;lsquo;dot all i&amp;rsquo;s and cross all t&amp;rsquo;s&amp;rsquo; spectrum and so,  in the flavour of that, this how-to will essentially meld together some typically separate specifications and describe:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;broadly what trying to do (sort of requirements definition - although the requirements statements are in the &lt;a href=&#34;../issues/1&#34;&gt;issues bit&lt;/a&gt; of this repository)&lt;/li&gt;
-&lt;li&gt;functionality needed (sort of functional specification)&lt;/li&gt;
-&lt;li&gt;paint-by-numbers implementation (sort of technical specification)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;broadly what trying to do&lt;/h2&gt;
-
-&lt;p&gt;In the &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;project blurb&lt;/a&gt; we talked about some of the &lt;a href=&#34;../issues/1&#34;&gt;things families organise&lt;/a&gt; like:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;closets full of paper&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;photo albums with handwritten reminders of locations, dates, and people&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;recipe books with post-it-notes to highlight favourite meals and tips to make them turn out&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;on-line photo sites or photo browsing applications to share holiday snaps and stories&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;shelves stacked with music, books and movies&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;music docks and subscription services to play tunes and create playlists&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;on-line social bookmark communities or collections of browser bookmarks to interesting sites&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;on-line file sharing or hard drives to hold electronic documents or emails&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;on-line video channels or media centre appliances to stream tv-shows, ebooks, podcasts and movies to big and small screens&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;That&amp;rsquo;s a lot to tackle all at once so for this first concept going to focus on organising movies (mainly because we like watching movies and even to add movies to alfresco will involve a wide range of concepts to look at like property types and inheritance and user interface considerations).&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;re starting this analysis with what &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/concepts/content-modeling-about.html#1&#34;&gt;Alfresco describes&lt;/a&gt; content modelling as:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Content modeling is a fundamental building block of the Alfresco content repository that provides a foundation for structuring and working with content&lt;/p&gt;
-
-&lt;p&gt;A content model defines how a node [anything stored] in the content repository is constrained [what kind it is, what properties it has and how it relates to other nodes].&lt;/p&gt;
-
-&lt;p&gt;The Alfresco content repository then provides services for querying nodes [searching] and manages events, processes and restrictions for maintaining them.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In a practical sense modelling movies involved understanding:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;classifying&lt;/strong&gt;  (i.e. what kind it is) - it&amp;rsquo;s a movie but a finer classification such as feature film, tv show or home video is useful.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;describing&lt;/strong&gt; (i.e. properties) with information that is available and interesting e.g. release year, plot, actors, content rating etc.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;relating&lt;/strong&gt; the movie file node to other nodes e.g. another episode or a poster&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;searching&lt;/strong&gt; (i.e querying) the model and returning results in a variety of ways&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;processing&lt;/strong&gt; events and workflows like capture / create, classify, tag / scrape etc.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;restricting&lt;/strong&gt; what can be done with a movie e.g. movie classifications, digital rights, retention/archive policies&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;###Classify&lt;/p&gt;
-
-&lt;p&gt;Its a movie! but a finer classification would make it easier for searching, working with and presenting movie content, for example:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;adding a hollywood blockbuster (feature film) and tagging it with release year, plot and actors scraped from IMDB, ensuring its &amp;lsquo;MA15+&amp;rsquo; content rating put it in the right access group to keep it safe from the kiddies and maybe having one format created to suit a big screen TV and another copy (a &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/references/API-JS-RenditionService.html&#34;&gt;rendition&lt;/a&gt; in Alfresco speak) made to suit a tablet.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;a tv show might use some of the same information but also have season and episode information and get it from TVDB not IMDB.&lt;/li&gt;
-&lt;li&gt;a home movie that could have some of the information but with an alternative rating system and increased focus on locations in the movie and wouldn&amp;rsquo;t scrape any of the info&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Three &amp;lsquo;movies&amp;rsquo; but 3 different sets of properties (albeit some common) with 3 different ways of getting the information and when sitting on the couch with a big box of popcorn looking for a saturday night movie you&amp;rsquo;re probably going to want to browse the covers of the latest blockbusters and not have to scan past all the other kinds.  Simple examples but show where using a more fine-grained type than just &amp;lsquo;movie&amp;rsquo; helps.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;http://en.wikipedia.org/wiki/Dublin_Core&#34;&gt;DublinCore Metadata Initiative (DCMI)&lt;/a&gt; provides a starting place (its &lt;a href=&#34;http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=dcmitype#dcmitype-MovingImage&#34;&gt;MovingImage&lt;/a&gt; type is a work in progress) but doesn&amp;rsquo;t provide the level of detail needed to form a content model adequate for configuring in alfresco (i.e. a set hierarchy of types with properties).  Fortunately, Allegria&amp;rsquo;s not the first project to walk this road.  A whole ecosystem of &lt;a href=&#34;http://www.imdb.com/title/tt0190865/&#34;&gt;vertical&lt;/a&gt; (movie focussed) systems exists for video sharing, media streaming and digital asset management (DAM) - Alfresco itself has a start on DAM.  From the ecosystem we get a leg up with &lt;a href=&#34;http://wiki.xbmc.org/index.php?title=Video_library&#34;&gt;thoughts and data structures&lt;/a&gt; for some subtypes (pretty much just Feature Films, TV Shows and Music Videos) but still have a bit to do.&lt;/p&gt;
-
-&lt;p&gt;The kinds of MovingImages (movies) in our initial &lt;a href=&#34;../issues/2&#34;&gt;classify requirement&lt;/a&gt; list are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;feature film&lt;/li&gt;
-&lt;li&gt;tv show&lt;/li&gt;
-&lt;li&gt;tv recording (a subset of tv show)&lt;/li&gt;
-&lt;li&gt;music video&lt;/li&gt;
-&lt;li&gt;home movie&lt;/li&gt;
-&lt;li&gt;multimedia project (e.g a uni assignment where make a movie)&lt;/li&gt;
-&lt;li&gt;exercise video&lt;/li&gt;
-&lt;li&gt;learning series&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;MovingImages in the context of Allegria includes binary files that are stored in the repository and internet streams but not images embedded in a web page (this will be picked up under managing bookmarks in another concept).&lt;/p&gt;
-
-&lt;p&gt;###Describe&lt;/p&gt;
-
-&lt;p&gt;Describing MovingImages is important because while images might be worth a thousand words, they aren&amp;rsquo;t words like documents which we can look for with a full text search or text mining.&lt;/p&gt;
-
-&lt;p&gt;To help with describing MovingImages there are:
-* standards for embedding some limited words (metadata) with image files, like event name / date, location and technical details&lt;br /&gt;
-* beginnings of facial and landmark recognition software capable of &amp;lsquo;indexing&amp;rsquo; or at least auto tagging images and it&amp;rsquo;s probably possible to do something with audio and subtitle tracks
-* online databases which have rich standardised descriptions available already for some MovingImage subtypes; e.g. scrapes of IMDB and TVDB for feature films and tv shows&lt;/p&gt;
-
-&lt;p&gt;All of these go some of the way to helping with descriptions but they are still a way off as they rely on the &lt;a href=&#34;http://www.stockartistsalliance.org/metadata-manifesto-1&#34;&gt;evolution of metadata standards&lt;/a&gt; and content creation tools or the willingness of contributors to define online sources.  I was hoping to grab some ready made metadata tags that systems are using out there and add them to the model but it didn&amp;rsquo;t seem that easy so decided on a sort of hybrid approach which builds on some of the metadata theory and glues it into what is happening in the existing ecosystem for media systems.  In that way hopefully when the standards do mature can easily retrofit and integration with what is already happening will be more straightforward (and easier to explain).&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;So, some theory first:&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Metadata&#34;&gt;wikipedia&lt;/a&gt; describes broadly metadata mechanics&lt;/li&gt;
-&lt;li&gt;Dublin Core Metadata Initiative (DCMI) has some mature work on &lt;a href=&#34;http://dublincore.org/documents/dces/&#34;&gt;core metadata elements&lt;/a&gt; and creates a namespace for a specific type of &lt;a href=&#34;http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=dcmitype#dcmitype-MovingImage&#34;&gt;MovingImages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;photometadata.org (who show up pretty regularly in search results for MovingImage metadata) have built on the wikipedia and Dublin Core categories of metadata to come up with some specific &lt;a href=&#34;http://photometadata.org/META-101-metadata-classes&#34;&gt;classes of metadata&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Helsinki Institute for Information Technology - had an interesting article adding &lt;a href=&#34;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.5752&amp;amp;rep=rep1&amp;amp;type=pdf&#34;&gt;Social Metadata&lt;/a&gt; to Personal Photography&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Threw all of these in the &lt;a href=&#34;http://www.imdb.com/title/tt0382932/&#34;&gt;cooking pot&lt;/a&gt;, boiled it up and out came these categories of metadata:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Descriptive Metadata&lt;/strong&gt; : describes various information about an image’s contents  e.g. captions, headlines, titles, keywords, location of capture etc. such as that in &lt;a href=&#34;http://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata-201007.pdf&#34;&gt;IPTC-Core&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Technical Metadata&lt;/strong&gt;: describes an image’s technical characteristics e.g. its size, colour profile and other camera settings etc. which most modern image-capture devices generate about themselves and the pictures they record, such as that stored in &lt;a href=&#34;http://photometadata.org/META-Resources-metadata-types-standards-Exif&#34;&gt;Exif&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Social Metadata&lt;/strong&gt;:  describes information about usage, events or interaction with the image e.g. is it well liked, for how long has it been viewed etc. (more about this in &amp;lsquo;process&amp;rsquo;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Administrative Metadata&lt;/strong&gt;:  describes specific restrictions on using an image e.g. licensing or rights,  usage terms, identity of the creator, and contact information for the rights holder or licensor etc. such as in &lt;a href=&#34;http://www.useplus.com/index.asp?&#34;&gt;PLUS&lt;/a&gt; (more about this in &amp;lsquo;restrict&amp;rsquo;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Some of this metadata may be embedded with the image, a separate sidecar file and/or stored in the image collection manager.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Now for the ecosystem&lt;/em&gt; (there are tons out there but these are ones i&amp;rsquo;ve used a bit and thought they would generate a good cross section of requirements):&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/concepts/content-model-preconfigured.html&#34;&gt;Alfresco&lt;/a&gt; out-of-the-box content models (obvious one to start with - make use of what is already there):
-
-&lt;ul&gt;
-&lt;li&gt;Jeff describes on &lt;a href=&#34;http://ecmarchitect.com/images/articles/alfresco-content/content-article-2ed.pdf&#34;&gt;page 10&lt;/a&gt; some of the out-of-the-box models&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/WEB-INF/classes/alfresco/model&lt;/code&gt; contains other models&lt;/li&gt;
-&lt;li&gt;Alfresco &lt;a href=&#34;http://wiki.alfresco.com/wiki/Data_Dictionary_Guide#Built-in_Content_Model_Namespaces&#34;&gt;data dictionary&lt;/a&gt; has further descriptions&lt;/li&gt;
-&lt;li&gt;has &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/concepts/metadata-extraction-about.html&#34;&gt;metadata extraction&lt;/a&gt; capabilities (particularly for technical metadata)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://upnp.org/sdcps-and-certification/standards/sdcps/&#34;&gt;Universal Plug and Play (UPnP)&lt;/a&gt; - &lt;a href=&#34;www.dlna.org&#34;&gt;Digital Living Network Alliance (DLNA)&lt;/a&gt;:
-
-&lt;ul&gt;
-&lt;li&gt;there are many similarities between Alfresco and UPnP Media Servers such as &amp;lsquo;content directory&amp;rsquo;, &amp;lsquo;content searching&amp;rsquo;, &amp;lsquo;metadata extraction&amp;rsquo; and protocols to deliver binary content (seems like a match made in &lt;a href=&#34;http://www.imdb.com/title/tt0425123/&#34;&gt;heaven&lt;/a&gt;) - Alfresco has a &amp;lsquo;Content Model&amp;rsquo; and UPnP has a &amp;lsquo;ContentDirectory Service Object Organization&amp;rsquo;&lt;/li&gt;
-&lt;li&gt;the &lt;a href=&#34;http://upnp.org/specs/av/UPnP-av-ContentDirectory-v4-Service.pdf&#34;&gt;standardised device and service description&lt;/a&gt; for a MediaServer-ContentDirectory has defined (see fig 4 on page 307) its hierarchy of content as objects such as imageItem, videoItem (movie:videoItem, musicVideoClip:videoItem, videoBroadcast:videoItem), playlistItem, audioItem (musicTrack:auditItem), textitem, bookmark, epgitem and collections (album:container)&lt;/li&gt;
-&lt;li&gt;there&amp;rsquo;s also some containers for other related objects such as a person instance represents an unordered collection of objects associated with a person - e.g. a musicArtist instance is a person instance, where the person associated with the container is a music artist and can contain objects of class musicAlbum, musicTrack or musicVideoClip&lt;/li&gt;
-&lt;li&gt;the standard also describes properties needed for working with the content like &amp;lsquo;browse&amp;rsquo;, &amp;lsquo;search&amp;rsquo; and &amp;lsquo;update&amp;rsquo;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/DanCooper/Ember-MM-Newscraper&#34;&gt;Ember&lt;/a&gt; media manager:
-
-&lt;ul&gt;
-&lt;li&gt;the user interface defines a set of metadata to store in the database against the &amp;lsquo;MovingImage&amp;rsquo;&lt;/li&gt;
-&lt;li&gt;uses a &amp;lsquo;scraper&amp;rsquo; to auto-fill the information from (predominantly) internet sources&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;organises multiple content files into a folder (like the binary file container with the audio, video and subtitle tracks and thumbnails for posters and fanart)&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;produces an NFO (info) xml file (which is essentially a mini content model) that structures the metadata and documents the location to the movie binaries and thumbnails and can include links to other metadata and binary content not stored in the folder such as trailers and actor information&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://xbmc.org&#34;&gt;XBMC&lt;/a&gt; media centre:
-
-&lt;ul&gt;
-&lt;li&gt;the user interface has search and display capabilities for metadata&lt;/li&gt;
-&lt;li&gt;has a &lt;a href=&#34;http://wiki.xbmc.org/index.php?title=XBMC_databases&#34;&gt;database&lt;/a&gt; which stores metadata that can be scraped from internet or &lt;a href=&#34;http://forum.xbmc.org/forumdisplay.php?fid=195&#34;&gt;read&lt;/a&gt; from Ember Media Manager &lt;a href=&#34;http://wiki.xbmc.org/index.php?title=NFO_files/movies&#34;&gt;NFO Files&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.imdb.com&#34;&gt;IMDB&lt;/a&gt;, &lt;a href=&#34;thetvdb.com&#34;&gt;TVDB&lt;/a&gt;, &lt;a href=&#34;https://www.icetv.com.au&#34;&gt;IceTV&lt;/a&gt; and many other online databases provide:
-
-&lt;ul&gt;
-&lt;li&gt;metadata (typically descriptive) such as title, release year, plot, studio, genre&lt;/li&gt;
-&lt;li&gt;related content such as actor thumbs and descriptions, trailers, electronic program guides (epg)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Added these ingredients to the pot that had the metadata theory simmering in it and served-up a tasty bowl of &lt;a href=&#34;../tree/master/aaContentModel/ContentModelAnalysis.xlsx&#34;&gt;ContentModelAnalysis&lt;/a&gt; which summarises the &lt;a href=&#34;../issues/3&#34;&gt;describe requirement&lt;/a&gt; as:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;hierarchy of types from; Alfresco core types -&amp;gt; Image -&amp;gt; MovingImage -&amp;gt; [MovingImage subtypes]&lt;/li&gt;
-&lt;li&gt;descriptive, technical, social and administrative properties (developed predominantly by cherry picking the properties in Alfresco out-of-the-box models, Ember Media Manager schema and NFO&amp;rsquo;s and the XBMC schema&lt;/li&gt;
-&lt;li&gt;assignment of properties to types including use of inheritance&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;###Relate&lt;/p&gt;
-
-&lt;p&gt;Relationships can &lt;a href=&#34;http://www.imdb.com/title/tt0314331/&#34;&gt;look like many things&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;a single MovingImage is more than one piece of content (it&amp;rsquo;s a tight hierarchy of associated types) including:
-
-&lt;ul&gt;
-&lt;li&gt;the binary file container with the audio, video and subtitle tracks&lt;/li&gt;
-&lt;li&gt;thumbnails for posters and fanart&lt;/li&gt;
-&lt;li&gt;additional containers for special features and trailers&lt;/li&gt;
-&lt;li&gt;thumbnails for artists&lt;/li&gt;
-&lt;li&gt;bookmarks to other content like reviews&lt;/li&gt;
-&lt;li&gt;an xml file that a renderer might use to show all these parts as one thing&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;One MovingImage might relate to another one such as in the case of sets (e.g. Starwars Saga), tv seasons and episodes or even a favourite playlist&lt;/li&gt;
-&lt;li&gt;the binary file container could be broken down into smaller related bits such as video, audio tracks, subtitle tracks, chapters&lt;/li&gt;
-&lt;li&gt;other relationships will exist also to non-MovingImage type content e.g. a cooking how-to video related to a recipe&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The content model &lt;a href=&#34;../issues/4&#34;&gt;relate requirement&lt;/a&gt; is key to structuring the information and the process requirement will be key to making them happen e.g. for a feature film getting the binary file and its metadata and linked to the other content like fan art and artist thumbs easily.&lt;/p&gt;
-
-&lt;p&gt;###Search&lt;/p&gt;
-
-&lt;p&gt;On the &lt;a href=&#34;http://www.imdb.com/title/tt0119094/&#34;&gt;face of&lt;/a&gt; it, the &lt;a href=&#34;../issues/5&#34;&gt;search requirement&lt;/a&gt; could well be the most important requirement of all.  After all, making things easy to find is why we are putting things in boxes (uploading to repository) and labelling them (classifying, describing and relating).&lt;/p&gt;
-
-&lt;p&gt;But does &amp;lsquo;easy to find&amp;rsquo; mean we are looking for a single particular item?  It probably does sometimes, like:
-* looking for a particular multimedia project for uni assignment we might use a unique code to do with the subject / assignment / question or search for a specific feature film we want to watch again by the title and year
-* linking from other content using an internal system reference e.g.
-  * a recipe linking to a particular demonstration video
-  * next episode for a tvshow or a sequel to a feature film
-  * next in an exercise series (like beginner to advanced) or type (stamina, speed etc) based on performance in an exercise
-  * next item in a series of holiday home movies based on a timeline or location or trip itinerary
-  * to do with a stage in a process e.g. might have an approval step to say it is ok to publish a particular MovingImage on a social media site.&lt;/p&gt;
-
-&lt;p&gt;These searches are using a small set of specific or unique search criteria to go straight to a specific item so can start using it immediately.  A small clarification might be useful here - some MovingImage subtypes like &amp;lsquo;feature film&amp;rsquo; will actually be a number of separate items in the repository such as the binary video, audio and subtitle tracks, links to posters and links to actors, i.e. while might be searching for a specific item, a number of tightly related items may actually be how it exists.&lt;/p&gt;
-
-&lt;p&gt;It is also fair to say that many times we&amp;rsquo;re not looking for a specific thing, so &amp;lsquo;easy to find&amp;rsquo; becomes more &amp;lsquo;easy to look around and choose&amp;rsquo;.&lt;/p&gt;
-
-&lt;p&gt;A quick internet search poll of &amp;lsquo;how do we choose a movie&amp;rsquo;, puts &amp;lsquo;mood&amp;rsquo; overwhelmingly in front. While &lt;a href=&#34;http://www.imdb.com/title/tt0084602/&#34;&gt;Rocky III&lt;/a&gt; may be the only go-to movie for some eye of the tiger inspiration, it&amp;rsquo;s more likely there are a bunch that can be matched to a mood. Do you remember ambling around the video store in the comedy or new releases sections because you felt like a laugh or something fresh.  You&amp;rsquo;d pick up a few because their cover or plot looked interesting, you knew the actors, a vote was taken with whoever came to the store with you or there was a deal on one new release and two weeklies.  The choosing had just as much to do with using the content model, like genre, actor and plot as it did with visual appeal like the covers or the other more non-specific factors like the group input or the deal the store was offering.&lt;/p&gt;
-
-&lt;p&gt;The first bit of the search was the &amp;lsquo;looking around&amp;rsquo; which could be summarised as the following three categories of browsing:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;navigate and browse - go to (navigate) predetermined groups of items like:
-
-&lt;ul&gt;
-&lt;li&gt;media centre style containers like type (e.g. feature film, home movie, music video), recently added, genres, sets, years, actors - it&amp;rsquo;s likely a MovingImage exists in more than one container e.g. music video in music and videos&lt;/li&gt;
-&lt;li&gt;youtube style containers like featured, top rated, most viewed, favourites, subscriptions, history&lt;/li&gt;
-&lt;li&gt;youtube style browsing using &amp;lsquo;more from&amp;rsquo; (creator), &amp;lsquo;related to&amp;rsquo; (e.g. mermaid), &amp;lsquo;comments (with links)&amp;rsquo;&lt;/li&gt;
-&lt;li&gt;playlists of favourites or themes or date driven like wedding anniversary or event driven like the same feature films watched when a particular group of friends catch up&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;filter and browse - set subtype dependent filter criteria like:
-
-&lt;ul&gt;
-&lt;li&gt;Classification such as feature film, home movie, music video&lt;/li&gt;
-&lt;li&gt;Descriptive Metadata such as title, rating, year, genre (xbmc also lists moods, styles and themes in its music searches), actor, director, studio, language for an Alien or Schwarzenegger marathon night, foreign movie night, a festive choice or the anniversary of something&lt;/li&gt;
-&lt;li&gt;Technical Metadata such as size so can work out if it will look ok on a tablet or a projector&lt;/li&gt;
-&lt;li&gt;Social Metadata such as in-progress to finish some that have started watching or which movies are in a &amp;lsquo;hot picks&amp;rsquo; list&lt;/li&gt;
-&lt;li&gt;Administrative Metadata such as creator to see all the home movies your child has taken&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;sort and browse - to make the browsing orderly and intuitive e.g.
-
-&lt;ul&gt;
-&lt;li&gt;alphabetical on title&lt;/li&gt;
-&lt;li&gt;ordered by rating&lt;/li&gt;
-&lt;li&gt;ordered by number of times watched&lt;/li&gt;
-&lt;li&gt;ordered by duration&lt;/li&gt;
-&lt;li&gt;ordered by year&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The second bit of the search, &amp;lsquo;choosing&amp;rsquo;, then might be:
-* visual cues like:
-  * images in a lightbox
-  * facetted search results with categorisation (e.g. grouped by subtype) and relevance
-  * nested search results like the YouTube style browsing example
-  * augmented search results that overlay subtype specific cues like a world map, or timeline or geneological tree to a series of home movies or &lt;a href=&#34;http://en.wikipedia.org/wiki/Augmented_reality&#34;&gt;augment&lt;/a&gt; the descriptions in the search results with additional information
-* use &lt;a href=&#34;http://www.drewsdirections.com/2010/06/27/the-system/&#34;&gt;group opinion&lt;/a&gt; tools or overlay popular choice suggestions like IceTV Picks, www.suggestmemovie.com, www.jinni.com, &lt;a href=&#34;http://en.wikipedia.org/wiki/Metacritic&#34;&gt;Metacritic&lt;/a&gt; or &lt;a href=&#34;http://en.wikipedia.org/wiki/Rotten_Tomatoes&#34;&gt;Rotten Tomatoes&lt;/a&gt;
-* add things to play queues like a wishlist or shopping cart idea
-* using the search itself to drive future searches such as:
-  * analytics about the number of times something has come up in a search
-  * what search terms resulted in a particular thing being identified and selected
-  * ways to make something appear higher in results or stand out from the pack&lt;/p&gt;
-
-&lt;p&gt;It seems obvious to say now but both the &amp;lsquo;specific&amp;rsquo; type search and &amp;lsquo;browse and choose&amp;rsquo; type search examples demonstrate that the application of the search criteria and how the search results are displayed and used are of equal importance.  What might not be obvious are the boundaries for searching:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;search will query internal and external / foreign metadata e.g. searching for MovingImages about Venice Italy might might bring up a home movie of a gondola ride and also bring up a news story of reparations to Venice foundations and today&amp;rsquo;s prices for gondola rides or while watching an old feature film you might want to know what other later movies one of the actors was in&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;the binary MovingImage file might not be stored in the repository - could be:
-
-&lt;ul&gt;
-&lt;li&gt;&amp;lsquo;offline&amp;rsquo; on a DVD because have chosen not to rip it&lt;/li&gt;
-&lt;li&gt;internet stream like &lt;a href=&#34;http://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol&#34;&gt;RTSP&lt;/a&gt; not a link to a webpage&lt;/li&gt;
-&lt;li&gt;in an online database somewhere (including external review information) but not yet in the repository - might end up adding it&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The gist of these boundaries is the idea of &lt;a href=&#34;./Point-of-View:-Where&#39;s-streaming-heading%3F&#34;&gt;universal search&lt;/a&gt; - that is a search that is informed but not constrained by what is in the repository (constraints will come later like processing restrictions applied).  Now the repository becomes more than a box to hoard stuff - it brings the contents to life.&lt;/p&gt;
-
-&lt;p&gt;###Process&lt;/p&gt;
-
-&lt;p&gt;ingest -&amp;gt; digest - &amp;gt; publish&lt;/p&gt;
-
-&lt;p&gt;what&amp;rsquo;s all the stuff we do to / with content? - lifecycle??&lt;/p&gt;
-
-&lt;p&gt;The purpose statement for the &lt;a href=&#34;http://en.wikipedia.org/wiki/Semantic_Web&#34;&gt;semantic web&lt;/a&gt; describes it as:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;enabling users to find, share, and combine information more easily&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;not really about the other capture processes - we only capture it so we can do these things…&lt;/p&gt;
-
-&lt;p&gt;MediaServer - Content Creation (capture) Subsystem, Content Storage Database, Content Management Subsystem, Content Transfer Subsystem.&lt;/p&gt;
-
-&lt;p&gt;In many ways this is a good fit as a higher purpose statement for Allegria -&lt;/p&gt;
-
-&lt;p&gt;UPnP Standardized Device Control Protocol Specification for a MediaServer (v4) defines the following services:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Services&lt;/th&gt;
-&lt;th&gt;Scenarios&lt;/th&gt;
-&lt;th&gt;Actions&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;ContentDirectory Service (v4)&lt;/td&gt;
-&lt;td&gt;Generating Object ID Values, Content Setup for Browsing and Searching, Browsing, Searching and References, Object Creation, Importing a Resource, Exporting ContentDirectory Resources, Playlist Manipulation, Multi-component media representation, Segments Manipulation, Bookmark Manipulation, Processing FreeForm Queries, Foreign Metadata, Monitoring Changes, Browsing preserved transitory content, Object Linking, DEVICE_MODE feature, Synchronized Playback&lt;/td&gt;
-&lt;td&gt;GetSearchCapabilities(), GetSortCapabilities(), GetSortExtensionCapabilities(), GetFeatureList(), GetSystemUpdateID(),  GetServiceResetToken(), Browse(), Search(), Filter, CreateObject(), DestroyObject(), UpdateObject(), MoveObject(), ImportResource(), ExportResource(), DeleteResource(), StopTransferResource(), GetTransferProgress(), CreateReference(), FreeFormQuery(), GetFreeFormQueryCapabilities(), RequestDeviceMode(), ExtendDeviceMode(), CancelDeviceMode(), GetDeviceMode(), GetDeviceModeStatus(), GetPermissionsInfo()&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;ConnectionManager Service (v3)&lt;/td&gt;
-&lt;td&gt;ProtocolInfo Concept , Typical Control Point Operations, Relation to Devices without ConnectionManagers, PrepareForConnection() and ConnectionComplete(), Determining if ContentDirectory items are playable, CLOCKSYNC Feature&lt;/td&gt;
-&lt;td&gt;GetProtocolInfo(), PrepareForConnection(), ConnectionComplete(), GetCurrentConnectionIDs(), GetCurrentConnectionInfo(), GetRendererItemInfo(), GetFeatureList()&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;AVTransport Service (v3)&lt;/td&gt;
-&lt;td&gt;TransportState Control, Transport Settings, Navigation, AVTransportURI Concept, AVTransport Abstraction, Supporting Multiple Virtual Transports,   SetAVTransportURI(), Playlist Playback, Dynamic Playlists, CLOCKSYNC feature: Synchronized Playback&lt;/td&gt;
-&lt;td&gt;SetNextAVTransportURI(), GetMediaInfo(), GetMediaInfo_Ext(), GetTransportInfo(), GetPositionInfo(), GetDeviceCapabilities(), GetTransportSettings(), Stop(), Play(), Pause(), Record(), Seek(), Next(), Previous(), SetPlayMode(), SetRecordQualityMode(), GetCurrentTransportActions(), GetDRMState(), GetStateVariables(), SetStateVariables(), GetSyncOffset(), SetSyncOffset(), AdjustSyncOffset(), SyncPlay(), SyncStop(), SyncPause() , SetStaticPlaylist(), SetStreamingPlaylist(), GetPlaylistInfo()&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;ScheduledRecording (v2)&lt;/td&gt;
-&lt;td&gt;Checking the Capabilities of a ScheduledRecording Service, Adding a Scheduled Recording Entry to the List, Browsing recordSchedule and recordTask instances, Rating System, Conflict Detection and Resolution, Deleting a recordSchedule&lt;/td&gt;
-&lt;td&gt;GetSortCapabilities(), GetPropertyList(), GetAllowedValues(), GetStateUpdateID(), BrowseRecordSchedules(), BrowseRecordTasks(), CreateRecordSchedule(), DeleteRecordSchedule(), GetRecordSchedule(), EnableRecordSchedule(), DisableRecordSchedule(), DeleteRecordTask(), GetRecordTask(), EnableRecordTask(), DisableRecordTask(), ResetRecordTask() , GetRecordScheduleConflicts(), GetRecordTaskConflicts()&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Alfresco Services comprise the following:
-* Content Services
-  * Lifecycle: manage content over time such as using rules to automatically trigger behavior when certain defined conditions are met. You can extend a standard set of conditions and actions using scripts and custom actions.
-  * Transformation: convert content from one type to another such as generating PDF files from Microsoft Office formats and converting between image formats. This service is extensible to allow the use of additional transformers.
-  * Metadata extraction: synchronize document metadata with node metadata - automatically extracts metadata information from inbound and/or updated content and updates the corresponding nodes properties with the metadata values.
-  * Tagging: arbitrary user-generated tags versus formally defined classifications
-  * Thumbnailing service - creates a thumbnail of a given content property for a node. It can generate a number of different standard types of thumbnails, including Flash web previews and image thumbnails (small and medium sized).
-* Control services (encapsulate processes through which content flows):
-  * Workflow - structured process that includes a sequence of connected steps
-  * Change set - working area for making safe content modifications
-  * Preview - viewing content as it should be before publishing
-  * Deployment - publishing content from one environment to another
-* Collaboration services (integrate the production and publishing of content into social networks):
-  * Social graph: represents people and their relationship to each other, either directly or indirectly through groups or teams
-  * Activities: continuous personalized feed of activities performed by others in the social graph or by Alfresco
-  * Wiki: easy creation and editing of interlinked web pages
-  * Blog: log of regularly maintained entries of commentary, events, and other material, such as documents and videos
-  * Discussions: threaded conversations
-* Sites service - a key concept within Alfresco Share for managing documents, wiki pages, blog posts, discussions, and other collaborative content relating to teams, projects, communities of interest, and other types of collaborative sites.
-* Invite service - maintains user and group memberships for sites.
-* Activity service - Alfresco Share uses activities to track a range of changes, updates, events, and actions, allowing users to be aware of details of the changes.
-* Tagging service - keywords or terms assigned to a piece of information including documents, blogs, wiki pages, and calendar events.
-* Commenting service - comments are modeled as separate content items that are associated with the relevant node through child associations. The Commenting service provides a RESTful API for working with comments.
-content centric app - no application database&lt;/p&gt;
-
-&lt;p&gt;Digital Asset Management (DAM) Ideas:&lt;/p&gt;
-
-&lt;p&gt;capture / create&lt;br /&gt;
-classify, tag / scrape
-associate / relate with other content&lt;br /&gt;
-renditions  - versioning, transcoding for different device formats or changes to embedded metadata&lt;br /&gt;
-check in/out&lt;br /&gt;
-review/approve&lt;br /&gt;
-assign tasks&lt;br /&gt;
-updating social metadata like most watched&lt;br /&gt;
-syndicate / publish&lt;br /&gt;
-auditing/reporting&lt;br /&gt;
-events/actions/notifications&lt;/p&gt;
-
-&lt;p&gt;Social Metadata
-request for assets like play, fast forward
-e.g.&lt;/p&gt;
-
-&lt;p&gt;&amp;lsquo;search&amp;rsquo; is also a process with metadata/metrics/restrictions&lt;/p&gt;
-
-&lt;p&gt;Also in understanding the metadata classes other requirements emerged
-changes to embedded metadata, updating social metadata like most watched
-uni-directional or bi-directional operation on the metadata - i.e. extracting the metadata from the content&amp;rsquo;s binary file and putting it into the alfresco database and/or going back in the other direction to change the metadata in the content&amp;rsquo;s binary file with data from the alfresco database (more about this in &amp;lsquo;process&amp;rsquo;).&lt;/p&gt;
-
-&lt;p&gt;this is locked in with &lt;a href=&#34;./Point-of-View:-Where&#39;s-streaming-heading%3F&#34;&gt;where streaming is heading&lt;/a&gt; because while use online sites to share photos and docs probably don&amp;rsquo;t share all of them or might only share the final version of something and want to retain other versions&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;../issues/6&#34;&gt;process requirements&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;###Restrict&lt;/p&gt;
-
-&lt;p&gt;e.g. movie classifications, digital rights, retention/archive policies&lt;/p&gt;
-
-&lt;p&gt;UPnP content protection stuff&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;../issues/7&#34;&gt;restrict requirements&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_1&#34;&gt;functionality needed (sort of functional specification)&lt;/h2&gt;
-
-&lt;p&gt;In reality it&amp;rsquo;s a mash up between the alfresco types (content centric) and upnp objects (service centric).  It&amp;rsquo;ll probably need a bit of tweaking particularly in working out an optimal model for inheritance of properties between types and the properties that &amp;lsquo;search&amp;rsquo;, &amp;lsquo;process&amp;rsquo; and &amp;lsquo;restrict&amp;rsquo; need - this mirrors Jeff&amp;rsquo;s comments:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;lsquo;be conservative early on by adding only what you know you need. A corollary to that is prepare yourself to blow away the repository multiple times until the content model stabilizes.&amp;rsquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;A UPnP media server (search and sort capabilities) does searches like Browse() using sorts on containers like album, person, genre and also straight searches on metadata properties like title, Ember and XBMC does similar.
-Alfresco has exploring a folder structure and searching + it has full text searching of the content (for images although the do sometimes have text embedded such as Exif/XMP they are predominantly binary so not really useful), cmis has the concepts of navigating and searching
-e.g. like using properties such as genre, title, year, artist, studio, unwatched, keywords&lt;/p&gt;
-
-&lt;p&gt;design work in the process requirements as the rest is really the properties&lt;/p&gt;
-
-&lt;p&gt;XMP: &lt;a href=&#34;http://en.wikipedia.org/wiki/Extensible_Metadata_Platform&#34;&gt;http://en.wikipedia.org/wiki/Extensible_Metadata_Platform&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Ember MM has exact match and partial match&lt;/p&gt;
-
-&lt;p&gt;Alfresco - open source CMS, DAM component can read/write XMP (MS Windows, Linux)  - some work started with the metadata for digital assets (but I can&amp;rsquo;t find it)&lt;/p&gt;
-
-&lt;p&gt;The most common metadata tags recorded in XMP data are those from the Dublin Core Metadata Initiative, which include things like title, description, creator, and so on. The standard is designed to be extensible, allowing users to add their own custom types of metadata into the XMP data. XMP generally does not allow binary data types to be embedded. This means that any binary data one wants to carry in XMP, such as thumbnail images, must be encoded in some XML-friendly format, such as Base64.
-XMP metadata can describe a document as a whole (the &amp;ldquo;main&amp;rdquo; metadata), but can also describe parts of a document, such as pages or included images. This architecture makes it possible to retain authorship and rights information about, for example, images included in a published document. Similarly, it permits documents created from several smaller documents to retain the original metadata associated with the parts.&lt;/p&gt;
-
-&lt;p&gt;maybe also need to add a special content type of MediaServer so that can hold the device description xml files(s).&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_2&#34;&gt;paint-by-numbers implementation (sort of technical specification)&lt;/h2&gt;
-
-&lt;p&gt;Here are the steps to follow when configuring a custom content model:
-1. Create an extension directory
-2. Create a custom model context file
-3. Create a model file
-4. Restart Tomcat&lt;/p&gt;
-
-&lt;p&gt;using xmp, what to about scrapers / uni-bi directional metadata updating (should keep the original file and create a rendition if updating metadata&lt;/p&gt;
-
-&lt;p&gt;change types
-&lt;a href=&#34;http://forums.alfresco.com/forum/end-user-discussions/alfresco-share/change-types-options-menu-labeleds-06082011-1023&#34;&gt;http://forums.alfresco.com/forum/end-user-discussions/alfresco-share/change-types-options-menu-labeleds-06082011-1023&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Configuring the Custom Model in Alfresco Share&lt;/p&gt;
-
-&lt;p&gt;Adding Custom Types and Aspects to Lists
- “Is sub-type” criteria. When a user configures a rule on a space and uses content types as a criteria, the custom types should be a choice in the list of possible content types.
- “Has aspect” criteria. When a user configures a rule on a space and uses the presence of an aspect as a criteria, the custom aspects should be a choice in the list of possible aspects.
- Change type action. When a user runs the “specialize type” action, either as part of a rule configuration or through the “Change Type” UI action, the custom types should be available.
- Add aspect. When a user runs the “add aspect” action, either as part of a rule configuration or through the “Manage Aspects” UI action, the custom aspects should be available.&lt;/p&gt;
-
-&lt;p&gt;Configuring Forms for Custom Properties / Configuring the form service for a custom type / Configuring the form service for custom properties
- Document Details. When a user looks at the document details page for a piece of content
-stored as one of the custom types or with one of the custom aspects attached, the properties section should show the custom properties.
- Edit Properties. When a user edits the properties of a piece of content, either with the “full” form or the abbreviated form, the appropriate properties should be shown.&lt;/p&gt;
-
-&lt;p&gt;Configuring Advanced Search in Alfresco Share
- Advanced search. When a user runs an advanced search, they should be able to restrict search results to instances of our custom types and/or content with specific values for the properties of our custom types.&lt;/p&gt;
-
-&lt;p&gt;Localizing Strings for Custom Content Models&lt;/p&gt;
-
-&lt;p&gt;You’ve seen that configuring Alfresco Share for your custom content model essentially involves adding XML to the share-config-custom.xml file and creating a properties file for your localized strings. All of this lives under the “web-extension” directory in the Share web application.
-There are other things you might like to do to the Share user interface, but these are beyond the scope of this document:
-• Add custom content types to the Create Content menu
-• Add custom properties to the document library sort criteria
-• Add custom properties to the document library data grid&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/Data_Dictionary_Guide#Step_by_Step_Model_Definition&#34;&gt;http://wiki.alfresco.com/wiki/Data_Dictionary_Guide#Step_by_Step_Model_Definition&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/Displaying_Custom_Metadata&#34;&gt;http://wiki.alfresco.com/wiki/Displaying_Custom_Metadata&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;../tree/master/aaContentModel&#34;&gt;aaContentModel&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Alfresco Integration</title>
-      <link>http://localhost:1313/retrospectives/1000ft/alfresco-integration/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/1000ft/alfresco-integration/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;caching content stores, syncing content stores, s3 content stores&amp;hellip;this detail is from the 2013 summit press - &lt;a href=&#34;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&#34;&gt;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;include Alfresco Rumours XMPP.&lt;/p&gt;
-
-&lt;p&gt;alfresco embedded api
-&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;cmis protocols
-&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco api documentation&lt;/a&gt;&lt;img src=&#34;/assets/img/wiki-ext-link.jpg?raw=true&#34; alt=&#34;img&#34; /&gt;
-&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;The Alfresco API lets you access content managed by Alfresco Cloud from your own applications. The API is RESTful, which means each call is an HTTP request, so you don&amp;rsquo;t even need a programming language to try it out. You can just type a URL address in a web browser. It consists of two parts, the standard CMIS API, which lets you manage and access content, and the new Alfresco REST API which lets you manage Alfresco&amp;rsquo;s additional features such as ratings and comments, that are not covered by the CMIS standard.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Integration options: &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CMIS (Content Management Interoperability Services)&lt;/li&gt;
-&lt;li&gt;Web scripts (RESTful api)&lt;/li&gt;
-&lt;li&gt;File-based access (CIFS, WebDAV, NFS, or FTP)&lt;/li&gt;
-&lt;li&gt;OpenSearch and feeds (RSS or Atom subscription protocols)&lt;/li&gt;
-&lt;li&gt;Java applications (using the core API directly)&lt;/li&gt;
-&lt;li&gt;PHP applications (through CMIS, through web scripts as a RESTful interface, or directly from the same application server as Alfresco. Alfresco has an optional extension that includes the Quercus PHP interpreter in a Tomcat server. The Quercus PHP interpreter is capable of running popular PHP applications, such as Joomla!, Drupal, WordPress, and MediaWiki.)&lt;/li&gt;
-&lt;li&gt;.NET applications (similar to integrations with Java applications through remote interfaces such as web scripts or CMIS. Either the SOAP or Atom Publishing interfaces can be used.)
-Integration patterns: &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Surf components&lt;/li&gt;
-&lt;li&gt;Authentication and directory services&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>CMIS</title>
       <link>http://localhost:1313/retrospectives/1000ft/cmis/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -576,22 +69,6 @@ Content that is independent of a folder, for example a Type definition be access
 &lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&lt;/a&gt;
 The URL to get all of the children of the root/test node in the repository looks like this:
 &lt;a href=&#34;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&#34;&gt;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>UPnP</title>
-      <link>http://localhost:1313/retrospectives/1000ft/upnp/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/1000ft/upnp/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-device-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-av-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
-&lt;/p&gt;
 </description>
     </item>
     
@@ -836,660 +313,431 @@ In addition to reading through all of the available knowledge and undertaking th
     </item>
     
     <item>
-      <title>Building a folder and document based protocol</title>
-      <link>http://localhost:1313/retrospectives/how-to/building-a-folder-and-document-based-protocol/</link>
+      <title>Modifying content types</title>
+      <link>http://localhost:1313/retrospectives/how-to/modifying-content-types/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/how-to/building-a-folder-and-document-based-protocol/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/retrospectives/how-to/modifying-content-types/</guid>
+      <description>
 
-&lt;p&gt;MediaGate for Java
-UPnP Stacks + a picture
-Apache Felix + Alfresco development tool roadmap
-OpenCMIS
-Learning Java&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.1/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.1/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.videolan.org/vlc/streaming.html&#34;&gt;http://www.videolan.org/vlc/streaming.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://shop.oreilly.com/product/9781849511384.do&#34;&gt;http://shop.oreilly.com/product/9781849511384.do&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.upnp-database.info/listDevices.jsp?filterType=servers&#34;&gt;http://www.upnp-database.info/listDevices.jsp?filterType=servers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There really is no need to write a &lt;a href=&#34;http://www.imdb.com/title/tt0077631/&#34;&gt;fully blown&lt;/a&gt; how-to of the technical aspects for &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/tasks/kb-define-custom-model.html&#34;&gt;modifying content models in Alfresco&lt;/a&gt; as Jeff Potts has written a &lt;a href=&#34;http://ecmarchitect.com/images/articles/alfresco-content/content-article-2ed.pdf&#34;&gt;concise and complete tutorial&lt;/a&gt; already including:&lt;/p&gt;
 
-&lt;p&gt;The Alfresco content application server supports many folder and document-based protocols to access and manage content held within the content repository using familiar client tools.
-All the protocol bindings expose folders and documents held in the Alfresco content repository. This means a client tool accessing the repository using the protocol can navigate through folders, examine properties, and read content. Most protocols also permit updates, allowing a client tool to modify the folder structure, create and update documents, and write content. Some protocols also allow interaction with capabilities such as version histories, search, and tasks.&lt;/p&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;paint-by-numbers implementation (sort of technical specification)&lt;/h2&gt;
 
-&lt;p&gt;Internally, the protocol bindings interact with the content repository services, which encapsulate the behavior of working with folders and files. This ensures a consistent view and update approach across all client tools interacting with the Alfresco content application server.&lt;/p&gt;
+&lt;p&gt;Here are the steps to follow when configuring a custom content model:
+1. Create an extension directory
+2. Create a custom model context file
+3. Create a model file
+4. Restart Tomcat&lt;/p&gt;
 
-&lt;p&gt;An Alfresco subsystem for file servers allows configuration and lifecycle management for each of the protocols either through property files or JMX.&lt;/p&gt;
+&lt;p&gt;using xmp, what to about scrapers / uni-bi directional metadata updating (should keep the original file and create a rendition if updating metadata&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&#34;&gt;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&lt;/a&gt;
-&lt;a href=&#34;https://github.com/peterwatts/allegria/wiki/1.2.1-Where&#39;s-streaming-heading%3F:-IN-PROGRESS&#34;&gt;https://github.com/peterwatts/allegria/wiki/1.2.1-Where&#39;s-streaming-heading%3F:-IN-PROGRESS&lt;/a&gt;
-&lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html&#34;&gt;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;http://wiki.alfresco.com/wiki/CMIS&lt;/a&gt;
-&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/alfresco-api/cmis-resources-tutorials-and-examples-03212012-1456&lt;/a&gt;
-&lt;a href=&#34;http://cmis.alfresco.com/cmis-cheatsheet.pdf&#34;&gt;http://cmis.alfresco.com/cmis-cheatsheet.pdf&lt;/a&gt;
-&lt;a href=&#34;http://tech.wrighting.org/category/cmis/&#34;&gt;http://tech.wrighting.org/category/cmis/&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#Query_Language&#34;&gt;http://wiki.alfresco.com/wiki/CMIS#Query_Language&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS_Query_Language&#34;&gt;http://wiki.alfresco.com/wiki/CMIS_Query_Language&lt;/a&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax&#34;&gt;http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax&lt;/a&gt;
-&lt;a href=&#34;http://www.scribd.com/doc/18495354/CMIS-CMIS-SQL-Search-Tutorial-ENG&#34;&gt;http://www.scribd.com/doc/18495354/CMIS-CMIS-SQL-Search-Tutorial-ENG&lt;/a&gt;
-&lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/using-cmis-get-list-document-urls-11302011-2029&#34;&gt;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/using-cmis-get-list-document-urls-11302011-2029&lt;/a&gt;
-&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/web-scripts/cmis-query-get-path-cmisdocument-11302011-1630&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/web-scripts/cmis-query-get-path-cmisdocument-11302011-1630&lt;/a&gt;
-&lt;a href=&#34;https://forums.alfresco.com/forum/developer-discussions/web-scripts/searching-documents-using-cmis-query-folder-hierarchy&#34;&gt;https://forums.alfresco.com/forum/developer-discussions/web-scripts/searching-documents-using-cmis-query-folder-hierarchy&lt;/a&gt;
-&lt;a href=&#34;http://yonaweb.be/using_cmis_query_content_query_navigation_model&#34;&gt;http://yonaweb.be/using_cmis_query_content_query_navigation_model&lt;/a&gt;
-&lt;a href=&#34;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&#34;&gt;http://blogs.alfresco.com/wp/pmonks/category/alfresco/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;change types
+&lt;a href=&#34;http://forums.alfresco.com/forum/end-user-discussions/alfresco-share/change-types-options-menu-labeleds-06082011-1023&#34;&gt;http://forums.alfresco.com/forum/end-user-discussions/alfresco-share/change-types-options-menu-labeleds-06082011-1023&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;(consider use of CMIS protocol and Apache Felix upnp-av tools, consider also if content is stored in the cloud how can get to it).&lt;/p&gt;
+&lt;p&gt;Configuring the Custom Model in Alfresco Share&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;joining cmis libraries / capabilities to dlna libraries / capabilities with a smart set of queries&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Adding Custom Types and Aspects to Lists
+ “Is sub-type” criteria. When a user configures a rule on a space and uses content types as a criteria, the custom types should be a choice in the list of possible content types.
+ “Has aspect” criteria. When a user configures a rule on a space and uses the presence of an aspect as a criteria, the custom aspects should be a choice in the list of possible aspects.
+ Change type action. When a user runs the “specialize type” action, either as part of a rule configuration or through the “Change Type” UI action, the custom types should be available.
+ Add aspect. When a user runs the “add aspect” action, either as part of a rule configuration or through the “Manage Aspects” UI action, the custom aspects should be available.&lt;/p&gt;
 
-&lt;p&gt;Regardless of the binding, there is a set of services that a CMIS repository must provide. These services include:
-•   Repository Services: Used to discover information and capabilities of the repository.
-•   Navigation Services: Used to traverse the repository’s folder hierarchy.
-•   Object Services: Used to perform CRUD functions on objects.
-•   Multi-filing Services: If the repository supports putting an object in  more than one folder, this service handles it.
-•   Discovery Services: Used to handle queries.
-•   Versioning Services: Used to checkout documents and work with  document versions.
-•   Relationship Services: Used to query an object for its relationships.
-•   Policy Services: Used to apply, remove, and query for policies.
-•   ACL Services: Not supported by all repositories, this service is used  to return and manage the ACL of an object.
-Some of these services share common characteristics. For example:
-• Almost every service that returns a list can be returned as a paged
-result set.
-• Services that return objects can often return additional information
-about those objects, if you ask for it, like relationships, ACLs,
-renditions, and allowable actions.
-• A repository may choose to give you a change token with an object to
-reduce the chance that you don’t update an out-of-date object. If a repository gives you a change token, it expects it back when you post the change.
-• Any of the services may throw an exception. For a list, check the spec.&lt;/p&gt;
+&lt;p&gt;Configuring Forms for Custom Properties / Configuring the form service for a custom type / Configuring the form service for custom properties
+ Document Details. When a user looks at the document details page for a piece of content
+stored as one of the custom types or with one of the custom aspects attached, the properties section should show the custom properties.
+ Edit Properties. When a user edits the properties of a piece of content, either with the “full” form or the abbreviated form, the appropriate properties should be shown.&lt;/p&gt;
 
-&lt;p&gt;Repository Services
-•   Get Repositories: Get a list of repositories that can be accessed from this service endpoint
-•   Get Repository Info: Get information about the specified repository
-•   Get Type Children, Get Type Descendants: Various ways to discover the object types in a repository
-•   Get Type Definition: Get the definition (list of properties) of the specified type
-Navigation Services
-▪   Get Folder Tree, Get Descendants, Get Children: Retrieve descendant objects (each one has slightly different nuances)
-▪   Get Folder Parent, Get Object Parents: Retrieve an object&amp;rsquo;s parent folder(s)
-▪   Get Checkedout Docs: Retrieve list of checked out documents
-Discovery Services
-▪   Query: Execute a CMIS query
-▪   Get Content Changes: Gets a list of changes to the repository; the client can provide an optional change log token that specifies the first event to be included in the list.
-Object Services
-▪   Get Object, Get Object By Path: Retrieve objects
-▪   Get Properties, Get Allowable Actions, Get Renditions: Get information about objects
-▪   Get Content Stream: Retrieve an object&amp;rsquo;s content stream
-▪   Create Relationship, Create Document, Create Document From Source, Create Policy, Create Folder: Create objects
-▪   Update Properties, Move Object: Update objects
-▪   Delete Object, Delete Tree: Remove objects
-▪   Set Content Stream, Delete Content Stream: Update content streams
-Versioning Services
-▪   Get Properties Of Latest Version, Get Object Of Latest Version: Get information about latest version of object
-▪   Get All Versions: Retrieve an object&amp;rsquo;s version history
-▪   Check Out, Check In, Cancel Check Out: Control locking/unlocking of an object for the purpose of updating
-▪   Delete All Versions: Remove version history
-Relationship Services
-▪   Get Object Relationships: Get the relationships associated with an object
-Multi-Filing Services
-▪   Add Object To Folder, Remove Object From Folder: File and un-file objects;
-▪   If multi-filing is supported in the repository, then an object can be added to multiple folders
-▪   If un-filing is supported in the repository, then an object can be removed from all folders that it is filed in without deleting the object
-ACL Services
-▪   Get ACL: Get the permissions associated with an object
-▪   Apply ACL: Set the permissions associated with an object
-Policy Services
-▪   Get Applied Policies: Get the policies that are applied to an object
-Apply Policy, Remove Policy: Apply and remove policies to/from an object&lt;/p&gt;
+&lt;p&gt;Configuring Advanced Search in Alfresco Share
+ Advanced search. When a user runs an advanced search, they should be able to restrict search results to instances of our custom types and/or content with specific values for the properties of our custom types.&lt;/p&gt;
 
-&lt;p&gt;CMIS Query  What it does
-SELECT cmis:name FROM sc:whitepaper where contains(‘sample’)    Select the name of every whitepaper with “sample” somewhere in their text.
-SELECT cmis:name, Score() as relevance FROM sc:whitepaper where contains(&amp;lsquo;sample&amp;rsquo;) order by relevance DESC  Select the name of whitepapers with “sample” somewhere in their text, ordered by full-text relevance, descending.
-SELECT cmis:name from sc:whitepaper where sc:isActive = true
-    Select whitepapers with the isActive flag set to true (which happens to be a property defined by an aspect).&lt;/p&gt;
+&lt;p&gt;Localizing Strings for Custom Content Models&lt;/p&gt;
 
-&lt;p&gt;SELECT cmis:name from sc:whitepaper where not(sc:isActive = true)   Select whitepapers with the isActive flag not set to true. This will return whitepapers where the property is not true as well as whitepapers where the property is unset.&lt;/p&gt;
+&lt;p&gt;You’ve seen that configuring Alfresco Share for your custom content model essentially involves adding XML to the share-config-custom.xml file and creating a properties file for your localized strings. All of this lives under the “web-extension” directory in the Share web application.
+There are other things you might like to do to the Share user interface, but these are beyond the scope of this document:
+• Add custom content types to the Create Content menu
+• Add custom properties to the document library sort criteria
+• Add custom properties to the document library data grid&lt;/p&gt;
 
-&lt;p&gt;SELECT cmis:name from sc:marketingDoc where any sc:campaign in (&amp;lsquo;Social Shopping&amp;rsquo;)  Select instances of Marketing Documents and their children where the multi-value property, sc:campaign, contains the value “Social Shopping” (note that Whitepaper is a child type of Marketing Document).
-SELECT cmis:name,sc:published from sc:whitepaper where sc:published &amp;gt;= &amp;lsquo;2009-11-10T00:00:00.000-06:00&amp;rsquo; and sc:published &amp;lt; &amp;lsquo;2009-11- 18T00:00:00.000-06:00&amp;rsquo;  Select whitepapers published (sc:published, a property of the sc:webable aspect) on or after November 10, 2009 and before 18, 2009.
-SELECT cmis:name from cmis:document where in_folder(&amp;lsquo;workspace://SpacesStore/393 5ce21-9f6f-4d46-9e22-4f97e1d5d9d8&amp;rsquo;) and contains(&amp;lsquo;contract&amp;rsquo;)   Select all content in the Sales folder containing the word “contract”.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/Data_Dictionary_Guide#Step_by_Step_Model_Definition&#34;&gt;http://wiki.alfresco.com/wiki/Data_Dictionary_Guide#Step_by_Step_Model_Definition&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://wiki.alfresco.com/wiki/Displaying_Custom_Metadata&#34;&gt;http://wiki.alfresco.com/wiki/Displaying_Custom_Metadata&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;SELECT cmis:name from cmis:document where in_tree(&amp;lsquo;workspace://SpacesStore/3935c e21-9f6f-4d46-9e22-4f97e1d5d9d8&amp;rsquo;) and contains(&amp;lsquo;contract&amp;rsquo;) and cm:description like “%sign%”    Select all content in the Sales folder or any of its descendant folders containing the word “contract” and a description like “%sign%”.&lt;/p&gt;
-
-&lt;p&gt;The DLNA Certified Device Classes are separated as follows:[9]
-Home Network Devices[edit source | editbeta]
-•   Digital Media Server (DMS): store content and make it available to networked digital media players (DMP) and digital media renderers (DMR). Examples include PCs and network-attached storage(NAS) devices.
-•   Digital Media Player (DMP): find content on digital media servers (DMS) and provide playback and rendering capabilities. Examples include TVs, stereos and home theaters, wireless monitors and game consoles.
-•   Digital Media Renderer (DMR): play content as instructed by a digital media controller (DMC), which will find content from a digital media server (DMS). Examples include TVs, audio/video receivers, video displays and remote speakers for music. It is possible for a single device (e.g. TV, A/V receiver, etc.) to function both as a DMR (receives &amp;ldquo;pushed&amp;rdquo; content from DMS) and DMP (&amp;ldquo;pulls&amp;rdquo; content from DMS)
-•   Digital Media Controller (DMC): find content on digital media servers (DMS) and instruct digital media renderers (DMR) to play the content. Content doesn&amp;rsquo;t stream from or through the DMC. Examples include Internet tablets, Wi-Fi enabled digital cameras and smartphones.
-•   Digital Media Printer (DMPr): provide printing services to the DLNA home network. Generally, digital media players (DMP) and digital media controllers (DMC) with print capability can print to DMPr. Examples include networked photo printers and networked all-in-one printers
-Mobile Handheld Devices[edit source | editbeta]
-▪   Mobile Digital Media Server (M-DMS): store content and make it available to wired/wireless networked mobile digital media players (M-DMP), digital media renderers (DMR) and digital media printers (DMPr). Examples include mobile phones and portable music players.
-▪   Mobile Digital Media Player (M-DMP): find and play content on a digital media server (DMS) or mobile digital media server (M-DMS). Examples include mobile phones and mobile media tablets designed for viewing multimedia content.
-▪   Mobile Digital Media Uploader (M-DMU): send (upload) content to a digital media server (DMS) or mobile digital media server (M-DMS). Examples include digital cameras and mobile phones.
-▪   Mobile Digital Media Downloader (M-DMD): find and store (download) content from a digital media server (DMS) or mobile digital media server (M-DMS). Examples include portable music players and mobile phones.
-▪   Mobile Digital Media Controller (M-DMC): find content on a digital media server (DMS) or mobile digital media server (M-DMS) and send it to digital media renderers (DMR). Examples include personal digital assistants (PDAs) and mobile phones.
-Home Infrastructure Devices[edit source | editbeta]
-▪   Mobile Network Connectivity Function (M-NCF): provide a bridge between mobile handheld device network connectivity and home network connectivity.
-▪   Media Interoperability Unit (MIU): provide content transformation between required media formats for home network and mobile handheld devices.
-The specification uses Digital Transmission Content Protection|DTCP-IP as &amp;ldquo;link protection&amp;rdquo; for copyright-protected commercial content between one device to another.[1][10]&lt;/p&gt;
-
-&lt;p&gt;Durable storage (glacier), resilient storage.
-Commercial Content Management -&amp;gt; Consumer Content Management &amp;lt;-Consumer media management.
-UPnP Design by Example, by Michael Jeronimo and Jack Weast
-UPnP Media Server implements the;
--   Content Directory Service - provides a logical structure for the media library available in the Server
--   Connection Manager Service&lt;/p&gt;
-
-&lt;p&gt;Most AV scenarios involve the flow of (entertainment) content (i.e. a movie, song, picture, etc.) from one device to another. As shown in Figure 2, an AV control point interacts with two or more UPnP devices acting as source and sink, respectively. Although the control point coordinates and synchronizes the behavior of both devices, the devices themselves interact with each other using a non-UPnP (“out-of- band”) communication protocol. The control point uses UPnP to initialize and configure both devices so that the desired content is transferred from one device to the other. However, since the content is transferred using an “out-of-band” transfer protocol, the control point is not directly involved in the actual transfer of the content. The control point configures the devices as needed, triggers the flow of content, then gets out of the way. Thus, after the transfer has begun, the control point can be disconnected without disrupting the flow of content. In other words, the core task (i.e. transferring the content) continues to function even without the control point present.&lt;/p&gt;
-
-&lt;p&gt;A MediaServer’s primary purpose is to allow control points to enumerate (i.e. browse or search for) content items that are available for the user to render. The MediaServer contains a ContentDirectory Service [CDS], a ConnectionManager Service [CM], and an optional AVTransport Service &lt;a href=&#34;depending on the supported transfer protocols&#34;&gt;AVT&lt;/a&gt;.
-Some MediaServers are capable of transferring multiple content items at the same time, e.g. a hard-disk- based audio jukebox may be able to simultaneously stream multiple audio files to the network. In order to support this type of MediaServer, the ConnectionManager assigns a unique Connection ID to each “connection” (i.e. each stream) that is made. This ConnectionID allows a third-party control points to obtain information about active connections of the MediaServer.
-3.1.1. Content Directory Service
-This service provides a set of actions that allow the control point to enumerate the content that the Server can provide to the home network. The primary action of this service is ContentDirectory::Browse(). This action allows control points to obtain detailed information about each Content Item that the Server can provide. This information (i.e. meta-data) includes properties such as its name, artist, date created, size, etc. Additionally, the returned meta-data identifies the transfer protocols and data formats that are supported by the Server for that particular Content Item. The control point uses this information to determine if a given MediaRenderer is capable of rendering that content in its available format.
-3.1.2. ConnectionManager Service
-This service is used to manage the connections associated with a particular device. The primary action of this service (within the context of a MediaServer) is ConnectionManager::PrepareForConnection(). When implemented, this optional action is invoked by the control point to give the Server an opportunity to prepare itself for an upcoming transfer. Depending on the specified transfer protocol and data format, this action may return the InstanceID of an AVTransport service that the control point can use to control the flow of this content (e.g. Stop, Pause, Seek, etc). As described below, this InstanceID is used to distinguish multiple (virtual) instances of the AVTransport service, each of which is associated with a particular connection to Renderer. Multiple (virtual) instances of the AVTransport service allow the MediaServer to support multiple Renderers at the same time. When the control point wants to terminate this connection, it should invoke the MediaServer’s ConnectionManager::ConnectionComplete() action (if implemented) to release the connection.
-If the ConnectionManager::PrepareForConnection() action is not implemented, the control point is only able to support a single Renderer at an given time. In this case, the control point should use InstanceID=0.
-3.1.3. AVTransport Service
-This (optional) service is used by the control point to control the “playback” of the content that is associated with the specified AVTransport. This includes the ability to Stop, Pause, Seek, etc. Depending on the supported transfer protocols and/or data formats, a MediaServer may or may not implement this service. If supported, the MediaServer can distinguish between multiple instances of the service by using the InstanceID that is included in each AVTransport action. New instances of the AVTransport service are created via the ConnectionManager’s ConnectionManager::PrepareForConnection() action. A new Instance Id is allocated for each new Service Instance.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../tree/master/aaContentModel&#34;&gt;aaContentModel&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Project Management</title>
-      <link>http://localhost:1313/retrospectives/1000ft/project-management/</link>
+      <title>Where&#39;s streaming heading?</title>
+      <link>http://localhost:1313/blog/pov/wheres-streaming-heading/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/1000ft/project-management/</guid>
+      <guid>http://localhost:1313/blog/pov/wheres-streaming-heading/</guid>
       <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;allegria&amp;rsquo;s objectives seem straightforward enough:&lt;/p&gt;
+&lt;p&gt;youtube
+Commercial appliances (including NAS) certified for UpnP/DLNA (
+SmartTV / STB (including Telco supplied) with online subscription service - catchup TV, movies
+Airplay
+HTPC / Android Sticks / GoogleTV / OpenSource media systems
+VLC style RTMP
+AdultContent industry&lt;/p&gt;
+
+&lt;p&gt;HDMI/MHL/Wireless app&lt;/p&gt;
+
+&lt;p&gt;universal search&lt;/p&gt;
+
+&lt;p&gt;dropbox, picassa, slideshare&lt;/p&gt;
+
+&lt;p&gt;xbmc model is interesting with roadmaps for peer-to-peer upnp file sharing, universal search, ecosystem of addons and customisations, dlna and airplay support, multiple methods as a control point&lt;/p&gt;
+
+&lt;p&gt;Risks (remember to put in mitigations)
+-   the market is already moving in a way with discrete / point solutions
+-   UPnP security issues&lt;/p&gt;
+
+&lt;p&gt;DLNA and AirPlay won&amp;rsquo;t talk to each other
+Choosing a home entertainment platform is a bit like picking sides in a battle: there are two rival standards, DLNA and AirPlay. Where DLNA works across thousands of different devices, AirPlay (and AirPrint) is more selective and only works on Apple or Apple-approved products. That&amp;rsquo;s the official line, anyway, but there are ways around it: apps such as AirSync bring AirPlay streaming to Android phones, while apps such as media:connect offer DLNA on iOS.&lt;/p&gt;
+
+&lt;p&gt;manuals online&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Contacts</title>
+      <link>http://localhost:1313/about/contacts/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/about/contacts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Concept Overview</title>
+      <link>http://localhost:1313/concepts/overview/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/concepts/overview/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;multiple ways to get to content so can use the tools familiar with to manipulate content e.g. iPhoto or flickr for photos - content at the edge is always tricky - ingesting / manipulating
+protocol-based access so don’t get locked in&lt;/p&gt;
+
+&lt;p&gt;service bus
+design based on a concise set of simple concepts that all can understand and build upon
+exposes a key interface where people can do content-driven-development&lt;/p&gt;
+
+&lt;p&gt;content context is built in - because meta-data is a blob as well then can rebuild from scratch an  understanding of content objects just by parsing the blobs - e.g. db backup corrupt, backup manifest corrupt, changing to a new db goes wrong -  never left with just thousands of cut up file names with no way to put back together
+ability to back up in a powerful way is built in - has deduplication, sync and share built-in, can use varied cost backup repositories depending on rules e.g. sentimental photos can be backed up on multiple local, peer and cloud sites, large media files that may not be so important can be on local and peer disks - doesn’t have to be one size / cost fits all - its built-in so no separate tools / consoles to manage and because its mutable storage don’t have to worry about piecing incremental backups together - just like git but for content
+specific implementation through Docker containers on NAS type devices.  Cloud storage through something like S3 buckets to Glacier lifecycle.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/allegria-logical-model.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Where&#39;s content management heading?</title>
+      <link>http://localhost:1313/blog/pov/wheres-content-management-heading/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/blog/pov/wheres-content-management-heading/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Consumers need a consumer level experience (read:iPhone usage easy) to use content tools.  It&amp;rsquo;s not just using the getting at content while its in the repository but importantly ingestion and publishing need to be easy.&lt;/p&gt;
+
+&lt;p&gt;and put the repository in a secure cloud so someone can do the management and that&amp;rsquo;d be nirvana&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Perl</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/perl/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/perl/</guid>
+      <description>
+
+&lt;p&gt;Have chosen to use Perl because;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;work out how to make the processes and tools large organisations use to organise stuff, practical for a household.&lt;/li&gt;
-&lt;li&gt;learn how to use some open source application lifecycle techniques, tools and technologies.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;have some fun and pass back what&amp;rsquo;s been learned to the community.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Perl is common in opensource projects and has extensive documentation and huge community&lt;/li&gt;
+&lt;li&gt;there a &lt;a href=&#34;https://github.com/MichaelDaum/cmis-perl&#34;&gt;CMIS wrapper&lt;/a&gt; written in Perl&lt;/li&gt;
+&lt;li&gt;there&amp;rsquo;s a &lt;a href=&#34;http://www.cybergarage.org/twiki/bin/view/Main/CyberLinkForPerl&#34;&gt;DLNA media server extension&lt;/a&gt; written in Perl&lt;/li&gt;
+&lt;li&gt;handles text stuff (which there is going to be heaps of)&lt;/li&gt;
+&lt;li&gt;it was new to me and I like a challenge&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;But what will it take to achieve them - &lt;a href=&#34;www.imdb.com/title/tt0066011/&#34;&gt;where do we begin&lt;/a&gt;?&lt;/p&gt;
+&lt;p&gt;Going to try and keep it neat and maintainable through the help of the Eclipse - Epic plugin.&lt;/p&gt;
 
-&lt;p&gt;Start at the beginning probably, although it may make more sense to start at the end, get a clear idea of [what success looks|Helicopter View: Success] like and write it down so there is a beacon to aim for and to keep the boat off the rocks.&lt;/p&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
 
-&lt;p&gt;With a clear view on success I hear you say &amp;lsquo;roll your sleeves up and get on with it&amp;rsquo; - the cunning plan - &lt;em&gt;just do it&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;And sometimes that is the best way to get things done, particulalry when the thing being done (product) is well known, how to do it is well known (process) and the whoever is doing it have worked together to do it before (people) i.e. the [dynamics|Helicopter View: Dynamics] are well understood.  Just getting on with it might also be the best approach when doing something like writing and writer&amp;rsquo;s block has set in making it difficult to start.  The &lt;a href=&#34;www.imdb.com/title/tt0181536/&#34;&gt;Forrestor Principle&lt;/a&gt; says to just sit down and write (but be prepared to re-write as well).&lt;/p&gt;
-
-&lt;p&gt;allegria as a product has parts well established (like the Alfresco platform), although in a corporate setting rather than for consumers and some of its technical parts are pretty new, and as is likely the case with most open source projects the people working on it also we have at the start none or limited experience with consumer content managemet and open source tools and techniques.&lt;/p&gt;
-
-&lt;p&gt;at the At the other end of the spectrum to the cunning plan, is to follow a prescription project management philosophy.&lt;/p&gt;
-
-&lt;p&gt;cunning plan is doable when just 1 person will build and use the product but as soon as add another for either activity then need some way to engage other (that means will need to use one or more PM techniques - and really even if you are by yourself will get some value from PM techniques).&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;project success&lt;/li&gt;
-&lt;li&gt;HRM&lt;/li&gt;
-&lt;li&gt;practitioner approaches&lt;/li&gt;
-&lt;li&gt;project dynamics&lt;/li&gt;
-&lt;li&gt;project lifecycle&lt;/li&gt;
-&lt;li&gt;quality&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Need a whole thing on the systems bit (not a PMBOK area but should add) as setting up an environment for manaing the project stuff and the development stuff and the overlap / integrations between them (think tasks / collaboration / consistency etc - all this is so integral to getting a project that has a systems flovour)&lt;/p&gt;
-
-&lt;p&gt;is this ia project or a product is it a number of projects to make a product -&lt;/p&gt;
-
-&lt;p&gt;In &lt;a href=&#34;http://www.imdb.com/title/tt0097647/&#34;&gt;Karate Kid III (1989)&lt;/a&gt; Mr. Miyagi sagely tells his pupil (but about karate);&lt;br /&gt;
-&lt;em&gt;Mr. Kesuke Miyagi: Ah. Only root [development] come from Miyagi. Just like bonsai choose own way grow because root strong you choose own way do karate same reason.&lt;/em&gt;&lt;br /&gt;
-&lt;em&gt;Daniel Larusso: I do it your way.&lt;/em&gt;&lt;br /&gt;
-&lt;em&gt;Mr. Kesuke Miyagi: Hai. One day you do own way.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Setting up some basic project resources for allegria was a bit like Miyagi San&amp;rsquo;s bonsai analogy for karate&amp;hellip;we wanted to have some basis in the steps of the [root] development process like:
-* propagate the idea - build the business case and project plan
-* work out the boundaries and requirements
-* define detailed design
-* specify technical elements and tools
-* determine the build, test and implement approach&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;but there really isn&amp;rsquo;t a traditional business case for this, we just want to do something &lt;a href=&#34;http://dictionary.reverso.net/italian-english/allegria&#34;&gt;fun&lt;/a&gt; and interesting - build &lt;a href=&#34;http://www.imdb.com/title/tt0097351/&#34;&gt;a field of dreams&lt;/a&gt;. It&amp;rsquo;s not going to be sold and nobody&amp;rsquo;s getting paid for this, which means even though there&amp;rsquo;s no fixed schedule, need to get quick, easy successes that build momentum and enthusiasm.  So our &amp;lsquo;own karate way&amp;rsquo; is somewhere in the middle of a spectrum of a sensible structured approach and the just-do-it cunning plan.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;project page&lt;/a&gt; describes the idea, objectives of the project and broadly a plan to get there.  The &lt;a href=&#34;../blob/master/README.md&#34;&gt;readme&lt;/a&gt;, &lt;a href=&#34;./&#34;&gt;wiki&lt;/a&gt; and &lt;a href=&#34;../issues&#34;&gt;issues&lt;/a&gt; describe a mixture of requirements and design (the summary &lt;a href=&#34;./Concept-Work&#34;&gt;concept&lt;/a&gt; and &lt;a href=&#34;./How-To&#39;s&#34;&gt;how to&lt;/a&gt; pages hold the 1000ft descriptions and will look to flesh this out in each of the underlying detail pages). We might be schmicky later with some traceability from objectives through requirements to code, test and implementation but for now going to take a pragmatic middle ground).&lt;/p&gt;
-
-&lt;p&gt;That leaves the technical elements.  Yes, it would be nice to have a bit more detail up front about what this thing is going to look like to determine an appropriate architecture, tools and approach but without trying to incite some zealous rage from technical purists the reality for this project is that there are some other drivers to these choices including:
-* the &lt;a href=&#34;http://www.imdb.com/title/tt0880557/&#34;&gt;64 million dollar&lt;/a&gt; question you&amp;rsquo;re probably thinking though is &amp;lsquo;why build a home media centre on top of a document management system - who does that? movies aren&amp;rsquo;t documents or web pages, just build a streaming app with genre folders&amp;rsquo;&amp;hellip;and I say, &amp;lsquo;it&amp;rsquo;s all content man!&amp;rsquo;, its just a content centric app&amp;hellip;not convinced? have a read of the &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;project page&lt;/a&gt; and choose then.
-* once had settled on doing this in a Content Management System had to pick a horse from the pack &amp;ndash;have looked at dozens of open source content / process tools but for whatever reason keep gravitating back to Alfresco - it might be the some of the words like &amp;lsquo;simple&amp;rsquo; and &amp;lsquo;solid&amp;rsquo; in the &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/concepts/alfresco-principles.html&#34;&gt;guiding design principles&lt;/a&gt; or that it was quick to get a feel for it and put content in, or the size of the surrounding community, or the shiny new Activiti tool, whatever it was we&amp;rsquo;re here. And now that have picked, a key objective of the project is to get better at using the Alfresco platform and use / enhance all of its capabilities and show others how we did it (interestingly Git is also a contender particularly for its feature of all collaborators having equal status of document versions - no single authoritative copy of something - and using sophisticated merge capabilities to sort out the logistics of merging updates).
-* for us, key to Alfresco &amp;lsquo;making sense&amp;rsquo; as a media centre is how it fits into the consumer ecosystems surrounding streaming stuff (movies, songs, pictures etc).  The horse race for technology contenders for this is close, none (and this will likely rattle more than a few cages) have really stuck out for us as THE ONE to choose.  This is crystal ball gazing rather than any scientific thinking about &lt;a href=&#34;./1.2.1-Where&#39;s-streaming-heading%3F&#34;&gt;where things are heading&lt;/a&gt;&amp;hellip;really just picked some &amp;lsquo;standards&amp;rsquo; that had some definition and community and will give them a crack (DLNA - Digital Living Network Alliance, UPnP - Universal Plug an Play and plug these into a content management standard CMIS -Content Management Interoperability Services).
-* another key objective is to get a better understanding of &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/newto/&#34;&gt;open source projects&lt;/a&gt;, so; using open source tools in a distributed collaborative approach (Alfresco and its addons and interfaces are developed in SpringSurf, Java, Python, Perl, C, Ruby etc and many are hosted on GitHub - so made sense to select from them).&lt;/p&gt;
-
-&lt;p&gt;• Integration Management&lt;br /&gt;
-• Scope Management&lt;br /&gt;
-• Time Management&lt;br /&gt;
-• Cost Management&lt;br /&gt;
-• Quality Management&lt;br /&gt;
-• Human Resources Management&lt;br /&gt;
-• Communications Management&lt;br /&gt;
-• Risk Management&lt;br /&gt;
-• Procurement Management&lt;br /&gt;
-• Stakeholder Management&lt;/p&gt;
+&lt;p&gt;Never used perl before so &lt;a href=&#34;http://www.imdb.com/title/tt0066011/?ref_=nm_flmg_com_92&#34;&gt;where do we begin&lt;/a&gt;? At the &lt;a href=&#34;http://www.perl.org/books/beginning-perl/&#34;&gt;beginning&lt;/a&gt; I guess:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;orGAnIZAtIonAL InFLuEncES And ProJEct LIFE cYcLE &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;. 19
-2.1 organizational Influences on Project Management &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; 20 2.1.1 organizational cultures and Styles &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;. 20 2.1.2 organizational communications &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 21 2.1.3 organizational Structures &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;. 21 2.1.4 organizational Process Assets &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 27 2.1.5 Enterprise Environmental Factors &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; 29&lt;/li&gt;
+&lt;li&gt;perl is an interpreted language (not compiled to a binary) so need an interpreter&lt;/li&gt;
+&lt;li&gt;get help&lt;/li&gt;
+&lt;li&gt;be good to the &lt;a href=&#34;http://www.imdb.com/title/tt0497116/&#34;&gt;environment&lt;/a&gt; variables&lt;/li&gt;
+&lt;li&gt;reuse, reduce, recycle - live sustainably with the Comprehensive Perl Archive Network&lt;/li&gt;
+&lt;li&gt;EPIC debugging is, well, &lt;a href=&#34;http://www.imdb.com/title/tt0848537/&#34;&gt;epic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;document as you go, who would have thunk it&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;http://www.imdb.com/title/tt0117509/&#34;&gt;name by any other&lt;/a&gt; is conventional&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;2.2 Project Stakeholders and Governance &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 30 2.2.1 Project Stakeholders&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; 30 2.2.2 Project Governance &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 34 2.2.3 Project Success&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 35
-2.3 Project team &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;. 35 2.3.1 composition of Project teams &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; 37 2.4 Project Life cycle &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip; 38 2.4.1 characteristics of the Project Life cycle &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.. 38 2.4.2 Project Phases&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;. 41&lt;/p&gt;
+&lt;h3 id=&#34;toc_1&#34;&gt;The Perl Interpreter&lt;/h3&gt;
 
-&lt;p&gt;Organizational culture is shaped by the common experiences of members of the organization and most organizations have developed unique cultures over time by practice and common usage. Common experiences include, but are not limited to:
-• Shared visions, mission, values, beliefs, and expectations;&lt;br /&gt;
-• Regulations, policies, methods, and procedures;&lt;br /&gt;
-• Motivation and reward systems;&lt;br /&gt;
-• Risk tolerance;&lt;br /&gt;
-• View of leadership, hierarchy, and authority relationships;&lt;br /&gt;
-• Code of conduct, work ethic, and work hours; and&lt;br /&gt;
-• Operating environments.&lt;/p&gt;
+&lt;p&gt;To check if already have a perl interpreter installed type the following into a command prompt:&lt;/p&gt;
 
-&lt;p&gt;Many organizational structures include strategic, middle management, and operational levels. The project manager may interact with all three levels depending on factors such as:
-• Strategic importance of the project,&lt;br /&gt;
-• Capacity of stakeholders to exert influence on the project,&lt;br /&gt;
-• Degree of project management maturity,&lt;br /&gt;
-• Project management systems, and&lt;br /&gt;
-• Organizational communications.&lt;br /&gt;
-This interaction determines project characteristics such as:&lt;br /&gt;
-• Project manager’s level of authority,&lt;br /&gt;
-• Resource availability and management,&lt;br /&gt;
-• Entity controlling the project budget,&lt;br /&gt;
-• Project manager’s role, and&lt;br /&gt;
-• Project team composition.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    perl -v 
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The project life cycle is independent from the life cycle of the product produced by or modified by the project. However, the project should take the current life-cycle phase of the product into consideration.  A project may be divided into any number of phases. A project phase is a collection of logically related project activities that culminates in the completion of one or more deliverables. Project phases are used when the nature of the work to be performed is unique to a portion of the project, and are typically linked to the development of a specific major deliverable. A phase may emphasize processes from a particular Project Management Process Group, but it is likely that most or all processes will be executed in some form in each phase. Project phases typically are completed sequentially, but can overlap in some project situations. Different phases typically have a different duration or effort. The high-level nature of project phases makes them an element of the project life cycle.&lt;/p&gt;
+&lt;p&gt;It should return something like:&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Phase-to-Phase relationships: sequential and overlapping&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Predictive Life cycles&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Iterative and Incremental Life cycles&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Adaptive life cycles (also known as change-driven or agile methods) are intended to respond to high levels of change and ongoing stakeholder involvement. Adaptive methods are also iterative and incremental, but differ in that iterations are very rapid (usually with a duration of 2 to 4 weeks) and are fixed in time and cost. Adaptive projects generally perform several processes in each iteration, although early iterations may concentrate more on planning activities.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Adaptive methods are generally preferred when dealing with a rapidly changing environment, when requirements and scope are difficult to define in advance, and when it is possible to define small incremental improvements that will deliver value to stakeholders.&lt;/p&gt;
-
-&lt;p&gt;The project processes are performed by the project team with stakeholder interaction and generally fall into one of two major categories:
-• Project management processes. These processes ensure the effective flow of the project throughout its life cycle. These processes encompass the tools and techniques involved in applying the skills and capabilities described in the Knowledge Areas (Sections 4 through 13).&lt;br /&gt;
-• Product-oriented processes. These processes specify and create the project’s product. Product- oriented processes are typically defined by the project life cycle (as discussed in Section 2.4) and vary by application area as well as the phase of the product life cycle. The scope of the project cannot be defined without some basic understanding of how to create the specified product. For example, various construction techniques and tools need to be considered when determining the overall complexity of the house to be built.&lt;/p&gt;
-
-&lt;p&gt;Stakeholder Management:&lt;/p&gt;
-
-&lt;p&gt;Project Stakeholder Management includes the processes required to identify the people, groups, or organizations that could impact or be impacted by the project, to analyze stakeholder expectations and their impact on the project, and to develop appropriate management strategies for effectively engaging stakeholders in project decisions and execution. Stakeholder management also focuses on continuous communication with stakeholders to understand their needs and expectations, addressing issues as they occur, managing conflicting interests and fostering appropriate stakeholder engagement in project decisions and activities. Stakeholder satisfaction should be managed as a key project objective.&lt;/p&gt;
-
-&lt;p&gt;Integration:&lt;/p&gt;
-
-&lt;p&gt;Project Charter:
-• Project purpose or justification,&lt;br /&gt;
-• Measurable project objectives and related success criteria,&lt;br /&gt;
-• High-level requirements,&lt;br /&gt;
-• Assumptions and constraints,&lt;br /&gt;
-• High-level project description and boundaries,&lt;br /&gt;
-• High-level risks,&lt;br /&gt;
-• Summary milestone schedule,&lt;br /&gt;
-• Summary budget,&lt;br /&gt;
-• Stakeholder list,&lt;br /&gt;
-• Project approval requirements (i.e., what constitutes project success, who decides the project is successful, and who signs off on the project),&lt;br /&gt;
-• Assigned project manager, responsibility, and authority level, and&lt;br /&gt;
-• Name and authority of the sponsor or other person(s) authorizing the project charter.&lt;/p&gt;
-
-&lt;p&gt;Scope:&lt;/p&gt;
-
-&lt;p&gt;Requirements documentation describes how individual requirements meet the business need for the project. Requirements may start out at a high level and become progressively more detailed as more about the requirements is known. Before being baselined, requirements need to be unambiguous (measurable and testable), traceable, complete, consistent, and acceptable to key stakeholders. The format of a requirements document may range from a simple document listing all the requirements categorized by stakeholder and priority, to more elaborate forms containing an executive summary, detailed descriptions, and attachments.
-Components of requirements documentation can include, but, are not limited to:&lt;br /&gt;
-• Business requirements, including:&lt;br /&gt;
-○ Business and project objectives for traceability;&lt;br /&gt;
-○ Business rules for the performing organization; and&lt;br /&gt;
-○ Guiding principles of the organisation.&lt;br /&gt;
-• Stakeholder requirements, including:&lt;br /&gt;
-○ Impacts to other organizational areas;&lt;br /&gt;
-○ Impacts to other entities inside or outside the performing organization; and ○ Stakeholder communication and reporting requirements.&lt;br /&gt;
-• Solution requirements, including:&lt;br /&gt;
-○ Functional and nonfunctional requirements;&lt;br /&gt;
-○ Technology and standard compliance requirements;&lt;br /&gt;
-○ Support and training requirements;&lt;br /&gt;
-○ Quality requirements; and&lt;br /&gt;
-○ Reporting requirements, etc. (solution requirements can be documented textually, in models, or both).&lt;br /&gt;
-• Project requirements, such as:&lt;br /&gt;
-○ Levels of service, performance, safety, compliance, etc.; and ○ Acceptance criteria.&lt;br /&gt;
-• Transition requirements.&lt;br /&gt;
-• Requirements assumptions, dependencies, and constraints.&lt;/p&gt;
-
-&lt;p&gt;The requirements traceability matrix is a grid that links product requirements from their origin to the deliverables that satisfy them. The implementation of a requirements traceability matrix helps ensure that each requirement adds business value by linking it to the business and project objectives. It provides a means to track requirements throughout the project life cycle, helping to ensure that requirements approved in the requirements documentation are delivered at the end of the project. Finally, it provides a structure for managing changes to the product scope.
-Tracing includes, but is not limited to, tracing requirements for the following:
-• Business needs, opportunities, goals, and objectives;&lt;br /&gt;
-• Project objectives;&lt;br /&gt;
-• Project scope/WBS deliverables;&lt;br /&gt;
-• Product design;&lt;br /&gt;
-• Product development;&lt;br /&gt;
-• Test strategy and test scenarios; and&lt;br /&gt;
-• High-level requirements to more detailed requirements.&lt;br /&gt;
-Attributes associated with each requirement can be recorded in the requirements traceability matrix. These attributes help to define key information about the requirement. Typical attributes used in the requirements traceability matrix may include: a unique identifier, a textual description of the requirement, the rationale for inclusion, owner, source, priority, version, current status (such as active, cancelled, deferred, added, approved, assigned, completed), and status date. Additional attributes to ensure that the requirement has met stakeholders’ satisfaction may include stability, complexity, and acceptance criteria.&lt;/p&gt;
-
-&lt;p&gt;(docs, decisions)&lt;/p&gt;
-
-&lt;p&gt;Quality:&lt;/p&gt;
-
-&lt;p&gt;In the context of achieving ISO compatibility, modern quality management approaches seek to minimize variation and to deliver results that meet defined requirements. These approaches recognize the importance of:
-• customer satisfaction. Understanding, evaluating, defining, and managing requirements so that customer expectations are met. This requires a combination of conformance to requirements (to ensure the project produces what it was created to produce) and fitness for use (the product or service needs to satisfy the real needs).&lt;br /&gt;
-• Prevention over inspection. Quality should be planned, designed, and built into—not inspected into the project’s management or the project’s deliverables. The cost of preventing mistakes is generally much less than the cost of correcting mistakes when they are found by inspection or during usage.&lt;br /&gt;
-• continuous improvement. The PDCA (plan-do-check-act) cycle is the basis for quality improvement as defined by Shewhart and modified by Deming. In addition, quality improvement initiatives such as Total Quality Management (TQM), Six Sigma, and Lean Six Sigma could improve the quality of the project’s management as well as the quality of the project’s product. Commonly used process improvement models include Malcolm Baldrige, Organizational Project Management Maturity Model (OPM3®), and Capability Maturity Model Integrated (CMMI®).&lt;br /&gt;
-• Management responsibility. Success requires the participation of all members of the project team.  Nevertheless, management retains, within its responsibility for quality, a related responsibility to provide suitable resources at adequate capacities.&lt;br /&gt;
-• cost of quality (coQ).&lt;/p&gt;
-
-&lt;p&gt;(Requirements detail / req wiki, ADG, development workflows / branching strategies)&lt;/p&gt;
-
-&lt;p&gt;HR:
-A responsibility assignment matrix (RAM) is a grid that shows the project resources assigned to each work package. It is used to illustrate the connections between work packages or activities and project team members.&lt;/p&gt;
-
-&lt;p&gt;One example of a RAM is a RACI (responsible, accountable, consult, and inform) chart.&lt;/p&gt;
-
-&lt;p&gt;(GitHub team stuff)&lt;/p&gt;
-
-&lt;p&gt;The use of virtual teams creates new possibilities when acquiring project team members. Virtual teams can be defined as groups of people with a shared goal who fulfill their roles with little or no time spent meeting face to
-face. The meetings
-• • • • • •
-availability of communication technology such as e-mail, audio conferencing, social media, web-based and video conferencing has made virtual teams feasible. The virtual team model makes it possible to:
-Form teams of people from the same organization who live in widespread geographic areas;
-Add special expertise to a project team even though the expert is not in the same geographic area; Incorporate employees who work from home offices;
-Form teams of people who work different shifts, hours, or days;
-Include people with mobility limitations or disabilities; and
-Move forward with projects that would have been ignored due to travel expenses.&lt;/p&gt;
-
-&lt;p&gt;(GitHub social, code of conduct - no flame wars or trolls)&lt;/p&gt;
-
-&lt;p&gt;Communication:&lt;/p&gt;
-
-&lt;p&gt;• Listening actively and effectively;&lt;br /&gt;
-• Questioning and probing ideas and situations to ensure better understanding;&lt;br /&gt;
-• Educating to increase team’s knowledge so that they can be more effective;&lt;br /&gt;
-• Fact-finding to identify or confirm information;&lt;br /&gt;
-• Setting and managing expectations;&lt;br /&gt;
-• Persuading a person, a team, or an organization to perform an action;&lt;br /&gt;
-• Motivating to provide encouragement or reassurance;&lt;br /&gt;
-• Coaching to improve performance and achieve desired results;&lt;br /&gt;
-• Negotiating to achieve mutually acceptable agreements between parties;&lt;br /&gt;
-• Resolving conflict to prevent disruptive impacts; and&lt;br /&gt;
-• Summarizing, recapping, and identifying the next steps.&lt;/p&gt;
-
-&lt;p&gt;• Who needs what information, and who is authorized to access that information;&lt;br /&gt;
-• When they will need the information;&lt;br /&gt;
-• Where the information should be stored;&lt;br /&gt;
-• What format the information should be stored in;&lt;br /&gt;
-• How the information can be retrieved; and&lt;br /&gt;
-• Whether time zone, language barriers, and cross-cultural considerations need to be taken into account.&lt;/p&gt;
-
-&lt;p&gt;The communications management plan is a component of the project management plan that describes how project communications will be planned, structured, monitored, and controlled. The plan contains the following information:
-• Stakeholder communication requirements;&lt;br /&gt;
-• Information to be communicated, including language, format, content, and level of detail;&lt;br /&gt;
-• Reason for the distribution of that information;&lt;br /&gt;
-• Time frame and frequency for the distribution of required information and receipt of acknowledgment or response, if applicable;&lt;br /&gt;
-• Person responsible for communicating the information;&lt;br /&gt;
-• Person responsible for authorizing release of confidential information;&lt;br /&gt;
-• Person or groups who will receive the information;&lt;br /&gt;
-• Methods or technologies used to convey the information, such as memos, e-mail, and/or press releases;&lt;br /&gt;
-• Resources allocated for communication activities, including time and budget;&lt;br /&gt;
-• Escalation process identifying time frames and the management chain (names) for escalation of issues that cannot be resolved at a lower staff level;&lt;br /&gt;
-• Method for updating and refining the communications management plan as the project progresses and develops;&lt;br /&gt;
-• Glossary of common terminology;&lt;br /&gt;
-• Flow charts of the information flow in the project, workflows with possible sequence of authorization, list
-of reports, and meeting plans, etc.; and&lt;br /&gt;
-• Communication constraints usually derived from a specific legislation or regulation, technology, and organizational policies, etc.&lt;/p&gt;
-
-&lt;p&gt;Risk:&lt;/p&gt;
-
-&lt;p&gt;Risk Management Plan&lt;/p&gt;
-
-&lt;p&gt;Methodology.&lt;br /&gt;
-roles and responsibilities.&lt;br /&gt;
-Budgeting.&lt;br /&gt;
-timing.&lt;br /&gt;
-risk categories.&lt;br /&gt;
-definitions of risk probability and impact.&lt;br /&gt;
-Probability and impact matrix.&lt;br /&gt;
-revised stakeholders’ tolerances.&lt;br /&gt;
-reporting formats.&lt;br /&gt;
-tracking.&lt;/p&gt;
-
-&lt;p&gt;risk management plan (compare these against the standard)&lt;br /&gt;
-- Strategies for negative risks or threats; avoid, transfer, mitigate, accept&lt;br /&gt;
-- Positive risks or opportunities; exploit, enhance, share, accept&lt;br /&gt;
-risk register&lt;br /&gt;
-risk reporting&lt;/p&gt;
-
-&lt;p&gt;Procurement:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;hosting&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;industrialising kickstarter / outsourcing / imaging&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;donations&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
+&lt;pre&gt;&lt;code&gt;    This is perl 5, version 12, subversion 4 (v5.12.4) built for darwin-thread-multi-2level
+    (with 2 registered patches, see perl -V for more detail)
     
-    <item>
-      <title>Setting up project resources</title>
-      <link>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</guid>
-      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
+    Copyright 1987-2010, Larry Wall
+    
+    Perl may be copied only under the terms of either the Artistic License or the
+    GNU General Public License, which may be found in the Perl 5 source kit.
+    
+    Complete documentation for Perl, including FAQ lists, should be found on
+    this system using &amp;quot;man perl&amp;quot; or &amp;quot;perldoc perl&amp;quot;.  If you have access to the
+    Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If it doesn&amp;rsquo;t, &lt;a href=&#34;http://www.perl.org/get.html&#34;&gt;download one&lt;/a&gt; for the relevant platform:&lt;/p&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Technology choice&lt;/th&gt;
-&lt;th&gt;Use&lt;/th&gt;
+&lt;th&gt;Platform&lt;/th&gt;
+&lt;th&gt;Where&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;[[GitHub&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
+&lt;td&gt;mac&lt;/td&gt;
+&lt;td&gt;pretty likely already installed&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;[[Eclipse&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
+&lt;td&gt;windows&lt;/td&gt;
+&lt;td&gt;could get &lt;a href=&#34;http://www.activestate.com&#34;&gt;activestate&lt;/a&gt; or &lt;a href=&#34;http://strawberryperl.com&#34;&gt;strawberryperl&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;[[Perl&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
-&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;VMWare&lt;/td&gt;
-&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;MySQL Workbench&lt;/td&gt;
-&lt;td&gt;data / content modelling&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Makefile&lt;/td&gt;
-&lt;td&gt;packaging installations&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
-&lt;td&gt;implementing installation files&lt;/td&gt;
+&lt;td&gt;linux&lt;/td&gt;
+&lt;td&gt;consult package manager&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Alfresco oAuth sample application</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/alfresco-oauth-sample-application/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/alfresco-oauth-sample-application/</guid>
-      <description>
 
-&lt;p&gt;&lt;html&gt;
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;
-    &lt;p&gt;
-      &lt;img src=&#34;/assets/mages/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;oAuth Sample webapp&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;&lt;/p&gt;
+&lt;p&gt;Once have the perl interpreter installed have access to the &lt;a href=&#34;http://www.perlmonks.org/?node_id=640489&#34;&gt;perl shell&lt;/a&gt; with:&lt;/p&gt;
 
-&lt;p&gt;In October 2012, Alfresco &lt;a href=&#34;http://www.alfresco.com/news/press-releases/alfrescos-cloud-api-mobile-apps-now-available&#34;&gt;announced&lt;/a&gt; an open application-programming interface &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;(API) for Alfresco in the cloud&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;There are some great resources available to show how to use the cloud api, including:&lt;br /&gt;
-* &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; from Jeff Potts
-* &lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation&lt;/a&gt; from the &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;Alfresco Developer Portal&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;To access Alfresco in the cloud:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;an Alfresco application uses the OAuth 2.0 authorization code flow to authenticate itself with Alfresco Cloud and to allow users to authorize the application to access data on their behalf.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://oauth.net&#34;&gt;oAuth&lt;/a&gt; is an open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications.  The &lt;a href=&#34;http://tools.ietf.org/html/rfc6749#section-1.2&#34;&gt;oAuth protocol flow&lt;/a&gt; starts with making an authorisation request through to receiving initial and refresh access tokens for using in sessions.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/ietf-oauth-flow.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;In addition to the &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529 and [Jeff Potts&#39; video tutorials](https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; showing how to do this, &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;Jeff also highlights&lt;/a&gt; on the developer forum Gethin Jame&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;oAuth sample application&lt;/a&gt; that demonstrates using the oAuth authentication protocol.&lt;/p&gt;
-
-&lt;p&gt;To get an access token to use with CMIS Workbench, Allegria has used Gethin&amp;rsquo;s oAuth sample application:&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Get the Alfresco oAuth application&lt;/li&gt;
-&lt;li&gt;Register for the Cloud api&lt;/li&gt;
-&lt;li&gt;Create an API key&lt;/li&gt;
-&lt;li&gt;Configure oAuth web app&lt;/li&gt;
-&lt;li&gt;Authorisation request&lt;/li&gt;
-&lt;li&gt;Access token request&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;1. Get the Alfresco oAuth application&lt;/h3&gt;
-
-&lt;p&gt;Gethin&amp;rsquo;s Alfresco oAuth Sample Application (uses gradle and runs in jetty servlet engine and http server) is easily used with CMIS workbench, so [[fork|Paint-by-numbers:-GitHub]] his &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;alfresco-oauth-sample repository&lt;/a&gt; and [[import|Paint-by-numbers:-Eclipse]] it to Eclipse eGit.&lt;/p&gt;
-
-&lt;p&gt;The readme has simple instructions to get things running.  For now just need to :
-* Ensure you have an &lt;a href=&#34;https://www.java.com/en/download/installed.jsp&#34; target=&#34;_blank&#34;&gt;up to date Java VM&lt;/a&gt; installed and port 8181 is not in use&lt;br /&gt;
-* take note of the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; which will be used when registering the application with Alfresco in later steps&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;2. Register for the Cloud api&lt;/h3&gt;
-
-&lt;p&gt;Need to follow a &lt;a href=&#34;https://www.alfresco.com/develop/cloud/signup&#34;&gt;registration process&lt;/a&gt; with Alfresco to obtain api access by following the steps on the &lt;a href=&#34;http://www.alfresco.com/develop&#34;&gt;Alfresco developer portal&lt;/a&gt; (click on the &amp;lsquo;register for the cloud api&amp;rsquo; button):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-developer-portal.png?raw=true&#34; alt=&#34;portal&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;3. Create an API key&lt;/h3&gt;
-
-&lt;p&gt;Register cmis-workbench on the Alfresco Developer site to to get authentication configuration details&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-manage-applications.png?raw=true&#34; alt=&#34;action&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The application can be called anything, just needs to have a name so can get an &amp;lsquo;API Key&amp;rsquo;, so have called it &amp;lsquo;cmis-workbench to make things easier.&lt;br /&gt;
-Edit the API Details and on the &amp;lsquo;Auth&amp;rsquo; tab enter the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; (this comes from Gethin&amp;rsquo;s repository readme):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-oAuth.png?raw=true&#34; alt=&#34;action&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_4&#34;&gt;4. Configure oAuth web app&lt;/h3&gt;
-
-&lt;p&gt;Follow the next next steps in Gethin&amp;rsquo;s readme:
-* Edit &lt;code&gt;src/main/webapp/config.js&lt;/code&gt; and put in the client_id, client_secret and callback urls registered at The Alfresco Developer Portal (For this app, the redirect_uri should be &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt;)&lt;br /&gt;
-* Run the Alfresco-oAuth-Sample application:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; # change to the folder holding the imported project  
- ./gradlew  jettyRun
+&lt;pre&gt;&lt;code&gt;    perl -MCPAN -e shell   
+    cpan  
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The first time it runs, the following output will appear:&lt;/p&gt;
+&lt;h3 id=&#34;toc_2&#34;&gt;getting help&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-1st-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;After the initial build, each subsequent time will output:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_5&#34;&gt;5. Authorisation request&lt;/h3&gt;
-
-&lt;p&gt;In a web browser go to &lt;code&gt;http://localhost:8181/oauthsample&lt;/code&gt; to see the first step in the oAuth protocol flow (authorisation request).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1.png?raw=true&#34; alt=&#34;request&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The values in this screen should come from the &lt;code&gt;config.js&lt;/code&gt; file configured in the previous step so just hit submit.&lt;/p&gt;
-
-&lt;p&gt;The authorisation screen from Alfresco Cloud will appear to allow entry of username and password that was set up when registered for api account:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1-1.png?raw=true&#34; alt=&#34;auth-credentials&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_6&#34;&gt;6. Access token request&lt;/h3&gt;
-
-&lt;p&gt;Send the authorisation grant - nothing to do here but hit submit (the client secret will have come from &lt;code&gt;config.js&lt;/code&gt; - it is blanked out here):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-2.png?raw=true&#34; alt=&#34;step2&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Will get a response from the cloud with the access token:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-3.png?raw=true&#34; alt=&#34;step2-1&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_7&#34;&gt;Other oAuth resources:&lt;/h3&gt;
+&lt;p&gt;Perl is up to version 5 now and that means there is tons of help out there.  Some of the obvious places are;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;The &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; describes a number of tools:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://curl.haxx.se&#34;&gt;cURL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[RESTCLient]&lt;a href=&#34;http://restclient.org)&#34;&gt;http://restclient.org)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Jeff Potts uses &lt;a href=&#34;https://code.google.com/p/google-oauth-java-client/&#34;&gt;Google&amp;rsquo;s Java oAuth2 client&lt;/a&gt; in his Alfresco cloud how-to &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; and highlights Jared Ottley&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/spring-social-alfresco&#34;&gt;Spring Social plug-in&lt;/a&gt; in the &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;developer forums&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;CPAN oAuth modules:&lt;br /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Net::OAuth provides a low-level API for reading and writing OAuth messages (probably should start with Net::OAuth::Client).  Net::OAuth provides; classes that encapsulate OAuth messages (requests and responses),
-message signing, message serialization and parsing, 2-legged requests (aka. tokenless requests, aka. consumer requests)&lt;/li&gt;
-&lt;li&gt;Net::OAuth::Simple - a simple wrapper round the OAuth protocol&lt;/li&gt;
-&lt;li&gt;OAuth::Simple - Simple OAuth authorization on your site&lt;/li&gt;
-&lt;li&gt;OAuth::Consumer - LWP based user agent with OAuth for consumer application&lt;/li&gt;
-&lt;li&gt;OAuth::Lite - OAuth framework (CONSUMER SIDE see OAuth::Lite::Consumer, SERVICE PROVIDER SIDE see OAuth::Lite::ServerUtil or to build server on mod_perl2, see OAuth::Lite::Server::mod_perl2.&lt;/li&gt;
-&lt;li&gt;OAuth::Lite::Util - utility for OAuth&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://perldoc.perl.org/perl.html&#34;&gt;http://perldoc.perl.org/perl.html&lt;/a&gt; and &lt;a href=&#34;http://www.perl.org/learn.html&#34;&gt;http://www.perl.org/learn.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Intro.pdf&#34;&gt;Beginning Perl Intro&lt;/a&gt; explains about getting text: &lt;em&gt;typing &lt;code&gt;perldoc perl&lt;/code&gt; from a command prompt will get you a table of contents and some basic infomration about Perl.  The pages your probably going to use are the Perl FAQ and &amp;lsquo;perlfunc&amp;rsquo;, which describes the built-in functions&lt;/em&gt;.  Page 10 in here also lists help sources.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlmonks.org&#34;&gt;http://www.perlmonks.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlhowto.com&#34;&gt;http://www.perlhowto.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;these look really simple to go through if have a bit of time: &lt;a href=&#34;http://docstore.mik.ua/orelly/perl3/lperl/index.htm&#34;&gt;http://docstore.mik.ua/orelly/perl3/lperl/index.htm&lt;/a&gt; and &lt;a href=&#34;http://docstore.mik.ua/orelly/perl4/index.htm&#34;&gt;http://docstore.mik.ua/orelly/perl4/index.htm&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;As with all help / how-to&amp;rsquo;s these established sources sometimes had varying levels of details for some of the start-up type questions like; @INC and the environment, working out what modules are installed or what to call things.  Usually had to put together a couple to get the answer (like the ones below).&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;@INC&lt;/h3&gt;
+
+&lt;p&gt;As start to use (pardon the pun), perl and edit first modules, a number of the errors popped up relating to modules that were &amp;lsquo;using&amp;rsquo; but couldn&amp;rsquo;t find.  This will probably be a path issue but the fix isn&amp;rsquo;t that obvious as there are gazillions of different ideas out there like:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mixture of &lt;a href=&#34;http://stackoverflow.com/questions/2526804/how-is-perls-inc-constructed-aka-what-are-all-the-ways-of-affecting-where-pe&#34;&gt;use, &amp;lsquo;@INC&amp;rsquo; and PERL5LIB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;overview of &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_AppB.pdf&#34;&gt;special variables&lt;/a&gt; like &amp;lsquo;%ENV&amp;rsquo;, &amp;lsquo;@INC&amp;rsquo;, &amp;lsquo;%INC&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;another environment setup &lt;a href=&#34;http://www.perlmonks.org/?node_id=867860&#34;&gt;PERL5LIB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;some more about &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Chap10.pdf&#34;&gt;modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perl.com/pub/2002/05/14/mod_perl.html&#34;&gt;use(), require(), do(), %INC and @INC Explained&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Somewhere in this list (start at the top and work down) and google will probably be the answer.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;CPAN Perl Modules&lt;/h3&gt;
+
+&lt;p&gt;There are a gazilion &lt;a href=&#34;https://docs.google.com/viewer?url=http://blob.perl.org/books/beginning-perl/3145_Chap10.pdf&#34;&gt;perl modules&lt;/a&gt; or bits of code already written to do all sorts of things, so where is it?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;installed as part of the interpreter  (File::Find, benchmark etc)&lt;/li&gt;
+&lt;li&gt;code up on repositories like GitHub&lt;/li&gt;
+&lt;li&gt;perl package &lt;a href=&#34;http://docs.activestate.com/activeperl/5.10/faq/ActivePerl-faq2.html#ppm_repositories&#34;&gt;repositories&lt;/a&gt; like for ActiveState&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cpan.org/misc/cpan-faq.html&#34;&gt;Comprehensive Perl Archive Network&lt;/a&gt; (CPAN)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am using macOSX so perl was installed already and installed the cpan addon &lt;a href=&#34;http://www.bioperl.org/wiki/Tutorial:Installing_Perl_modules&#34;&gt;package manager&lt;/a&gt; by entering the &lt;a href=&#34;http://search.cpan.org/~miyagawa/App-cpanminus-1.7001/bin/cpanm&#34;&gt;code below&lt;/a&gt; in a terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo cpan App::cpanminus
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now &lt;a href=&#34;http://www.cpan.org/modules/INSTALL.html&#34;&gt;install&lt;/a&gt; any module you can find on cpan &lt;code&gt;sudo cpanm Module::Name&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To find what modules are currently installed, as with most things perl there seems to be multitude of ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;instmodsh&lt;/code&gt; &lt;a href=&#34;http://www.cyberciti.biz/faq/how-do-i-find-out-what-perl-modules-already-installed-on-my-system/&#34;&gt;to see all installed modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;perldoc -l Net::UPnP&lt;/code&gt; &lt;a href=&#34;http://www.perlhowto.com/list_the_installed_modules&#34;&gt;to see if Net::UPnP is installed&lt;/a&gt;, this will show where the module (.pm) is&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;perl -MTie::Hash -e 1&lt;/code&gt; &lt;a href=&#34;http://www.perlhowto.com/check_if_a_module_is_installed&#34;&gt;to see if Tie::Hash is installed&lt;/a&gt;, this will run it so if not installed will get and error message and if installed then will need to break execution&lt;/li&gt;
+&lt;li&gt;see the &lt;code&gt;perlmodinstall&lt;/code&gt; manpage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;EPIC&lt;/h3&gt;
+
+&lt;p&gt;To get the most out of EPIC, need to install some supporting perl modules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project templates (Module::Starter)&lt;/li&gt;
+&lt;li&gt;source formatting (Perl::Tidy), also get colouring&lt;/li&gt;
+&lt;li&gt;best practice approach (Perl::Critic)&lt;/li&gt;
+&lt;li&gt;syntax (Perl::Debugger and Pad::Walker)&lt;/li&gt;
+&lt;li&gt;commenting / documentation (&lt;a href=&#34;http://perldoc.perl.org/perlpod.html&#34;&gt;perlpod&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;eclipse perspective for outline views of code and consoles for heaps of things like tasks, logs etc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To do that we ran the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo cpanm Module::Starter
+    sudo cpanm Perl::Tidy
+    sudo cpanm Perl::Critic
+    sudo cpanm Pad::Walker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When configuring these into &lt;a href=&#34;./Paint-by-numbers:-Eclipse-with-Epic-and-Egit&#34;&gt;EPIC preferences&lt;/a&gt; need to find where the modules installed to as couldn&amp;rsquo;t use the default locations.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Perldoc&lt;/h3&gt;
+
+&lt;p&gt;Understanding how perldoc works, in particular the syntax for embedding pod into code and then using it to auto-generate documentation was a great place to start understanding perl.  In doing this first, got to see code examples, work out how to see and fix mistakes like forgetting to put in spaces and semicolons at end of lines and had to use the perl interpreter and instal modules.  Also was an easy, practical way to start looking at the perl language, and actually got to produce something helpful.&lt;/p&gt;
+
+&lt;p&gt;Got some help from the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://search.cpan.org/~rjbs/perl-5.18.1/pod/perlpod.pod&#34;&gt;http://search.cpan.org/~rjbs/perl-5.18.1/pod/perlpod.pod&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://perldoc.perl.org/perlpod.html&#34;&gt;http://perldoc.perl.org/perlpod.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.perlmonks.org/?node_id=252477&#34;&gt;http://www.perlmonks.org/?node_id=252477&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first pod we did was inside one of the pDLNA modules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;create some heading information for the package (remember the = operator needs to be against the margin no spaces and sometimes need space at the end of line to work properly)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=head1 NAME
+
+package PDLNA::SSDP - core module for Simple Service Discovery Protocol (SSDP).
+
+=head1 DESCRIPTION
+
+When a Universal Plug and Play (UPnP) enabled device joins a network.....
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;documentation for the functions used, note the use of &lt;code&gt;over&lt;/code&gt;, &lt;code&gt;begin/end html&lt;/code&gt;, &lt;code&gt;back&lt;/code&gt; and &lt;code&gt;cut&lt;/code&gt;, these give the pod structure (over to start the list and back to end it), also using html inside the pod meant could link between the resulting html docs, so when you &lt;a href=&#34;http://www.imdb.com/title/tt0389860/&#34;&gt;click&lt;/a&gt; on an internal library you get taken to the htmlpod for that module.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=head1 LIBRARY FUNCTIONS
+
+=over 12
+
+=item internal libraries
+
+=begin html
+
+&amp;lt;/p&amp;gt;
+&amp;lt;a href=&amp;quot;./Config.html&amp;quot;&amp;gt;PDLNA::Config&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Database.html&amp;quot;&amp;gt;PDLNA::Database&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Devices.html&amp;quot;&amp;gt;PDLNA::Devices&amp;lt;/a&amp;gt;,
+&amp;lt;a href=&amp;quot;./Log.html&amp;quot;&amp;gt;PDLNA::Log&amp;lt;/a&amp;gt;.
+&amp;lt;/p&amp;gt;
+
+=end html
+
+=item external libraries
+
+L&amp;lt;IO::Socket::INET&amp;gt;,
+L&amp;lt;IO::Socket::Multicast&amp;gt;,
+L&amp;lt;Net::Netmask&amp;gt;.
+
+=back
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the block of pod like the following gave chance to document as went the modules actions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=item add_receive_socket()
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;this was how wrapped up pod in the module, note the use of &lt;code&gt;back&lt;/code&gt; at start of the podblock below, this is to close off the headings above.  Note also the use of &lt;code&gt;L&amp;lt;&amp;lt;lt&amp;gt;...E&amp;lt;gt&amp;gt;&amp;gt;&lt;/code&gt; this was a fiddly way to get the email link to work, the other web link was easier.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;=back
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2010-2013 Stefan Heumader L&amp;lt;E&amp;lt;lt&amp;gt;stefan@heumader.atE&amp;lt;gt&amp;gt;&amp;gt;.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licenses/&amp;gt;.
+
+=cut
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once had put all the pod into the modules then created a perl program as below to generate html files like the one for &lt;a href=&#34;../usefuldocs/SSDP.html&#34;&gt;ssdp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    #!/usr/bin/perl
+    
+    use warnings;
+    use strict;
+    
+    use Pod::Simple::HTMLBatch;
+    use Pod::Simple::XHTML;
+
+    my $in_dir = &#39;put directory in here&#39;;
+    my $out_dir = $in_dir . &#39;POD&#39;;
+    
+    my $convert = Pod::Simple::HTMLBatch-&amp;gt;new;
+    $convert-&amp;gt;html_render_class(&#39;Pod::Simple::XHTML&#39;);
+    $convert-&amp;gt;add_css(&#39;http://www.perl.org/css/perl.css&#39;);
+    $convert-&amp;gt;css_flurry(0);
+    $convert-&amp;gt;contents_page_start;
+    $convert-&amp;gt;contents_page_end;
+    $convert-&amp;gt;javascript_flurry(0);
+    $convert-&amp;gt;contents_file(0);
+    $convert-&amp;gt;batch_convert( [ $in_dir ], $out_dir );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Some conventions&lt;/h3&gt;
+
+&lt;p&gt;There seemed to be different naming conventions for different versions of perl but we&amp;rsquo;re using:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;.pl for programs&lt;/li&gt;
+&lt;li&gt;.pm for modules&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This seems to be ok and works in the EPIC plugin to ensure that get nice syntax colouring.&lt;/p&gt;
 </description>
     </item>
     
@@ -1733,227 +981,121 @@ CMIS helper scripts distributed with the CMIS Workbench can make your Groovy cod
     </item>
     
     <item>
-      <title>Java</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/java/</link>
+      <title>Reporting project effort</title>
+      <link>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/java/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/totalbeginner.html&#34;&gt;http://eclipsetutorial.sourceforge.net/totalbeginner.html&lt;/a&gt;
-&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&#34;&gt;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&lt;/a&gt;
-&lt;a href=&#34;http://sourceforge.net/projects/eclipsetutorial/files/&#34;&gt;http://sourceforge.net/projects/eclipsetutorial/files/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A model for reporting the status of project effort:&lt;/p&gt;
 
-&lt;p&gt;The companion has resources listed in the back including (gold standard):
-&lt;a href=&#34;http://docs.oracle.com/javase/tutorial/java/index.html&#34;&gt;http://docs.oracle.com/javase/tutorial/java/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Multi-level messages&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&#34;&gt;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=al7bRZzz4oU&#34;&gt;http://www.youtube.com/watch?v=al7bRZzz4oU&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&#34;&gt;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;maven in Eclipse:  &lt;a href=&#34;http://www.youtube.com/watch?v=xE2F4Z_wKCU&#34;&gt;http://www.youtube.com/watch?v=xE2F4Z_wKCU&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Budget baseline
+Actual baseline
+Forecast baseline&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Eclipse</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</link>
+      <title>Motivation</title>
+      <link>http://localhost:1313/about/motivation/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;hidden stuff
--rw-r&amp;ndash;r&amp;ndash;@.DS_Store
--rw-r&amp;ndash;r&amp;ndash; .classpath
-drwxr-xr-x .git
--rw-r&amp;ndash;r&amp;ndash; .gitignore
-drwxr-xr-x .gradle
--rw-r&amp;ndash;r&amp;ndash; .project
-drwxr-xr-x   .settings&lt;/p&gt;
-
-&lt;p&gt;eclipse project import will create some (particulalry if using the gradle plugin)
-gradle build will create some
-.gitignore is also in the Atlassian SourceTree global gitignore (there is a decision here about whether or not to store the .gitignore stuff in the reporsitory to maintain consistency across the team - prob would put in a dev note so that could have the best of both worlds in case someone is working on a few projects and have different things in their gitignore - although could prob have a base one in here that includes the .gitignore file as well so it doesn&amp;rsquo;t get changed back on commit - would have to add manually through the GitHub gui I think)&lt;/p&gt;
-
-&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
-
-&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
-
+      <guid>http://localhost:1313/about/motivation/</guid>
+      <description>&lt;p&gt;Your family is probably more organised than ours but we generate or collect a ton of stuff including;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
-&lt;li&gt;formatting code so it&amp;rsquo;s readable, valid and conforms to best practice techniques for the language (like project structures)&lt;/li&gt;
-&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
-&lt;li&gt;build/package/implement code&lt;/li&gt;
-&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
+&lt;li&gt;closets full of paper&lt;/li&gt;
+&lt;li&gt;photo albums and video tapes with handwritten reminders of locations, dates, and people&lt;/li&gt;
+&lt;li&gt;recipe books with post-it-notes to highlight favourite meals and tips to make them turn out&lt;/li&gt;
+&lt;li&gt;on-line social media photo sites or photo browsing applications to share holiday snaps and stories&lt;/li&gt;
+&lt;li&gt;boxes of receipts and bills or magazine clippings of housing renovations&lt;/li&gt;
+&lt;li&gt;shelves stacked with music, books and movies&lt;/li&gt;
+&lt;li&gt;a fridge and walls covered in school notices and reminders, report cards, holiday programs for the kids or things to do around the house&lt;/li&gt;
+&lt;li&gt;music docks and subscription services to play tunes and create playlists&lt;/li&gt;
+&lt;li&gt;on-line social bookmark communities or private collections of browser bookmarks to interesting sites&lt;/li&gt;
+&lt;li&gt;blogs of hints, comments, reviews, gists, likes and tips&lt;/li&gt;
+&lt;li&gt;on-line file sharing or hard drives to hold electronic documents or emails&lt;/li&gt;
+&lt;li&gt;on-line video channels or media centre appliances to stream tv-shows, ebooks, podcasts and movies to big and small screens.&lt;/li&gt;  
 &lt;/ul&gt;
 
-&lt;p&gt;Wow, that&amp;rsquo;s a lot of things, but which one to choose?  There are heaps of IDE&amp;rsquo;s out there.  We have chosen &lt;a href=&#34;http://www.eclipse.org&#34;&gt;Eclipse&lt;/a&gt; because; there&amp;rsquo;s tons of documentation, examples and community surrounding it.  Also, because we have also chosen Perl as a development language for the CmisDlnaConnector and Git (GitHub) for source control, Eclipse is a good choice for us because it has really cool plugins &lt;a href=&#34;http://www.epic-ide.org&#34;&gt;EPIC&lt;/a&gt; and &lt;a href=&#34;http://www.eclipse.org/egit/&#34;&gt;EGit&lt;/a&gt; to support both of them.&lt;/p&gt;
+&lt;p&gt;This all works but it can be hard to find things or the links between them and it can take time to create folders and labels to store things. And things change over time (like assignments) or are sensitive (like a Last Will), or are age inappropriate (like violent movies) or are highly sentimental (like family snaps) --it can be hard to work out which is the latest version, who can access something we&#39;ve shared and know if it is protected from loss --it can be hard to stay in control when some of these things are in other&#39;s hands (like on-line sharing or backup sites).&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+&lt;p&gt;We&#39;d love to be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;store all our stuff forever, regardless of what it is and not worry about losing it because it got deleted, misplaced or was overwritten&lt;/li&gt;
+&lt;li&gt;save stuff easily without needing to spend ages creating folder structures and labels.&lt;/li&gt;
+&lt;li&gt;find stuff, no matter where it is or where we are, or what it&#39;s being used for&lt;/li&gt;
+&lt;li&gt;be in control of our stuff, but also still be able to get help from others to manage it.&lt;/li&gt;
+&lt;li&gt;be able to safely and easily share stuff and know what its being used for&lt;/li&gt;
+&lt;/ul&gt;  
 
+&lt;p&gt;That way we&#39;d:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;know the wedding and baby snaps are safe if our hard disk fails or the on-line back-up site disappears&lt;/li&gt;
+&lt;li&gt;reprint the latest version of an assignment at uni that forgot to pick up off the kitchen table&lt;/li&gt;
+&lt;li&gt;get this year’s tax notes and receipts while at a bank filling out loan forms&lt;/li&gt;
+&lt;li&gt;know that the kids aren’t watching blood and guts zombie movies or how much television is being watched&lt;/li&gt;
+&lt;li&gt;cook a favourite recipe at a friends house and use aunty’s email of tips and a how-to demonstration video to improve the chances of it working out&lt;/li&gt;
+&lt;li&gt;bring together subscription services in one place, play them anywhere in the house and even work out if it’s worth having all of them&lt;/li&gt;
+&lt;li&gt;see what things everyone in the family has on&lt;/li&gt;
+&lt;li&gt;have a list of home contents that includes a photo of each item, a scan of its purchase receipt, and its user manual to help with insurance or warranty repairs&lt;/li&gt;  
+&lt;li&gt;show the architect working on the extension a gallery of ideas collected from magazines and realestate sites&lt;/li&gt;
+&lt;li&gt;see a things to do list with materials needed while at the hardware store&lt;/li&gt;
+&lt;li&gt;double check that have set to record a favourite show while out camping&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;
+&lt;a name=&#34;The Idea&#34; class=&#34;anchor&#34; href=&#34;#idea&#34;&gt;&lt;span class=&#34;octicon octicon-link&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+The Idea
+&lt;/h3&gt;
+
+&lt;p&gt;We want a simple access point to the family&#39;s entire digital life&lt;/p&gt;
+&lt;p&gt;--a virtual personal assistant to tie up the loose ends of how we organise our important documents and entertainment.&lt;/p&gt;
+
+&lt;p&gt;The processes and tools to do this aren&#39;t new concepts.  For years:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Corporations have been able to do this by digitising file-rooms full of paper and storing it in Enterprise Content Management (ECM) systems so it can then be more easily; routed through business processes, secured, and searched.&lt;/li&gt;
+&lt;li&gt;Software developers have had Distributed Version Control systems to manage multiple versions, differences and dependencies with source code, builds and documentation.&lt;/li&gt;
+&lt;li&gt;Researchers have had distributed immutable repositories to preserve research papers with integrity.&lt;/li&gt;
+&lt;li&gt;Webmasters have had sophisticated content tools to organise digital assets for publishing on cool sites.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; Between these they have had; sophisticated linking, analytics, collaboration and search, version control, file signing for preservation, integrity, encryption, licensing and citability, granular security models, flexible rules-based workflows and tools for backup and cloud access &lt;/p&gt;
+&lt;p&gt;It could make a lot of sense to take these cool capabilities and consumerise them for home use.&lt;/p&gt;
+
+&lt;h3&gt;
+&lt;a name=&#34;Objectives&#34; class=&#34;anchor&#34; href=&#34;#objectives&#34;&gt;&lt;span class=&#34;octicon octicon-link&#34;&gt;&lt;/span&gt;&lt;/a&gt;Objectives&lt;/h3&gt;
+
+&lt;p&gt;&lt;p&gt;allegria will hopefully be a fun and interesting experience in creating something to organise and preserve all the family&amp;rsquo;s electronic stuff while at the same time:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Getting and configuring Eclipse&lt;/li&gt;
-&lt;li&gt;Getting and configuring Epic&lt;/li&gt;
-&lt;li&gt;Getting and configuring EGit&lt;/li&gt;
-&lt;li&gt;Importing projects&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;Getting and configuring Eclipse&lt;/h3&gt;
-
-&lt;p&gt;Downloaded &lt;a href=&#34;http://www.eclipse.org/downloads/&#34;&gt;Eclipse Kepler (4.3.1)&lt;/a&gt; for MacOSX (and can get a Windows and Linux one as well).&lt;/p&gt;
-
-&lt;p&gt;It comes as an archive which we unstuffed. Then &lt;a href=&#34;http://www.imdb.com/title/tt0109045/&#34;&gt;drag&lt;/a&gt; the &amp;ldquo;eclipse&amp;rdquo; folder into your Applications folder. &lt;a href=&#34;http://www.cs.dartmouth.edu/~cs5/install/eclipse-osx/&#34;&gt;The easiest way to do so&lt;/a&gt; is to open a new window in the Finder and click on Applications in the list you get on the left-hand side. Then drag the &amp;ldquo;eclipse&amp;rdquo; folder in with the other applications. Make sure that you do not drag it into a folder that&amp;rsquo;s already within Applications. In other words, when you&amp;rsquo;re done, the Applications folder should have directly within it a folder named &amp;ldquo;eclipse.&amp;rdquo;
-(This step is not required, but handy.) Double click the &amp;ldquo;eclipse&amp;rdquo; folder. You&amp;rsquo;ll see an application named &amp;ldquo;Eclipse&amp;rdquo;; it has a purple icon with white horizontal stripes. Drag it into your dock. Now you will be able to launch Eclipse by clicking on the icon in the dock.&lt;/p&gt;
-
-&lt;p&gt;Launch the application and set up the default workspace preferences (we&amp;rsquo;ve just put it in the ~/Documents/workspace folder ).&lt;/p&gt;
-
-&lt;p&gt;Didn&amp;rsquo;t really do any other configuration as most of the preferences that are important to us are in the Epic and EGit plugins.  Didn&amp;rsquo;t look at many support docs to get going as its pretty self explanatory but the &lt;a href=&#34;http://help.eclipse.org/kepler/topic/org.eclipse.platform.doc.user/gettingStarted/qs-01.htm?cp=0_1_0&#34;&gt;basic tutorial&lt;/a&gt; and some descriptions of the &lt;a href=&#34;http://help.eclipse.org/kepler/index.jsp?topic=/org.eclipse.jdt.doc.user/reference/ref-icons.htm&#34;&gt;icons&lt;/a&gt; were useful (if could find a similar icons ref for Epic that would be cool).&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;Getting and configuring Epic&lt;/h3&gt;
-
-&lt;p&gt;Even though the project repository is foundational, we&amp;rsquo;ve put this section in before setting up EGit as when we connect to the repo and import projects we wanted to import them as Perl projects (and wanted Perl frameworks and Epic plugin installed first to do this).&lt;/p&gt;
-
-&lt;p&gt;And, in order to have all EPIC &lt;a href=&#34;http://www.epic-ide.org/articles.php&#34;&gt;features&lt;/a&gt; like template project model (Module::Starter), source formatting (PerlTidy), syntax checking, coding standards (PerlCritic), interactive debug etc., you need to have a &lt;a href=&#34;./Paint-by-numbers:-Perl&#34;&gt;Perl interpreter and some supporting perl modules installed&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The Epic &lt;a href=&#34;http://www.epic-ide.org/guide/ch01s02.php&#34;&gt;installation&lt;/a&gt; is done by using the Eclipse Update Manager by entering &amp;lsquo;epic - &lt;a href=&#34;http://e-p-i-c.sf.net/updates/testing&#39;&#34;&gt;http://e-p-i-c.sf.net/updates/testing&#39;&lt;/a&gt; into the “Help &amp;gt; Install new software” dialog.  Chose the testing version &amp;lsquo;cause saw some posts that said it was stable and had good advantages over the current released version (and who doesn&amp;rsquo;t like a shiny new toy).&lt;/p&gt;
-
-&lt;p&gt;Once the plugin is installed, updated the &amp;ldquo;Eclipse &amp;gt; Preferences &amp;gt; Perl EPIC&amp;rdquo; preferences:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Perl EPIC:
-  ~ Perl Executable: &amp;ldquo;/usr/bin/perl&amp;rdquo;&lt;br /&gt;
-  ~ Interpreter Type: Standard&lt;br /&gt;
-Module::Starter:&lt;br /&gt;
-  ~ Select Enable Module::Starter&lt;br /&gt;
-  ~ Custom location: /usr/local/bin/module-starter&lt;br /&gt;
-  ~ Select Override module-starter config file&lt;br /&gt;
-  ~ Module Author:&lt;br /&gt;
-  ~ Module Author Email:&lt;br /&gt;
-Perl::Critic:&lt;br /&gt;
-  ~ Select Enable Critic&lt;br /&gt;
-  ~ Custom location: /usr/local/bin/perlcritic&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;That&amp;rsquo;s the ones we tweaked but there are heaps of other ones as well.&lt;/p&gt;
-
-&lt;p&gt;So now you&amp;rsquo;ve got the &lt;a href=&#34;http://www.imdb.com/title/tt0659325/&#34;&gt;eagles nest&lt;/a&gt; for a birds eye view of the project.  The main structure of Eclipse are perspectives.  &lt;em&gt;Perspectives control what appears in certain menus and toolbars. They define visible action sets, which you can change to customize a perspective. You can save a perspective that you build in this manner, making your own custom perspective that you can open again later.&lt;/em&gt;
-&lt;em&gt;You can set your Workbench preferences to open perspectives in the same window or in a new window.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The main perspectives for developing Perl applications are:
-* Perl - This is the main perspective for coding Perl scripts.&lt;br /&gt;
-* Debug - Provides the main functionality for debugging and executing Perl scripts.&lt;/p&gt;
-
-&lt;p&gt;Did have an error setting up EPIC;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“An internal error occurred during: &amp;ldquo;Launching MyRSSFeeder&amp;rdquo;.java.lang.NullPointerException&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This happened because had mistakenly set the interpreter type in the Perl EPIC preferences to &amp;lsquo;cygwin&amp;rsquo;. Need to make sure use the “Standard” Interpreter type.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;Getting and configuring EGit&lt;/h3&gt;
-
-&lt;p&gt;The &lt;a href=&#34;http://www.eclipse.org/egit/download/&#34;&gt;download page&lt;/a&gt; for EGit says to; &lt;em&gt;install via one of the update site URLs listed below, copy and paste it into the “Help &amp;gt; Install new software” dialog&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;There is a &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide&#34;&gt;huge user guide&lt;/a&gt; for EGit.  We skimmed it.&lt;/p&gt;
-
-&lt;p&gt;Once installed go to the Eclipse &amp;gt; Preferences menu and set the &amp;gt;Team&amp;gt;Git Default repository folder: which we set to the Eclipse workspace directory /Documents/workspaces (it will actually go into each imported project&amp;rsquo;s folder).  The other settings within Eclipse will get set when you actually import projects (and these will be stored in ~/.gitconfig).  The later section on importing projects will detail other settings.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_4&#34;&gt;Importing projects&lt;/h3&gt;
-
-&lt;p&gt;Now, you can connect Eclipse through EGit to a locally cloned repository (like one cloned by the Git commandline client or graphical client), which will give you an Eclipse workspace, a local Git repo and an online Git repo.  We have chosen to clone directly into the Eclipse workspace area so only have the Eclipse workspace directory for the project (like /Documents/workspace/allegria) which will have a hidden .git directory in it with relevant repo config files.&lt;/p&gt;
-
-&lt;p&gt;To do this you will need to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;prepare for &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Eclipse_SSH_Configuration&#34;&gt;ssh connection&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories&#34;&gt;clone a remote repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The ssh connection was a bit tricky and when doing it we got a few error messages.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;the first error message was a problem with validation and there are many &lt;a href=&#34;http://stackoverflow.com/questions/3225862/multiple-github-accounts-ssh-config&#34;&gt;posts&lt;/a&gt; describing the need to create a ~.ssh/config file (the ~.ssh directory is the same directory that the ssh keys are stored).  We used our favourite editor to create ~.ssh/config with the following entries;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;    Host github.com  
-    HostName github.com  
-    User git  
-    PreferredAuthentications publickey  
-    IdentityFile ~/.ssh/id_rsa  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;the second error was about &lt;a href=&#34;https://help.github.com/articles/error-permission-denied-publickey&#34;&gt;permission denied public key&lt;/a&gt; and related to the &amp;lsquo;User&amp;rsquo; entry in the ~.ssh/config file, initially we were using the username for the repo but need to use the generic &amp;lsquo;git&amp;rsquo; user name.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;a third error concerned the need to fix the &lt;a href=&#34;http://www.howtogeek.com/168119/fixing-warning-unprotected-private-key-file-on-linux/&#34;&gt;permissions on id_rsa key files&lt;/a&gt; by resetting them back to default;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;    sudo chmod 600 ~/.ssh/id_rsa  
-    sudo chmod 600 ~/.ssh/id_rsa.pub  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Once have prepared the ssh connection then can clone the remote repo by choosing &amp;ldquo;File &amp;gt; Import &amp;gt; Git &amp;gt; Project from Git&amp;rdquo; and then on the next screen select Clone URI.  Paste in the URI from the repo (in our case github.com/peterwatts/allegria) and select protocol ssh (this will change the URI to ssh://github.com/peterwatts/allegria).  Choose the branches on the next screen and select a directory in the next (in our case ~/Documents/workspace/).  Will then ask you &amp;lsquo;import projects&amp;rsquo; which you can select and do.&lt;/p&gt;
-
-&lt;p&gt;Choose the New Project Wizard (as the other two options; &amp;lsquo;Import existing projects&amp;rsquo; and &amp;lsquo;Import as general project&amp;rsquo; will cause an error as they probably don&amp;rsquo;t have the necessary eclipse setting files).&lt;/p&gt;
+&lt;li&gt;working out how to make the processes and tools large organisations use to organise stuff (like Enterprise Content Management, Advanced Case Management,
+Business Process Management) practical for a household.&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;learning how to use some open source project techniques, tools and technologies (like Portfolio Management, Agile Development, Application Lifecycle Management and DevOps).&lt;/li&gt;&lt;br /&gt;
+&lt;li&gt;passing back what&amp;rsquo;s been learned to the community.&lt;/li&gt;&lt;br /&gt;
+&lt;/ol&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Launchng OSX scripts</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/launching-osx-scripts/</link>
+      <title>Service Terms</title>
+      <link>http://localhost:1313/about/serviceterms/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/launching-osx-scripts/</guid>
-      <description>
+      <guid>http://localhost:1313/about/serviceterms/</guid>
+      <description>&lt;p&gt;This program is free software; you can redistribute it and/or modify it
+under the terms of the the Artistic License (2.0). You may obtain a
+copy of the full license at: &lt;a href=&#34;http://www.perlfoundation.org/artistic_license_2_0&#34;&gt;http://www.perlfoundation.org/artistic_license_2_0&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;html&gt;
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;
-    &lt;p&gt;
-      &lt;img src=&#34;./images/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;The CMIS Workbench application in its default download launches with a shell script rather than a neat osx package.  The osx Automator can be used to launch it from an icon in the osx launchpad or dock.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Create an &amp;lsquo;application&amp;rsquo; from the osx Automator:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator-type.png?raw=true&#34; alt=&#34;automator&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Drag run shell script to the action window and enter the path to workbench.sh:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator.png?raw=true&#34; alt=&#34;action&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Save the package as &amp;lsquo;CMIS Workbench.app&amp;rsquo; to the &amp;lsquo;Applications&amp;rsquo; folder.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Go to the &amp;lsquo;Applications&amp;rsquo; folder, right-click on the &amp;lsquo;CMIS Workbench.app&amp;rsquo; file,&amp;lsquo;Get Info&amp;rsquo;and and click on the icon at the top left until it has a blue outline:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-getinfo.png?raw=true&#34; alt=&#34;finder&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; &lt;a href=&#34;https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/chemistry-opencmis-workbench/chemistry-opencmis-workbench/src/main/resources/images/&#34;&gt;Download&lt;/a&gt; the CMIS Workbench icon (or use the pic below), open it in a paint application, copy to the clipboard and use the Finder [Edit] menu to paste the CMIS Workbench icon onto the &amp;lsquo;Get Info&amp;rsquo; icon.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-wb-icon.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;Disclaimer of Warranty: THE PACKAGE IS PROVIDED BY THE COPYRIGHT HOLDER
+AND CONTRIBUTORS &amp;lsquo;AS IS&amp;rsquo; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
+THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, OR NON-INFRINGEMENT ARE DISCLAIMED TO THE EXTENT PERMITTED BY
+YOUR LOCAL LAW. UNLESS REQUIRED BY LAW, NO COPYRIGHT HOLDER OR
+CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR
+CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;
 </description>
     </item>
     
@@ -2132,6 +1274,154 @@ Perl::Critic:&lt;br /&gt;
 &lt;li&gt;project issues / key decisions&lt;/li&gt;
 &lt;li&gt;bugs, enhancements etc&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Eclipse</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;hidden stuff
+-rw-r&amp;ndash;r&amp;ndash;@.DS_Store
+-rw-r&amp;ndash;r&amp;ndash; .classpath
+drwxr-xr-x .git
+-rw-r&amp;ndash;r&amp;ndash; .gitignore
+drwxr-xr-x .gradle
+-rw-r&amp;ndash;r&amp;ndash; .project
+drwxr-xr-x   .settings&lt;/p&gt;
+
+&lt;p&gt;eclipse project import will create some (particulalry if using the gradle plugin)
+gradle build will create some
+.gitignore is also in the Atlassian SourceTree global gitignore (there is a decision here about whether or not to store the .gitignore stuff in the reporsitory to maintain consistency across the team - prob would put in a dev note so that could have the best of both worlds in case someone is working on a few projects and have different things in their gitignore - although could prob have a base one in here that includes the .gitignore file as well so it doesn&amp;rsquo;t get changed back on commit - would have to add manually through the GitHub gui I think)&lt;/p&gt;
+
+&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
+
+&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
+&lt;li&gt;formatting code so it&amp;rsquo;s readable, valid and conforms to best practice techniques for the language (like project structures)&lt;/li&gt;
+&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
+&lt;li&gt;build/package/implement code&lt;/li&gt;
+&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
+&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Wow, that&amp;rsquo;s a lot of things, but which one to choose?  There are heaps of IDE&amp;rsquo;s out there.  We have chosen &lt;a href=&#34;http://www.eclipse.org&#34;&gt;Eclipse&lt;/a&gt; because; there&amp;rsquo;s tons of documentation, examples and community surrounding it.  Also, because we have also chosen Perl as a development language for the CmisDlnaConnector and Git (GitHub) for source control, Eclipse is a good choice for us because it has really cool plugins &lt;a href=&#34;http://www.epic-ide.org&#34;&gt;EPIC&lt;/a&gt; and &lt;a href=&#34;http://www.eclipse.org/egit/&#34;&gt;EGit&lt;/a&gt; to support both of them.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Getting and configuring Eclipse&lt;/li&gt;
+&lt;li&gt;Getting and configuring Epic&lt;/li&gt;
+&lt;li&gt;Getting and configuring EGit&lt;/li&gt;
+&lt;li&gt;Importing projects&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Getting and configuring Eclipse&lt;/h3&gt;
+
+&lt;p&gt;Downloaded &lt;a href=&#34;http://www.eclipse.org/downloads/&#34;&gt;Eclipse Kepler (4.3.1)&lt;/a&gt; for MacOSX (and can get a Windows and Linux one as well).&lt;/p&gt;
+
+&lt;p&gt;It comes as an archive which we unstuffed. Then &lt;a href=&#34;http://www.imdb.com/title/tt0109045/&#34;&gt;drag&lt;/a&gt; the &amp;ldquo;eclipse&amp;rdquo; folder into your Applications folder. &lt;a href=&#34;http://www.cs.dartmouth.edu/~cs5/install/eclipse-osx/&#34;&gt;The easiest way to do so&lt;/a&gt; is to open a new window in the Finder and click on Applications in the list you get on the left-hand side. Then drag the &amp;ldquo;eclipse&amp;rdquo; folder in with the other applications. Make sure that you do not drag it into a folder that&amp;rsquo;s already within Applications. In other words, when you&amp;rsquo;re done, the Applications folder should have directly within it a folder named &amp;ldquo;eclipse.&amp;rdquo;
+(This step is not required, but handy.) Double click the &amp;ldquo;eclipse&amp;rdquo; folder. You&amp;rsquo;ll see an application named &amp;ldquo;Eclipse&amp;rdquo;; it has a purple icon with white horizontal stripes. Drag it into your dock. Now you will be able to launch Eclipse by clicking on the icon in the dock.&lt;/p&gt;
+
+&lt;p&gt;Launch the application and set up the default workspace preferences (we&amp;rsquo;ve just put it in the ~/Documents/workspace folder ).&lt;/p&gt;
+
+&lt;p&gt;Didn&amp;rsquo;t really do any other configuration as most of the preferences that are important to us are in the Epic and EGit plugins.  Didn&amp;rsquo;t look at many support docs to get going as its pretty self explanatory but the &lt;a href=&#34;http://help.eclipse.org/kepler/topic/org.eclipse.platform.doc.user/gettingStarted/qs-01.htm?cp=0_1_0&#34;&gt;basic tutorial&lt;/a&gt; and some descriptions of the &lt;a href=&#34;http://help.eclipse.org/kepler/index.jsp?topic=/org.eclipse.jdt.doc.user/reference/ref-icons.htm&#34;&gt;icons&lt;/a&gt; were useful (if could find a similar icons ref for Epic that would be cool).&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Getting and configuring Epic&lt;/h3&gt;
+
+&lt;p&gt;Even though the project repository is foundational, we&amp;rsquo;ve put this section in before setting up EGit as when we connect to the repo and import projects we wanted to import them as Perl projects (and wanted Perl frameworks and Epic plugin installed first to do this).&lt;/p&gt;
+
+&lt;p&gt;And, in order to have all EPIC &lt;a href=&#34;http://www.epic-ide.org/articles.php&#34;&gt;features&lt;/a&gt; like template project model (Module::Starter), source formatting (PerlTidy), syntax checking, coding standards (PerlCritic), interactive debug etc., you need to have a &lt;a href=&#34;./Paint-by-numbers:-Perl&#34;&gt;Perl interpreter and some supporting perl modules installed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Epic &lt;a href=&#34;http://www.epic-ide.org/guide/ch01s02.php&#34;&gt;installation&lt;/a&gt; is done by using the Eclipse Update Manager by entering &amp;lsquo;epic - &lt;a href=&#34;http://e-p-i-c.sf.net/updates/testing&#39;&#34;&gt;http://e-p-i-c.sf.net/updates/testing&#39;&lt;/a&gt; into the “Help &amp;gt; Install new software” dialog.  Chose the testing version &amp;lsquo;cause saw some posts that said it was stable and had good advantages over the current released version (and who doesn&amp;rsquo;t like a shiny new toy).&lt;/p&gt;
+
+&lt;p&gt;Once the plugin is installed, updated the &amp;ldquo;Eclipse &amp;gt; Preferences &amp;gt; Perl EPIC&amp;rdquo; preferences:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Perl EPIC:
+  ~ Perl Executable: &amp;ldquo;/usr/bin/perl&amp;rdquo;&lt;br /&gt;
+  ~ Interpreter Type: Standard&lt;br /&gt;
+Module::Starter:&lt;br /&gt;
+  ~ Select Enable Module::Starter&lt;br /&gt;
+  ~ Custom location: /usr/local/bin/module-starter&lt;br /&gt;
+  ~ Select Override module-starter config file&lt;br /&gt;
+  ~ Module Author:&lt;br /&gt;
+  ~ Module Author Email:&lt;br /&gt;
+Perl::Critic:&lt;br /&gt;
+  ~ Select Enable Critic&lt;br /&gt;
+  ~ Custom location: /usr/local/bin/perlcritic&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That&amp;rsquo;s the ones we tweaked but there are heaps of other ones as well.&lt;/p&gt;
+
+&lt;p&gt;So now you&amp;rsquo;ve got the &lt;a href=&#34;http://www.imdb.com/title/tt0659325/&#34;&gt;eagles nest&lt;/a&gt; for a birds eye view of the project.  The main structure of Eclipse are perspectives.  &lt;em&gt;Perspectives control what appears in certain menus and toolbars. They define visible action sets, which you can change to customize a perspective. You can save a perspective that you build in this manner, making your own custom perspective that you can open again later.&lt;/em&gt;
+&lt;em&gt;You can set your Workbench preferences to open perspectives in the same window or in a new window.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The main perspectives for developing Perl applications are:
+* Perl - This is the main perspective for coding Perl scripts.&lt;br /&gt;
+* Debug - Provides the main functionality for debugging and executing Perl scripts.&lt;/p&gt;
+
+&lt;p&gt;Did have an error setting up EPIC;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“An internal error occurred during: &amp;ldquo;Launching MyRSSFeeder&amp;rdquo;.java.lang.NullPointerException&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This happened because had mistakenly set the interpreter type in the Perl EPIC preferences to &amp;lsquo;cygwin&amp;rsquo;. Need to make sure use the “Standard” Interpreter type.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Getting and configuring EGit&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://www.eclipse.org/egit/download/&#34;&gt;download page&lt;/a&gt; for EGit says to; &lt;em&gt;install via one of the update site URLs listed below, copy and paste it into the “Help &amp;gt; Install new software” dialog&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is a &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide&#34;&gt;huge user guide&lt;/a&gt; for EGit.  We skimmed it.&lt;/p&gt;
+
+&lt;p&gt;Once installed go to the Eclipse &amp;gt; Preferences menu and set the &amp;gt;Team&amp;gt;Git Default repository folder: which we set to the Eclipse workspace directory /Documents/workspaces (it will actually go into each imported project&amp;rsquo;s folder).  The other settings within Eclipse will get set when you actually import projects (and these will be stored in ~/.gitconfig).  The later section on importing projects will detail other settings.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;Importing projects&lt;/h3&gt;
+
+&lt;p&gt;Now, you can connect Eclipse through EGit to a locally cloned repository (like one cloned by the Git commandline client or graphical client), which will give you an Eclipse workspace, a local Git repo and an online Git repo.  We have chosen to clone directly into the Eclipse workspace area so only have the Eclipse workspace directory for the project (like /Documents/workspace/allegria) which will have a hidden .git directory in it with relevant repo config files.&lt;/p&gt;
+
+&lt;p&gt;To do this you will need to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;prepare for &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Eclipse_SSH_Configuration&#34;&gt;ssh connection&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories&#34;&gt;clone a remote repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The ssh connection was a bit tricky and when doing it we got a few error messages.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the first error message was a problem with validation and there are many &lt;a href=&#34;http://stackoverflow.com/questions/3225862/multiple-github-accounts-ssh-config&#34;&gt;posts&lt;/a&gt; describing the need to create a ~.ssh/config file (the ~.ssh directory is the same directory that the ssh keys are stored).  We used our favourite editor to create ~.ssh/config with the following entries;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    Host github.com  
+    HostName github.com  
+    User git  
+    PreferredAuthentications publickey  
+    IdentityFile ~/.ssh/id_rsa  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the second error was about &lt;a href=&#34;https://help.github.com/articles/error-permission-denied-publickey&#34;&gt;permission denied public key&lt;/a&gt; and related to the &amp;lsquo;User&amp;rsquo; entry in the ~.ssh/config file, initially we were using the username for the repo but need to use the generic &amp;lsquo;git&amp;rsquo; user name.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;a third error concerned the need to fix the &lt;a href=&#34;http://www.howtogeek.com/168119/fixing-warning-unprotected-private-key-file-on-linux/&#34;&gt;permissions on id_rsa key files&lt;/a&gt; by resetting them back to default;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo chmod 600 ~/.ssh/id_rsa  
+    sudo chmod 600 ~/.ssh/id_rsa.pub  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once have prepared the ssh connection then can clone the remote repo by choosing &amp;ldquo;File &amp;gt; Import &amp;gt; Git &amp;gt; Project from Git&amp;rdquo; and then on the next screen select Clone URI.  Paste in the URI from the repo (in our case github.com/peterwatts/allegria) and select protocol ssh (this will change the URI to ssh://github.com/peterwatts/allegria).  Choose the branches on the next screen and select a directory in the next (in our case ~/Documents/workspace/).  Will then ask you &amp;lsquo;import projects&amp;rsquo; which you can select and do.&lt;/p&gt;
+
+&lt;p&gt;Choose the New Project Wizard (as the other two options; &amp;lsquo;Import existing projects&amp;rsquo; and &amp;lsquo;Import as general project&amp;rsquo; will cause an error as they probably don&amp;rsquo;t have the necessary eclipse setting files).&lt;/p&gt;
 </description>
     </item>
     

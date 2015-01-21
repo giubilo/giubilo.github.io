@@ -57,9 +57,13 @@
 	                        </tr>
 	                    </thead>
 	                    <tbody>
-							{{ range .Data.Pages.ByWeight }}
-		             		{{ .Render "tbl"}}
-		         			{{ end }}
+					        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+					            {{ range $taxonomy.Pages.ByWeight }}
+					            	{{ if eq $key "concept" }}
+									{{ .Render "tbl"}}
+					            	{{ end }}			            
+					            {{ end }}
+					        {{ end }}
 	                    </tbody>
 	                </table>
 	            </div>                      

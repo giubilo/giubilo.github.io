@@ -118,7 +118,7 @@
 					</p>
                 </div>            
                 <div class="col-md-3 btn-buy animated fadeInRight">
-                    <a href="#" class="btn-u btn-u-lg"><i class="fa  fa-circle-o-notch"></i> Start Here</a>
+                    <a href="/about/start" class="btn-u btn-u-lg"><i class="fa  fa-circle-o-notch"></i> Start Here</a>
                 </div>
             </div>
         </div>
@@ -136,7 +136,7 @@
 				        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
 				            {{ range first 3 $taxonomy.Pages.ByDate.Reverse }}
 				            	{{ if eq $key "releases" }}
-								{{ .Render "li"}}
+									{{ .Render "li"}}
 				            	{{ end }}			            
 				            {{ end }}
 				        {{ end }}
@@ -149,7 +149,7 @@
 				        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
 				            {{ range first 3 $taxonomy.Pages.ByDate.Reverse }}
 				            	{{ if eq $key "posts" }}
-								{{ .Render "li"}}
+									{{ .Render "li"}}
 				            	{{ end }}			            
 				            {{ end }}
 				        {{ end }}
@@ -162,7 +162,7 @@
 				        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
 				            {{ range first 3 $taxonomy.Pages.ByDate.Reverse }}
 				            	{{ if eq $key "news" }}
-								{{ .Render "li"}}
+									{{ .Render "li"}}
 				            	{{ end }}			            
 				            {{ end }}
 				        {{ end }}
@@ -201,7 +201,7 @@
                         licensing and citability, granular access models, flexible rules-based workflows and tools for backup, sync and cloud access. 
                         </p>
                         <p>
-                        It makes sense to consumerise these cool capabilities to help at home.
+                        It makes sense to consumerise these cool capabilities to help at home...<a href="/about/motivation">READ MORE</a>
                         </p>
                     </div>
                 </div>
@@ -212,6 +212,7 @@
 	            <p>Some of the ideas and inspiration for Giubilo came from the following:</p>
                 <div class="row">
                     <div class="col-sm-12">
+						<a href="/community/relatedprojects">
 				        <ul class="list-inline our-clients" id="effect-2">
 				            <li>
 				                <figure>
@@ -278,6 +279,7 @@
 				                </figure>
 				            </li>    				 
 				        </ul>
+				    	</a>
 			        </div>
                 </div>
             </div><!--/col-md-8-->        
@@ -286,17 +288,17 @@
     	<!-- Service Blocks -->
     	<div class="row margin-bottom-30">
         	<div class="col-md-4">
-        		<div class="service">
+        		<div class="service" data-service="/about/motivation">
                     <i class="fa fa-search-plus service-icon"></i>
         			<div class="desc">
         				<h4>Store, Search & Share</h4>
                         <p>We're developing tools that you can download and use for, storing all your digital things forever, no matter what they are, find them no 
                         matter where you are and share them safely and easily...</p>
         			</div>
-        		</div>	
+        		</div>
         	</div>
         	<div class="col-md-4">
-        		<div class="service">
+        		<div class="service" data-service="/about/motivation">
                     <i class="fa fa-cubes service-icon"></i>
         			<div class="desc">
         				<h4>Step-by-Step</h4>
@@ -306,7 +308,7 @@
         		</div>	
         	</div>			    
         	<div class="col-md-4">
-        		<div class="service">
+        		<div class="service" data-service="/about/motivation">
                     <i class="fa fa-cogs service-icon"></i>
         			<div class="desc">
         				<h4>Open Source</h4>
@@ -348,6 +350,13 @@
         Index.initLayerSlider();
         OwlCarousel.initOwlCarousel();
     });
+</script>
+
+<script type="text/javascript">
+$(".service").click(function() {
+	window.location = $(this).data("service"); 
+  return false;
+});
 </script>
 
 {{ partial "ie9_plugin.html" . }}
