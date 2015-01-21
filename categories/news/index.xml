@@ -10,6 +10,20 @@
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
+      <title>Where&#39;s content management heading?</title>
+      <link>http://localhost:1313/blog/pov/wheres-content-management-heading/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/blog/pov/wheres-content-management-heading/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Consumers need a consumer level experience (read:iPhone usage easy) to use content tools.  It&amp;rsquo;s not just using the getting at content while its in the repository but importantly ingestion and publishing need to be easy.&lt;/p&gt;
+
+&lt;p&gt;and put the repository in a secure cloud so someone can do the management and that&amp;rsquo;d be nirvana&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Where&#39;s streaming heading?</title>
       <link>http://localhost:1313/blog/pov/wheres-streaming-heading/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -41,20 +55,6 @@ AdultContent industry&lt;/p&gt;
 Choosing a home entertainment platform is a bit like picking sides in a battle: there are two rival standards, DLNA and AirPlay. Where DLNA works across thousands of different devices, AirPlay (and AirPrint) is more selective and only works on Apple or Apple-approved products. That&amp;rsquo;s the official line, anyway, but there are ways around it: apps such as AirSync bring AirPlay streaming to Android phones, while apps such as media:connect offer DLNA on iOS.&lt;/p&gt;
 
 &lt;p&gt;manuals online&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Where&#39;s content management heading?</title>
-      <link>http://localhost:1313/blog/pov/wheres-content-management-heading/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/blog/pov/wheres-content-management-heading/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Consumers need a consumer level experience (read:iPhone usage easy) to use content tools.  It&amp;rsquo;s not just using the getting at content while its in the repository but importantly ingestion and publishing need to be easy.&lt;/p&gt;
-
-&lt;p&gt;and put the repository in a secure cloud so someone can do the management and that&amp;rsquo;d be nirvana&lt;/p&gt;
 </description>
     </item>
     

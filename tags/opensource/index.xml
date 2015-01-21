@@ -10,12 +10,24 @@
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>Contacts</title>
-      <link>http://localhost:1313/about/contacts/</link>
+      <title>Service Terms</title>
+      <link>http://localhost:1313/about/serviceterms/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/about/contacts/</guid>
-      <description></description>
+      <guid>http://localhost:1313/about/serviceterms/</guid>
+      <description>&lt;p&gt;This program is free software; you can redistribute it and/or modify it
+under the terms of the the Artistic License (2.0). You may obtain a
+copy of the full license at: &lt;a href=&#34;http://www.perlfoundation.org/artistic_license_2_0&#34;&gt;http://www.perlfoundation.org/artistic_license_2_0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Disclaimer of Warranty: THE PACKAGE IS PROVIDED BY THE COPYRIGHT HOLDER
+AND CONTRIBUTORS &amp;lsquo;AS IS&amp;rsquo; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
+THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, OR NON-INFRINGEMENT ARE DISCLAIMED TO THE EXTENT PERMITTED BY
+YOUR LOCAL LAW. UNLESS REQUIRED BY LAW, NO COPYRIGHT HOLDER OR
+CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR
+CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -99,24 +111,12 @@ Business Process Management) practical for a household.&lt;/li&gt;&lt;br /&gt;
     </item>
     
     <item>
-      <title>Service Terms</title>
-      <link>http://localhost:1313/about/serviceterms/</link>
+      <title>Contacts</title>
+      <link>http://localhost:1313/about/contacts/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/about/serviceterms/</guid>
-      <description>&lt;p&gt;This program is free software; you can redistribute it and/or modify it
-under the terms of the the Artistic License (2.0). You may obtain a
-copy of the full license at: &lt;a href=&#34;http://www.perlfoundation.org/artistic_license_2_0&#34;&gt;http://www.perlfoundation.org/artistic_license_2_0&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Disclaimer of Warranty: THE PACKAGE IS PROVIDED BY THE COPYRIGHT HOLDER
-AND CONTRIBUTORS &amp;lsquo;AS IS&amp;rsquo; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
-THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-PURPOSE, OR NON-INFRINGEMENT ARE DISCLAIMED TO THE EXTENT PERMITTED BY
-YOUR LOCAL LAW. UNLESS REQUIRED BY LAW, NO COPYRIGHT HOLDER OR
-CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR
-CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE,
-EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/about/contacts/</guid>
+      <description></description>
     </item>
     
   </channel>
