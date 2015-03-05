@@ -8,7 +8,7 @@
        "tag": "tags",
        "series": "series"
     },
-  "baseurl": "http://giubilo.org",
+	"baseurl": "http://giubilo.org",
     "title": "giubilo project site",
     "canonifyurls": false
 }

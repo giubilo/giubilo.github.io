@@ -15,7 +15,9 @@
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
       <guid>http://localhost:1313/about/serviceterms/</guid>
-      <description>&lt;p&gt;This program is free software; you can redistribute it and/or modify it
+      <description>&lt;p&gt;The content via giubilo.org is subject to the folloing:&lt;/p&gt;
+
+&lt;p&gt;This program is free software; you can redistribute it and/or modify it
 under the terms of the the Artistic License (2.0). You may obtain a
 copy of the full license at: &lt;a href=&#34;http://www.perlfoundation.org/artistic_license_2_0&#34;&gt;http://www.perlfoundation.org/artistic_license_2_0&lt;/a&gt;&lt;/p&gt;
 
@@ -28,6 +30,15 @@ CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR
 CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Contacts</title>
+      <link>http://localhost:1313/about/contacts/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/about/contacts/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -108,15 +119,6 @@ Business Process Management) practical for a household.&lt;/li&gt;&lt;br /&gt;
 &lt;li&gt;passing back what&amp;rsquo;s been learned to the community.&lt;/li&gt;&lt;br /&gt;
 &lt;/ol&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Contacts</title>
-      <link>http://localhost:1313/about/contacts/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/about/contacts/</guid>
-      <description></description>
     </item>
     
     <item>
