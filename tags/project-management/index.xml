@@ -123,6 +123,24 @@ In addition to reading through all of the available knowledge and undertaking th
     </item>
     
     <item>
+      <title>Reporting project effort</title>
+      <link>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A model for reporting the status of project effort:&lt;/p&gt;
+
+&lt;p&gt;Multi-level messages&lt;/p&gt;
+
+&lt;p&gt;Budget baseline
+Actual baseline
+Forecast baseline&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Project Management</title>
       <link>http://localhost:1313/retrospectives/1000ft/project-management/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -394,24 +412,6 @@ risk reporting&lt;/p&gt;
 &lt;li&gt;industrialising kickstarter / outsourcing / imaging&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;donations&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Reporting project effort</title>
-      <link>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;A model for reporting the status of project effort:&lt;/p&gt;
-
-&lt;p&gt;Multi-level messages&lt;/p&gt;
-
-&lt;p&gt;Budget baseline
-Actual baseline
-Forecast baseline&lt;/p&gt;
 </description>
     </item>
     
