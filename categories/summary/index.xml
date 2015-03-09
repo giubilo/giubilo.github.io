@@ -27,5 +27,14 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>http://localhost:1313/retrospectives/faq/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/faq/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

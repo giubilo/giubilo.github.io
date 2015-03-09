@@ -301,6 +301,133 @@ it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licens
     </item>
     
     <item>
+      <title>Application Lifecycle Management</title>
+      <link>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;how to manage all the activities that occur from birth to death of an application (includes strategy / portfolio performance management, project management, Agile/DevOps including capacity/incident/problem/config/change etc, Financial Management - CAPEX/OPEX, supplier management / strategic sourcing, license management) - all the stuff ITIL/CObIT talk about.&lt;/p&gt;
+
+&lt;p&gt;Agile/DevOps about focus/flow&lt;/p&gt;
+
+&lt;p&gt;something to do - task / context used to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;build a project schedule / demand forecast&lt;/li&gt;
+&lt;li&gt;focus work by attaching task to requirements / defect and relevant source code / documentation (and when work is attached end to end like that then it is also self documenting so don&amp;rsquo;t have to explain to the next person who picks it up either for review or later maintenance tasks what all the relevant bits are + get traceability)&lt;/li&gt;
+&lt;li&gt;at the really detailed end can build as go by putting in TODO&amp;rsquo; in the code so know what is left, less to fall through the cracks&lt;/li&gt;
+&lt;li&gt;easy to see status
+(need a user interface for developer to pick and use tasks, project manager to summarise, a task bus to shuffle tasks from developers code, issues logged - and the social commentary around them, code reviews, builds and a repository to store the tasks - mylyn / tasktop / jira - all about focus and flow - books aplenty on this like mikado, lean/alm, requirements management, project management)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;develop some code&lt;/p&gt;
+
+&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
+
+&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - java, go, ruby, json, perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
+&lt;li&gt;model driven development / test driven development / content driven development (all wrapped up in Agile)&lt;/li&gt;
+&lt;li&gt;formatting code so it&amp;rsquo;s readable (syntax highlighting), valid (syntax checking) and conforms to best practice techniques for the language (like project structures, code quality and vulnerabilities)&lt;/li&gt;
+&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
+&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
+&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
+&lt;li&gt;source code management / version control - branching / merging strategies (GitFlow)&lt;/li&gt;
+&lt;li&gt;code review - GitHub pull request vs Gerrit review&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(Eclipse + plugins, Atlassian SourceTree + GitFlow, Mou - sometimes it makes sense to come outside of the IDE, Gerrit, GitHub + badges)&lt;/p&gt;
+
+&lt;p&gt;environments&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;build/package/implement code - release strategy / cycle&lt;/li&gt;
+&lt;li&gt;testing not a separate step but baked into everything else (e.g. requirements management, code reviews)&lt;/li&gt;
+&lt;li&gt;Vagrant + Docker (+ CoreOS) + Chef/Puppet - continuous build / integration (DevOps)&lt;/li&gt;
+&lt;li&gt;Gradle&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(need a repository to put released code, binaries, release notes and setup scripts + badges)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://secretgeek.net/lifecycle.asp&#34;&gt;http://secretgeek.net/lifecycle.asp&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.top-q.co.il/services/alm/&#34;&gt;http://www.top-q.co.il/services/alm/&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&#34;&gt;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&#34;&gt;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&#34;&gt;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Systems_development_life-cycle&#34;&gt;http://en.wikipedia.org/wiki/Systems_development_life-cycle&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;somewhere between what&amp;rsquo;s needed to deliver a textbook hello world output example application and enterprise methodologies and frameworks for delivering outcomes.&lt;/p&gt;
+
+&lt;p&gt;Application lifecycle management (ALM) is the product lifecycle management (governance, development, and maintenance) of application software. It encompasses requirements management, software architecture, computer programming, software testing, software maintenance, change management, project management, and release management.&lt;/p&gt;
+
+&lt;p&gt;In software engineering, software configuration management (SCM)[1] is the task of tracking and controlling changes in the software, part of the larger cross-discipline field of configuration management.[2] SCM practices include revision control and the establishment of baselines - software development is considered separately.&lt;/p&gt;
+
+&lt;p&gt;The goals of SCM are generally:[citation needed]
+* Configuration identification - Identifying configurations, configuration items and baselines.
+* Configuration control - Implementing a controlled change process. This is usually achieved by setting up a change control board whose primary function is to approve or reject all change requests that are sent against any baseline.
+* Configuration status accounting - Recording and reporting all the necessary information on the status of the development process.
+* Configuration auditing - Ensuring that configurations contain all their intended parts and are sound with respect to their specifying documents, including requirements, architectural specifications and user manuals.
+* Build management - Managing the process and tools used for builds.
+* Process management - Ensuring adherence to the organization&amp;rsquo;s development process.
+* Environment management - Managing the software and hardware that host the system.
+* Teamwork - Facilitate team interactions related to the process.
+* Defect tracking - Making sure every defect has traceability back to the source.&lt;/p&gt;
+
+&lt;p&gt;DevOps integration targets product delivery, quality testing, feature development and maintenance releases in order to improve reliability and security and faster development and deployment cycles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Agile_software_development&#34;&gt;http://en.wikipedia.org/wiki/Agile_software_development&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://guide.agilealliance.org/subway.html&#34;&gt;http://guide.agilealliance.org/subway.html&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Community-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Community-driven_development&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Kanban_(development&#34;&gt;http://en.wikipedia.org/wiki/Kanban_(development&lt;/a&gt;)  kanban / process driven development  / content driven development&lt;br /&gt;
+The Kanban method – An approach to incremental, evolutionary process improvement for organisations.&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Feature-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Feature-driven_development&lt;/a&gt;  (decomposition approach)&lt;br /&gt;
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Test-driven_development&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Model-driven_software_development&#34;&gt;http://en.wikipedia.org/wiki/Model-driven_software_development&lt;/a&gt; / business driven development&lt;br /&gt;
+Model-driven software development (MDSD) is an alternative to round-trip engineering. Round-trip engineering is the concept of being able to make any kind of change to a model as well as to the code generated from that model. The changes always propagate bidirectional and both artifacts are always consistent.&lt;/p&gt;
+
+&lt;p&gt;The Agile Manifesto is based on twelve principles:[9]&lt;br /&gt;
+Customer satisfaction by rapid delivery of useful software&lt;br /&gt;
+Welcome changing requirements, even late in development&lt;br /&gt;
+Working software is delivered frequently (weeks rather than months)&lt;br /&gt;
+Working software is the principal measure of progress&lt;br /&gt;
+Sustainable development, able to maintain a constant pace&lt;br /&gt;
+Close, daily cooperation between business people and developers&lt;br /&gt;
+Face-to-face conversation is the best form of communication (co-location)&lt;br /&gt;
+Projects are built around motivated individuals, who should be trusted&lt;br /&gt;
+Continuous attention to technical excellence and good design&lt;br /&gt;
+Simplicity—the art of maximizing the amount of work not done—is essential&lt;br /&gt;
+Self-organizing teams&lt;br /&gt;
+Regular adaptation to changing circumstances&lt;/p&gt;
+
+&lt;p&gt;Agile development is supported by a bundle of concrete practices suggested by the agile methods, covering areas like requirements, design, modeling, coding, testing, project management, process, quality, etc. Some notable agile practices include:
+Acceptance test-driven development (ATDD)&lt;br /&gt;
+Agile Modeling&lt;br /&gt;
+Backlogs (Product and Sprint)&lt;br /&gt;
+Behavior-driven development (BDD)&lt;br /&gt;
+Cross-functional team&lt;br /&gt;
+Continuous integration (CI)&lt;br /&gt;
+Domain-driven design (DDD)&lt;br /&gt;
+Information radiators (Scrum board, Kanban board, Task board, Burndown chart)&lt;br /&gt;
+Iterative and incremental development (IID)&lt;br /&gt;
+Pair programming&lt;br /&gt;
+Planning poker&lt;br /&gt;
+Refactoring&lt;br /&gt;
+Scrum meetings (Sprint planning, Daily scrum, Sprint review and retrospective)&lt;br /&gt;
+Test-driven development (TDD)&lt;br /&gt;
+Agile testing&lt;br /&gt;
+Timeboxing&lt;br /&gt;
+Use case&lt;br /&gt;
+User story&lt;br /&gt;
+Story-driven modelling&lt;br /&gt;
+Velocity tracking&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Java</title>
       <link>http://localhost:1313/retrospectives/paint-by-numbers/java/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -499,133 +626,6 @@ it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licens
 &lt;li&gt;project issues / key decisions&lt;/li&gt;
 &lt;li&gt;bugs, enhancements etc&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Application Lifecycle Management</title>
-      <link>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;how to manage all the activities that occur from birth to death of an application (includes strategy / portfolio performance management, project management, Agile/DevOps including capacity/incident/problem/config/change etc, Financial Management - CAPEX/OPEX, supplier management / strategic sourcing, license management) - all the stuff ITIL/CObIT talk about.&lt;/p&gt;
-
-&lt;p&gt;Agile/DevOps about focus/flow&lt;/p&gt;
-
-&lt;p&gt;something to do - task / context used to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;build a project schedule / demand forecast&lt;/li&gt;
-&lt;li&gt;focus work by attaching task to requirements / defect and relevant source code / documentation (and when work is attached end to end like that then it is also self documenting so don&amp;rsquo;t have to explain to the next person who picks it up either for review or later maintenance tasks what all the relevant bits are + get traceability)&lt;/li&gt;
-&lt;li&gt;at the really detailed end can build as go by putting in TODO&amp;rsquo; in the code so know what is left, less to fall through the cracks&lt;/li&gt;
-&lt;li&gt;easy to see status
-(need a user interface for developer to pick and use tasks, project manager to summarise, a task bus to shuffle tasks from developers code, issues logged - and the social commentary around them, code reviews, builds and a repository to store the tasks - mylyn / tasktop / jira - all about focus and flow - books aplenty on this like mikado, lean/alm, requirements management, project management)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;develop some code&lt;/p&gt;
-
-&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
-
-&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - java, go, ruby, json, perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
-&lt;li&gt;model driven development / test driven development / content driven development (all wrapped up in Agile)&lt;/li&gt;
-&lt;li&gt;formatting code so it&amp;rsquo;s readable (syntax highlighting), valid (syntax checking) and conforms to best practice techniques for the language (like project structures, code quality and vulnerabilities)&lt;/li&gt;
-&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
-&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
-&lt;li&gt;source code management / version control - branching / merging strategies (GitFlow)&lt;/li&gt;
-&lt;li&gt;code review - GitHub pull request vs Gerrit review&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(Eclipse + plugins, Atlassian SourceTree + GitFlow, Mou - sometimes it makes sense to come outside of the IDE, Gerrit, GitHub + badges)&lt;/p&gt;
-
-&lt;p&gt;environments&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;build/package/implement code - release strategy / cycle&lt;/li&gt;
-&lt;li&gt;testing not a separate step but baked into everything else (e.g. requirements management, code reviews)&lt;/li&gt;
-&lt;li&gt;Vagrant + Docker (+ CoreOS) + Chef/Puppet - continuous build / integration (DevOps)&lt;/li&gt;
-&lt;li&gt;Gradle&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(need a repository to put released code, binaries, release notes and setup scripts + badges)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://secretgeek.net/lifecycle.asp&#34;&gt;http://secretgeek.net/lifecycle.asp&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.top-q.co.il/services/alm/&#34;&gt;http://www.top-q.co.il/services/alm/&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&#34;&gt;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&#34;&gt;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&#34;&gt;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Systems_development_life-cycle&#34;&gt;http://en.wikipedia.org/wiki/Systems_development_life-cycle&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;somewhere between what&amp;rsquo;s needed to deliver a textbook hello world output example application and enterprise methodologies and frameworks for delivering outcomes.&lt;/p&gt;
-
-&lt;p&gt;Application lifecycle management (ALM) is the product lifecycle management (governance, development, and maintenance) of application software. It encompasses requirements management, software architecture, computer programming, software testing, software maintenance, change management, project management, and release management.&lt;/p&gt;
-
-&lt;p&gt;In software engineering, software configuration management (SCM)[1] is the task of tracking and controlling changes in the software, part of the larger cross-discipline field of configuration management.[2] SCM practices include revision control and the establishment of baselines - software development is considered separately.&lt;/p&gt;
-
-&lt;p&gt;The goals of SCM are generally:[citation needed]
-* Configuration identification - Identifying configurations, configuration items and baselines.
-* Configuration control - Implementing a controlled change process. This is usually achieved by setting up a change control board whose primary function is to approve or reject all change requests that are sent against any baseline.
-* Configuration status accounting - Recording and reporting all the necessary information on the status of the development process.
-* Configuration auditing - Ensuring that configurations contain all their intended parts and are sound with respect to their specifying documents, including requirements, architectural specifications and user manuals.
-* Build management - Managing the process and tools used for builds.
-* Process management - Ensuring adherence to the organization&amp;rsquo;s development process.
-* Environment management - Managing the software and hardware that host the system.
-* Teamwork - Facilitate team interactions related to the process.
-* Defect tracking - Making sure every defect has traceability back to the source.&lt;/p&gt;
-
-&lt;p&gt;DevOps integration targets product delivery, quality testing, feature development and maintenance releases in order to improve reliability and security and faster development and deployment cycles.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Agile_software_development&#34;&gt;http://en.wikipedia.org/wiki/Agile_software_development&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://guide.agilealliance.org/subway.html&#34;&gt;http://guide.agilealliance.org/subway.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Community-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Community-driven_development&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Kanban_(development&#34;&gt;http://en.wikipedia.org/wiki/Kanban_(development&lt;/a&gt;)  kanban / process driven development  / content driven development&lt;br /&gt;
-The Kanban method – An approach to incremental, evolutionary process improvement for organisations.&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Feature-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Feature-driven_development&lt;/a&gt;  (decomposition approach)&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Test-driven_development&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Model-driven_software_development&#34;&gt;http://en.wikipedia.org/wiki/Model-driven_software_development&lt;/a&gt; / business driven development&lt;br /&gt;
-Model-driven software development (MDSD) is an alternative to round-trip engineering. Round-trip engineering is the concept of being able to make any kind of change to a model as well as to the code generated from that model. The changes always propagate bidirectional and both artifacts are always consistent.&lt;/p&gt;
-
-&lt;p&gt;The Agile Manifesto is based on twelve principles:[9]&lt;br /&gt;
-Customer satisfaction by rapid delivery of useful software&lt;br /&gt;
-Welcome changing requirements, even late in development&lt;br /&gt;
-Working software is delivered frequently (weeks rather than months)&lt;br /&gt;
-Working software is the principal measure of progress&lt;br /&gt;
-Sustainable development, able to maintain a constant pace&lt;br /&gt;
-Close, daily cooperation between business people and developers&lt;br /&gt;
-Face-to-face conversation is the best form of communication (co-location)&lt;br /&gt;
-Projects are built around motivated individuals, who should be trusted&lt;br /&gt;
-Continuous attention to technical excellence and good design&lt;br /&gt;
-Simplicity—the art of maximizing the amount of work not done—is essential&lt;br /&gt;
-Self-organizing teams&lt;br /&gt;
-Regular adaptation to changing circumstances&lt;/p&gt;
-
-&lt;p&gt;Agile development is supported by a bundle of concrete practices suggested by the agile methods, covering areas like requirements, design, modeling, coding, testing, project management, process, quality, etc. Some notable agile practices include:
-Acceptance test-driven development (ATDD)&lt;br /&gt;
-Agile Modeling&lt;br /&gt;
-Backlogs (Product and Sprint)&lt;br /&gt;
-Behavior-driven development (BDD)&lt;br /&gt;
-Cross-functional team&lt;br /&gt;
-Continuous integration (CI)&lt;br /&gt;
-Domain-driven design (DDD)&lt;br /&gt;
-Information radiators (Scrum board, Kanban board, Task board, Burndown chart)&lt;br /&gt;
-Iterative and incremental development (IID)&lt;br /&gt;
-Pair programming&lt;br /&gt;
-Planning poker&lt;br /&gt;
-Refactoring&lt;br /&gt;
-Scrum meetings (Sprint planning, Daily scrum, Sprint review and retrospective)&lt;br /&gt;
-Test-driven development (TDD)&lt;br /&gt;
-Agile testing&lt;br /&gt;
-Timeboxing&lt;br /&gt;
-Use case&lt;br /&gt;
-User story&lt;br /&gt;
-Story-driven modelling&lt;br /&gt;
-Velocity tracking&lt;/p&gt;
 </description>
     </item>
     
