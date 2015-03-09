@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>News on giubilo project site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/news/index.xml/</link>
+    
+    
+    
+    <updated>Sun, 08 Mar 2015 00:00:00 UTC</updated>
+    
+    <item>
+      <title>giubilo up and running</title>
+      <link>http://localhost:1313/news/news-2015-03-08/</link>
+      <pubDate>Sun, 08 Mar 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/news/news-2015-03-08/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,7 +3,7 @@
     "description": "tbd.",
     "date": "2014-02-01",
     "categories" : [
-    	 "news"
+    	 "pov"
     ],
     "tags": [ "content management" ],
     "status": "research"

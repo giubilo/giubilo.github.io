@@ -1,0 +1,73 @@
+{{ partial "pre_header.html" . }}
+<head>
+
+	{{ partial "std_header.html" . }}
+
+    <!-- CSS Implementing Plugins -->
+    {{ partial "std_impl_plugins.html" . }}
+
+    <!-- CSS Page Style -->    
+    <link rel="stylesheet" href="/assets/css/pages/page_job.css">
+
+
+	{{ partial "std_css_theme.html" . }}
+
+</head>
+<body class="header-fixed">
+
+<div class="wrapper">
+
+    <div class="header">
+		{{ partial "topbar.html" . }}
+		{{ partial "navbar.html" . }}
+    </div>
+
+	 <!--=== Breadcrumbs ===-->
+	 <div class="breadcrumbs">
+	     <div class="container">
+	         <h1 class="pull-left">Getting Involved</h1>
+	         <ul class="pull-right breadcrumb">
+	             <li><a href="/">Home</a></li>
+	             <li><a href="/community">{{.Title}}</a></li>
+	             <li class="active">Getting Involved</li>
+	         </ul>
+	     </div>
+	 </div><!--/breadcrumbs-->
+
+	<div class="container">
+	    <div class="row margin-top-30">
+	        <div class="col-md-12">					
+	
+			<p>Getting involved with the Giubilo community is easier than you think. 
+			   Tell us what you think, and open the future of consumer content management.</p>
+	
+	        </div>            
+	    </div>
+	</div>
+
+	{{ partial "copyright.html" . }}
+
+</div><!--/wrapper-->
+
+{{ partial "js_global_compulsory.html" . }}
+
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+
+<!-- JS Page Level -->           
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/pages/index.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+      $(".clickableRow").click(function() {
+            window.document.location = $(this).attr("href");
+      });
+});
+</script>
+
+
+{{ partial "ie9_plugin.html" . }}
+
+</body>
+</html>

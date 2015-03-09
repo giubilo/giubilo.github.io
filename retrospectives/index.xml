@@ -10,254 +10,6 @@
     <updated>Sat, 01 Feb 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>CMIS</title>
-      <link>http://localhost:1313/retrospectives/1000ft/cmis/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/1000ft/cmis/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-types-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-highlevel-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Alfresco CMIS information: &lt;a href=&#34;http://www.alfresco.com/cmis&#34;&gt;http://www.alfresco.com/cmis&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&lt;/a&gt;
-The Browser Binding&lt;/p&gt;
-
-&lt;p&gt;In addition to the existing XML-based AtomPub and Web services bindings, CMIS 1.1 provides a simpler JSON-based binding. The browser binding is designed for web applications and is easy to use just with HTML and JavaScript. It uses just two verbs, GET and POST, and resources are referenced using simple and predictable URLs.
-You reference content in the repository by using the two URLs returned by the getRepositories or getRepositoryInfo service:
-rootFolderUrl
-repositoryUrl
-Objects can then be referenced in two ways;
-by their Id
-&lt;rootFolderUrl&gt;?objectId=&lt;objectId&gt;
-by their path
-&lt;rootFolderUrl&gt;/&lt;object path&gt;
-Content that is independent of a folder, for example a Type definition be accessed using the repositoryUrl service.
-&lt;repositoryUrl&gt;?cmisselector=&lt;selector&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;cmis 1.1 standard&lt;/h2&gt;
-
-&lt;p&gt;new cmis:item type - can use for config - types without content streams, secondary types&amp;hellip;both really cool.new browser binding - preferred&lt;/p&gt;
-
-&lt;p&gt;put in the pictures from the standard for objects, and create a picture that highlights the services&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;basically create a really condensed version of the spec.&lt;/p&gt;
-
-&lt;p&gt;To use CMIS, you can either directly interact with one of the CMIS bindings or develop against a CMIS client API. Several APIs are &amp;ldquo;in development&amp;rdquo; for the following programming languages: &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Client_APIs&#34;&gt;cient cmis api&amp;rsquo;s&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;cmis wiki&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;IBM CMIS
-&lt;a href=&#34;http://www-01.ibm.com/software/ecm/cmis.html&#34;&gt;http://www-01.ibm.com/software/ecm/cmis.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;CMIS Poster Lab videos
-&lt;a href=&#34;https://www.youtube.com/watch?v=_koCqeYic1k&#34;&gt;https://www.youtube.com/watch?v=_koCqeYic1k&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&lt;/a&gt;
-The URL to get all of the children of the root/test node in the repository looks like this:
-&lt;a href=&#34;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&#34;&gt;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>UPnP</title>
-      <link>http://localhost:1313/retrospectives/1000ft/upnp/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/1000ft/upnp/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-device-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-av-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
-&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Project Success</title>
-      <link>http://localhost:1313/retrospectives/how-to/project-success/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/project-success/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Introduction
-It might be stating the obvious but we begin a project with the view that we are going to successfully deliver the project’s outcomes. Right! In general I guess that is true, except for those stakeholders hoping we don’t finish, don’t deliver, don’t succeed.
-Is finishing or delivering, the end-game then? Is that what success is.  How do we know we are at the end? How do we measure the level to which we have achieved the outcomes?
-Who Says What Success Is?
-What success means, is dependant generally on perspective; that is, who we are measuring success for.  There are generally many stakeholders on a project, all with their own views, sometimes conflicting, on what success is.  Success then is defined by the stakeholder’s personal views, professional views, role they play on the project or in society.  Their views are more than likely affected by the impact the project has on the environment, dictated by things like scale (100,000 people, 10 years) and nature (e.g. construction, software, social change) of the project.
-The old saying “the project was brought in on time, on budget and with acceptable quality” is still, in some peoples mind, the measure of project success.  There is much evidence to suggest however, that these are not the only measures of success.&lt;/p&gt;
-
-&lt;p&gt;Turner&lt;br /&gt;
-Hartman&lt;/p&gt;
-
-&lt;p&gt;Success as a Function of Time
-Projects are unique, transient, almost organic entities.  They have a start, middle and end.&lt;br /&gt;
-At the beginning of a project it is important to understand what are the criteria for success and who is measuring success.  This allows the direction of the project to be set and provides a yardstick with which to later evaluate the project.
-During the project we monitor success at useful points to ensure there is a reason to continue, to learn from what we have done right so that we can continue to use successful techniques and use points of success to motivate the team.
-It is important to end the project with success as generally all stakeholders have begun and continued the project with the thought of success.
-The point in time we are measuring success has an enormous influence on what success is and who measures success.  The team may be interested in time and quality during the project, the sponsor in cost at delivery time and the community might be interested in the impact the project had years after it was delivered.&lt;/p&gt;
-
-&lt;p&gt;PIC&lt;/p&gt;
-
-&lt;p&gt;Maximising Success
-Some easy steps to maximise the chances of success;
-* Understand the general drivers, pressures, resistance and dynamics of projects
-* Learn from past mistakes
-* Apply sound management techniques&lt;/p&gt;
-
-&lt;p&gt;Understanding Projects
-The chances of success can be maximised if you manage the forces on the project effectively.&lt;/p&gt;
-
-&lt;p&gt;Turner describes a number of interactions of a project.  Each may have an affect on the other.  Even though most projects by their nature are unique, some of the effects of the interactions may be understood through examining similarities to other projects.  Many of these project integration affects are well documented.&lt;/p&gt;
-
-&lt;p&gt;Of all the project dynamics, Attitude is the most important.
-The chances of success are substantially diminished unless;
-* There is major commitment to making the project a success
-* The motivation of everyone working on the project is high
-* Attitudes are supportive and positive.&lt;/p&gt;
-
-&lt;p&gt;Learning From The Past
-There is an enormous amount of generic information about what teams have done in the past to succeed and what pitfalls caused a less than desirable outcome.  The sheer volume of literature and anecdotal evidence to suggest that projects fail is a strong indicator for being concerned about why projects fail.
-By looking to the past we can see what worked and what didn’t so that we can learn from past successes and avoid past mistakes.&lt;/p&gt;
-
-&lt;p&gt;project failure examples&lt;/p&gt;
-
-&lt;p&gt;Cunning Plan: We&amp;rsquo;ll just do it!!&lt;/p&gt;
-
-&lt;p&gt;If you fail to plan, then plan to fail.&lt;/p&gt;
-
-&lt;p&gt;We never seem to have time to plan our projects, but we always have time to do them twice.&lt;/p&gt;
-
-&lt;p&gt;Project Pitfalls
-3 Grude describes a number of categories of pitfalls that have been observed on projects.  This is not intended as an exhaustive list but useful as a quick health check for a project;&lt;/p&gt;
-
-&lt;p&gt;Establishing the Project&lt;br /&gt;
-Pitfalls in the way the project is set up within the parent organisation;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;project plans not aligned with business plans,&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;procedures for managing projects are not well defined,&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;priorities are not communicated to parties involved,&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;no shared vision.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Planning the Project
-Pitfalls in the way the work is defined, the time &amp;amp; cost schedules calculated and communicated to the project team;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;project plans developed on a single level,&lt;/li&gt;
-&lt;li&gt;using cumbersome tools,&lt;/li&gt;
-&lt;li&gt;creativity discouraged,&lt;/li&gt;
-&lt;li&gt;unrealistic estimates&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Organising &amp;amp; Implementing the Project
-Pitfalls in building the project organisation and assigning work to people;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;lack of cooperation,&lt;/li&gt;
-&lt;li&gt;resource providers not committed,&lt;/li&gt;
-&lt;li&gt;resources not available when required,&lt;/li&gt;
-&lt;li&gt;management responsibility not defined,&lt;/li&gt;
-&lt;li&gt;poor communication,&lt;/li&gt;
-&lt;li&gt;technical vs project management.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Controlling the Project
-Pitfalls in monitoring and control;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;purpose of control not understood,&lt;/li&gt;
-&lt;li&gt;progress is not monitored against the plan,&lt;/li&gt;
-&lt;li&gt;ineffective review meetings,&lt;/li&gt;
-&lt;li&gt;responsibility without authority.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Principles of Good Project Management
-Project Management, just as any other management stream, has it’s own principles upon which a manager can look to for guidance.  There is a huge body of stored knowledge on the principles and professional certification available for those willing.  These will all arm the manager with an enormous amount of skill and techniques on which to build experience.
-In addition to reading through all of the available knowledge and undertaking the available studies a number of simple, practical principles may be relied upon;
- Most large or complex problems become easier if broken down into manageable parts that     allow them all to be absorbed.  Make use of breakdown structures for any part of the project    that requires visibility and understanding, such as tasks, people, product, organisation.  By   breaking then down we can more easily see new information about each piece as it becomes    evident over time.  This makes it possible to monitor and manage the project elaboration.
- People are the biggest factor in nearly all projects, they need to be adequately motivated,    organised, committed, directed, skilled and communicated with.  You need to confirm and     align stakeholder’s success criteria.  Disregard the people factors at your peril.
- Get as many successes as you can.  Organise the team, the schedule &amp;amp; the work so that  successes happy often.  If each small step is a success it will be easier and more likely that  the journey will be a success.  Learn from past successes and avoid the causes for past     failures.
- Continuously carry out health checks and audits.  The old adage, ‘if it isn’t broken, don’t fix it’    doesn’t apply if we don’t know it isn’t broken.  Only by understanding the dynamics and     symptoms of a project can we steer the ship and take corrective actions.&lt;/p&gt;
-
-&lt;p&gt;Above all else KEEP IT SIMPLE.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Modifying content types</title>
-      <link>http://localhost:1313/retrospectives/how-to/modifying-content-types/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/modifying-content-types/</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;There really is no need to write a &lt;a href=&#34;http://www.imdb.com/title/tt0077631/&#34;&gt;fully blown&lt;/a&gt; how-to of the technical aspects for &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/tasks/kb-define-custom-model.html&#34;&gt;modifying content models in Alfresco&lt;/a&gt; as Jeff Potts has written a &lt;a href=&#34;http://ecmarchitect.com/images/articles/alfresco-content/content-article-2ed.pdf&#34;&gt;concise and complete tutorial&lt;/a&gt; already including:&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;paint-by-numbers implementation (sort of technical specification)&lt;/h2&gt;
-
-&lt;p&gt;Here are the steps to follow when configuring a custom content model:
-1. Create an extension directory
-2. Create a custom model context file
-3. Create a model file
-4. Restart Tomcat&lt;/p&gt;
-
-&lt;p&gt;using xmp, what to about scrapers / uni-bi directional metadata updating (should keep the original file and create a rendition if updating metadata&lt;/p&gt;
-
-&lt;p&gt;change types
-&lt;a href=&#34;http://forums.alfresco.com/forum/end-user-discussions/alfresco-share/change-types-options-menu-labeleds-06082011-1023&#34;&gt;http://forums.alfresco.com/forum/end-user-discussions/alfresco-share/change-types-options-menu-labeleds-06082011-1023&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Configuring the Custom Model in Alfresco Share&lt;/p&gt;
-
-&lt;p&gt;Adding Custom Types and Aspects to Lists
- “Is sub-type” criteria. When a user configures a rule on a space and uses content types as a criteria, the custom types should be a choice in the list of possible content types.
- “Has aspect” criteria. When a user configures a rule on a space and uses the presence of an aspect as a criteria, the custom aspects should be a choice in the list of possible aspects.
- Change type action. When a user runs the “specialize type” action, either as part of a rule configuration or through the “Change Type” UI action, the custom types should be available.
- Add aspect. When a user runs the “add aspect” action, either as part of a rule configuration or through the “Manage Aspects” UI action, the custom aspects should be available.&lt;/p&gt;
-
-&lt;p&gt;Configuring Forms for Custom Properties / Configuring the form service for a custom type / Configuring the form service for custom properties
- Document Details. When a user looks at the document details page for a piece of content
-stored as one of the custom types or with one of the custom aspects attached, the properties section should show the custom properties.
- Edit Properties. When a user edits the properties of a piece of content, either with the “full” form or the abbreviated form, the appropriate properties should be shown.&lt;/p&gt;
-
-&lt;p&gt;Configuring Advanced Search in Alfresco Share
- Advanced search. When a user runs an advanced search, they should be able to restrict search results to instances of our custom types and/or content with specific values for the properties of our custom types.&lt;/p&gt;
-
-&lt;p&gt;Localizing Strings for Custom Content Models&lt;/p&gt;
-
-&lt;p&gt;You’ve seen that configuring Alfresco Share for your custom content model essentially involves adding XML to the share-config-custom.xml file and creating a properties file for your localized strings. All of this lives under the “web-extension” directory in the Share web application.
-There are other things you might like to do to the Share user interface, but these are beyond the scope of this document:
-• Add custom content types to the Create Content menu
-• Add custom properties to the document library sort criteria
-• Add custom properties to the document library data grid&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/Data_Dictionary_Guide#Step_by_Step_Model_Definition&#34;&gt;http://wiki.alfresco.com/wiki/Data_Dictionary_Guide#Step_by_Step_Model_Definition&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://wiki.alfresco.com/wiki/Displaying_Custom_Metadata&#34;&gt;http://wiki.alfresco.com/wiki/Displaying_Custom_Metadata&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;../tree/master/aaContentModel&#34;&gt;aaContentModel&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Perl</title>
       <link>http://localhost:1313/retrospectives/paint-by-numbers/perl/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
@@ -549,948 +301,179 @@ it under the terms of the ......  If not, see L&amp;lt;http://www.gnu.org/licens
     </item>
     
     <item>
-      <title>Reporting project effort</title>
-      <link>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</link>
+      <title>CMIS</title>
+      <link>http://localhost:1313/retrospectives/1000ft/cmis/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/spaghetti-western/reporting-project-effort/</guid>
+      <guid>http://localhost:1313/retrospectives/1000ft/cmis/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-types-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis11-highlevel-uml.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fpra%2F1%2Ftopics%2Fcmis-welcome.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Alfresco CMIS information: &lt;a href=&#34;http://www.alfresco.com/cmis&#34;&gt;http://www.alfresco.com/cmis&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding.html&lt;/a&gt;
+The Browser Binding&lt;/p&gt;
+
+&lt;p&gt;In addition to the existing XML-based AtomPub and Web services bindings, CMIS 1.1 provides a simpler JSON-based binding. The browser binding is designed for web applications and is easy to use just with HTML and JavaScript. It uses just two verbs, GET and POST, and resources are referenced using simple and predictable URLs.
+You reference content in the repository by using the two URLs returned by the getRepositories or getRepositoryInfo service:
+rootFolderUrl
+repositoryUrl
+Objects can then be referenced in two ways;
+by their Id
+&lt;rootFolderUrl&gt;?objectId=&lt;objectId&gt;
+by their path
+&lt;rootFolderUrl&gt;/&lt;object path&gt;
+Content that is independent of a folder, for example a Type definition be accessed using the repositoryUrl service.
+&lt;repositoryUrl&gt;?cmisselector=&lt;selector&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;cmis 1.1 standard&lt;/h2&gt;
+
+&lt;p&gt;new cmis:item type - can use for config - types without content streams, secondary types&amp;hellip;both really cool.new browser binding - preferred&lt;/p&gt;
+
+&lt;p&gt;put in the pictures from the standard for objects, and create a picture that highlights the services&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;basically create a really condensed version of the spec.&lt;/p&gt;
+
+&lt;p&gt;To use CMIS, you can either directly interact with one of the CMIS bindings or develop against a CMIS client API. Several APIs are &amp;ldquo;in development&amp;rdquo; for the following programming languages: &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#CMIS_Client_APIs&#34;&gt;cient cmis api&amp;rsquo;s&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS&#34;&gt;cmis wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;IBM CMIS
+&lt;a href=&#34;http://www-01.ibm.com/software/ecm/cmis.html&#34;&gt;http://www-01.ibm.com/software/ecm/cmis.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;CMIS Poster Lab videos
+&lt;a href=&#34;https://www.youtube.com/watch?v=_koCqeYic1k&#34;&gt;https://www.youtube.com/watch?v=_koCqeYic1k&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&#34;&gt;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/pra/1/concepts/cmis-1.1-browser-binding-get.html&lt;/a&gt;
+The URL to get all of the children of the root/test node in the repository looks like this:
+&lt;a href=&#34;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&#34;&gt;http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/browser/root/test?cmisselector=children&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UPnP</title>
+      <link>http://localhost:1313/retrospectives/1000ft/upnp/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/1000ft/upnp/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home|home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-device-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/upnp-av-architecture-63.png?raw=true&#34; alt=&#34;UPnP Device Architecture&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Alfresco Integration</title>
+      <link>http://localhost:1313/retrospectives/1000ft/alfresco-integration/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/1000ft/alfresco-integration/</guid>
       <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;A model for reporting the status of project effort:&lt;/p&gt;
+&lt;p&gt;caching content stores, syncing content stores, s3 content stores&amp;hellip;this detail is from the 2013 summit press - &lt;a href=&#34;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&#34;&gt;http://summit.alfresco.com/boston/sessions/getting-started-alfresco-development&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Multi-level messages&lt;/p&gt;
+&lt;p&gt;include Alfresco Rumours XMPP.&lt;/p&gt;
 
-&lt;p&gt;Budget baseline
-Actual baseline
-Forecast baseline&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Github</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/github/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/github/</guid>
-      <description>
+&lt;p&gt;alfresco embedded api
+&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;First things first! There&amp;rsquo;s a lot of stuff to manage; source code objects, project information, documentation, issues and will need to see how this stuff changes over time.  Had mainly used commercial implementations of source repositories and team collaboration / wiki tools.  Looked at a few open source ones (GitHub, BitBucket, SourceForge) and chose GitHub because; it had plenty of &lt;a href=&#34;http://git-scm.com/about&#34;&gt;documentation&lt;/a&gt; and &lt;a href=&#34;http://teach.github.com&#34;&gt;training&lt;/a&gt;, active community, mac client, eclipse plug-in and there are other modules such as cmis-perl, pDLNA and ember media manager - that the project will be leveraging - are also on GitHub.&lt;/p&gt;
+&lt;p&gt;cmis protocols
+&lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fprotocols-about.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;So we are going to use Git for:&lt;/p&gt;
-
-&lt;p&gt;|GitHub Capability  |Use  |
-|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;|&lt;br /&gt;
-|GitHubPages |project information  |&lt;br /&gt;
-|source code management tools (&amp;lt;&amp;gt; icon) | code storage, organisation, versioning, collaboration, backup, code review  |&lt;br /&gt;
-|wiki (the book icon) | how to documentation  |&lt;br /&gt;
-|issues (the (!) icon) | requirements and issue tracking   |
-|GitHub stats  | use the graphs and &lt;a href=&#34;https://help.github.com/articles/be-social&#34;&gt;social stuff&lt;/a&gt; to see how we are going |&lt;/p&gt;
-
-&lt;p&gt;There&amp;rsquo;s a bit of a hill to climb to get the most out of Git but it was great to put a &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resource&lt;/a&gt; in like this as a first thing for the project as everything had a place to go and when talking to people could point them to it no matter where they were in the world.  We&amp;rsquo;re just using some of the basic bits.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Setup GitHub account&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Setup repository&lt;/li&gt;
-&lt;li&gt;Clone to desktop&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Edit README&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Setup GitHubPages&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Setup wiki&lt;/li&gt;
-&lt;li&gt;Setup issues&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;1. Setup GitHub account&lt;/h3&gt;
-
-&lt;p&gt;Simple registration, can do a free account or various paid ones if want more functionality, just go to &lt;a href=&#34;github.com&#34;&gt;github.com&lt;/a&gt;.  Can have individual accounts or organisation accounts.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;2. Setup repository(s)&lt;/h3&gt;
-
-&lt;p&gt;Just used the online prompts but there is an excellent &lt;a href=&#34;https://help.github.com&#34;&gt;bootcamp tutorial&lt;/a&gt;. Currently the project has repos for;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;allegria - the main repository that this wiki is in&lt;/li&gt;
-&lt;li&gt;pDLNA - a &amp;lsquo;forked&amp;rsquo; repository of some modules that allegria will customise&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Have initially set the allegria repo up as a catchall for all the concepts being developed.  Later on may make submodules of each of the big areas to make cloning easier but just keeping it simple for now.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;3. Clone to desktop&lt;/h3&gt;
-
-&lt;p&gt;So you need a client application on your desktop to clone your repository to so that you can work on it.  Can do this with the &lt;a href=&#34;http://git-scm.com/downloads&#34;&gt;commandline client&lt;/a&gt;, which is ok and has lots of &lt;a href=&#34;http://git-scm.com/about&#34;&gt;documentation&lt;/a&gt;.  Or can use a &lt;a href=&#34;http://git-scm.com/downloads/guis&#34;&gt;graphical client&lt;/a&gt; (had a brief look at the mac client and it was pretty cool).  But for this project&amp;rsquo;s purposes we are using a graphical client that is embedded into the Eclipse Integrated Development Environment &lt;a href=&#34;./Paint-by-numbers:-Eclipse-with-Epic-and-Egit&#34;&gt;see the paint-by numbers here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_4&#34;&gt;4. Edit README&lt;/h3&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://help.github.com/articles/create-a-repo&#34;&gt;create a repo&lt;/a&gt; tutorial suggests that it is a good idea for your GitHub repository to have a &lt;a href=&#34;.&#34;&gt;README&lt;/a&gt; (or README.md) file which is like a summary landing page for the online webclient. If you create a repo through the command line there&amp;rsquo;s a few hoops to jump through but if you use the online webclient there is a checkbox to initialise the repo with a readme (that&amp;rsquo;s the easiest way to go).  The readme&amp;rsquo;s a good place to put some summary detail about the project and kick off some links to things like a project page, the wiki or to related sites.&lt;/p&gt;
-
-&lt;p&gt;The readme can use a &amp;lsquo;markdown&amp;rsquo; type language and there is tons of help for it like; &lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown&#34;&gt;articles in GitHub&lt;/a&gt; or &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax#link&#34;&gt;blogs&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_5&#34;&gt;5. Setup GitHub Pages&lt;/h3&gt;
-
-&lt;p&gt;The readme file is a good start to give people a snapshot of the project, but we wanted to have something a bit more, so are using &lt;a href=&#34;http://pages.github.com&#34;&gt;GitHubPages&lt;/a&gt;.  It is initially a bit tricky to set up. We used the wizard that is on the GitHubPages site but it seemed to not do anything (it says to wait 10 mins).  After a while if you go to the url (username.github.io/repository) that the wizard gives you (in our case it was &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;http://peterwatts.github.io/allegria/&lt;/a&gt;) then you should see the default page.&lt;/p&gt;
-
-&lt;p&gt;Underneath, the GitHubPages is a gh-pages branch under your repo and you can go into there and customise it to your heart&amp;rsquo;s content (we initially just tweaked the index page (by editing it online) with project information).  You could probably use some cool tools to manage it much as you would any normal html website but we are doing it all manually at the moment.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_6&#34;&gt;6. Setup wiki&lt;/h3&gt;
-
-&lt;p&gt;Using the wiki for the majority of documentation for the project other than read-me&amp;rsquo;s and release notes etc which are included in each of the development directories.&lt;/p&gt;
-
-&lt;p&gt;Generally the wiki makes it easy to put up some information relatively quickly.  Needed to play around with getting the markup correct (e.g. putting spaces after text on end of line to get to display on next line, using relative links and embedding images in the pages).&lt;/p&gt;
-
-&lt;p&gt;Using predominantly the &amp;ldquo;Markdown&amp;rdquo; editing mode as it&amp;rsquo;s the default (&lt;a href=&#34;http://www.mediawiki.org/wiki/MediaWiki&#34;&gt;MediaWiki&lt;/a&gt; would also be useful) and just using basic functionality to begin with including:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;simple naming standard of Home, Concept, HowTo, Paint-by-numbers, Point-of-view so the &amp;lsquo;Pages&amp;rsquo; page looks organised and relative links are easy to guess.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;formatting like; headings, bold, code blocks, unordered lists, ordered lists and quotes.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;relative links for content inside the Github repository (including for images).&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is plenty of raw documentation out there about the wiki syntax including:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://help.github.com/categories/88/articles&#34;&gt;GitHub Help&lt;/a&gt; including; Writing on GitHub, Markdown Basics and GitHub Flavoured Markdown&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://guides.github.com/overviews/mastering-markdown/&#34;&gt;http://guides.github.com/overviews/mastering-markdown/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gollum/gollum/wiki&#34;&gt;https://github.com/gollum/gollum/wiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mojombo/gollum-demo/wiki&#34;&gt;https://github.com/mojombo/gollum-demo/wiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown&#34;&gt;https://help.github.com/articles/github-flavored-markdown&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/blog/1395-relative-links-in-markup-files&#34;&gt;https://github.com/blog/1395-relative-links-in-markup-files&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/relative-links-in-readmes&#34;&gt;https://help.github.com/articles/relative-links-in-readmes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;http://daringfireball.net/projects/markdown/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://designshack.net/articles/html/mastering-markdown-30-resources-apps-and-tutorials-to-get-you-started/&#34;&gt;http://designshack.net/articles/html/mastering-markdown-30-resources-apps-and-tutorials-to-get-you-started/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Also a few forum examples for some of the trickier formatting stuff such as:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://webapps.stackexchange.com/questions/29602/markdown-to-insert-and-display-an-image-on-github-repo&#34;&gt;embedding images into a wiki page&lt;/a&gt; - some of the standard information available looked confusing or inaccurate - but this explanation seems to work.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/snowplow/snowplow/wiki&#34;&gt;example Github wiki&lt;/a&gt; that has some nice table footer and sidebar functionality.&lt;/li&gt;
-&lt;li&gt;plenty of forum examples out there on using the Eclipse IDE to author the wiki rather than typing into the online webclient but need to test out how to do this before write about it.&lt;/li&gt;
-&lt;li&gt;can get some of the work in formatting tables done with a &lt;a href=&#34;http://www.tablesgenerator.com/markdown_tables&#34;&gt;table generator&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&amp;ldquo;Github Flavoured Markdown (GFM) Markdown table syntax is quite simple. It does not allow row or cell spanning as well as putting multi-line text in a cell&amp;rdquo;.  To get a bit fancier can use some inline HTML.  The &lt;a href=&#34;http://www.w3schools.com/html/html_tables.asp&#34;&gt;W3Schools site&lt;/a&gt; has some good documentation for this (and syntax in general).&lt;/p&gt;
-
-&lt;p&gt;Simple example using the info from W3Schools:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  &amp;lt;table border=&amp;quot;0&amp;quot;&amp;gt;
-  &amp;lt;!--tr gives you a new table row and td gives you a new cell in the row--&amp;gt;
-  &amp;lt;tr&amp;gt;
-    &amp;lt;td&amp;gt;For more information on using groovy with cmis:
-     &amp;lt;ul&amp;gt;
-     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://groovy.codehaus.org&amp;quot;&amp;gt;Groovy home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://groovy.codehaus.org/Documentation&amp;quot;&amp;gt;Groovy documentation&amp;lt;/a&amp;gt; including getting started and tutorials&amp;lt;/li&amp;gt;
-     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.ibm.com/developerworks/java/tutorials/j-groovy&amp;quot;&amp;gt;IBM groovy tutorial&amp;lt;/a&amp;gt; includes using with Eclipse IDE&amp;lt;/li&amp;gt;
-     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.gradle.org&amp;quot;&amp;gt;Gradle&amp;lt;/a&amp;gt; build system for groovy&amp;lt;/li&amp;gt;
-     &amp;lt;li&amp;gt;books with groovy code examples&amp;lt;/li&amp;gt;
-     &amp;lt;/ul&amp;gt;
-    &amp;lt;/td&amp;gt;
-    &amp;lt;td&amp;gt;
-      &amp;lt;!--The target=&amp;quot;_blank&amp;quot; tag opens in a new browser tab when click on image--&amp;gt;
-      &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://www.manning.com/mueller&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;
-        &amp;lt;img src=&amp;quot;./images/manning-cmis.png?raw=true&amp;quot; alt=&amp;quot;book&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
-      &amp;lt;/p&amp;gt;
-    &amp;lt;/td&amp;gt;
-  &amp;lt;/tr&amp;gt;
-  &amp;lt;/table&amp;gt;  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;which produces:&lt;/p&gt;
-
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;For more information on using groovy with cmis:
-   &lt;ul&gt;
-   &lt;li&gt;&lt;a href=&#34;http://groovy.codehaus.org&#34;&gt;Groovy home&lt;/a&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;a href=&#34;http://groovy.codehaus.org/Documentation&#34;&gt;Groovy documentation&lt;/a&gt; including getting started and tutorials&lt;/li&gt;
-   &lt;li&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/java/tutorials/j-groovy&#34;&gt;IBM groovy tutorial&lt;/a&gt; includes using with Eclipse IDE&lt;/li&gt;
-   &lt;li&gt;&lt;a href=&#34;http://www.gradle.org&#34;&gt;Gradle&lt;/a&gt; build system for groovy&lt;/li&gt;
-   &lt;li&gt;books with groovy code examples&lt;/li&gt;
-   &lt;/ul&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/mueller&#34; target=&#34;_blank&#34;&gt;
-      &lt;img src=&#34;./images/manning-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Examples of coding with images:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;a name=&amp;quot;PaintByNumbers&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 
-##![Paint](/assets/img/paint-by-numbers-50.png?raw=true) Paint by Numbers  
-
-&amp;lt;a name=&amp;quot;HowTo&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 
-&amp;lt;html&amp;gt;
-  &amp;lt;h2&amp;gt;
-      &amp;lt;img src=&amp;quot;../blob/master/images/paint-by-numbers-50.png?raw=true&amp;quot; alt=&amp;quot;icon&amp;quot; style=&amp;quot;float:left&amp;quot;&amp;gt; How To&#39;s
-  &amp;lt;/h2&amp;gt;
-&amp;lt;/html&amp;gt; 
-
-[![Gem Version](https://badge.fury.io/rb/gollum.png)](http://rubygems.org/gems/gollum)
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;toc_7&#34;&gt;7. Setup issues log&lt;/h3&gt;
-
-&lt;p&gt;Not getting too funky here but will use the issues list capability to store:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;requirements definitions (green label)&lt;/li&gt;
-&lt;li&gt;project issues / key decisions&lt;/li&gt;
-&lt;li&gt;bugs, enhancements etc&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>CMIS Workbench</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/cmis-workbench/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/cmis-workbench/</guid>
-      <description>
-
-&lt;p&gt;&lt;html&gt;
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;
-    &lt;p&gt;
-      &lt;img src=&#34;./images/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;CMIS Workbench&lt;/a&gt; is a desktop (osx, win, linux) repository browser and development tool for working with the OpenCMIS client API (there&amp;rsquo;s an &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;introductory video&lt;/a&gt; that provides a simple overview).&lt;/p&gt;
-
-&lt;p&gt;Things it&amp;rsquo;s being used on Allegria for include:
-* quickly prototyping and checking content types and properties
-* working out syntax for cmis queries
-* running quick scripts for changing objects in the repositories&lt;/p&gt;
-
-&lt;p&gt;The OpenCMIS API it uses, is an open source implementation of the &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt; provided by the &lt;a href=&#34;http://chemistry.apache.org&#34; title=&#34;target=_blank&#34;&gt;Apache Chemistry project&lt;/a&gt;.  The CMIS Workbench is also one of the tools from the apache project:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/chemistry_tm_logo_small.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
-&lt;br /&gt;
-&lt;img src=&#34;/assets/img/apache-chemistry.png?raw=true&#34; alt=&#34;img&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco api documentation&lt;/a&gt;&lt;img src=&#34;/assets/img/wiki-ext-link.jpg?raw=true&#34; alt=&#34;img&#34; /&gt;
 &lt;/p&gt;
-
-&lt;p&gt;Alfresco being a cmis-compliant rich content repository, means that it provides a set of [[services for working with objects|Helicopter view: CMIS]] defined by the specification (which are then wrapped in the OpenCMIS implementation that a client like the CMIS Workbench can use).  With CMIS, most capabilities of the Alfresco repository are accessible and for the rest there are [[other interfaces|Helicopter view: Alfresco integration]] available.&lt;/p&gt;
-
-&lt;p&gt;Florian Muller, Jay Brown and Jeff Potts have written &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt;, which they describe as a hands on experience with the [cmis] standard and with the Apache Chemistry libraries and tools [including CMIS Workbench].  In a very similar vein to Allegria, the focus of the book is on:
-&amp;gt;
-getting a good general understanding of CMIS, enough to build a useful (and we hope fun) application&lt;br /&gt;
-&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;This paint-by-numbers is not to redo the work inside their book but does summarise some of the key aspects of the CMIS Workbench, in particular using it with an Alfresco repository.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Get CMIS Workbench&lt;/li&gt;
-&lt;li&gt;Connecting the workbench to repositories&lt;/li&gt;
-&lt;li&gt;Browsing objects in the repository&lt;/li&gt;
-&lt;li&gt;Querying the repository&lt;/li&gt;
-&lt;li&gt;CMIS Types&lt;/li&gt;
-&lt;li&gt;The groovy console&lt;/li&gt;
-&lt;li&gt;Advanced features&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;1. Get CMIS Workbench&lt;/h3&gt;
-
-&lt;p&gt;The CMIS Workbench can be &lt;a href=&#34;http://www.apache.org/dyn/closer.cgi/chemistry/opencmis/0.10.0/chemistry-opencmis-workbench-0.10.0-full.zip&#34;&gt;downloaded&lt;/a&gt; as a zip from the &lt;a href=&#34;http://chemistry.apache.org&#34;&gt;Apache Chemistry project&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Florian Muller has also created a &lt;a href=&#34;https://github.com/fmui/ApacheChemistryInAction&#34;&gt;GitHub Repository&lt;/a&gt; for readers of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; which contains; a zip of the CMIS Workbench, an in-memory cmis compliant repository (another one of the apache project&amp;rsquo;s tools) and the source code for each chapter&amp;rsquo;s examples.  To use the ApacheChemistryInAction GitHub repository, fork it and import it to Eclipse eGit as per the paint-by-numbers directions for [[GitHub|Paint by numbers: GitHub]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
- and the ones for [[Eclipse|Paint by numbers: Eclipse]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
-.&lt;/p&gt;
-
-&lt;p&gt;Unzip the chemistry-opencmis-workbench-0.10.0-full.zip.  Using a linux or osx terminal type:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd [directory where extracted workbench to]
-./workbench.sh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; the workbench.sh file from Florian&amp;rsquo;s GitHub repo is tailored to use the apache in-memory repository.  To use the CMIS Workbench with Alfresco it is better to also get the one from the ApacheProject (so rename Florian&amp;rsquo;s to something like &lt;code&gt;workbench.in-memory.sh&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;To have a neater installation and run it from the osx launchpad or dock follow this [[paint-by-numbers|Paint by numbers: Launching osx scripts]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
-.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;2. Connecting the workbench&lt;/h3&gt;
-
-&lt;p&gt;The connection window will appear either when starting the application or using the &amp;lsquo;Connection&amp;rsquo; menu button:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;./images/cmis workbench on-premise connection.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The three key items needed to make a connection to a repository host are:
-* &lt;strong&gt;BINDING&lt;/strong&gt; - the bindings (atompub, webservice, browser) are explained in detail in the cmis specification (the &amp;lsquo;browser&amp;rsquo; binding is the fullest and most lightweight implementation but not always available).&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;URL&lt;/strong&gt; - the url is where the rubber hits the road for cmis on Alfresco, however it is a little tricky to understand just which url is needed as there are many to choose from depending on; what version of Alfresco is running, how the repository is deployed (i.e. on-premise, cloud, public), which binding is being used (atompub, webservice, browser) and whether connecting to the OpenCMIS API or to services or service information.  To keep this step readable the unravelling of this is in [[Spaghetti western: CMIS URL|Spaghetti western: CMIS URL]]&lt;img src=&#34;/assets/img/spaghetti-western-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
- (although the examples below have the answers anyway).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;AUTHENTICATION CREDENTIALS / METHOD&lt;/strong&gt; - just like the url, we are spoilt for choice on what authentication methods and credentials may be used, and there is a proliferation of documentation to go along with that.  To keep things simple going to use the standard, non-https, user name and password for connecting to Alfresco on-premise and when connecting to Alfresco in the cloud, use the required oAuth implementation (how to do this is in the examples below).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The &amp;lsquo;basic&amp;rsquo; tab provides, well, basic input boxes for these key parameters plus some performance tuning parameters (which &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; explains in Part 3 - advanced topics).  The &amp;lsquo;expert&amp;rsquo; tab allows an expanded syntax of &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/org/apache/chemistry/opencmis/commons/SessionParameter.html&#34;&gt;OpenCMIS session parameters&lt;/a&gt; to fine tune the &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/constant-values.html#org.apache&#34;&gt;values&lt;/a&gt; that can be used.  The expert tab has a drop down of some preset connection parameters (such as Alfresco) to make things easier.&lt;/p&gt;
-
-&lt;p&gt;So, to connect to an Alfresco 4.2e, on-premise repository with the OpenCMIS browser binding use the following parameters:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;org.apache.chemistry.opencmis.binding.spi.type=browser
-org.apache.chemistry.opencmis.binding.browser.url=http://[host]/alfresco/cmisbrowser
-org.apache.chemistry.opencmis.user=&amp;lt;user&amp;gt;
-org.apache.chemistry.opencmis.password=&amp;lt;password&amp;gt;
-org.apache.chemistry.opencmis.binding.compression=true
-org.apache.chemistry.opencmis.binding.cookies=true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Given only simple parameters were chosen in the on-premise example above, they could have also been entered in the basic tab for the same result.  Connecting to the Alfresco in the cloud repository requires the use of the expert tab though as it uses parameter values that cannot be set on the basic tab.&lt;/p&gt;
-
-&lt;p&gt;The example syntax below was generated by selecting &amp;lsquo;Alfresco Cloud AtomPub&amp;rsquo; from the parameter template drop down list at the top of the expert tab (at present it doesn&amp;rsquo;t seem like the browser binding is available in the cloud repository). The value for the oAuth access token is obtained from an oAuth authentication flow which is described in [[Paint by numbers: Alfresco oAuth sample application|Paint by numbers: Alfresco oAuth sample application]]&lt;img src=&#34;./images/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
-:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# Alfresco Cloud (CMIS 1.0 AtomPub)
-org.apache.chemistry.opencmis.binding.spi.type=atompub
-org.apache.chemistry.opencmis.binding.atompub.url=https://api.alfresco.com/cmis/versions/1.0/atom
-org.apache.chemistry.opencmis.binding.auth.http.basic=false
-
-# Please provide a valid OAuth access token in the following property
-# Note that Alfresco Cloud access tokens have a limited lifetime (currently 1 hour) and the OpenCMIS Workbench does not auto-refresh the access token when it expires
-org.apache.chemistry.opencmis.binding.header.0=Authorization:Bearer ####ACCESS_TOKEN####
-
-# Other optional options - compression etc. - may be provided here
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Once all the relevant parameters are entered, pressing the &amp;lsquo;load repositories&amp;rsquo; button, presents a choice of instances on the host (as can run multiples), choose a repository from the drop down, press the login button and &lt;a href=&#34;http://www.imdb.com/title/tt2379418/&#34;&gt;voila!&lt;/a&gt; you are into the default configuration of the CMIS Workbench user interface.&lt;/p&gt;
-
-&lt;p&gt;The CMIS Workbench can also be configured through &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;system properties or additional properties&lt;/a&gt; in the expert login dialog. An &lt;a href=&#34;http://forums.alfresco.com/comment/75223#comment-75223&#34;&gt;Alfresco forum post&lt;/a&gt; explains this as:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;The CMIS Workbench, for example, makes use of the OperationContext. It sets up two OperationContext objects when it starts:&lt;br /&gt;
-* One OperationContext object is used for the folder list on left. This OperationContext only selects the data that is needed for this view: a handful of properties, no Allowable Actions, no ACLs, etc. That [as with paging] speeds up the retrieval of the list.&lt;br /&gt;
-* The second OperationContext is used to populate the right hand panels. It selects everything because it displays everything.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;The Alfresco API lets you access content managed by Alfresco Cloud from your own applications. The API is RESTful, which means each call is an HTTP request, so you don&amp;rsquo;t even need a programming language to try it out. You can just type a URL address in a web browser. It consists of two parts, the standard CMIS API, which lets you manage and access content, and the new Alfresco REST API which lets you manage Alfresco&amp;rsquo;s additional features such as ratings and comments, that are not covered by the CMIS standard.&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The current values for the OperationContexts can be seen if press the Info button.  The notion of OperationContext is explained more fully in &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; and the &lt;a href=&#34;http://chemistry.apache.org/java/developing/guide.html&#34;&gt;Apache OpenCMIS API docs&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once connected the features of the tool are available.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;3. Browsing objects in the repository&lt;/h3&gt;
-
-&lt;p&gt;Browse the repository&amp;rsquo;s objects, actions, properties, relationships, ACL, policies, versions, types and extensions:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-main.png?raw=true&#34; alt=&#34;browse&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_4&#34;&gt;4. Querying the repository&lt;/h3&gt;
-
-&lt;p&gt;The CMIS query syntax is defined in detail in:&lt;br /&gt;
-* 2.1.14 Query of &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt;
-* &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS_Query_Language&#34;&gt;Alfresco wiki&lt;/a&gt;
-* Chapter 5 - Query of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-query.png?raw=true&#34; alt=&#34;query&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_5&#34;&gt;5. CMIS Types&lt;/h3&gt;
-
-&lt;p&gt;The type function exposes the content model through the workbench:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-type.png?raw=true&#34; alt=&#34;type&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The ability to create and update types allows programatic deployment of a content model eliminating the need for custom configuration scripts for the various repositories to configure types.&lt;/p&gt;
-
-&lt;p&gt;Chapter 4 - CMIS metadata: types and properties of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; describes how:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;OpenCMIS provides the TypeUtils class, which can read and write type definitions from and to XML and JSON.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;toc_6&#34;&gt;6. The groovy console&lt;/h3&gt;
-
-&lt;p&gt;The groovy console provides a quick and easy development environment to use the &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/overview-summary.html&#34;&gt;Apache Chemistry OpenCMIS API&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-groovy.png?raw=true&#34; alt=&#34;groovy&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;In addition to the default API, &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; highlights two other API&amp;rsquo;s that can be accessed from the Groovy console:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Chapter 3: Part 3 Advanced Topics - low-level api&lt;/em&gt;
-&amp;gt;
-The APIs provide an object-oriented interface with a lot of convenience, simplified data structures, and high-level operations that don’t exist in CMIS. On the other hand, these APIs hide extension points and access to the data structures that are transferred over the wire.&lt;br /&gt;
-It turns out that there’s a layer between the bindings and these APIs called the low- level API. The low-level API provides a set of interfaces and operations that model all the services and operations in the CMIS specification one-to-one. For each of the nine CMIS services, there’s an interface. For each operation, there’s a method with exactly the same name and the same parameters, in the same order. The data objects are very close to the data structures used on the wire. The semantics and behavior are as described in the CMIS domain model. You can use the CMIS specification as a manual for these interfaces.
-&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Chapter 3: Creating, updating, and deleting objects with CMIS - groovy helper scripts&lt;/em&gt;
-&amp;gt;
-CMIS helper scripts distributed with the CMIS Workbench can make your Groovy code more succinct. What other shortcuts are available? If you take a look at the source code for the CMIS Workbench, you’ll find the Groovy file that defines the CMIS helper scripts in /src/main/resources/scripts/CMIS.groovy. Consult that file for the full list.
-&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;The Florian Muller GitHub Repository workbench version ships with chapter scripts which can be accessed when use the Console button.  The apache project&amp;rsquo;s version ships with other scripts that can be accessed from the Console button of that version.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; if get the unauthorised error when accessing the cloud repository then the token has probably timed out - need to close the groovy console, regenerate an access token, reconnect with the new token and reopen the console.&lt;/p&gt;
-
-&lt;p&gt;For information on groovy:
-* &lt;a href=&#34;http://groovy.codehaus.org&#34;&gt;Groovy home&lt;/a&gt;
-* &lt;a href=&#34;http://groovy.codehaus.org/Documentation&#34;&gt;documentation&lt;/a&gt; including getting started and tutorials
-* &lt;a href=&#34;http://www.gradle.org&#34;&gt;Gradle&lt;/a&gt; build system for groovy&lt;/p&gt;
-
-&lt;p&gt;Some books on Groovy and CMIS (with source code):&lt;/p&gt;
-
-&lt;p&gt;&lt;html&gt;
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/mueller&#34; target=&#34;_blank&#34;&gt;
-      &lt;img src=&#34;./images/manning-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/koenig2&#34; target=&#34;_blank&#34;&gt;
-      &lt;img src=&#34;./images/manning-groovy.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;a href=&#34;http://www.packtpub.com/develop-applications-and-integrations-that-can-interact-with-cmis-alfresco/book&#34; target=&#34;_blank&#34;&gt;
-      &lt;img src=&#34;./images/pakt-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;a href=&#34;http://www.packtpub.com/groovy-2-cookbook/book&#34; target=&#34;_blank&#34;&gt;
-      &lt;img src=&#34;./images/pakt-groovy.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_7&#34;&gt;7. Advanced features&lt;/h3&gt;
-
-&lt;p&gt;Other features of CMIS Workbench are:&lt;br /&gt;
-* Repository info
-* &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#Change_Log&#34;&gt;Change Logger&lt;/a&gt;
-* TCK (Test Compatibility Kit)
-* CMIS Client Logging (filtered logging)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Launchng OSX scripts</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/launching-osx-scripts/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/launching-osx-scripts/</guid>
-      <description>
-
-&lt;p&gt;&lt;html&gt;
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;
-    &lt;p&gt;
-      &lt;img src=&#34;./images/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;The CMIS Workbench application in its default download launches with a shell script rather than a neat osx package.  The osx Automator can be used to launch it from an icon in the osx launchpad or dock.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Create an &amp;lsquo;application&amp;rsquo; from the osx Automator:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator-type.png?raw=true&#34; alt=&#34;automator&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Drag run shell script to the action window and enter the path to workbench.sh:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator.png?raw=true&#34; alt=&#34;action&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Save the package as &amp;lsquo;CMIS Workbench.app&amp;rsquo; to the &amp;lsquo;Applications&amp;rsquo; folder.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Go to the &amp;lsquo;Applications&amp;rsquo; folder, right-click on the &amp;lsquo;CMIS Workbench.app&amp;rsquo; file,&amp;lsquo;Get Info&amp;rsquo;and and click on the icon at the top left until it has a blue outline:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-getinfo.png?raw=true&#34; alt=&#34;finder&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; &lt;a href=&#34;https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/chemistry-opencmis-workbench/chemistry-opencmis-workbench/src/main/resources/images/&#34;&gt;Download&lt;/a&gt; the CMIS Workbench icon (or use the pic below), open it in a paint application, copy to the clipboard and use the Finder [Edit] menu to paste the CMIS Workbench icon onto the &amp;lsquo;Get Info&amp;rsquo; icon.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-wb-icon.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
-&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/java/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/java/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/totalbeginner.html&#34;&gt;http://eclipsetutorial.sourceforge.net/totalbeginner.html&lt;/a&gt;
-&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&#34;&gt;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&lt;/a&gt;
-&lt;a href=&#34;http://sourceforge.net/projects/eclipsetutorial/files/&#34;&gt;http://sourceforge.net/projects/eclipsetutorial/files/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The companion has resources listed in the back including (gold standard):
-&lt;a href=&#34;http://docs.oracle.com/javase/tutorial/java/index.html&#34;&gt;http://docs.oracle.com/javase/tutorial/java/index.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&#34;&gt;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=al7bRZzz4oU&#34;&gt;http://www.youtube.com/watch?v=al7bRZzz4oU&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&#34;&gt;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;maven in Eclipse:  &lt;a href=&#34;http://www.youtube.com/watch?v=xE2F4Z_wKCU&#34;&gt;http://www.youtube.com/watch?v=xE2F4Z_wKCU&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Application Lifecycle Management</title>
-      <link>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/how-to/application-lifecycle-management/</guid>
-      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;how to manage all the activities that occur from birth to death of an application (includes strategy / portfolio performance management, project management, Agile/DevOps including capacity/incident/problem/config/change etc, Financial Management - CAPEX/OPEX, supplier management / strategic sourcing, license management) - all the stuff ITIL/CObIT talk about.&lt;/p&gt;
-
-&lt;p&gt;Agile/DevOps about focus/flow&lt;/p&gt;
-
-&lt;p&gt;something to do - task / context used to:&lt;/p&gt;
+&lt;p&gt;Integration options: &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;build a project schedule / demand forecast&lt;/li&gt;
-&lt;li&gt;focus work by attaching task to requirements / defect and relevant source code / documentation (and when work is attached end to end like that then it is also self documenting so don&amp;rsquo;t have to explain to the next person who picks it up either for review or later maintenance tasks what all the relevant bits are + get traceability)&lt;/li&gt;
-&lt;li&gt;at the really detailed end can build as go by putting in TODO&amp;rsquo; in the code so know what is left, less to fall through the cracks&lt;/li&gt;
-&lt;li&gt;easy to see status
-(need a user interface for developer to pick and use tasks, project manager to summarise, a task bus to shuffle tasks from developers code, issues logged - and the social commentary around them, code reviews, builds and a repository to store the tasks - mylyn / tasktop / jira - all about focus and flow - books aplenty on this like mikado, lean/alm, requirements management, project management)&lt;/li&gt;
+&lt;li&gt;CMIS (Content Management Interoperability Services)&lt;/li&gt;
+&lt;li&gt;Web scripts (RESTful api)&lt;/li&gt;
+&lt;li&gt;File-based access (CIFS, WebDAV, NFS, or FTP)&lt;/li&gt;
+&lt;li&gt;OpenSearch and feeds (RSS or Atom subscription protocols)&lt;/li&gt;
+&lt;li&gt;Java applications (using the core API directly)&lt;/li&gt;
+&lt;li&gt;PHP applications (through CMIS, through web scripts as a RESTful interface, or directly from the same application server as Alfresco. Alfresco has an optional extension that includes the Quercus PHP interpreter in a Tomcat server. The Quercus PHP interpreter is capable of running popular PHP applications, such as Joomla!, Drupal, WordPress, and MediaWiki.)&lt;/li&gt;
+&lt;li&gt;.NET applications (similar to integrations with Java applications through remote interfaces such as web scripts or CMIS. Either the SOAP or Atom Publishing interfaces can be used.)
+Integration patterns: &lt;a href=&#34;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&#34;&gt;http://docs.alfresco.com/4.2/index.jsp?topic=%2Fcom.alfresco.enterprise.doc%2Fconcepts%2Fintegration-options.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Surf components&lt;/li&gt;
+&lt;li&gt;Authentication and directory services&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;develop some code&lt;/p&gt;
-
-&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
-
-&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - java, go, ruby, json, perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
-&lt;li&gt;model driven development / test driven development / content driven development (all wrapped up in Agile)&lt;/li&gt;
-&lt;li&gt;formatting code so it&amp;rsquo;s readable (syntax highlighting), valid (syntax checking) and conforms to best practice techniques for the language (like project structures, code quality and vulnerabilities)&lt;/li&gt;
-&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
-&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
-&lt;li&gt;source code management / version control - branching / merging strategies (GitFlow)&lt;/li&gt;
-&lt;li&gt;code review - GitHub pull request vs Gerrit review&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(Eclipse + plugins, Atlassian SourceTree + GitFlow, Mou - sometimes it makes sense to come outside of the IDE, Gerrit, GitHub + badges)&lt;/p&gt;
-
-&lt;p&gt;environments&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;build/package/implement code - release strategy / cycle&lt;/li&gt;
-&lt;li&gt;testing not a separate step but baked into everything else (e.g. requirements management, code reviews)&lt;/li&gt;
-&lt;li&gt;Vagrant + Docker (+ CoreOS) + Chef/Puppet - continuous build / integration (DevOps)&lt;/li&gt;
-&lt;li&gt;Gradle&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(need a repository to put released code, binaries, release notes and setup scripts + badges)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://secretgeek.net/lifecycle.asp&#34;&gt;http://secretgeek.net/lifecycle.asp&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.top-q.co.il/services/alm/&#34;&gt;http://www.top-q.co.il/services/alm/&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&#34;&gt;http://blogs.technet.com/b/doug_mccutcheon/archive/2009/05/19/the-new-application-lifecycle-management-demo-image-built-on-sharepoint-server-2007-enterprise-project-management-epm-solution.aspx&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&#34;&gt;http://blog.programmableweb.com/2013/07/10/new-wso2-app-factory-allows-management-of-complete-enterprise-application-lifecycle/&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&#34;&gt;http://www.mountainview-itsm.com/itil-training/downloads/itil-pocket-guide/itil-pocket-guide.swf&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Systems_development_life-cycle&#34;&gt;http://en.wikipedia.org/wiki/Systems_development_life-cycle&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;somewhere between what&amp;rsquo;s needed to deliver a textbook hello world output example application and enterprise methodologies and frameworks for delivering outcomes.&lt;/p&gt;
-
-&lt;p&gt;Application lifecycle management (ALM) is the product lifecycle management (governance, development, and maintenance) of application software. It encompasses requirements management, software architecture, computer programming, software testing, software maintenance, change management, project management, and release management.&lt;/p&gt;
-
-&lt;p&gt;In software engineering, software configuration management (SCM)[1] is the task of tracking and controlling changes in the software, part of the larger cross-discipline field of configuration management.[2] SCM practices include revision control and the establishment of baselines - software development is considered separately.&lt;/p&gt;
-
-&lt;p&gt;The goals of SCM are generally:[citation needed]
-* Configuration identification - Identifying configurations, configuration items and baselines.
-* Configuration control - Implementing a controlled change process. This is usually achieved by setting up a change control board whose primary function is to approve or reject all change requests that are sent against any baseline.
-* Configuration status accounting - Recording and reporting all the necessary information on the status of the development process.
-* Configuration auditing - Ensuring that configurations contain all their intended parts and are sound with respect to their specifying documents, including requirements, architectural specifications and user manuals.
-* Build management - Managing the process and tools used for builds.
-* Process management - Ensuring adherence to the organization&amp;rsquo;s development process.
-* Environment management - Managing the software and hardware that host the system.
-* Teamwork - Facilitate team interactions related to the process.
-* Defect tracking - Making sure every defect has traceability back to the source.&lt;/p&gt;
-
-&lt;p&gt;DevOps integration targets product delivery, quality testing, feature development and maintenance releases in order to improve reliability and security and faster development and deployment cycles.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Agile_software_development&#34;&gt;http://en.wikipedia.org/wiki/Agile_software_development&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://guide.agilealliance.org/subway.html&#34;&gt;http://guide.agilealliance.org/subway.html&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Community-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Community-driven_development&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Kanban_(development&#34;&gt;http://en.wikipedia.org/wiki/Kanban_(development&lt;/a&gt;)  kanban / process driven development  / content driven development&lt;br /&gt;
-The Kanban method – An approach to incremental, evolutionary process improvement for organisations.&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Feature-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Feature-driven_development&lt;/a&gt;  (decomposition approach)&lt;br /&gt;
-&lt;a href=&#34;http://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;http://en.wikipedia.org/wiki/Test-driven_development&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Model-driven_software_development&#34;&gt;http://en.wikipedia.org/wiki/Model-driven_software_development&lt;/a&gt; / business driven development&lt;br /&gt;
-Model-driven software development (MDSD) is an alternative to round-trip engineering. Round-trip engineering is the concept of being able to make any kind of change to a model as well as to the code generated from that model. The changes always propagate bidirectional and both artifacts are always consistent.&lt;/p&gt;
-
-&lt;p&gt;The Agile Manifesto is based on twelve principles:[9]&lt;br /&gt;
-Customer satisfaction by rapid delivery of useful software&lt;br /&gt;
-Welcome changing requirements, even late in development&lt;br /&gt;
-Working software is delivered frequently (weeks rather than months)&lt;br /&gt;
-Working software is the principal measure of progress&lt;br /&gt;
-Sustainable development, able to maintain a constant pace&lt;br /&gt;
-Close, daily cooperation between business people and developers&lt;br /&gt;
-Face-to-face conversation is the best form of communication (co-location)&lt;br /&gt;
-Projects are built around motivated individuals, who should be trusted&lt;br /&gt;
-Continuous attention to technical excellence and good design&lt;br /&gt;
-Simplicity—the art of maximizing the amount of work not done—is essential&lt;br /&gt;
-Self-organizing teams&lt;br /&gt;
-Regular adaptation to changing circumstances&lt;/p&gt;
-
-&lt;p&gt;Agile development is supported by a bundle of concrete practices suggested by the agile methods, covering areas like requirements, design, modeling, coding, testing, project management, process, quality, etc. Some notable agile practices include:
-Acceptance test-driven development (ATDD)&lt;br /&gt;
-Agile Modeling&lt;br /&gt;
-Backlogs (Product and Sprint)&lt;br /&gt;
-Behavior-driven development (BDD)&lt;br /&gt;
-Cross-functional team&lt;br /&gt;
-Continuous integration (CI)&lt;br /&gt;
-Domain-driven design (DDD)&lt;br /&gt;
-Information radiators (Scrum board, Kanban board, Task board, Burndown chart)&lt;br /&gt;
-Iterative and incremental development (IID)&lt;br /&gt;
-Pair programming&lt;br /&gt;
-Planning poker&lt;br /&gt;
-Refactoring&lt;br /&gt;
-Scrum meetings (Sprint planning, Daily scrum, Sprint review and retrospective)&lt;br /&gt;
-Test-driven development (TDD)&lt;br /&gt;
-Agile testing&lt;br /&gt;
-Timeboxing&lt;br /&gt;
-Use case&lt;br /&gt;
-User story&lt;br /&gt;
-Story-driven modelling&lt;br /&gt;
-Velocity tracking&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Eclipse</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</link>
+      <title>Modifying content types</title>
+      <link>http://localhost:1313/retrospectives/how-to/modifying-content-types/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</guid>
+      <guid>http://localhost:1313/retrospectives/how-to/modifying-content-types/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;hidden stuff
--rw-r&amp;ndash;r&amp;ndash;@.DS_Store
--rw-r&amp;ndash;r&amp;ndash; .classpath
-drwxr-xr-x .git
--rw-r&amp;ndash;r&amp;ndash; .gitignore
-drwxr-xr-x .gradle
--rw-r&amp;ndash;r&amp;ndash; .project
-drwxr-xr-x   .settings&lt;/p&gt;
+&lt;p&gt;There really is no need to write a &lt;a href=&#34;http://www.imdb.com/title/tt0077631/&#34;&gt;fully blown&lt;/a&gt; how-to of the technical aspects for &lt;a href=&#34;http://docs.alfresco.com/4.2/topic/com.alfresco.enterprise.doc/tasks/kb-define-custom-model.html&#34;&gt;modifying content models in Alfresco&lt;/a&gt; as Jeff Potts has written a &lt;a href=&#34;http://ecmarchitect.com/images/articles/alfresco-content/content-article-2ed.pdf&#34;&gt;concise and complete tutorial&lt;/a&gt; already including:&lt;/p&gt;
 
-&lt;p&gt;eclipse project import will create some (particulalry if using the gradle plugin)
-gradle build will create some
-.gitignore is also in the Atlassian SourceTree global gitignore (there is a decision here about whether or not to store the .gitignore stuff in the reporsitory to maintain consistency across the team - prob would put in a dev note so that could have the best of both worlds in case someone is working on a few projects and have different things in their gitignore - although could prob have a base one in here that includes the .gitignore file as well so it doesn&amp;rsquo;t get changed back on commit - would have to add manually through the GitHub gui I think)&lt;/p&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;paint-by-numbers implementation (sort of technical specification)&lt;/h2&gt;
 
-&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
+&lt;p&gt;Here are the steps to follow when configuring a custom content model:
+1. Create an extension directory
+2. Create a custom model context file
+3. Create a model file
+4. Restart Tomcat&lt;/p&gt;
 
-&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
+&lt;p&gt;using xmp, what to about scrapers / uni-bi directional metadata updating (should keep the original file and create a rendition if updating metadata&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
-&lt;li&gt;formatting code so it&amp;rsquo;s readable, valid and conforms to best practice techniques for the language (like project structures)&lt;/li&gt;
-&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
-&lt;li&gt;build/package/implement code&lt;/li&gt;
-&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;change types
+&lt;a href=&#34;http://forums.alfresco.com/forum/end-user-discussions/alfresco-share/change-types-options-menu-labeleds-06082011-1023&#34;&gt;http://forums.alfresco.com/forum/end-user-discussions/alfresco-share/change-types-options-menu-labeleds-06082011-1023&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Wow, that&amp;rsquo;s a lot of things, but which one to choose?  There are heaps of IDE&amp;rsquo;s out there.  We have chosen &lt;a href=&#34;http://www.eclipse.org&#34;&gt;Eclipse&lt;/a&gt; because; there&amp;rsquo;s tons of documentation, examples and community surrounding it.  Also, because we have also chosen Perl as a development language for the CmisDlnaConnector and Git (GitHub) for source control, Eclipse is a good choice for us because it has really cool plugins &lt;a href=&#34;http://www.epic-ide.org&#34;&gt;EPIC&lt;/a&gt; and &lt;a href=&#34;http://www.eclipse.org/egit/&#34;&gt;EGit&lt;/a&gt; to support both of them.&lt;/p&gt;
+&lt;p&gt;Configuring the Custom Model in Alfresco Share&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+&lt;p&gt;Adding Custom Types and Aspects to Lists
+ “Is sub-type” criteria. When a user configures a rule on a space and uses content types as a criteria, the custom types should be a choice in the list of possible content types.
+ “Has aspect” criteria. When a user configures a rule on a space and uses the presence of an aspect as a criteria, the custom aspects should be a choice in the list of possible aspects.
+ Change type action. When a user runs the “specialize type” action, either as part of a rule configuration or through the “Change Type” UI action, the custom types should be available.
+ Add aspect. When a user runs the “add aspect” action, either as part of a rule configuration or through the “Manage Aspects” UI action, the custom aspects should be available.&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Getting and configuring Eclipse&lt;/li&gt;
-&lt;li&gt;Getting and configuring Epic&lt;/li&gt;
-&lt;li&gt;Getting and configuring EGit&lt;/li&gt;
-&lt;li&gt;Importing projects&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Configuring Forms for Custom Properties / Configuring the form service for a custom type / Configuring the form service for custom properties
+ Document Details. When a user looks at the document details page for a piece of content
+stored as one of the custom types or with one of the custom aspects attached, the properties section should show the custom properties.
+ Edit Properties. When a user edits the properties of a piece of content, either with the “full” form or the abbreviated form, the appropriate properties should be shown.&lt;/p&gt;
 
-&lt;h3 id=&#34;toc_1&#34;&gt;Getting and configuring Eclipse&lt;/h3&gt;
+&lt;p&gt;Configuring Advanced Search in Alfresco Share
+ Advanced search. When a user runs an advanced search, they should be able to restrict search results to instances of our custom types and/or content with specific values for the properties of our custom types.&lt;/p&gt;
 
-&lt;p&gt;Downloaded &lt;a href=&#34;http://www.eclipse.org/downloads/&#34;&gt;Eclipse Kepler (4.3.1)&lt;/a&gt; for MacOSX (and can get a Windows and Linux one as well).&lt;/p&gt;
+&lt;p&gt;Localizing Strings for Custom Content Models&lt;/p&gt;
 
-&lt;p&gt;It comes as an archive which we unstuffed. Then &lt;a href=&#34;http://www.imdb.com/title/tt0109045/&#34;&gt;drag&lt;/a&gt; the &amp;ldquo;eclipse&amp;rdquo; folder into your Applications folder. &lt;a href=&#34;http://www.cs.dartmouth.edu/~cs5/install/eclipse-osx/&#34;&gt;The easiest way to do so&lt;/a&gt; is to open a new window in the Finder and click on Applications in the list you get on the left-hand side. Then drag the &amp;ldquo;eclipse&amp;rdquo; folder in with the other applications. Make sure that you do not drag it into a folder that&amp;rsquo;s already within Applications. In other words, when you&amp;rsquo;re done, the Applications folder should have directly within it a folder named &amp;ldquo;eclipse.&amp;rdquo;
-(This step is not required, but handy.) Double click the &amp;ldquo;eclipse&amp;rdquo; folder. You&amp;rsquo;ll see an application named &amp;ldquo;Eclipse&amp;rdquo;; it has a purple icon with white horizontal stripes. Drag it into your dock. Now you will be able to launch Eclipse by clicking on the icon in the dock.&lt;/p&gt;
+&lt;p&gt;You’ve seen that configuring Alfresco Share for your custom content model essentially involves adding XML to the share-config-custom.xml file and creating a properties file for your localized strings. All of this lives under the “web-extension” directory in the Share web application.
+There are other things you might like to do to the Share user interface, but these are beyond the scope of this document:
+• Add custom content types to the Create Content menu
+• Add custom properties to the document library sort criteria
+• Add custom properties to the document library data grid&lt;/p&gt;
 
-&lt;p&gt;Launch the application and set up the default workspace preferences (we&amp;rsquo;ve just put it in the ~/Documents/workspace folder ).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wiki.alfresco.com/wiki/Data_Dictionary_Guide#Step_by_Step_Model_Definition&#34;&gt;http://wiki.alfresco.com/wiki/Data_Dictionary_Guide#Step_by_Step_Model_Definition&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://wiki.alfresco.com/wiki/Displaying_Custom_Metadata&#34;&gt;http://wiki.alfresco.com/wiki/Displaying_Custom_Metadata&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Didn&amp;rsquo;t really do any other configuration as most of the preferences that are important to us are in the Epic and EGit plugins.  Didn&amp;rsquo;t look at many support docs to get going as its pretty self explanatory but the &lt;a href=&#34;http://help.eclipse.org/kepler/topic/org.eclipse.platform.doc.user/gettingStarted/qs-01.htm?cp=0_1_0&#34;&gt;basic tutorial&lt;/a&gt; and some descriptions of the &lt;a href=&#34;http://help.eclipse.org/kepler/index.jsp?topic=/org.eclipse.jdt.doc.user/reference/ref-icons.htm&#34;&gt;icons&lt;/a&gt; were useful (if could find a similar icons ref for Epic that would be cool).&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;Getting and configuring Epic&lt;/h3&gt;
-
-&lt;p&gt;Even though the project repository is foundational, we&amp;rsquo;ve put this section in before setting up EGit as when we connect to the repo and import projects we wanted to import them as Perl projects (and wanted Perl frameworks and Epic plugin installed first to do this).&lt;/p&gt;
-
-&lt;p&gt;And, in order to have all EPIC &lt;a href=&#34;http://www.epic-ide.org/articles.php&#34;&gt;features&lt;/a&gt; like template project model (Module::Starter), source formatting (PerlTidy), syntax checking, coding standards (PerlCritic), interactive debug etc., you need to have a &lt;a href=&#34;./Paint-by-numbers:-Perl&#34;&gt;Perl interpreter and some supporting perl modules installed&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The Epic &lt;a href=&#34;http://www.epic-ide.org/guide/ch01s02.php&#34;&gt;installation&lt;/a&gt; is done by using the Eclipse Update Manager by entering &amp;lsquo;epic - &lt;a href=&#34;http://e-p-i-c.sf.net/updates/testing&#39;&#34;&gt;http://e-p-i-c.sf.net/updates/testing&#39;&lt;/a&gt; into the “Help &amp;gt; Install new software” dialog.  Chose the testing version &amp;lsquo;cause saw some posts that said it was stable and had good advantages over the current released version (and who doesn&amp;rsquo;t like a shiny new toy).&lt;/p&gt;
-
-&lt;p&gt;Once the plugin is installed, updated the &amp;ldquo;Eclipse &amp;gt; Preferences &amp;gt; Perl EPIC&amp;rdquo; preferences:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Perl EPIC:
-  ~ Perl Executable: &amp;ldquo;/usr/bin/perl&amp;rdquo;&lt;br /&gt;
-  ~ Interpreter Type: Standard&lt;br /&gt;
-Module::Starter:&lt;br /&gt;
-  ~ Select Enable Module::Starter&lt;br /&gt;
-  ~ Custom location: /usr/local/bin/module-starter&lt;br /&gt;
-  ~ Select Override module-starter config file&lt;br /&gt;
-  ~ Module Author:&lt;br /&gt;
-  ~ Module Author Email:&lt;br /&gt;
-Perl::Critic:&lt;br /&gt;
-  ~ Select Enable Critic&lt;br /&gt;
-  ~ Custom location: /usr/local/bin/perlcritic&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;That&amp;rsquo;s the ones we tweaked but there are heaps of other ones as well.&lt;/p&gt;
-
-&lt;p&gt;So now you&amp;rsquo;ve got the &lt;a href=&#34;http://www.imdb.com/title/tt0659325/&#34;&gt;eagles nest&lt;/a&gt; for a birds eye view of the project.  The main structure of Eclipse are perspectives.  &lt;em&gt;Perspectives control what appears in certain menus and toolbars. They define visible action sets, which you can change to customize a perspective. You can save a perspective that you build in this manner, making your own custom perspective that you can open again later.&lt;/em&gt;
-&lt;em&gt;You can set your Workbench preferences to open perspectives in the same window or in a new window.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The main perspectives for developing Perl applications are:
-* Perl - This is the main perspective for coding Perl scripts.&lt;br /&gt;
-* Debug - Provides the main functionality for debugging and executing Perl scripts.&lt;/p&gt;
-
-&lt;p&gt;Did have an error setting up EPIC;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“An internal error occurred during: &amp;ldquo;Launching MyRSSFeeder&amp;rdquo;.java.lang.NullPointerException&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This happened because had mistakenly set the interpreter type in the Perl EPIC preferences to &amp;lsquo;cygwin&amp;rsquo;. Need to make sure use the “Standard” Interpreter type.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;Getting and configuring EGit&lt;/h3&gt;
-
-&lt;p&gt;The &lt;a href=&#34;http://www.eclipse.org/egit/download/&#34;&gt;download page&lt;/a&gt; for EGit says to; &lt;em&gt;install via one of the update site URLs listed below, copy and paste it into the “Help &amp;gt; Install new software” dialog&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;There is a &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide&#34;&gt;huge user guide&lt;/a&gt; for EGit.  We skimmed it.&lt;/p&gt;
-
-&lt;p&gt;Once installed go to the Eclipse &amp;gt; Preferences menu and set the &amp;gt;Team&amp;gt;Git Default repository folder: which we set to the Eclipse workspace directory /Documents/workspaces (it will actually go into each imported project&amp;rsquo;s folder).  The other settings within Eclipse will get set when you actually import projects (and these will be stored in ~/.gitconfig).  The later section on importing projects will detail other settings.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_4&#34;&gt;Importing projects&lt;/h3&gt;
-
-&lt;p&gt;Now, you can connect Eclipse through EGit to a locally cloned repository (like one cloned by the Git commandline client or graphical client), which will give you an Eclipse workspace, a local Git repo and an online Git repo.  We have chosen to clone directly into the Eclipse workspace area so only have the Eclipse workspace directory for the project (like /Documents/workspace/allegria) which will have a hidden .git directory in it with relevant repo config files.&lt;/p&gt;
-
-&lt;p&gt;To do this you will need to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;prepare for &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Eclipse_SSH_Configuration&#34;&gt;ssh connection&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories&#34;&gt;clone a remote repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The ssh connection was a bit tricky and when doing it we got a few error messages.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;the first error message was a problem with validation and there are many &lt;a href=&#34;http://stackoverflow.com/questions/3225862/multiple-github-accounts-ssh-config&#34;&gt;posts&lt;/a&gt; describing the need to create a ~.ssh/config file (the ~.ssh directory is the same directory that the ssh keys are stored).  We used our favourite editor to create ~.ssh/config with the following entries;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;    Host github.com  
-    HostName github.com  
-    User git  
-    PreferredAuthentications publickey  
-    IdentityFile ~/.ssh/id_rsa  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;the second error was about &lt;a href=&#34;https://help.github.com/articles/error-permission-denied-publickey&#34;&gt;permission denied public key&lt;/a&gt; and related to the &amp;lsquo;User&amp;rsquo; entry in the ~.ssh/config file, initially we were using the username for the repo but need to use the generic &amp;lsquo;git&amp;rsquo; user name.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;a third error concerned the need to fix the &lt;a href=&#34;http://www.howtogeek.com/168119/fixing-warning-unprotected-private-key-file-on-linux/&#34;&gt;permissions on id_rsa key files&lt;/a&gt; by resetting them back to default;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;    sudo chmod 600 ~/.ssh/id_rsa  
-    sudo chmod 600 ~/.ssh/id_rsa.pub  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Once have prepared the ssh connection then can clone the remote repo by choosing &amp;ldquo;File &amp;gt; Import &amp;gt; Git &amp;gt; Project from Git&amp;rdquo; and then on the next screen select Clone URI.  Paste in the URI from the repo (in our case github.com/peterwatts/allegria) and select protocol ssh (this will change the URI to ssh://github.com/peterwatts/allegria).  Choose the branches on the next screen and select a directory in the next (in our case ~/Documents/workspace/).  Will then ask you &amp;lsquo;import projects&amp;rsquo; which you can select and do.&lt;/p&gt;
-
-&lt;p&gt;Choose the New Project Wizard (as the other two options; &amp;lsquo;Import existing projects&amp;rsquo; and &amp;lsquo;Import as general project&amp;rsquo; will cause an error as they probably don&amp;rsquo;t have the necessary eclipse setting files).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Alfresco oAuth sample application</title>
-      <link>http://localhost:1313/retrospectives/paint-by-numbers/alfresco-oauth-sample-application/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://localhost:1313/retrospectives/paint-by-numbers/alfresco-oauth-sample-application/</guid>
-      <description>
-
-&lt;p&gt;&lt;html&gt;
-&lt;table border=&#34;0&#34;&gt;
-&lt;tr&gt;
-  &lt;td&gt;
-    &lt;p&gt;
-      &lt;img src=&#34;/assets/mages/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
-    &lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;
-  &lt;td&gt;
-    &lt;p&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;oAuth Sample webapp&lt;/b&gt;&lt;/p&gt;
-  &lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;In October 2012, Alfresco &lt;a href=&#34;http://www.alfresco.com/news/press-releases/alfrescos-cloud-api-mobile-apps-now-available&#34;&gt;announced&lt;/a&gt; an open application-programming interface &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;(API) for Alfresco in the cloud&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;There are some great resources available to show how to use the cloud api, including:&lt;br /&gt;
-* &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; from Jeff Potts
-* &lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation&lt;/a&gt; from the &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;Alfresco Developer Portal&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;To access Alfresco in the cloud:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;an Alfresco application uses the OAuth 2.0 authorization code flow to authenticate itself with Alfresco Cloud and to allow users to authorize the application to access data on their behalf.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://oauth.net&#34;&gt;oAuth&lt;/a&gt; is an open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications.  The &lt;a href=&#34;http://tools.ietf.org/html/rfc6749#section-1.2&#34;&gt;oAuth protocol flow&lt;/a&gt; starts with making an authorisation request through to receiving initial and refresh access tokens for using in sessions.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/ietf-oauth-flow.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;In addition to the &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529 and [Jeff Potts&#39; video tutorials](https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; showing how to do this, &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;Jeff also highlights&lt;/a&gt; on the developer forum Gethin Jame&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;oAuth sample application&lt;/a&gt; that demonstrates using the oAuth authentication protocol.&lt;/p&gt;
-
-&lt;p&gt;To get an access token to use with CMIS Workbench, Allegria has used Gethin&amp;rsquo;s oAuth sample application:&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Get the Alfresco oAuth application&lt;/li&gt;
-&lt;li&gt;Register for the Cloud api&lt;/li&gt;
-&lt;li&gt;Create an API key&lt;/li&gt;
-&lt;li&gt;Configure oAuth web app&lt;/li&gt;
-&lt;li&gt;Authorisation request&lt;/li&gt;
-&lt;li&gt;Access token request&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;toc_1&#34;&gt;1. Get the Alfresco oAuth application&lt;/h3&gt;
-
-&lt;p&gt;Gethin&amp;rsquo;s Alfresco oAuth Sample Application (uses gradle and runs in jetty servlet engine and http server) is easily used with CMIS workbench, so [[fork|Paint-by-numbers:-GitHub]] his &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;alfresco-oauth-sample repository&lt;/a&gt; and [[import|Paint-by-numbers:-Eclipse]] it to Eclipse eGit.&lt;/p&gt;
-
-&lt;p&gt;The readme has simple instructions to get things running.  For now just need to :
-* Ensure you have an &lt;a href=&#34;https://www.java.com/en/download/installed.jsp&#34; target=&#34;_blank&#34;&gt;up to date Java VM&lt;/a&gt; installed and port 8181 is not in use&lt;br /&gt;
-* take note of the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; which will be used when registering the application with Alfresco in later steps&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_2&#34;&gt;2. Register for the Cloud api&lt;/h3&gt;
-
-&lt;p&gt;Need to follow a &lt;a href=&#34;https://www.alfresco.com/develop/cloud/signup&#34;&gt;registration process&lt;/a&gt; with Alfresco to obtain api access by following the steps on the &lt;a href=&#34;http://www.alfresco.com/develop&#34;&gt;Alfresco developer portal&lt;/a&gt; (click on the &amp;lsquo;register for the cloud api&amp;rsquo; button):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-developer-portal.png?raw=true&#34; alt=&#34;portal&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;3. Create an API key&lt;/h3&gt;
-
-&lt;p&gt;Register cmis-workbench on the Alfresco Developer site to to get authentication configuration details&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-manage-applications.png?raw=true&#34; alt=&#34;action&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The application can be called anything, just needs to have a name so can get an &amp;lsquo;API Key&amp;rsquo;, so have called it &amp;lsquo;cmis-workbench to make things easier.&lt;br /&gt;
-Edit the API Details and on the &amp;lsquo;Auth&amp;rsquo; tab enter the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; (this comes from Gethin&amp;rsquo;s repository readme):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-oAuth.png?raw=true&#34; alt=&#34;action&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_4&#34;&gt;4. Configure oAuth web app&lt;/h3&gt;
-
-&lt;p&gt;Follow the next next steps in Gethin&amp;rsquo;s readme:
-* Edit &lt;code&gt;src/main/webapp/config.js&lt;/code&gt; and put in the client_id, client_secret and callback urls registered at The Alfresco Developer Portal (For this app, the redirect_uri should be &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt;)&lt;br /&gt;
-* Run the Alfresco-oAuth-Sample application:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; # change to the folder holding the imported project  
- ./gradlew  jettyRun
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The first time it runs, the following output will appear:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-1st-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;After the initial build, each subsequent time will output:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_5&#34;&gt;5. Authorisation request&lt;/h3&gt;
-
-&lt;p&gt;In a web browser go to &lt;code&gt;http://localhost:8181/oauthsample&lt;/code&gt; to see the first step in the oAuth protocol flow (authorisation request).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1.png?raw=true&#34; alt=&#34;request&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;The values in this screen should come from the &lt;code&gt;config.js&lt;/code&gt; file configured in the previous step so just hit submit.&lt;/p&gt;
-
-&lt;p&gt;The authorisation screen from Alfresco Cloud will appear to allow entry of username and password that was set up when registered for api account:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1-1.png?raw=true&#34; alt=&#34;auth-credentials&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_6&#34;&gt;6. Access token request&lt;/h3&gt;
-
-&lt;p&gt;Send the authorisation grant - nothing to do here but hit submit (the client secret will have come from &lt;code&gt;config.js&lt;/code&gt; - it is blanked out here):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-2.png?raw=true&#34; alt=&#34;step2&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Will get a response from the cloud with the access token:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-3.png?raw=true&#34; alt=&#34;step2-1&#34; /&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_7&#34;&gt;Other oAuth resources:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; describes a number of tools:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://curl.haxx.se&#34;&gt;cURL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[RESTCLient]&lt;a href=&#34;http://restclient.org)&#34;&gt;http://restclient.org)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Jeff Potts uses &lt;a href=&#34;https://code.google.com/p/google-oauth-java-client/&#34;&gt;Google&amp;rsquo;s Java oAuth2 client&lt;/a&gt; in his Alfresco cloud how-to &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; and highlights Jared Ottley&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/spring-social-alfresco&#34;&gt;Spring Social plug-in&lt;/a&gt; in the &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;developer forums&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;CPAN oAuth modules:&lt;br /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Net::OAuth provides a low-level API for reading and writing OAuth messages (probably should start with Net::OAuth::Client).  Net::OAuth provides; classes that encapsulate OAuth messages (requests and responses),
-message signing, message serialization and parsing, 2-legged requests (aka. tokenless requests, aka. consumer requests)&lt;/li&gt;
-&lt;li&gt;Net::OAuth::Simple - a simple wrapper round the OAuth protocol&lt;/li&gt;
-&lt;li&gt;OAuth::Simple - Simple OAuth authorization on your site&lt;/li&gt;
-&lt;li&gt;OAuth::Consumer - LWP based user agent with OAuth for consumer application&lt;/li&gt;
-&lt;li&gt;OAuth::Lite - OAuth framework (CONSUMER SIDE see OAuth::Lite::Consumer, SERVICE PROVIDER SIDE see OAuth::Lite::ServerUtil or to build server on mod_perl2, see OAuth::Lite::Server::mod_perl2.&lt;/li&gt;
-&lt;li&gt;OAuth::Lite::Util - utility for OAuth&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;../tree/master/aaContentModel&#34;&gt;aaContentModel&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1649,6 +632,185 @@ This service is used to manage the connections associated with a particular devi
 If the ConnectionManager::PrepareForConnection() action is not implemented, the control point is only able to support a single Renderer at an given time. In this case, the control point should use InstanceID=0.
 3.1.3. AVTransport Service
 This (optional) service is used by the control point to control the “playback” of the content that is associated with the specified AVTransport. This includes the ability to Stop, Pause, Seek, etc. Depending on the supported transfer protocols and/or data formats, a MediaServer may or may not implement this service. If supported, the MediaServer can distinguish between multiple instances of the service by using the InstanceID that is included in each AVTransport action. New instances of the AVTransport service are created via the ConnectionManager’s ConnectionManager::PrepareForConnection() action. A new Instance Id is allocated for each new Service Instance.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Project Success</title>
+      <link>http://localhost:1313/retrospectives/how-to/project-success/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/project-success/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Introduction
+It might be stating the obvious but we begin a project with the view that we are going to successfully deliver the project’s outcomes. Right! In general I guess that is true, except for those stakeholders hoping we don’t finish, don’t deliver, don’t succeed.
+Is finishing or delivering, the end-game then? Is that what success is.  How do we know we are at the end? How do we measure the level to which we have achieved the outcomes?
+Who Says What Success Is?
+What success means, is dependant generally on perspective; that is, who we are measuring success for.  There are generally many stakeholders on a project, all with their own views, sometimes conflicting, on what success is.  Success then is defined by the stakeholder’s personal views, professional views, role they play on the project or in society.  Their views are more than likely affected by the impact the project has on the environment, dictated by things like scale (100,000 people, 10 years) and nature (e.g. construction, software, social change) of the project.
+The old saying “the project was brought in on time, on budget and with acceptable quality” is still, in some peoples mind, the measure of project success.  There is much evidence to suggest however, that these are not the only measures of success.&lt;/p&gt;
+
+&lt;p&gt;Turner&lt;br /&gt;
+Hartman&lt;/p&gt;
+
+&lt;p&gt;Success as a Function of Time
+Projects are unique, transient, almost organic entities.  They have a start, middle and end.&lt;br /&gt;
+At the beginning of a project it is important to understand what are the criteria for success and who is measuring success.  This allows the direction of the project to be set and provides a yardstick with which to later evaluate the project.
+During the project we monitor success at useful points to ensure there is a reason to continue, to learn from what we have done right so that we can continue to use successful techniques and use points of success to motivate the team.
+It is important to end the project with success as generally all stakeholders have begun and continued the project with the thought of success.
+The point in time we are measuring success has an enormous influence on what success is and who measures success.  The team may be interested in time and quality during the project, the sponsor in cost at delivery time and the community might be interested in the impact the project had years after it was delivered.&lt;/p&gt;
+
+&lt;p&gt;PIC&lt;/p&gt;
+
+&lt;p&gt;Maximising Success
+Some easy steps to maximise the chances of success;
+* Understand the general drivers, pressures, resistance and dynamics of projects
+* Learn from past mistakes
+* Apply sound management techniques&lt;/p&gt;
+
+&lt;p&gt;Understanding Projects
+The chances of success can be maximised if you manage the forces on the project effectively.&lt;/p&gt;
+
+&lt;p&gt;Turner describes a number of interactions of a project.  Each may have an affect on the other.  Even though most projects by their nature are unique, some of the effects of the interactions may be understood through examining similarities to other projects.  Many of these project integration affects are well documented.&lt;/p&gt;
+
+&lt;p&gt;Of all the project dynamics, Attitude is the most important.
+The chances of success are substantially diminished unless;
+* There is major commitment to making the project a success
+* The motivation of everyone working on the project is high
+* Attitudes are supportive and positive.&lt;/p&gt;
+
+&lt;p&gt;Learning From The Past
+There is an enormous amount of generic information about what teams have done in the past to succeed and what pitfalls caused a less than desirable outcome.  The sheer volume of literature and anecdotal evidence to suggest that projects fail is a strong indicator for being concerned about why projects fail.
+By looking to the past we can see what worked and what didn’t so that we can learn from past successes and avoid past mistakes.&lt;/p&gt;
+
+&lt;p&gt;project failure examples&lt;/p&gt;
+
+&lt;p&gt;Cunning Plan: We&amp;rsquo;ll just do it!!&lt;/p&gt;
+
+&lt;p&gt;If you fail to plan, then plan to fail.&lt;/p&gt;
+
+&lt;p&gt;We never seem to have time to plan our projects, but we always have time to do them twice.&lt;/p&gt;
+
+&lt;p&gt;Project Pitfalls
+3 Grude describes a number of categories of pitfalls that have been observed on projects.  This is not intended as an exhaustive list but useful as a quick health check for a project;&lt;/p&gt;
+
+&lt;p&gt;Establishing the Project&lt;br /&gt;
+Pitfalls in the way the project is set up within the parent organisation;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project plans not aligned with business plans,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;procedures for managing projects are not well defined,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;priorities are not communicated to parties involved,&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;no shared vision.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Planning the Project
+Pitfalls in the way the work is defined, the time &amp;amp; cost schedules calculated and communicated to the project team;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;project plans developed on a single level,&lt;/li&gt;
+&lt;li&gt;using cumbersome tools,&lt;/li&gt;
+&lt;li&gt;creativity discouraged,&lt;/li&gt;
+&lt;li&gt;unrealistic estimates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Organising &amp;amp; Implementing the Project
+Pitfalls in building the project organisation and assigning work to people;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lack of cooperation,&lt;/li&gt;
+&lt;li&gt;resource providers not committed,&lt;/li&gt;
+&lt;li&gt;resources not available when required,&lt;/li&gt;
+&lt;li&gt;management responsibility not defined,&lt;/li&gt;
+&lt;li&gt;poor communication,&lt;/li&gt;
+&lt;li&gt;technical vs project management.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Controlling the Project
+Pitfalls in monitoring and control;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;purpose of control not understood,&lt;/li&gt;
+&lt;li&gt;progress is not monitored against the plan,&lt;/li&gt;
+&lt;li&gt;ineffective review meetings,&lt;/li&gt;
+&lt;li&gt;responsibility without authority.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Principles of Good Project Management
+Project Management, just as any other management stream, has it’s own principles upon which a manager can look to for guidance.  There is a huge body of stored knowledge on the principles and professional certification available for those willing.  These will all arm the manager with an enormous amount of skill and techniques on which to build experience.
+In addition to reading through all of the available knowledge and undertaking the available studies a number of simple, practical principles may be relied upon;
+ Most large or complex problems become easier if broken down into manageable parts that     allow them all to be absorbed.  Make use of breakdown structures for any part of the project    that requires visibility and understanding, such as tasks, people, product, organisation.  By   breaking then down we can more easily see new information about each piece as it becomes    evident over time.  This makes it possible to monitor and manage the project elaboration.
+ People are the biggest factor in nearly all projects, they need to be adequately motivated,    organised, committed, directed, skilled and communicated with.  You need to confirm and     align stakeholder’s success criteria.  Disregard the people factors at your peril.
+ Get as many successes as you can.  Organise the team, the schedule &amp;amp; the work so that  successes happy often.  If each small step is a success it will be easier and more likely that  the journey will be a success.  Learn from past successes and avoid the causes for past     failures.
+ Continuously carry out health checks and audits.  The old adage, ‘if it isn’t broken, don’t fix it’    doesn’t apply if we don’t know it isn’t broken.  Only by understanding the dynamics and     symptoms of a project can we steer the ship and take corrective actions.&lt;/p&gt;
+
+&lt;p&gt;Above all else KEEP IT SIMPLE.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up project resources</title>
+      <link>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/how-to/setting-up-project-resources/</guid>
+      <description>&lt;p&gt;Select the links below to see the paint-by-numbers setup instructions;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Technology choice&lt;/th&gt;
+&lt;th&gt;Use&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[[GitHub&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-GitHub]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Eclipse&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Eclipse]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Perl&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Perl]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Java &amp;amp; Groovy&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-Java]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;[[Cmis Workbench&lt;/td&gt;
+&lt;td&gt;Paint-by-numbers:-CMIS-Workbench]]&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;VMWare&lt;/td&gt;
+&lt;td&gt;pDlna and Alfresco (bitnami) virtual machines&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;MySQL Workbench&lt;/td&gt;
+&lt;td&gt;data / content modelling&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Makefile&lt;/td&gt;
+&lt;td&gt;packaging installations&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Secure Copy (scp)&lt;/td&gt;
+&lt;td&gt;implementing installation files&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
@@ -1923,6 +1085,807 @@ risk reporting&lt;/p&gt;
 &lt;li&gt;hosting&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;industrialising kickstarter / outsourcing / imaging&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;donations&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Alfresco oAuth sample application</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/alfresco-oauth-sample-application/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/alfresco-oauth-sample-application/</guid>
+      <description>
+
+&lt;p&gt;&lt;html&gt;
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+    &lt;p&gt;
+      &lt;img src=&#34;/assets/mages/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;oAuth Sample webapp&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;In October 2012, Alfresco &lt;a href=&#34;http://www.alfresco.com/news/press-releases/alfrescos-cloud-api-mobile-apps-now-available&#34;&gt;announced&lt;/a&gt; an open application-programming interface &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;(API) for Alfresco in the cloud&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are some great resources available to show how to use the cloud api, including:&lt;br /&gt;
+* &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; from Jeff Potts
+* &lt;a href=&#34;https://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation&lt;/a&gt; from the &lt;a href=&#34;https://www.alfresco.com/develop/cloud&#34;&gt;Alfresco Developer Portal&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To access Alfresco in the cloud:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;an Alfresco application uses the OAuth 2.0 authorization code flow to authenticate itself with Alfresco Cloud and to allow users to authorize the application to access data on their behalf.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://oauth.net&#34;&gt;oAuth&lt;/a&gt; is an open protocol to allow secure authorization in a simple and standard method from web, mobile and desktop applications.  The &lt;a href=&#34;http://tools.ietf.org/html/rfc6749#section-1.2&#34;&gt;oAuth protocol flow&lt;/a&gt; starts with making an authorisation request through to receiving initial and refresh access tokens for using in sessions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/ietf-oauth-flow.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;In addition to the &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529 and [Jeff Potts&#39; video tutorials](https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; showing how to do this, &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;Jeff also highlights&lt;/a&gt; on the developer forum Gethin Jame&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;oAuth sample application&lt;/a&gt; that demonstrates using the oAuth authentication protocol.&lt;/p&gt;
+
+&lt;p&gt;To get an access token to use with CMIS Workbench, Allegria has used Gethin&amp;rsquo;s oAuth sample application:&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Get the Alfresco oAuth application&lt;/li&gt;
+&lt;li&gt;Register for the Cloud api&lt;/li&gt;
+&lt;li&gt;Create an API key&lt;/li&gt;
+&lt;li&gt;Configure oAuth web app&lt;/li&gt;
+&lt;li&gt;Authorisation request&lt;/li&gt;
+&lt;li&gt;Access token request&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;1. Get the Alfresco oAuth application&lt;/h3&gt;
+
+&lt;p&gt;Gethin&amp;rsquo;s Alfresco oAuth Sample Application (uses gradle and runs in jetty servlet engine and http server) is easily used with CMIS workbench, so [[fork|Paint-by-numbers:-GitHub]] his &lt;a href=&#34;https://github.com/Alfresco/alfresco-oauth-sample&#34;&gt;alfresco-oauth-sample repository&lt;/a&gt; and [[import|Paint-by-numbers:-Eclipse]] it to Eclipse eGit.&lt;/p&gt;
+
+&lt;p&gt;The readme has simple instructions to get things running.  For now just need to :
+* Ensure you have an &lt;a href=&#34;https://www.java.com/en/download/installed.jsp&#34; target=&#34;_blank&#34;&gt;up to date Java VM&lt;/a&gt; installed and port 8181 is not in use&lt;br /&gt;
+* take note of the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; which will be used when registering the application with Alfresco in later steps&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;2. Register for the Cloud api&lt;/h3&gt;
+
+&lt;p&gt;Need to follow a &lt;a href=&#34;https://www.alfresco.com/develop/cloud/signup&#34;&gt;registration process&lt;/a&gt; with Alfresco to obtain api access by following the steps on the &lt;a href=&#34;http://www.alfresco.com/develop&#34;&gt;Alfresco developer portal&lt;/a&gt; (click on the &amp;lsquo;register for the cloud api&amp;rsquo; button):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-developer-portal.png?raw=true&#34; alt=&#34;portal&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;3. Create an API key&lt;/h3&gt;
+
+&lt;p&gt;Register cmis-workbench on the Alfresco Developer site to to get authentication configuration details&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-manage-applications.png?raw=true&#34; alt=&#34;action&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The application can be called anything, just needs to have a name so can get an &amp;lsquo;API Key&amp;rsquo;, so have called it &amp;lsquo;cmis-workbench to make things easier.&lt;br /&gt;
+Edit the API Details and on the &amp;lsquo;Auth&amp;rsquo; tab enter the callback url &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt; (this comes from Gethin&amp;rsquo;s repository readme):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/Alfresco-portal-oAuth.png?raw=true&#34; alt=&#34;action&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;4. Configure oAuth web app&lt;/h3&gt;
+
+&lt;p&gt;Follow the next next steps in Gethin&amp;rsquo;s readme:
+* Edit &lt;code&gt;src/main/webapp/config.js&lt;/code&gt; and put in the client_id, client_secret and callback urls registered at The Alfresco Developer Portal (For this app, the redirect_uri should be &lt;code&gt;http://localhost:8181/oauthsample/mycallback.html&lt;/code&gt;)&lt;br /&gt;
+* Run the Alfresco-oAuth-Sample application:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; # change to the folder holding the imported project  
+ ./gradlew  jettyRun
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The first time it runs, the following output will appear:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-1st-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;After the initial build, each subsequent time will output:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-sample-run.png?raw=true&#34; alt=&#34;oauth-flow&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;5. Authorisation request&lt;/h3&gt;
+
+&lt;p&gt;In a web browser go to &lt;code&gt;http://localhost:8181/oauthsample&lt;/code&gt; to see the first step in the oAuth protocol flow (authorisation request).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1.png?raw=true&#34; alt=&#34;request&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The values in this screen should come from the &lt;code&gt;config.js&lt;/code&gt; file configured in the previous step so just hit submit.&lt;/p&gt;
+
+&lt;p&gt;The authorisation screen from Alfresco Cloud will appear to allow entry of username and password that was set up when registered for api account:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-1-1.png?raw=true&#34; alt=&#34;auth-credentials&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;6. Access token request&lt;/h3&gt;
+
+&lt;p&gt;Send the authorisation grant - nothing to do here but hit submit (the client secret will have come from &lt;code&gt;config.js&lt;/code&gt; - it is blanked out here):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-2.png?raw=true&#34; alt=&#34;step2&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Will get a response from the cloud with the access token:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/oAuth-3.png?raw=true&#34; alt=&#34;step2-1&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Other oAuth resources:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;http://www.alfresco.com/cmis/browser?id=workspace%3A//SpacesStore/b09d212a-00c6-4ec3-9764-0eca67bb8529&#34;&gt;Alfresco API documentation for the cloud&lt;/a&gt; describes a number of tools:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://curl.haxx.se&#34;&gt;cURL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[RESTCLient]&lt;a href=&#34;http://restclient.org)&#34;&gt;http://restclient.org)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Jeff Potts uses &lt;a href=&#34;https://code.google.com/p/google-oauth-java-client/&#34;&gt;Google&amp;rsquo;s Java oAuth2 client&lt;/a&gt; in his Alfresco cloud how-to &lt;a href=&#34;https://www.youtube.com/watch?v=TdAFYy0QttU&amp;amp;list=PLOEM5PcngNJV3weFgkCI6_yYdaYEPjQqc&#34;&gt;video tutorials&lt;/a&gt; and highlights Jared Ottley&amp;rsquo;s &lt;a href=&#34;https://github.com/Alfresco/spring-social-alfresco&#34;&gt;Spring Social plug-in&lt;/a&gt; in the &lt;a href=&#34;http://forums.alfresco.com/forum/developer-discussions/alfresco-api/cloud-api-oauth-tokens-10202013-0243&#34;&gt;developer forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CPAN oAuth modules:&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Net::OAuth provides a low-level API for reading and writing OAuth messages (probably should start with Net::OAuth::Client).  Net::OAuth provides; classes that encapsulate OAuth messages (requests and responses),
+message signing, message serialization and parsing, 2-legged requests (aka. tokenless requests, aka. consumer requests)&lt;/li&gt;
+&lt;li&gt;Net::OAuth::Simple - a simple wrapper round the OAuth protocol&lt;/li&gt;
+&lt;li&gt;OAuth::Simple - Simple OAuth authorization on your site&lt;/li&gt;
+&lt;li&gt;OAuth::Consumer - LWP based user agent with OAuth for consumer application&lt;/li&gt;
+&lt;li&gt;OAuth::Lite - OAuth framework (CONSUMER SIDE see OAuth::Lite::Consumer, SERVICE PROVIDER SIDE see OAuth::Lite::ServerUtil or to build server on mod_perl2, see OAuth::Lite::Server::mod_perl2.&lt;/li&gt;
+&lt;li&gt;OAuth::Lite::Util - utility for OAuth&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CMIS Workbench</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/cmis-workbench/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/cmis-workbench/</guid>
+      <description>
+
+&lt;p&gt;&lt;html&gt;
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+    &lt;p&gt;
+      &lt;img src=&#34;./images/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;CMIS Workbench&lt;/a&gt; is a desktop (osx, win, linux) repository browser and development tool for working with the OpenCMIS client API (there&amp;rsquo;s an &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;introductory video&lt;/a&gt; that provides a simple overview).&lt;/p&gt;
+
+&lt;p&gt;Things it&amp;rsquo;s being used on Allegria for include:
+* quickly prototyping and checking content types and properties
+* working out syntax for cmis queries
+* running quick scripts for changing objects in the repositories&lt;/p&gt;
+
+&lt;p&gt;The OpenCMIS API it uses, is an open source implementation of the &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt; provided by the &lt;a href=&#34;http://chemistry.apache.org&#34; title=&#34;target=_blank&#34;&gt;Apache Chemistry project&lt;/a&gt;.  The CMIS Workbench is also one of the tools from the apache project:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/chemistry_tm_logo_small.png?raw=true&#34; alt=&#34;logo&#34; /&gt;
+&lt;br /&gt;
+&lt;img src=&#34;/assets/img/apache-chemistry.png?raw=true&#34; alt=&#34;img&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Alfresco being a cmis-compliant rich content repository, means that it provides a set of [[services for working with objects|Helicopter view: CMIS]] defined by the specification (which are then wrapped in the OpenCMIS implementation that a client like the CMIS Workbench can use).  With CMIS, most capabilities of the Alfresco repository are accessible and for the rest there are [[other interfaces|Helicopter view: Alfresco integration]] available.&lt;/p&gt;
+
+&lt;p&gt;Florian Muller, Jay Brown and Jeff Potts have written &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt;, which they describe as a hands on experience with the [cmis] standard and with the Apache Chemistry libraries and tools [including CMIS Workbench].  In a very similar vein to Allegria, the focus of the book is on:
+&amp;gt;
+getting a good general understanding of CMIS, enough to build a useful (and we hope fun) application&lt;br /&gt;
+&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;This paint-by-numbers is not to redo the work inside their book but does summarise some of the key aspects of the CMIS Workbench, in particular using it with an Alfresco repository.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Get CMIS Workbench&lt;/li&gt;
+&lt;li&gt;Connecting the workbench to repositories&lt;/li&gt;
+&lt;li&gt;Browsing objects in the repository&lt;/li&gt;
+&lt;li&gt;Querying the repository&lt;/li&gt;
+&lt;li&gt;CMIS Types&lt;/li&gt;
+&lt;li&gt;The groovy console&lt;/li&gt;
+&lt;li&gt;Advanced features&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;1. Get CMIS Workbench&lt;/h3&gt;
+
+&lt;p&gt;The CMIS Workbench can be &lt;a href=&#34;http://www.apache.org/dyn/closer.cgi/chemistry/opencmis/0.10.0/chemistry-opencmis-workbench-0.10.0-full.zip&#34;&gt;downloaded&lt;/a&gt; as a zip from the &lt;a href=&#34;http://chemistry.apache.org&#34;&gt;Apache Chemistry project&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Florian Muller has also created a &lt;a href=&#34;https://github.com/fmui/ApacheChemistryInAction&#34;&gt;GitHub Repository&lt;/a&gt; for readers of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; which contains; a zip of the CMIS Workbench, an in-memory cmis compliant repository (another one of the apache project&amp;rsquo;s tools) and the source code for each chapter&amp;rsquo;s examples.  To use the ApacheChemistryInAction GitHub repository, fork it and import it to Eclipse eGit as per the paint-by-numbers directions for [[GitHub|Paint by numbers: GitHub]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+ and the ones for [[Eclipse|Paint by numbers: Eclipse]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+.&lt;/p&gt;
+
+&lt;p&gt;Unzip the chemistry-opencmis-workbench-0.10.0-full.zip.  Using a linux or osx terminal type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd [directory where extracted workbench to]
+./workbench.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; the workbench.sh file from Florian&amp;rsquo;s GitHub repo is tailored to use the apache in-memory repository.  To use the CMIS Workbench with Alfresco it is better to also get the one from the ApacheProject (so rename Florian&amp;rsquo;s to something like &lt;code&gt;workbench.in-memory.sh&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;To have a neater installation and run it from the osx launchpad or dock follow this [[paint-by-numbers|Paint by numbers: Launching osx scripts]]&lt;img src=&#34;/assets/img/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;2. Connecting the workbench&lt;/h3&gt;
+
+&lt;p&gt;The connection window will appear either when starting the application or using the &amp;lsquo;Connection&amp;rsquo; menu button:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./images/cmis workbench on-premise connection.png?raw=true&#34; alt=&#34;connection&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The three key items needed to make a connection to a repository host are:
+* &lt;strong&gt;BINDING&lt;/strong&gt; - the bindings (atompub, webservice, browser) are explained in detail in the cmis specification (the &amp;lsquo;browser&amp;rsquo; binding is the fullest and most lightweight implementation but not always available).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;URL&lt;/strong&gt; - the url is where the rubber hits the road for cmis on Alfresco, however it is a little tricky to understand just which url is needed as there are many to choose from depending on; what version of Alfresco is running, how the repository is deployed (i.e. on-premise, cloud, public), which binding is being used (atompub, webservice, browser) and whether connecting to the OpenCMIS API or to services or service information.  To keep this step readable the unravelling of this is in [[Spaghetti western: CMIS URL|Spaghetti western: CMIS URL]]&lt;img src=&#34;/assets/img/spaghetti-western-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+ (although the examples below have the answers anyway).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;AUTHENTICATION CREDENTIALS / METHOD&lt;/strong&gt; - just like the url, we are spoilt for choice on what authentication methods and credentials may be used, and there is a proliferation of documentation to go along with that.  To keep things simple going to use the standard, non-https, user name and password for connecting to Alfresco on-premise and when connecting to Alfresco in the cloud, use the required oAuth implementation (how to do this is in the examples below).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &amp;lsquo;basic&amp;rsquo; tab provides, well, basic input boxes for these key parameters plus some performance tuning parameters (which &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; explains in Part 3 - advanced topics).  The &amp;lsquo;expert&amp;rsquo; tab allows an expanded syntax of &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/org/apache/chemistry/opencmis/commons/SessionParameter.html&#34;&gt;OpenCMIS session parameters&lt;/a&gt; to fine tune the &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/constant-values.html#org.apache&#34;&gt;values&lt;/a&gt; that can be used.  The expert tab has a drop down of some preset connection parameters (such as Alfresco) to make things easier.&lt;/p&gt;
+
+&lt;p&gt;So, to connect to an Alfresco 4.2e, on-premise repository with the OpenCMIS browser binding use the following parameters:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;org.apache.chemistry.opencmis.binding.spi.type=browser
+org.apache.chemistry.opencmis.binding.browser.url=http://[host]/alfresco/cmisbrowser
+org.apache.chemistry.opencmis.user=&amp;lt;user&amp;gt;
+org.apache.chemistry.opencmis.password=&amp;lt;password&amp;gt;
+org.apache.chemistry.opencmis.binding.compression=true
+org.apache.chemistry.opencmis.binding.cookies=true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Given only simple parameters were chosen in the on-premise example above, they could have also been entered in the basic tab for the same result.  Connecting to the Alfresco in the cloud repository requires the use of the expert tab though as it uses parameter values that cannot be set on the basic tab.&lt;/p&gt;
+
+&lt;p&gt;The example syntax below was generated by selecting &amp;lsquo;Alfresco Cloud AtomPub&amp;rsquo; from the parameter template drop down list at the top of the expert tab (at present it doesn&amp;rsquo;t seem like the browser binding is available in the cloud repository). The value for the oAuth access token is obtained from an oAuth authentication flow which is described in [[Paint by numbers: Alfresco oAuth sample application|Paint by numbers: Alfresco oAuth sample application]]&lt;img src=&#34;./images/paint-by-numbers-10.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Alfresco Cloud (CMIS 1.0 AtomPub)
+org.apache.chemistry.opencmis.binding.spi.type=atompub
+org.apache.chemistry.opencmis.binding.atompub.url=https://api.alfresco.com/cmis/versions/1.0/atom
+org.apache.chemistry.opencmis.binding.auth.http.basic=false
+
+# Please provide a valid OAuth access token in the following property
+# Note that Alfresco Cloud access tokens have a limited lifetime (currently 1 hour) and the OpenCMIS Workbench does not auto-refresh the access token when it expires
+org.apache.chemistry.opencmis.binding.header.0=Authorization:Bearer ####ACCESS_TOKEN####
+
+# Other optional options - compression etc. - may be provided here
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once all the relevant parameters are entered, pressing the &amp;lsquo;load repositories&amp;rsquo; button, presents a choice of instances on the host (as can run multiples), choose a repository from the drop down, press the login button and &lt;a href=&#34;http://www.imdb.com/title/tt2379418/&#34;&gt;voila!&lt;/a&gt; you are into the default configuration of the CMIS Workbench user interface.&lt;/p&gt;
+
+&lt;p&gt;The CMIS Workbench can also be configured through &lt;a href=&#34;http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html&#34;&gt;system properties or additional properties&lt;/a&gt; in the expert login dialog. An &lt;a href=&#34;http://forums.alfresco.com/comment/75223#comment-75223&#34;&gt;Alfresco forum post&lt;/a&gt; explains this as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The CMIS Workbench, for example, makes use of the OperationContext. It sets up two OperationContext objects when it starts:&lt;br /&gt;
+* One OperationContext object is used for the folder list on left. This OperationContext only selects the data that is needed for this view: a handful of properties, no Allowable Actions, no ACLs, etc. That [as with paging] speeds up the retrieval of the list.&lt;br /&gt;
+* The second OperationContext is used to populate the right hand panels. It selects everything because it displays everything.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The current values for the OperationContexts can be seen if press the Info button.  The notion of OperationContext is explained more fully in &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; and the &lt;a href=&#34;http://chemistry.apache.org/java/developing/guide.html&#34;&gt;Apache OpenCMIS API docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once connected the features of the tool are available.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;3. Browsing objects in the repository&lt;/h3&gt;
+
+&lt;p&gt;Browse the repository&amp;rsquo;s objects, actions, properties, relationships, ACL, policies, versions, types and extensions:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-main.png?raw=true&#34; alt=&#34;browse&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;4. Querying the repository&lt;/h3&gt;
+
+&lt;p&gt;The CMIS query syntax is defined in detail in:&lt;br /&gt;
+* 2.1.14 Query of &lt;a href=&#34;http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf&#34;&gt;Content Management Interoperability Services (CMIS) specification&lt;/a&gt;
+* &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS_Query_Language&#34;&gt;Alfresco wiki&lt;/a&gt;
+* Chapter 5 - Query of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-query.png?raw=true&#34; alt=&#34;query&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;5. CMIS Types&lt;/h3&gt;
+
+&lt;p&gt;The type function exposes the content model through the workbench:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-type.png?raw=true&#34; alt=&#34;type&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The ability to create and update types allows programatic deployment of a content model eliminating the need for custom configuration scripts for the various repositories to configure types.&lt;/p&gt;
+
+&lt;p&gt;Chapter 4 - CMIS metadata: types and properties of &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; describes how:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;OpenCMIS provides the TypeUtils class, which can read and write type definitions from and to XML and JSON.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;6. The groovy console&lt;/h3&gt;
+
+&lt;p&gt;The groovy console provides a quick and easy development environment to use the &lt;a href=&#34;http://chemistry.apache.org/java/0.9.0/maven/apidocs/overview-summary.html&#34;&gt;Apache Chemistry OpenCMIS API&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-workbench-groovy.png?raw=true&#34; alt=&#34;groovy&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;In addition to the default API, &lt;a href=&#34;http://www.manning.com/mueller&#34;&gt;CMIS and Apache Chemistry in Action&lt;/a&gt; highlights two other API&amp;rsquo;s that can be accessed from the Groovy console:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Chapter 3: Part 3 Advanced Topics - low-level api&lt;/em&gt;
+&amp;gt;
+The APIs provide an object-oriented interface with a lot of convenience, simplified data structures, and high-level operations that don’t exist in CMIS. On the other hand, these APIs hide extension points and access to the data structures that are transferred over the wire.&lt;br /&gt;
+It turns out that there’s a layer between the bindings and these APIs called the low- level API. The low-level API provides a set of interfaces and operations that model all the services and operations in the CMIS specification one-to-one. For each of the nine CMIS services, there’s an interface. For each operation, there’s a method with exactly the same name and the same parameters, in the same order. The data objects are very close to the data structures used on the wire. The semantics and behavior are as described in the CMIS domain model. You can use the CMIS specification as a manual for these interfaces.
+&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Chapter 3: Creating, updating, and deleting objects with CMIS - groovy helper scripts&lt;/em&gt;
+&amp;gt;
+CMIS helper scripts distributed with the CMIS Workbench can make your Groovy code more succinct. What other shortcuts are available? If you take a look at the source code for the CMIS Workbench, you’ll find the Groovy file that defines the CMIS helper scripts in /src/main/resources/scripts/CMIS.groovy. Consult that file for the full list.
+&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;The Florian Muller GitHub Repository workbench version ships with chapter scripts which can be accessed when use the Console button.  The apache project&amp;rsquo;s version ships with other scripts that can be accessed from the Console button of that version.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; if get the unauthorised error when accessing the cloud repository then the token has probably timed out - need to close the groovy console, regenerate an access token, reconnect with the new token and reopen the console.&lt;/p&gt;
+
+&lt;p&gt;For information on groovy:
+* &lt;a href=&#34;http://groovy.codehaus.org&#34;&gt;Groovy home&lt;/a&gt;
+* &lt;a href=&#34;http://groovy.codehaus.org/Documentation&#34;&gt;documentation&lt;/a&gt; including getting started and tutorials
+* &lt;a href=&#34;http://www.gradle.org&#34;&gt;Gradle&lt;/a&gt; build system for groovy&lt;/p&gt;
+
+&lt;p&gt;Some books on Groovy and CMIS (with source code):&lt;/p&gt;
+
+&lt;p&gt;&lt;html&gt;
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/mueller&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/manning-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/koenig2&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/manning-groovy.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.packtpub.com/develop-applications-and-integrations-that-can-interact-with-cmis-alfresco/book&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/pakt-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.packtpub.com/groovy-2-cookbook/book&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/pakt-groovy.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;7. Advanced features&lt;/h3&gt;
+
+&lt;p&gt;Other features of CMIS Workbench are:&lt;br /&gt;
+* Repository info
+* &lt;a href=&#34;http://wiki.alfresco.com/wiki/CMIS#Change_Log&#34;&gt;Change Logger&lt;/a&gt;
+* TCK (Test Compatibility Kit)
+* CMIS Client Logging (filtered logging)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Eclipse</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/eclipse/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;this page is not finished, see the &lt;a href=&#34;../wiki&#34;&gt;wiki home page&lt;/a&gt; to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;hidden stuff
+-rw-r&amp;ndash;r&amp;ndash;@.DS_Store
+-rw-r&amp;ndash;r&amp;ndash; .classpath
+drwxr-xr-x .git
+-rw-r&amp;ndash;r&amp;ndash; .gitignore
+drwxr-xr-x .gradle
+-rw-r&amp;ndash;r&amp;ndash; .project
+drwxr-xr-x   .settings&lt;/p&gt;
+
+&lt;p&gt;eclipse project import will create some (particulalry if using the gradle plugin)
+gradle build will create some
+.gitignore is also in the Atlassian SourceTree global gitignore (there is a decision here about whether or not to store the .gitignore stuff in the reporsitory to maintain consistency across the team - prob would put in a dev note so that could have the best of both worlds in case someone is working on a few projects and have different things in their gitignore - although could prob have a base one in here that includes the .gitignore file as well so it doesn&amp;rsquo;t get changed back on commit - would have to add manually through the GitHub gui I think)&lt;/p&gt;
+
+&lt;p&gt;No matter how advanced system modelling and code generation gets there&amp;rsquo;s seems to be no escaping the need to hand write some code.  So, we could have broken out our favourite text editor (Xcode, Sublime, Notepad, vi, joe, nano), interpreter / compiler, debugger, command line to package and read logs, manuals, specs, html editor, documentation editor, xml editor&amp;hellip;but chose instead to take a sec to look at using an open source &lt;a href=&#34;http://en.wikipedia.org/wiki/Integrated_development_environment&#34;&gt;Integrated Development Environment&lt;/a&gt; (IDE).&lt;/p&gt;
+
+&lt;p&gt;In one interface (with multiple perspectives) we get a ton of &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resources&lt;/a&gt; to help with the &lt;a href=&#34;http://www.ibm.com/developerworks/opensource/tutorials/os-perlecl/section2.html&#34;&gt;tasks of the project&lt;/a&gt; including;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;writing code (there&amp;rsquo;ll be all sorts - perl, xml, html, text, makefile, markdown code)&lt;/li&gt;
+&lt;li&gt;formatting code so it&amp;rsquo;s readable, valid and conforms to best practice techniques for the language (like project structures)&lt;/li&gt;
+&lt;li&gt;execute and debug the code (postmortem/live/cgi-remote)&lt;/li&gt;
+&lt;li&gt;build/package/implement code&lt;/li&gt;
+&lt;li&gt;get help writing internal comments, documentation and todo&amp;rsquo;s&lt;/li&gt;
+&lt;li&gt;get access to documentation (like perldoc for modules)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Wow, that&amp;rsquo;s a lot of things, but which one to choose?  There are heaps of IDE&amp;rsquo;s out there.  We have chosen &lt;a href=&#34;http://www.eclipse.org&#34;&gt;Eclipse&lt;/a&gt; because; there&amp;rsquo;s tons of documentation, examples and community surrounding it.  Also, because we have also chosen Perl as a development language for the CmisDlnaConnector and Git (GitHub) for source control, Eclipse is a good choice for us because it has really cool plugins &lt;a href=&#34;http://www.epic-ide.org&#34;&gt;EPIC&lt;/a&gt; and &lt;a href=&#34;http://www.eclipse.org/egit/&#34;&gt;EGit&lt;/a&gt; to support both of them.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Getting and configuring Eclipse&lt;/li&gt;
+&lt;li&gt;Getting and configuring Epic&lt;/li&gt;
+&lt;li&gt;Getting and configuring EGit&lt;/li&gt;
+&lt;li&gt;Importing projects&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;Getting and configuring Eclipse&lt;/h3&gt;
+
+&lt;p&gt;Downloaded &lt;a href=&#34;http://www.eclipse.org/downloads/&#34;&gt;Eclipse Kepler (4.3.1)&lt;/a&gt; for MacOSX (and can get a Windows and Linux one as well).&lt;/p&gt;
+
+&lt;p&gt;It comes as an archive which we unstuffed. Then &lt;a href=&#34;http://www.imdb.com/title/tt0109045/&#34;&gt;drag&lt;/a&gt; the &amp;ldquo;eclipse&amp;rdquo; folder into your Applications folder. &lt;a href=&#34;http://www.cs.dartmouth.edu/~cs5/install/eclipse-osx/&#34;&gt;The easiest way to do so&lt;/a&gt; is to open a new window in the Finder and click on Applications in the list you get on the left-hand side. Then drag the &amp;ldquo;eclipse&amp;rdquo; folder in with the other applications. Make sure that you do not drag it into a folder that&amp;rsquo;s already within Applications. In other words, when you&amp;rsquo;re done, the Applications folder should have directly within it a folder named &amp;ldquo;eclipse.&amp;rdquo;
+(This step is not required, but handy.) Double click the &amp;ldquo;eclipse&amp;rdquo; folder. You&amp;rsquo;ll see an application named &amp;ldquo;Eclipse&amp;rdquo;; it has a purple icon with white horizontal stripes. Drag it into your dock. Now you will be able to launch Eclipse by clicking on the icon in the dock.&lt;/p&gt;
+
+&lt;p&gt;Launch the application and set up the default workspace preferences (we&amp;rsquo;ve just put it in the ~/Documents/workspace folder ).&lt;/p&gt;
+
+&lt;p&gt;Didn&amp;rsquo;t really do any other configuration as most of the preferences that are important to us are in the Epic and EGit plugins.  Didn&amp;rsquo;t look at many support docs to get going as its pretty self explanatory but the &lt;a href=&#34;http://help.eclipse.org/kepler/topic/org.eclipse.platform.doc.user/gettingStarted/qs-01.htm?cp=0_1_0&#34;&gt;basic tutorial&lt;/a&gt; and some descriptions of the &lt;a href=&#34;http://help.eclipse.org/kepler/index.jsp?topic=/org.eclipse.jdt.doc.user/reference/ref-icons.htm&#34;&gt;icons&lt;/a&gt; were useful (if could find a similar icons ref for Epic that would be cool).&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Getting and configuring Epic&lt;/h3&gt;
+
+&lt;p&gt;Even though the project repository is foundational, we&amp;rsquo;ve put this section in before setting up EGit as when we connect to the repo and import projects we wanted to import them as Perl projects (and wanted Perl frameworks and Epic plugin installed first to do this).&lt;/p&gt;
+
+&lt;p&gt;And, in order to have all EPIC &lt;a href=&#34;http://www.epic-ide.org/articles.php&#34;&gt;features&lt;/a&gt; like template project model (Module::Starter), source formatting (PerlTidy), syntax checking, coding standards (PerlCritic), interactive debug etc., you need to have a &lt;a href=&#34;./Paint-by-numbers:-Perl&#34;&gt;Perl interpreter and some supporting perl modules installed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Epic &lt;a href=&#34;http://www.epic-ide.org/guide/ch01s02.php&#34;&gt;installation&lt;/a&gt; is done by using the Eclipse Update Manager by entering &amp;lsquo;epic - &lt;a href=&#34;http://e-p-i-c.sf.net/updates/testing&#39;&#34;&gt;http://e-p-i-c.sf.net/updates/testing&#39;&lt;/a&gt; into the “Help &amp;gt; Install new software” dialog.  Chose the testing version &amp;lsquo;cause saw some posts that said it was stable and had good advantages over the current released version (and who doesn&amp;rsquo;t like a shiny new toy).&lt;/p&gt;
+
+&lt;p&gt;Once the plugin is installed, updated the &amp;ldquo;Eclipse &amp;gt; Preferences &amp;gt; Perl EPIC&amp;rdquo; preferences:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Perl EPIC:
+  ~ Perl Executable: &amp;ldquo;/usr/bin/perl&amp;rdquo;&lt;br /&gt;
+  ~ Interpreter Type: Standard&lt;br /&gt;
+Module::Starter:&lt;br /&gt;
+  ~ Select Enable Module::Starter&lt;br /&gt;
+  ~ Custom location: /usr/local/bin/module-starter&lt;br /&gt;
+  ~ Select Override module-starter config file&lt;br /&gt;
+  ~ Module Author:&lt;br /&gt;
+  ~ Module Author Email:&lt;br /&gt;
+Perl::Critic:&lt;br /&gt;
+  ~ Select Enable Critic&lt;br /&gt;
+  ~ Custom location: /usr/local/bin/perlcritic&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That&amp;rsquo;s the ones we tweaked but there are heaps of other ones as well.&lt;/p&gt;
+
+&lt;p&gt;So now you&amp;rsquo;ve got the &lt;a href=&#34;http://www.imdb.com/title/tt0659325/&#34;&gt;eagles nest&lt;/a&gt; for a birds eye view of the project.  The main structure of Eclipse are perspectives.  &lt;em&gt;Perspectives control what appears in certain menus and toolbars. They define visible action sets, which you can change to customize a perspective. You can save a perspective that you build in this manner, making your own custom perspective that you can open again later.&lt;/em&gt;
+&lt;em&gt;You can set your Workbench preferences to open perspectives in the same window or in a new window.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The main perspectives for developing Perl applications are:
+* Perl - This is the main perspective for coding Perl scripts.&lt;br /&gt;
+* Debug - Provides the main functionality for debugging and executing Perl scripts.&lt;/p&gt;
+
+&lt;p&gt;Did have an error setting up EPIC;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“An internal error occurred during: &amp;ldquo;Launching MyRSSFeeder&amp;rdquo;.java.lang.NullPointerException&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This happened because had mistakenly set the interpreter type in the Perl EPIC preferences to &amp;lsquo;cygwin&amp;rsquo;. Need to make sure use the “Standard” Interpreter type.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Getting and configuring EGit&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://www.eclipse.org/egit/download/&#34;&gt;download page&lt;/a&gt; for EGit says to; &lt;em&gt;install via one of the update site URLs listed below, copy and paste it into the “Help &amp;gt; Install new software” dialog&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is a &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide&#34;&gt;huge user guide&lt;/a&gt; for EGit.  We skimmed it.&lt;/p&gt;
+
+&lt;p&gt;Once installed go to the Eclipse &amp;gt; Preferences menu and set the &amp;gt;Team&amp;gt;Git Default repository folder: which we set to the Eclipse workspace directory /Documents/workspaces (it will actually go into each imported project&amp;rsquo;s folder).  The other settings within Eclipse will get set when you actually import projects (and these will be stored in ~/.gitconfig).  The later section on importing projects will detail other settings.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;Importing projects&lt;/h3&gt;
+
+&lt;p&gt;Now, you can connect Eclipse through EGit to a locally cloned repository (like one cloned by the Git commandline client or graphical client), which will give you an Eclipse workspace, a local Git repo and an online Git repo.  We have chosen to clone directly into the Eclipse workspace area so only have the Eclipse workspace directory for the project (like /Documents/workspace/allegria) which will have a hidden .git directory in it with relevant repo config files.&lt;/p&gt;
+
+&lt;p&gt;To do this you will need to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;prepare for &lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Eclipse_SSH_Configuration&#34;&gt;ssh connection&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories&#34;&gt;clone a remote repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The ssh connection was a bit tricky and when doing it we got a few error messages.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the first error message was a problem with validation and there are many &lt;a href=&#34;http://stackoverflow.com/questions/3225862/multiple-github-accounts-ssh-config&#34;&gt;posts&lt;/a&gt; describing the need to create a ~.ssh/config file (the ~.ssh directory is the same directory that the ssh keys are stored).  We used our favourite editor to create ~.ssh/config with the following entries;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    Host github.com  
+    HostName github.com  
+    User git  
+    PreferredAuthentications publickey  
+    IdentityFile ~/.ssh/id_rsa  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the second error was about &lt;a href=&#34;https://help.github.com/articles/error-permission-denied-publickey&#34;&gt;permission denied public key&lt;/a&gt; and related to the &amp;lsquo;User&amp;rsquo; entry in the ~.ssh/config file, initially we were using the username for the repo but need to use the generic &amp;lsquo;git&amp;rsquo; user name.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;a third error concerned the need to fix the &lt;a href=&#34;http://www.howtogeek.com/168119/fixing-warning-unprotected-private-key-file-on-linux/&#34;&gt;permissions on id_rsa key files&lt;/a&gt; by resetting them back to default;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    sudo chmod 600 ~/.ssh/id_rsa  
+    sudo chmod 600 ~/.ssh/id_rsa.pub  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once have prepared the ssh connection then can clone the remote repo by choosing &amp;ldquo;File &amp;gt; Import &amp;gt; Git &amp;gt; Project from Git&amp;rdquo; and then on the next screen select Clone URI.  Paste in the URI from the repo (in our case github.com/peterwatts/allegria) and select protocol ssh (this will change the URI to ssh://github.com/peterwatts/allegria).  Choose the branches on the next screen and select a directory in the next (in our case ~/Documents/workspace/).  Will then ask you &amp;lsquo;import projects&amp;rsquo; which you can select and do.&lt;/p&gt;
+
+&lt;p&gt;Choose the New Project Wizard (as the other two options; &amp;lsquo;Import existing projects&amp;rsquo; and &amp;lsquo;Import as general project&amp;rsquo; will cause an error as they probably don&amp;rsquo;t have the necessary eclipse setting files).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/java/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/java/</guid>
+      <description>&lt;p&gt;&lt;em&gt;this page is not finished, see the [[wiki home page|Home]] to find out why&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/totalbeginner.html&#34;&gt;http://eclipsetutorial.sourceforge.net/totalbeginner.html&lt;/a&gt;
+&lt;a href=&#34;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&#34;&gt;http://eclipsetutorial.sourceforge.net/Total_Beginner_Companion_Document.pdf&lt;/a&gt;
+&lt;a href=&#34;http://sourceforge.net/projects/eclipsetutorial/files/&#34;&gt;http://sourceforge.net/projects/eclipsetutorial/files/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The companion has resources listed in the back including (gold standard):
+&lt;a href=&#34;http://docs.oracle.com/javase/tutorial/java/index.html&#34;&gt;http://docs.oracle.com/javase/tutorial/java/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&#34;&gt;http://127.0.0.1:59162/help/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2FgettingStarted%2Fintro%2Foverview.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=al7bRZzz4oU&#34;&gt;http://www.youtube.com/watch?v=al7bRZzz4oU&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&#34;&gt;http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;maven in Eclipse:  &lt;a href=&#34;http://www.youtube.com/watch?v=xE2F4Z_wKCU&#34;&gt;http://www.youtube.com/watch?v=xE2F4Z_wKCU&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Launchng OSX scripts</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/launching-osx-scripts/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/launching-osx-scripts/</guid>
+      <description>
+
+&lt;p&gt;&lt;html&gt;
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;
+    &lt;p&gt;
+      &lt;img src=&#34;./images/paint-by-numbers.png?raw=true&#34; alt=&#34;book&#34;&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;This paint by numbers has used:&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Alfresco 4.2&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;CMIS Workbench 0.9.0-beta-1 &amp;amp; 0.10.0&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;The CMIS Workbench application in its default download launches with a shell script rather than a neat osx package.  The osx Automator can be used to launch it from an icon in the osx launchpad or dock.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Create an &amp;lsquo;application&amp;rsquo; from the osx Automator:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator-type.png?raw=true&#34; alt=&#34;automator&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Drag run shell script to the action window and enter the path to workbench.sh:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-automator.png?raw=true&#34; alt=&#34;action&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Save the package as &amp;lsquo;CMIS Workbench.app&amp;rsquo; to the &amp;lsquo;Applications&amp;rsquo; folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Go to the &amp;lsquo;Applications&amp;rsquo; folder, right-click on the &amp;lsquo;CMIS Workbench.app&amp;rsquo; file,&amp;lsquo;Get Info&amp;rsquo;and and click on the icon at the top left until it has a blue outline:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/mac-osx-getinfo.png?raw=true&#34; alt=&#34;finder&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; &lt;a href=&#34;https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/chemistry-opencmis-workbench/chemistry-opencmis-workbench/src/main/resources/images/&#34;&gt;Download&lt;/a&gt; the CMIS Workbench icon (or use the pic below), open it in a paint application, copy to the clipboard and use the Finder [Edit] menu to paste the CMIS Workbench icon onto the &amp;lsquo;Get Info&amp;rsquo; icon.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/assets/img/cmis-wb-icon.png?raw=true&#34; alt=&#34;icon&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>http://localhost:1313/retrospectives/paint-by-numbers/github/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/retrospectives/paint-by-numbers/github/</guid>
+      <description>
+
+&lt;p&gt;First things first! There&amp;rsquo;s a lot of stuff to manage; source code objects, project information, documentation, issues and will need to see how this stuff changes over time.  Had mainly used commercial implementations of source repositories and team collaboration / wiki tools.  Looked at a few open source ones (GitHub, BitBucket, SourceForge) and chose GitHub because; it had plenty of &lt;a href=&#34;http://git-scm.com/about&#34;&gt;documentation&lt;/a&gt; and &lt;a href=&#34;http://teach.github.com&#34;&gt;training&lt;/a&gt;, active community, mac client, eclipse plug-in and there are other modules such as cmis-perl, pDLNA and ember media manager - that the project will be leveraging - are also on GitHub.&lt;/p&gt;
+
+&lt;p&gt;So we are going to use Git for:&lt;/p&gt;
+
+&lt;p&gt;|GitHub Capability  |Use  |
+|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;|&lt;br /&gt;
+|GitHubPages |project information  |&lt;br /&gt;
+|source code management tools (&amp;lt;&amp;gt; icon) | code storage, organisation, versioning, collaboration, backup, code review  |&lt;br /&gt;
+|wiki (the book icon) | how to documentation  |&lt;br /&gt;
+|issues (the (!) icon) | requirements and issue tracking   |
+|GitHub stats  | use the graphs and &lt;a href=&#34;https://help.github.com/articles/be-social&#34;&gt;social stuff&lt;/a&gt; to see how we are going |&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s a bit of a hill to climb to get the most out of Git but it was great to put a &lt;a href=&#34;./HowTo:-setting-up-project-resources&#34;&gt;resource&lt;/a&gt; in like this as a first thing for the project as everything had a place to go and when talking to people could point them to it no matter where they were in the world.  We&amp;rsquo;re just using some of the basic bits.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Steps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Setup GitHub account&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup repository&lt;/li&gt;
+&lt;li&gt;Clone to desktop&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Edit README&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup GitHubPages&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Setup wiki&lt;/li&gt;
+&lt;li&gt;Setup issues&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;1. Setup GitHub account&lt;/h3&gt;
+
+&lt;p&gt;Simple registration, can do a free account or various paid ones if want more functionality, just go to &lt;a href=&#34;github.com&#34;&gt;github.com&lt;/a&gt;.  Can have individual accounts or organisation accounts.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;2. Setup repository(s)&lt;/h3&gt;
+
+&lt;p&gt;Just used the online prompts but there is an excellent &lt;a href=&#34;https://help.github.com&#34;&gt;bootcamp tutorial&lt;/a&gt;. Currently the project has repos for;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;allegria - the main repository that this wiki is in&lt;/li&gt;
+&lt;li&gt;pDLNA - a &amp;lsquo;forked&amp;rsquo; repository of some modules that allegria will customise&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have initially set the allegria repo up as a catchall for all the concepts being developed.  Later on may make submodules of each of the big areas to make cloning easier but just keeping it simple for now.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;3. Clone to desktop&lt;/h3&gt;
+
+&lt;p&gt;So you need a client application on your desktop to clone your repository to so that you can work on it.  Can do this with the &lt;a href=&#34;http://git-scm.com/downloads&#34;&gt;commandline client&lt;/a&gt;, which is ok and has lots of &lt;a href=&#34;http://git-scm.com/about&#34;&gt;documentation&lt;/a&gt;.  Or can use a &lt;a href=&#34;http://git-scm.com/downloads/guis&#34;&gt;graphical client&lt;/a&gt; (had a brief look at the mac client and it was pretty cool).  But for this project&amp;rsquo;s purposes we are using a graphical client that is embedded into the Eclipse Integrated Development Environment &lt;a href=&#34;./Paint-by-numbers:-Eclipse-with-Epic-and-Egit&#34;&gt;see the paint-by numbers here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;4. Edit README&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://help.github.com/articles/create-a-repo&#34;&gt;create a repo&lt;/a&gt; tutorial suggests that it is a good idea for your GitHub repository to have a &lt;a href=&#34;.&#34;&gt;README&lt;/a&gt; (or README.md) file which is like a summary landing page for the online webclient. If you create a repo through the command line there&amp;rsquo;s a few hoops to jump through but if you use the online webclient there is a checkbox to initialise the repo with a readme (that&amp;rsquo;s the easiest way to go).  The readme&amp;rsquo;s a good place to put some summary detail about the project and kick off some links to things like a project page, the wiki or to related sites.&lt;/p&gt;
+
+&lt;p&gt;The readme can use a &amp;lsquo;markdown&amp;rsquo; type language and there is tons of help for it like; &lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown&#34;&gt;articles in GitHub&lt;/a&gt; or &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax#link&#34;&gt;blogs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;5. Setup GitHub Pages&lt;/h3&gt;
+
+&lt;p&gt;The readme file is a good start to give people a snapshot of the project, but we wanted to have something a bit more, so are using &lt;a href=&#34;http://pages.github.com&#34;&gt;GitHubPages&lt;/a&gt;.  It is initially a bit tricky to set up. We used the wizard that is on the GitHubPages site but it seemed to not do anything (it says to wait 10 mins).  After a while if you go to the url (username.github.io/repository) that the wizard gives you (in our case it was &lt;a href=&#34;http://peterwatts.github.io/allegria/&#34;&gt;http://peterwatts.github.io/allegria/&lt;/a&gt;) then you should see the default page.&lt;/p&gt;
+
+&lt;p&gt;Underneath, the GitHubPages is a gh-pages branch under your repo and you can go into there and customise it to your heart&amp;rsquo;s content (we initially just tweaked the index page (by editing it online) with project information).  You could probably use some cool tools to manage it much as you would any normal html website but we are doing it all manually at the moment.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;6. Setup wiki&lt;/h3&gt;
+
+&lt;p&gt;Using the wiki for the majority of documentation for the project other than read-me&amp;rsquo;s and release notes etc which are included in each of the development directories.&lt;/p&gt;
+
+&lt;p&gt;Generally the wiki makes it easy to put up some information relatively quickly.  Needed to play around with getting the markup correct (e.g. putting spaces after text on end of line to get to display on next line, using relative links and embedding images in the pages).&lt;/p&gt;
+
+&lt;p&gt;Using predominantly the &amp;ldquo;Markdown&amp;rdquo; editing mode as it&amp;rsquo;s the default (&lt;a href=&#34;http://www.mediawiki.org/wiki/MediaWiki&#34;&gt;MediaWiki&lt;/a&gt; would also be useful) and just using basic functionality to begin with including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;simple naming standard of Home, Concept, HowTo, Paint-by-numbers, Point-of-view so the &amp;lsquo;Pages&amp;rsquo; page looks organised and relative links are easy to guess.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;formatting like; headings, bold, code blocks, unordered lists, ordered lists and quotes.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;relative links for content inside the Github repository (including for images).&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is plenty of raw documentation out there about the wiki syntax including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/categories/88/articles&#34;&gt;GitHub Help&lt;/a&gt; including; Writing on GitHub, Markdown Basics and GitHub Flavoured Markdown&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://guides.github.com/overviews/mastering-markdown/&#34;&gt;http://guides.github.com/overviews/mastering-markdown/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gollum/gollum/wiki&#34;&gt;https://github.com/gollum/gollum/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mojombo/gollum-demo/wiki&#34;&gt;https://github.com/mojombo/gollum-demo/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown&#34;&gt;https://help.github.com/articles/github-flavored-markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/blog/1395-relative-links-in-markup-files&#34;&gt;https://github.com/blog/1395-relative-links-in-markup-files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/relative-links-in-readmes&#34;&gt;https://help.github.com/articles/relative-links-in-readmes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;http://daringfireball.net/projects/markdown/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://designshack.net/articles/html/mastering-markdown-30-resources-apps-and-tutorials-to-get-you-started/&#34;&gt;http://designshack.net/articles/html/mastering-markdown-30-resources-apps-and-tutorials-to-get-you-started/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also a few forum examples for some of the trickier formatting stuff such as:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://webapps.stackexchange.com/questions/29602/markdown-to-insert-and-display-an-image-on-github-repo&#34;&gt;embedding images into a wiki page&lt;/a&gt; - some of the standard information available looked confusing or inaccurate - but this explanation seems to work.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/snowplow/snowplow/wiki&#34;&gt;example Github wiki&lt;/a&gt; that has some nice table footer and sidebar functionality.&lt;/li&gt;
+&lt;li&gt;plenty of forum examples out there on using the Eclipse IDE to author the wiki rather than typing into the online webclient but need to test out how to do this before write about it.&lt;/li&gt;
+&lt;li&gt;can get some of the work in formatting tables done with a &lt;a href=&#34;http://www.tablesgenerator.com/markdown_tables&#34;&gt;table generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;ldquo;Github Flavoured Markdown (GFM) Markdown table syntax is quite simple. It does not allow row or cell spanning as well as putting multi-line text in a cell&amp;rdquo;.  To get a bit fancier can use some inline HTML.  The &lt;a href=&#34;http://www.w3schools.com/html/html_tables.asp&#34;&gt;W3Schools site&lt;/a&gt; has some good documentation for this (and syntax in general).&lt;/p&gt;
+
+&lt;p&gt;Simple example using the info from W3Schools:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;table border=&amp;quot;0&amp;quot;&amp;gt;
+  &amp;lt;!--tr gives you a new table row and td gives you a new cell in the row--&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;For more information on using groovy with cmis:
+     &amp;lt;ul&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://groovy.codehaus.org&amp;quot;&amp;gt;Groovy home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://groovy.codehaus.org/Documentation&amp;quot;&amp;gt;Groovy documentation&amp;lt;/a&amp;gt; including getting started and tutorials&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.ibm.com/developerworks/java/tutorials/j-groovy&amp;quot;&amp;gt;IBM groovy tutorial&amp;lt;/a&amp;gt; includes using with Eclipse IDE&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.gradle.org&amp;quot;&amp;gt;Gradle&amp;lt;/a&amp;gt; build system for groovy&amp;lt;/li&amp;gt;
+     &amp;lt;li&amp;gt;books with groovy code examples&amp;lt;/li&amp;gt;
+     &amp;lt;/ul&amp;gt;
+    &amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;
+      &amp;lt;!--The target=&amp;quot;_blank&amp;quot; tag opens in a new browser tab when click on image--&amp;gt;
+      &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://www.manning.com/mueller&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;
+        &amp;lt;img src=&amp;quot;./images/manning-cmis.png?raw=true&amp;quot; alt=&amp;quot;book&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+      &amp;lt;/p&amp;gt;
+    &amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;/table&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which produces:&lt;/p&gt;
+
+&lt;table border=&#34;0&#34;&gt;
+&lt;tr&gt;
+  &lt;td&gt;For more information on using groovy with cmis:
+   &lt;ul&gt;
+   &lt;li&gt;&lt;a href=&#34;http://groovy.codehaus.org&#34;&gt;Groovy home&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://groovy.codehaus.org/Documentation&#34;&gt;Groovy documentation&lt;/a&gt; including getting started and tutorials&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://www.ibm.com/developerworks/java/tutorials/j-groovy&#34;&gt;IBM groovy tutorial&lt;/a&gt; includes using with Eclipse IDE&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&#34;http://www.gradle.org&#34;&gt;Gradle&lt;/a&gt; build system for groovy&lt;/li&gt;
+   &lt;li&gt;books with groovy code examples&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/td&gt;
+  &lt;td&gt;
+    &lt;p&gt;&lt;a href=&#34;http://www.manning.com/mueller&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;./images/manning-cmis.png?raw=true&#34; alt=&#34;book&#34;&gt;&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Examples of coding with images:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a name=&amp;quot;PaintByNumbers&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 
+##![Paint](/assets/img/paint-by-numbers-50.png?raw=true) Paint by Numbers  
+
+&amp;lt;a name=&amp;quot;HowTo&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; 
+&amp;lt;html&amp;gt;
+  &amp;lt;h2&amp;gt;
+      &amp;lt;img src=&amp;quot;../blob/master/images/paint-by-numbers-50.png?raw=true&amp;quot; alt=&amp;quot;icon&amp;quot; style=&amp;quot;float:left&amp;quot;&amp;gt; How To&#39;s
+  &amp;lt;/h2&amp;gt;
+&amp;lt;/html&amp;gt; 
+
+[![Gem Version](https://badge.fury.io/rb/gollum.png)](http://rubygems.org/gems/gollum)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;7. Setup issues log&lt;/h3&gt;
+
+&lt;p&gt;Not getting too funky here but will use the issues list capability to store:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;requirements definitions (green label)&lt;/li&gt;
+&lt;li&gt;project issues / key decisions&lt;/li&gt;
+&lt;li&gt;bugs, enhancements etc&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
